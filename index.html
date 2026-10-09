@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Shrine Balance</title>
+<style>
+:root{font:15px system-ui;color:#e5edf5;background:#101820;color-scheme:dark}body{max-width:1480px;margin:auto;padding:28px}h1{margin:0;font-size:30px}h2{font-size:20px}p{color:#b4c6d4;line-height:1.55}.top{display:flex;justify-content:space-between;gap:20px;align-items:center;flex-wrap:wrap}.panel{background:#192630;border:1px solid #344654;border-radius:12px;padding:20px;margin:20px 0}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:16px}label{display:block;font-size:13px;color:#beced9}input,select,button{font:inherit;border:1px solid #536675;border-radius:5px;padding:8px;background:#101b24;color:#edf4f8;box-sizing:border-box}label input{display:block;width:100%;margin-top:6px}button{cursor:pointer;background:#235d58}button:hover{background:#30796f}input[type=number]{width:105px}label input[type=number]{width:100%}.scroll{overflow:auto}table{width:100%;border-collapse:collapse;white-space:nowrap}th,td{text-align:left;padding:10px 8px;border-bottom:1px solid #344654;font-size:13px}th{color:#a6c6d5;font-weight:500}td input[type=text]{width:185px}.note{color:#f2cb87}.error{color:#ffaca8}small{display:block;color:#a7bbc9;margin-top:5px}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}.card{border:1px solid #46636b;border-radius:8px;padding:16px}.big{font-size:25px;color:#8fe1cf}.good{color:#8fe1cf}.warn{color:#f2cb87}details{margin:15px 0}summary{cursor:pointer}#status{min-height:22px}a{color:#8fe1cf}
+</style>
+<div class="top"><div><h1>Shrine Balance</h1><p>Player strength → creature roles → wave composition</p></div><div><button id="save">Export scenario</button> <button id="load">Import scenario</button> <button id="reset">Reset draft</button><input id="file" type="file" accept="application/json,.json" hidden></div></div>
+<p class="note">Planning estimates, not measured combat results. Snuffiss defenses are prefilled. Player hit damage, attack timings, uptime, and enemy contact rates are example inputs. Replace them with observations before tuning a live event.</p>
+<div id="status" role="status"></div>
+<section class="panel"><h2>1 · Player</h2><div id="player" class="grid"></div>
+<details><summary>What these inputs mean</summary><p>Effective hit damage means immediate health removed from the target after its defenses. Use an enemy-specific override when resistances differ. Do not put the earlier 791 mixed poison payload here. Attack interval is time between successful hits during uninterrupted attacks. First-hit delay is time from attack start to its first impact.</p><p>Attack uptime approximates time available to attack during combat. Healing is a manually estimated sustained recovery rate for wave pressure only. It is not calculated from lifesteal gear. Snuffiss health uses the intended modifier order (672.45); the unresolved alternative is 646.24.</p></details></section>
+<section class="panel"><h2>2 · Creature roles and stats</h2><p>Choose one representative enemy attack per row. Physical and elemental damage are raw, before player defenses. Elemental means an immediate hit using the entered resistance. Poison timing, native resistance interactions, and multiple damage types need measured effective inputs or a later detailed model.</p><div class="scroll"><table><thead><tr><th>Creature / attack</th><th>Role</th><th>Health</th><th>Player hit override<br>0 = player default</th><th>Raw physical</th><th>Raw elemental</th><th>Attack interval (s)</th><th>Contact %</th><th></th></tr></thead><tbody id="enemies"></tbody></table></div><p><button id="addEnemy">Add creature</button></p>
+<details><summary>Edit role targets</summary><p>These are the proposed starting ranges from our discussion, not industry standards. TTK targets use attack start to death under uninterrupted attacks. Empty limits mean unrestricted.</p><div class="scroll"><table><thead><tr><th>Role</th><th>TTK min (s)</th><th>TTK max (s)</th><th>HTK min</th><th>HTK max</th><th>Player HTD min</th><th>Player HTD max</th></tr></thead><tbody id="roles"></tbody></table></div></details></section>
+<section class="panel"><h2>3 · Creature results</h2><p>HTK = hits to kill the creature. HTD = hits to kill the player. HTD uses unblocked hits, changing armor at the health threshold, with no healing or random avoidance. TTD starts at the first incoming hit. A lethal first hit has TTD 0.</p><div class="scroll"><table><thead><tr><th>Creature</th><th>HTK</th><th>Focused TTK</th><th>Practical TTK*</th><th>Received hit<br>normal / low HP</th><th>Player HTD</th><th>Player TTD</th><th>Health fitting TTK + HTK</th></tr></thead><tbody id="results"></tbody></table></div><small>*Focused TTK divided by attack uptime. A planning approximation, not an animation simulation.</small></section>
+<section class="panel"><h2>4 · Wave composition</h2><p>Set the number of each creature in each wave. Contact % estimates how many enemy attack opportunities reach the player; it combines movement and successful defense into a coarse assumption.</p><div class="scroll"><table><thead id="waveHead"></thead><tbody id="counts"></tbody></table></div><p><button id="addWave">Add wave</button></p><div id="waves" class="cards"></div></section>
+<section class="panel"><h2>Model limits</h2><p>Wave clear time assumes sequential single-target kills, a fresh first-hit delay per target, and the entered attack uptime. It excludes area damage, poison, chain lightning, shaman healing, travel, and spawn delays. It is not a forecast of actual wave duration.</p><p>Wave TTD holds the whole pack alive and spreads incoming damage evenly over time, subtracting the entered healing rate. Armor changes at the health threshold. This shows starting pressure; it does not model enemies dying, simultaneous hits, stagger, shields, parries, conditional hit avoidance, or reactive healing. A “sustain holds” result does not mean burst damage is safe.</p><p>The clear-time / TTD ratio is a comparison of these assumptions, not a difficulty score. Use live tests to check damage taken, recovery, deaths, and actual wave duration. Scenarios save in this browser and can be exported as JSON. This app does not generate Fortress configuration.</p></section>
+<script>
+let state; let revision=0;
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const labels={health:'Maximum health',armor:'Armor: normal',low_armor:'Armor: low health',threshold:'Low-health threshold (%)',physical_resist:'Physical resistance (%)',elemental_resist:'Elemental resistance (%)',hit:'Effective immediate hit (example)',interval:'Player hit interval (s, example)',windup:'First-hit delay (s, example)',uptime:'Attack uptime (%, example)',healing:'Wave recovery (HP/s, estimate)'};
+function field(v,attrs=''){return `<input type="number" min="0" step="any" value="${esc(v)}" ${attrs}>`}
+function render(){
+ $('player').innerHTML=Object.entries(labels).map(([k,label])=>`<label>${label}${field(state.player[k],`data-player="${k}"`)}</label>`).join('');
+ $('enemies').innerHTML=state.enemies.map((e,i)=>`<tr><td><input aria-label="Creature name" type="text" value="${esc(e.name)}" data-enemy="${i}" data-key="name"></td><td><select aria-label="Role" data-enemy="${i}" data-key="role">${Object.keys(state.roles).map(r=>`<option ${r===e.role?'selected':''}>${esc(r)}</option>`).join('')}</select></td>${['health','hit','physical','elemental','interval','contact'].map(k=>`<td>${field(e[k],`aria-label="${k}" data-enemy="${i}" data-key="${k}"`)}</td>`).join('')}<td><button data-remove-enemy="${i}">Remove</button></td></tr>`).join('');
+ $('roles').innerHTML=Object.entries(state.roles).map(([r,limits])=>`<tr><td>${esc(r)}</td>${limits.map((v,i)=>`<td>${field(v??'',`aria-label="${esc(r)} limit ${i+1}" data-role="${esc(r)}" data-limit="${i}"`)}</td>`).join('')}</tr>`).join('');
+ renderCounts();
+}
+function renderCounts(){
+ $('waveHead').innerHTML='<tr><th>Creature</th>'+state.waves.map((w,i)=>`<th><input aria-label="Wave name" value="${esc(w)}" data-wave="${i}"> <button data-remove-wave="${i}">×</button></th>`).join('')+'</tr>';
+ $('counts').innerHTML=state.enemies.map((e,i)=>`<tr><td>${esc(e.name)}</td>${e.counts.map((c,j)=>`<td>${field(c,`step="1" aria-label="${esc(e.name)} wave ${j+1} count" data-count="${i}" data-index="${j}"`)}</td>`).join('')}</tr>`).join('');
+}
+const fmt=(n,unit='')=>n===null?'—':`${Number(n.toFixed(2)).toLocaleString()}${unit}`;
+const metric=(n,r,unit='')=>`${fmt(n,unit)}<small class="${r==='In range'?'good':'warn'}">${esc(r)}</small>`;
+async function request(s){const r=await fetch('/analyze',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(s)});const body=await r.json();if(!r.ok)throw Error(body.error);return body;}
+async function calculate(){
+ const current=++revision;
+ try{const output=await request(state);if(current!==revision)return;
+ $('results').innerHTML=output.enemies.map(e=>`<tr><td>${esc(e.name)}</td><td>${metric(e.htk,e.htk_rating)}</td><td>${metric(e.ttk,e.ttk_rating,' s')}</td><td>${fmt(e.practical,' s')}</td><td>${fmt(e.damage)} / ${fmt(e.low_damage)}</td><td>${metric(e.htd,e.htd_rating)}</td><td>${fmt(e.ttd,' s')}</td><td>${!e.target_possible?'Targets conflict at this attack speed':`&gt; ${fmt(e.health_min_exclusive)}${e.health_max===null?'':` to ${fmt(e.health_max)} HP`}`}</td></tr>`).join('');
+ $('waves').innerHTML=output.waves.map(w=>`<div class="card"><b>${esc(w.name)} · ${w.count} enemies</b><p><span class="big">${fmt(w.clear,' s')}</span><br>Sequential clear estimate</p><p>Starting damage/s: ${fmt(w.pressure)}<br>Low-health damage/s: ${fmt(w.low_pressure)}<br>Constant-pack TTD: ${w.ttd===null?'Sustain holds':fmt(w.ttd,' s')}<br>Clear / TTD: ${fmt(w.ratio)}</p></div>`).join('');
+ $('status').className='';$('status').textContent='Updated · calculations use the assumptions shown below.';
+ try{localStorage.setItem('shrine-balance-v1',JSON.stringify(state));}catch{$('status').textContent+=' Browser saving unavailable; use Export.';}
+ }catch(e){if(current!==revision)return;$('status').className='error';$('status').textContent=e.message;$('results').innerHTML='';$('waves').innerHTML='';}
+}
+document.addEventListener('change',e=>{const t=e.target,d=t.dataset;
+ if(d.player)state.player[d.player]=t.value===''?null:Number(t.value);
+ else if(d.enemy!==undefined)state.enemies[d.enemy][d.key]=['name','role'].includes(d.key)?t.value:(t.value===''?null:Number(t.value));
+ else if(d.role)state.roles[d.role][d.limit]=t.value===''?null:Number(t.value);
+ else if(d.count!==undefined)state.enemies[d.count].counts[d.index]=t.value===''?null:Number(t.value);
+ else if(d.wave!==undefined)state.waves[d.wave]=t.value;
+ else return;
+ if(d.key==='name')renderCounts();calculate();
+});
+document.addEventListener('click',e=>{const d=e.target.dataset;
+ if(d.removeEnemy!==undefined&&state.enemies.length>1){state.enemies.splice(Number(d.removeEnemy),1);render();calculate();}
+ if(d.removeWave!==undefined&&state.waves.length>1){const i=Number(d.removeWave);state.waves.splice(i,1);state.enemies.forEach(e=>e.counts.splice(i,1));renderCounts();calculate();}
+});
+$('addEnemy').onclick=()=>{state.enemies.push({name:'New creature',role:Object.keys(state.roles)[0],health:1000,hit:0,physical:100,elemental:0,interval:3,contact:40,counts:state.waves.map(()=>0)});render();calculate();};
+$('addWave').onclick=()=>{state.waves.push(`Wave ${state.waves.length+1}`);state.enemies.forEach(e=>e.counts.push(0));renderCounts();calculate();};
+$('save').onclick=async()=>{try{await request(state);const u=URL.createObjectURL(new Blob([JSON.stringify(state,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=u;a.download='shrine-scenario.json';a.click();setTimeout(()=>URL.revokeObjectURL(u),1000);}catch(e){$('status').textContent=e.message;}};
+$('load').onclick=()=>$('file').click();
+$('file').onchange=async e=>{try{const file=e.target.files[0];if(!file)return;if(file.size>200000)throw Error('Scenario must be smaller than 200 KB');const candidate=JSON.parse(await file.text());await request(candidate);state=candidate;render();await calculate();}catch(e){$('status').className='error';$('status').textContent=e.message;}finally{$('file').value='';}};
+$('reset').onclick=async()=>{if(confirm('Replace this draft with the initial Snuffiss example? Export first to keep your changes.')){state=await(await fetch('/defaults')).json();render();calculate();}};
+(async()=>{try{state=await(await fetch('/defaults')).json();let warning='';try{const saved=localStorage.getItem('shrine-balance-v1');if(saved){const candidate=JSON.parse(saved);await request(candidate);state=candidate;}}catch{warning=' Saved data could not be loaded; showing defaults.';}render();await calculate();$('status').textContent+=warning;}catch(e){$('status').textContent=e.message;}})();
+</script></html>
