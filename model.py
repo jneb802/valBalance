@@ -1,5 +1,6 @@
 """Deterministic planning calculations, not a Valheim combat simulator."""
 import math
+from copy import deepcopy
 
 
 DEFAULTS = {
@@ -111,6 +112,20 @@ def rating(value, lo, hi):
 
 
 def analyze(data):
+    # Resolve optional Season 8 star inputs without mutating the caller's scenario.
+    data = deepcopy(data)
+    if isinstance(data, dict) and isinstance(data.get("enemies"), list):
+        for enemy in data["enemies"]:
+            if isinstance(enemy, dict) and "stars" in enemy:
+                stars = number(enemy["stars"], "Stars", 0, 10000)
+                if int(stars) != stars:
+                    raise ValueError("Stars must be whole numbers")
+                health = number(enemy["base_health"], "Base health", 0.001)
+                physical = number(enemy["base_physical"], "Base physical damage")
+                elemental = number(enemy.get("base_elemental", 0), "Base elemental damage")
+                enemy["health"] = health * (1 + stars)
+                enemy["physical"] = physical * (1 + 0.25 * stars)
+                enemy["elemental"] = elemental * (1 + 0.25 * stars)
     validate(data)
     p = data["player"]
     rows = []
@@ -133,7 +148,9 @@ def analyze(data):
             time_max = math.floor((limits[1] - p["windup"]) / p["interval"] + 1)
             maximum_hits = time_max if maximum_hits is None else min(maximum_hits, time_max)
         possible = maximum_hits is None or maximum_hits >= minimum_hits
-        rows.append({"name": e["name"], "htk": htk, "ttk": focused, "practical": practical,
+        rows.append({"name": e["name"], "stars": e.get("stars"), "health": e["health"],
+                     "raw_physical": e["physical"], "raw_elemental": e["elemental"],
+                     "htk": htk, "ttk": focused, "practical": practical,
                      "damage": normal, "low_damage": low, "htd": htd, "ttd": ttd,
                      "ttk_rating": rating(focused, *limits[:2]), "htk_rating": rating(htk, *limits[2:4]),
                      "htd_rating": rating(htd, *limits[4:]),

@@ -26,6 +26,10 @@ The reusable entry point is `model.analyze(scenario)`. It validates input and re
 
 Contact percentage is the fraction of enemy attack opportunities that reach the player after movement and active defense. It affects wave pressure only. Uptime is the fraction of combat time available for player attacks. It affects practical TTK and wave clear time, not focused HTK/TTK.
 
+Optional `stars`, `base_health`, `base_physical`, and `base_elemental` inputs enable the nominal Season 8 star calculation. When `stars` is present, it overrides the supplied health and damage fields using `health = base_health * (1 + stars)` and `damage = base_damage * (1 + 0.25 * stars)`. Base elemental damage defaults to zero. This mode does not include custom per-creature stat overrides or SLS modifiers. The report includes resolved health, stars, and raw damage.
+
+`examples/blackforest-stars-v1.json` is the first star-only design. All creatures meet their durability targets under the illustrative offense assumptions. Brutes and bears do not meet damage targets. Exact wave counts remain a design target, not a guarantee from the Fortress PR schema.
+
 ## Defaults and provenance
 
 The player defenses come from the Snuffiss analysis in the October 9, 2026 shrine-design session, based on the October 1 character snapshot. They include equipped Epic Loot armor and resistance totals, three best health foods, and no Crown. Health uses the intended modifier order; use 646.24 instead of 672.45 to examine the unresolved alternative order. No character account identifiers or raw saves are included.

@@ -63,6 +63,18 @@ class ModelTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             analyze(self.data)
 
+    def test_stars_resolve_stats_without_mutating_input(self):
+        enemy = self.data['enemies'][0]
+        enemy.update(stars=19, base_health=40, base_physical=14)
+        row = analyze(self.data)['enemies'][0]
+        self.assertEqual(row['health'], 800)
+        self.assertEqual(row['raw_physical'], 80.5)
+        self.assertEqual(row['htk'], 2)
+        self.assertEqual(enemy['health'], 1200)
+        enemy['stars'] = 19.5
+        with self.assertRaises(ValueError):
+            analyze(self.data)
+
 
 if __name__ == '__main__':
     unittest.main()
