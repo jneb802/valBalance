@@ -41,6 +41,12 @@ def validate(data):
     for key in DEFAULTS["player"]:
         number(p[key], f"Player {key}", 0.001 if key in ("health", "hit", "interval", "uptime") else 0,
                100 if key in ("threshold", "physical_resist", "elemental_resist", "uptime") else 1e9)
+    for key in ("lightning_resist", "frost_resist"):
+        if key in p:
+            number(p[key], key, 0, 100)
+    for key in ("lightning_multiplier", "frost_multiplier"):
+        if key in p:
+            number(p[key], key, 0, 10)
     if not isinstance(data["waves"], list) or not 1 <= len(data["waves"]) <= 20:
         raise ValueError("Use 1–20 waves")
     if any(not isinstance(w, str) or not w.strip() or len(w) > 100 for w in data["waves"]):
@@ -79,9 +85,11 @@ def validate(data):
 
 def received(e, p, armor):
     physical = e["physical"] * (1 - p["physical_resist"] / 100)
-    # Valheim armor curve for the physical portion; element input is immediate only.
-    physical = physical - armor if physical >= 2 * armor else physical * physical / (4 * armor)
-    return physical + e["elemental"] * (1 - p["elemental_resist"] / 100)
+    damage = physical + e["elemental"] * (1 - p["elemental_resist"] / 100)
+    for kind in ("lightning", "frost"):
+        damage += e.get("resolved_" + kind, 0) * (1 - p.get(kind + "_resist", p["elemental_resist"]) / 100) * p.get(kind + "_multiplier", 1)
+    # Character.RPC_Damage applies resistance, then armor to the combined hit.
+    return damage - armor if damage >= 2 * armor else damage * damage / (4 * armor)
 
 
 def hits_to_die(p, normal, low):
@@ -116,6 +124,9 @@ def analyze(data):
     data = deepcopy(data)
     if isinstance(data, dict) and isinstance(data.get("enemies"), list):
         for enemy in data["enemies"]:
+            if isinstance(enemy, dict):
+                enemy.pop("resolved_lightning", None)
+                enemy.pop("resolved_frost", None)
             if isinstance(enemy, dict) and "stars" in enemy:
                 stars = number(enemy["stars"], "Stars", 0, 10000)
                 if int(stars) != stars:
@@ -126,6 +137,22 @@ def analyze(data):
                 enemy["health"] = health * (1 + stars)
                 enemy["physical"] = physical * (1 + 0.25 * stars)
                 enemy["elemental"] = elemental * (1 + 0.25 * stars)
+            if isinstance(enemy, dict) and enemy.get("sls_modifiers"):
+                if "stars" not in enemy:
+                    raise ValueError("SLS modifiers require an explicit star count")
+                modifiers = enemy["sls_modifiers"]
+                if not isinstance(modifiers, list) or any(m not in ("Lightning", "Frost") for m in modifiers):
+                    raise ValueError("Only immediate Lightning and Frost modifiers are modeled")
+                if len(set(modifiers)) != len(modifiers):
+                    raise ValueError("Duplicate SLS modifier")
+                base_hit = enemy["physical"] + enemy["elemental"]
+                for modifier in modifiers:
+                    powers = data["sls_modifier_powers"][modifier]
+                    if not isinstance(powers, list) or len(powers) != 2:
+                        raise ValueError("Modifier powers must be [base, per game level]")
+                    base_power = number(powers[0], "Modifier base power", 0, 10)
+                    per_level = number(powers[1], "Modifier per-level power", 0, 10)
+                    enemy["resolved_" + modifier.lower()] = base_hit * (base_power + per_level * (enemy["stars"] + 1))
     validate(data)
     p = data["player"]
     rows = []
@@ -150,6 +177,8 @@ def analyze(data):
         possible = maximum_hits is None or maximum_hits >= minimum_hits
         rows.append({"name": e["name"], "stars": e.get("stars"), "health": e["health"],
                      "raw_physical": e["physical"], "raw_elemental": e["elemental"],
+                     "sls_modifiers": e.get("sls_modifiers", []),
+                     "raw_lightning": e.get("resolved_lightning", 0), "raw_frost": e.get("resolved_frost", 0),
                      "htk": htk, "ttk": focused, "practical": practical,
                      "damage": normal, "low_damage": low, "htd": htd, "ttd": ttd,
                      "ttk_rating": rating(focused, *limits[:2]), "htk_rating": rating(htk, *limits[2:4]),

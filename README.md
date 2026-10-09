@@ -43,13 +43,21 @@ Role targets reproduce the user's proposed starting ranges. They are not measure
 - `HTK = ceil(creature health / effective immediate player hit)`.
 - `Focused TTK = first-hit delay + (HTK - 1) * attack interval`.
 - Practical TTK divides focused TTK by attack uptime.
-- Incoming physical damage is reduced by physical resistance, then armor: `d - armor` if `d >= 2 * armor`, otherwise `d² / (4 * armor)`. Elemental input uses the entered elemental resistance and bypasses armor. This simplified split does not reproduce every damage type or mod interaction.
+- Incoming damage uses resistance per type, then armor on the combined damage: `d - armor` if `d >= 2 * armor`, otherwise `d² / (4 * armor)`. This corrects the first version's elemental armor bypass. Generic elemental input must represent immediate damage, not a fire or poison payload.
 - Player HTD applies normal or low-health armor according to health before each hit. There is no block, parry, hit-ignore chance, or recovery. TTD is `(HTD - 1) * enemy interval`, starting at first impact.
 - Sequential wave clear time sums practical creature TTK by count. It excludes area damage, travel, spawn delays, poison, and healing of enemies.
 - Constant-pack damage per second sums `count * received hit / enemy interval * contact fraction`. The pack stays alive in this model. TTD integrates normal and low-health damage rates after subtracting user-entered recovery. If recovery prevents crossing either health segment, it reports that sustain holds. Burst can still kill.
 - The clear/TTD ratio compares two coarse models with different timing conventions. It is not a win probability or difficulty grade.
 
 Use effective damage measured against each creature. Do not convert random damage, poison, lifesteal, chain lightning, or avoidance into exact hit counts by averaging them. This first version intentionally provides a transparent deterministic baseline. Validate final events in the actual Season 8 mod set.
+
+## SLS damage modifiers
+
+An enemy can specify `sls_modifiers: ["Lightning", "Frost"]`. The scenario must supply `sls_modifier_powers`, mapping each chosen name to `[basePower, perlevelPower]`. Season 8 snapshot values are Lightning `[0.4, 0.05]` and Frost `[0.4, 0.01]`. Each adds `original attack * (basePower + perlevelPower * (stars + 1))`. Both use the same original attack total; they do not multiply each other.
+
+Player `lightning_resist` and `frost_resist` override the generic elemental resistance. Optional `lightning_multiplier` and `frost_multiplier` represent native resistance multipliers after Epic Loot resistance; both default to 1. The Snuffiss modifier example uses 57.728% lightning resistance and a 0.5 native frost multiplier from his chest armor.
+
+Only these two immediate damage modifiers are supported. Other modifiers are rejected rather than silently approximated. Fire and poison need damage-over-time modeling; ElementalChaos needs random type selection. Brutal changes attack animation speed, and Fast changes movement, so neither has a direct damage-per-hit bonus.
 
 ## Tests
 

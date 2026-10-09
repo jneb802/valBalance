@@ -22,6 +22,7 @@ def report(data, result):
         lines.extend([
             f"{row['name']} [{enemy['role']}] — {row['health']:g} HP" + (f" / {row['stars']} stars" if row['stars'] is not None else ""),
             f"  Raw attack: {row['raw_physical']:g} physical + {row['raw_elemental']:g} elemental",
+            f"  SLS modifiers: {', '.join(row['sls_modifiers']) or 'none'}; added lightning: {row['raw_lightning']:g}; added frost: {row['raw_frost']:g}",
             f"  HTK: {row['htk']} ({row['htk_rating']})",
             f"  Focused TTK: {row['ttk']:.2f}s ({row['ttk_rating']}); practical estimate: {row['practical']:.2f}s",
             f"  Received damage: {row['damage']:.2f} normal / {row['low_damage']:.2f} at low health",

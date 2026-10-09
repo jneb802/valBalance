@@ -29,7 +29,7 @@ class ModelTests(unittest.TestCase):
 
     def test_physical_curve_and_elemental_split(self):
         p = {'physical_resist': 50, 'elemental_resist': 25}
-        self.assertAlmostEqual(received({'physical': 200, 'elemental': 40}, p, 100), 55)
+        self.assertAlmostEqual(received({'physical': 200, 'elemental': 40}, p, 100), 42.25)
         self.assertEqual(received({'physical': 600, 'elemental': 0}, p, 100), 200)
         self.assertEqual(received({'physical': 0, 'elemental': 0}, p, 0), 0)
 
@@ -73,6 +73,24 @@ class ModelTests(unittest.TestCase):
         self.assertEqual(enemy['health'], 1200)
         enemy['stars'] = 19.5
         with self.assertRaises(ValueError):
+            analyze(self.data)
+
+    def test_sls_lightning_and_frost_share_original_hit_basis(self):
+        self.data['player'].update(lightning_resist=57.728, frost_multiplier=0.5)
+        self.data['sls_modifier_powers'] = {'Lightning': [0.4, 0.05], 'Frost': [0.4, 0.01]}
+        self.data['enemies'][1].update(stars=25, base_health=150, base_physical=30,
+                                      sls_modifiers=['Lightning', 'Frost'])
+        row = analyze(self.data)['enemies'][1]
+        self.assertAlmostEqual(row['raw_lightning'], 369.75)
+        self.assertAlmostEqual(row['raw_frost'], 143.55)
+        self.assertAlmostEqual(row['damage'], 131.52, places=2)
+        self.assertEqual(row['htd'], 6)
+        self.assertEqual(row['htk'], 8)
+
+    def test_unsupported_modifier_is_rejected(self):
+        self.data['enemies'][0].update(stars=19, base_health=40, base_physical=14,
+                                      sls_modifiers=['Poison'])
+        with self.assertRaisesRegex(ValueError, 'Only immediate'):
             analyze(self.data)
 
 

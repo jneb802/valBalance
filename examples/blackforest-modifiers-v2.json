@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "design_status": "Provisional stars plus modifiers draft. Brute and bear meet selected durability and HTD targets under the stated assumptions. Not live validated.",
+  "assumptions": [
+    "Snuffiss defenses use the previous Season 8 snapshot and intended health modifier order.",
+    "500 effective immediate damage, 0.8-second attack interval, and 0.4-second first-hit delay are illustrative, not measured Snuffiss offense.",
+    "SLS nominal health = base health * (1 + stars); raw damage = base damage * (1 + 0.25 * stars).",
+    "Brute requires Lightning and Frost; bear requires Lightning. Additional random modifiers can change these results.",
+    "SLS Lightning power is 0.4 + 0.05 * game level; Frost is 0.4 + 0.01 * game level. Game level is stars + 1.",
+    "Snuffiss has 57.728 percent lightning resistance and native 0.5 frost damage multiplier from chest armor.",
+    "Shaman melee is modeled. Its poison payload at 24 stars is 210 before defenses; poison timing and healing are not modeled.",
+    "Wave counts are design targets. PR 19 creature overrides do not guarantee exact wave composition.",
+    "Fixed managed stars require the PR 19 Fortress integration and compatible SLS spawn-management API.",
+    "Bear prefab Bjorn must be added to the shrine creature catalog. High stars also increase creature size."
+  ],
+  "sls_modifier_powers": {"Lightning": [0.4, 0.05], "Frost": [0.4, 0.01]},
+  "player": {
+    "health": 672.45, "armor": 186.36, "low_armor": 219.96,
+    "threshold": 75, "physical_resist": 48.12, "elemental_resist": 38.728,
+    "lightning_resist": 57.728, "frost_multiplier": 0.5,
+    "hit": 500, "interval": 0.8, "windup": 0.4, "uptime": 70, "healing": 0
+  },
+  "roles": {
+    "Fodder": [0.5, 2, 1, 3, 8, null],
+    "Support": [0.5, 3, 1, 4, 8, null],
+    "Standard": [3, 8, 4, 8, 4, 7],
+    "Elite": [10, 25, 10, 25, 3, 5],
+    "Mini boss": [20, 60, null, null, 2, 4]
+  },
+  "enemies": [
+    {
+      "name": "Greydwarf", "prefab": "Greydwarf", "role": "Fodder",
+      "base_health": 40, "base_physical": 14, "stars": 19,
+      "health": 800, "hit": 0, "physical": 80.5, "elemental": 0,
+      "interval": 3, "contact": 40, "counts": [6, 6, 8, 8]
+    },
+    {
+      "name": "Brute", "prefab": "Greydwarf_Elite", "role": "Standard",
+      "base_health": 150, "base_physical": 30, "stars": 25,
+      "sls_modifiers": ["Lightning", "Frost"],
+      "health": 3900, "hit": 0, "physical": 217.5, "elemental": 0,
+      "interval": 4, "contact": 40, "counts": [2, 1, 2, 1]
+    },
+    {
+      "name": "Shaman (melee only)", "prefab": "Greydwarf_Shaman", "role": "Support",
+      "base_health": 60, "base_physical": 14, "stars": 24,
+      "health": 1500, "hit": 0, "physical": 98, "elemental": 0,
+      "interval": 4, "contact": 30, "counts": [1, 1, 1, 1]
+    },
+    {
+      "name": "Bear (bite)", "prefab": "Bjorn", "role": "Elite",
+      "base_health": 500, "base_physical": 55, "stars": 19,
+      "sls_modifiers": ["Lightning"],
+      "health": 10000, "hit": 0, "physical": 316.25, "elemental": 0,
+      "interval": 3, "contact": 50, "counts": [0, 1, 1, 1]
+    },
+    {
+      "name": "Troll (heavy hit)", "prefab": "Troll", "role": "Mini boss",
+      "base_health": 600, "base_physical": 70, "stars": 39,
+      "health": 24000, "hit": 0, "physical": 752.5, "elemental": 0,
+      "interval": 5, "contact": 50, "counts": [0, 0, 0, 1]
+    }
+  ],
+  "waves": ["First pack", "Bear pack", "Reinforced pack", "Troll pack"]
+}
