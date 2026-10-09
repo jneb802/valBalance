@@ -5,7 +5,7 @@ Temporary BepInEx test helper for a development character in a local proof world
 Build against the game version under test:
 
 ```sh
-dotnet build tools/shrine_balance/live_probe/ShrineDamageProbe.csproj \
+dotnet build live_probe/ShrineDamageProbe.csproj \
   -p:GameAssembly=/path/to/assembly_valheim.dll
 ```
 

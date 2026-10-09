@@ -1,14 +1,14 @@
-# Shrine Balance
+# valBalance
 
 A Python calculation model and command-line app for comparing player strength, creature roles, and wave composition. No dependencies beyond Python 3.9 or later. No game or server files are changed.
 
 ```sh
-python3 tools/shrine_balance/app.py weapon tools/shrine_balance/examples/snuffiss-weapon-source.json
-python3 tools/shrine_balance/app.py calibrate tools/shrine_balance/examples/blackforest-v3.json --weapon tools/shrine_balance/examples/snuffiss-weapon-source.json
-python3 tools/shrine_balance/app.py example /tmp/forest-scenario.json
+python3 app.py weapon examples/snuffiss-weapon-source.json
+python3 app.py calibrate examples/blackforest-v3.json --weapon examples/snuffiss-weapon-source.json
+python3 app.py example /tmp/forest-scenario.json
 # Enter verified scalar inputs before running the simpler constant-hit model:
-python3 tools/shrine_balance/app.py analyze /tmp/forest-scenario.json
-python3 tools/shrine_balance/app.py analyze /tmp/forest-scenario.json --json --output /tmp/forest-results.json
+python3 app.py analyze /tmp/forest-scenario.json
+python3 app.py analyze /tmp/forest-scenario.json --json --output /tmp/forest-results.json
 ```
 
 ## Metric names
@@ -86,5 +86,5 @@ Only these two immediate damage modifiers are supported. Other modifiers are rej
 ## Tests
 
 ```sh
-python3 -m unittest discover -s tools/shrine_balance -p 'test_*.py' -v
+python3 -m unittest discover -s . -p 'test_*.py' -v
 ```
