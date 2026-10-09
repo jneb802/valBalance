@@ -1,0 +1,50 @@
+{
+  "trials": 2000,
+  "seed": 19,
+  "include_initial_chain_hits": true,
+  "assumptions": [
+    "Primary spear attacks, full health, no dodge buff, no Crown, freshly eaten health foods, rested, full starting stamina for each isolated target.",
+    "Dry, alert, unstaggered target with zero armor. No enemy healing, blocking, movement, misses, chain returns, or collateral damage.",
+    "Nominal source animation cycle, immediate first status update and chain impact. Unity frame/input/network scheduling is not simulated. TTK is a scenario prediction, not an exact live value.",
+    "Uniform weapon skill rolls and independent double-damage and chain proc rolls. Each chain proc hits the isolated target once, without recursive weapon effects.",
+    "Both unresolved SLS/poison-conversion patch orders are reported separately. Quantiles are random-outcome samples, not guaranteed bounds.",
+    "Stamina cost 16 * (1 - 0.33) = 10.72 with zero attack-cost equipment/status adjustment. Max stamina 50 + 109 + 0.12 * 672.448. Regen multiplier 2 rested + 0.8996 equipped effects. World stamina regen rate 1; continuous idle recovery, no combat recovery or potions.",
+    "Defense uses intended health patch order: 672.448 HP. HTD excludes shield, parry, healing, lifesteal, avoidance, and protective magic. Shaman HTD describes melee only, not its poison attack.",
+    "Only listed SLS modifiers are modeled. Required modifiers do not exclude extra random modifiers in the shrine API.",
+    "Role targets apply to median isolated-target results under each patch order. Critical fodder kills can take one hit and fall below the TTK floor. No pack-clear time is inferred from these results."
+  ],
+  "stamina": {
+    "maximum": 239.69376,
+    "initial": 239.69376,
+    "cost_per_attack": 10.72,
+    "base_regen": 6,
+    "regen_multiplier": 2.8996,
+    "regen_delay": 1,
+    "regen_time_multiplier": 1
+  },
+  "player_defense": {
+    "health": 672.448,
+    "armor": 186.3616,
+    "low_armor": 219.9616,
+    "threshold": 75,
+    "physical_resist": 48.12,
+    "elemental_resist": 38.728,
+    "lightning_resist": 57.728,
+    "frost_multiplier": 0.5
+  },
+  "sls_modifier_powers": {"Lightning": [0.4, 0.05], "Frost": [0.4, 0.01]},
+  "roles": {
+    "Fodder": [0.5, 2, 1, 3, 8, null],
+    "Support": [0.5, 3, 1, 4, 8, null],
+    "Standard": [3, 8, 4, 8, 4, 7],
+    "Elite": [10, 25, 10, 25, 3, 5],
+    "Mini boss": [20, 60, null, null, 2, 4]
+  },
+  "enemies": [
+    {"prefab": "Greydwarf", "role": "Fodder", "stars": 19, "base_physical": 14, "sls_modifiers": []},
+    {"prefab": "Greydwarf_Elite", "role": "Standard", "stars": 25, "base_physical": 30, "sls_modifiers": ["Lightning", "Frost"]},
+    {"prefab": "Greydwarf_Shaman", "role": "Support", "stars": 20, "base_physical": 14, "sls_modifiers": []},
+    {"prefab": "Bjorn", "role": "Elite", "stars": 19, "base_physical": 55, "sls_modifiers": ["Lightning"]},
+    {"prefab": "Troll", "role": "Mini boss", "stars": 39, "base_physical": 70, "sls_modifiers": []}
+  ]
+}

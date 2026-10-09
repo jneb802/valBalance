@@ -4,6 +4,7 @@ A Python calculation model and command-line app for comparing player strength, c
 
 ```sh
 python3 tools/shrine_balance/app.py weapon tools/shrine_balance/examples/snuffiss-weapon-source.json
+python3 tools/shrine_balance/app.py calibrate tools/shrine_balance/examples/blackforest-v3.json --weapon tools/shrine_balance/examples/snuffiss-weapon-source.json
 python3 tools/shrine_balance/app.py example /tmp/forest-scenario.json
 # Enter verified scalar inputs before running the simpler constant-hit model:
 python3 tools/shrine_balance/app.py analyze /tmp/forest-scenario.json
@@ -25,7 +26,9 @@ python3 tools/shrine_balance/app.py analyze /tmp/forest-scenario.json --json --o
 
 The file contains primary spear attack animation events, speed changes, attack-state transitions, hit pause, poison/fire timing rules, and native/Epic Loot proc inputs. `weapon` reports exact per-strike outcomes for the supplied states and random rolls, plus unresolved inputs. It does **not** yet simulate the full fight. It returns `null` for TTK/HTK rather than inventing a repeated-attack interval or treating delayed damage as immediate.
 
-The remaining work before this build can calibrate events is runtime attack scheduling (including frame timing and stamina), confirmed SLS/Epic Loot damage-patch order, and a complete timed application of damage-over-time and bonus hits. The full-health/no-dodge-buff context is an explicit test case, not the character's current live state. Targets use their base native resistances and the recorded SLS poison multiplier; wetness, stagger, backstab, and random defensive modifiers require separate encounter states.
+`calibrate` runs the separate nominal single-target scenario model in `combat.py`. It includes timed fire/poison refresh, skill and double-damage rolls, initial chain hits, and stamina depletion/recovery. It integrates source animation events into a nominal cycle and reports each unresolved SLS/Epic Loot patch order separately. It does not report exact live timing. The full-health/no-dodge-buff context is an explicit test case, not the character's current live state. Targets use their base native resistances and the recorded SLS poison multiplier; wetness, stagger, backstab, and random defensive modifiers require separate encounter states.
+
+The [Black Forest v3 candidate](configs/blackforest-v3/README.md) contains the resulting star/modifier choices, role targets, reproducible sampled results, and YAML merge fragments. It uses six greydwarves, two brute/shaman selections, and one bear per pack; a unique troll joins the final pack. The full simulation assumptions and remaining live-validation requirements are recorded beside the config. No production files are changed by this app.
 
 `events` calculates exact HTK/TTK from a supplied sequence of **applied health changes**. Input fields are `monster_health`, `attack_start`, and time-ordered `events`, each with `time`, `kind` (`weapon_hit`, `dot`, `proc`, or `heal`), and nonnegative `amount`. Dot/proc events can kill the monster without adding to HTK. This path accepts authoritative event data; it does not synthesize missing events.
 
@@ -49,7 +52,7 @@ Contact percentage is the fraction of enemy attack opportunities that reach the 
 
 Optional `stars`, `base_health`, `base_physical`, and `base_elemental` inputs enable the nominal Season 8 star calculation. When `stars` is present, it overrides the supplied health and damage fields using `health = base_health * (1 + stars)` and `damage = base_damage * (1 + 0.25 * stars)`. Base elemental damage defaults to zero. This mode does not include custom per-creature stat overrides or SLS modifiers. The report includes resolved health, stars, and raw damage.
 
-The prior Black Forest star and modifier scenarios are retained as **withdrawn calibration drafts**. Their offensive inputs are now null, and `analyze` rejects them until verified inputs are supplied. The configuration fragment based on those durability targets was removed. Exact wave counts remain a design target, not a guarantee from the Fortress PR schema.
+The prior Black Forest star and modifier scenarios are retained as **withdrawn calibration drafts**. Their offensive inputs are now null, and `analyze` rejects them until verified inputs are supplied. Use v3 for the current source-based test candidate. Its catalog costs and existing wave format determine the pack counts; its two support selections can repeat.
 
 ## Defaults and provenance
 

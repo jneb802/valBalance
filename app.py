@@ -7,6 +7,7 @@ from pathlib import Path
 
 from model import DEFAULTS, analyze
 from weapon import audit, evaluate_events
+from combat import calibrate
 
 
 def format_value(value):
@@ -64,6 +65,9 @@ def main(argv=None):
     weapon.add_argument("scenario", type=Path)
     events = commands.add_parser("events", help="Calculate HTK/TTK from applied damage events; JSON output")
     events.add_argument("scenario", type=Path)
+    tuning = commands.add_parser("calibrate", help="Run source-based single-target scenarios; JSON output")
+    tuning.add_argument("scenario", type=Path)
+    tuning.add_argument("--weapon", required=True, type=Path)
     calculate = commands.add_parser("analyze", help="Analyze a scenario")
     calculate.add_argument("scenario", type=Path)
     calculate.add_argument("--json", action="store_true", help="Output machine-readable results")
@@ -78,6 +82,11 @@ def main(argv=None):
             return 0
         with args.scenario.open() as stream:
             data = json.load(stream)
+        if args.command == 'calibrate':
+            with args.weapon.open() as stream:
+                profile = json.load(stream)
+            print(json.dumps(calibrate(profile, data), indent=2, allow_nan=False))
+            return 0
         if args.command in ('weapon', 'events'):
             result = audit(data) if args.command == 'weapon' else evaluate_events(data)
             print(json.dumps(result, indent=2, allow_nan=False))

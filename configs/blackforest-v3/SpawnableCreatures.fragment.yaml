@@ -1,0 +1,38 @@
+# Merge these keys into the existing creatures map. Do not replace the full file.
+# These aliases need exclusion from unrelated levels without a creature whitelist.
+creatures:
+  EndForestGreydwarf:
+    spawnCost: 6
+    prefabName: Greydwarf
+    spawnType: common
+    biome: BlackForest
+    enabled: true
+    dropsEnabled: false
+  EndForestBrute:
+    spawnCost: 20
+    prefabName: Greydwarf_Elite
+    spawnType: rare
+    biome: BlackForest
+    enabled: true
+    dropsEnabled: false
+  EndForestShaman:
+    spawnCost: 20
+    prefabName: Greydwarf_Shaman
+    spawnType: rare
+    biome: BlackForest
+    enabled: true
+    dropsEnabled: false
+  EndForestBear:
+    spawnCost: 20
+    prefabName: Bjorn
+    spawnType: elite
+    biome: BlackForest
+    enabled: true
+    dropsEnabled: false
+  EndForestTroll:
+    spawnCost: 100
+    prefabName: Troll
+    spawnType: unique
+    biome: BlackForest
+    enabled: true
+    dropsEnabled: false
