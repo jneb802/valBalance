@@ -3,10 +3,31 @@
 A Python calculation model and command-line app for comparing player strength, creature roles, and wave composition. No dependencies beyond Python 3.9 or later. No game or server files are changed.
 
 ```sh
+python3 tools/shrine_balance/app.py weapon tools/shrine_balance/examples/snuffiss-weapon-source.json
 python3 tools/shrine_balance/app.py example /tmp/forest-scenario.json
+# Enter verified scalar inputs before running the simpler constant-hit model:
 python3 tools/shrine_balance/app.py analyze /tmp/forest-scenario.json
 python3 tools/shrine_balance/app.py analyze /tmp/forest-scenario.json --json --output /tmp/forest-results.json
 ```
+
+## Metric names
+
+- TTK: seconds for the player to kill a monster.
+- HTK: player hits needed to kill a monster.
+- HTD: monster hits needed to kill the player.
+- TTD: seconds until the monster or pack kills the player.
+
+## Actual player inputs
+
+`weapon.py` accepts weapon base damage by type, per-quality increases, quality, skill, equipped damage effects, socket effect totals, coin count, current/max health, dodge-buff state, target native resistance, target SLS damage-received multipliers, target armor, skill roll, and double-damage outcome. It separates immediate damage from fire, poison, and spirit payloads. It never turns an averaged payload into a hit count.
+
+`examples/snuffiss-weapon-source.json` contains data extracted from the production **1.0.16** asset bundle and assembly, the deployed Epic Loot assembly, the Season 8 config snapshot, and Snuffiss's saved equipped gear. It records source hashes. The local installed 1.0.17 assets were not used as the authoritative source.
+
+The file contains primary spear attack animation events, speed changes, attack-state transitions, hit pause, poison/fire timing rules, and native/Epic Loot proc inputs. `weapon` reports exact per-strike outcomes for the supplied states and random rolls, plus unresolved inputs. It does **not** yet simulate the full fight. It returns `null` for TTK/HTK rather than inventing a repeated-attack interval or treating delayed damage as immediate.
+
+The remaining work before this build can calibrate events is runtime attack scheduling (including frame timing and stamina), confirmed SLS/Epic Loot damage-patch order, and a complete timed application of damage-over-time and bonus hits. The full-health/no-dodge-buff context is an explicit test case, not the character's current live state. Targets use their base native resistances and the recorded SLS poison multiplier; wetness, stagger, backstab, and random defensive modifiers require separate encounter states.
+
+`events` calculates exact HTK/TTK from a supplied sequence of **applied health changes**. Input fields are `monster_health`, `attack_start`, and time-ordered `events`, each with `time`, `kind` (`weapon_hit`, `dot`, `proc`, or `heal`), and nonnegative `amount`. Dot/proc events can kill the monster without adding to HTK. This path accepts authoritative event data; it does not synthesize missing events.
 
 1. Generate the example JSON and edit player health, armor, resistances, effective immediate damage, and attack timings.
 2. Set creature health, role, and representative incoming attack. Set `hit` to override player damage for creatures with different defenses; zero uses the player default.
@@ -28,13 +49,13 @@ Contact percentage is the fraction of enemy attack opportunities that reach the 
 
 Optional `stars`, `base_health`, `base_physical`, and `base_elemental` inputs enable the nominal Season 8 star calculation. When `stars` is present, it overrides the supplied health and damage fields using `health = base_health * (1 + stars)` and `damage = base_damage * (1 + 0.25 * stars)`. Base elemental damage defaults to zero. This mode does not include custom per-creature stat overrides or SLS modifiers. The report includes resolved health, stars, and raw damage.
 
-`examples/blackforest-stars-v1.json` is the first star-only design. All creatures meet their durability targets under the illustrative offense assumptions. Brutes and bears do not meet damage targets. Exact wave counts remain a design target, not a guarantee from the Fortress PR schema.
+The prior Black Forest star and modifier scenarios are retained as **withdrawn calibration drafts**. Their offensive inputs are now null, and `analyze` rejects them until verified inputs are supplied. The configuration fragment based on those durability targets was removed. Exact wave counts remain a design target, not a guarantee from the Fortress PR schema.
 
 ## Defaults and provenance
 
 The player defenses come from the Snuffiss analysis in the October 9, 2026 shrine-design session, based on the October 1 character snapshot. They include equipped Epic Loot armor and resistance totals, three best health foods, and no Crown. Health uses the intended modifier order; use 646.24 instead of 672.45 to examine the unresolved alternative order. No character account identifiers or raw saves are included.
 
-The 500 effective immediate damage, 0.8-second attack interval, 0.4-second first-hit delay, 70% uptime, enemy timings, and contact percentages are **illustrative assumptions, not measurements of Snuffiss**. The earlier 791 mixed damage payload is intentionally not used. Creature health, raw damage, and wave counts are the preliminary Black Forest design, not live prefab defaults or a balanced recommendation. Shaman damage covers melee only; its poison and healing are excluded.
+There is **no default player hit damage, interval, first-hit delay, or attack uptime**. The previous values were placeholders, not measurements, and have been removed from all shipped scenarios. Synthetic values remain only in tests. Enemy timing and contact values in the old draft are also unverified; do not use them for calibrated TTD/wave predictions. Creature health, raw damage, and wave counts in those drafts are proposals, not validated recommendations.
 
 Role targets reproduce the user's proposed starting ranges. They are not measured industry averages. TTK targets apply to uninterrupted attack-start timing. Practical TTK is separately shown.
 

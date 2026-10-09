@@ -1,0 +1,271 @@
+{
+  "version": 1,
+  "character": "Snuffiss",
+  "character_snapshot": "2026-10-01T20:05:15Z",
+  "game_version": "1.0.16",
+  "skill": 100,
+  "coins": 3221,
+  "weapon": {
+    "prefab": "SpearGold_BloodLightning",
+    "quality": 3,
+    "base_damage": {
+      "blunt": 0.0,
+      "slash": 0.0,
+      "pierce": 180.0,
+      "fire": 0.0,
+      "frost": 0.0,
+      "lightning": 45.0,
+      "poison": 0.0,
+      "spirit": 0.0
+    },
+    "per_quality": {
+      "blunt": 0.0,
+      "slash": 0.0,
+      "pierce": 10.0,
+      "fire": 0.0,
+      "frost": 0.0,
+      "lightning": 5.0,
+      "poison": 0.0,
+      "spirit": 0.0
+    },
+    "attack_damage_multiplier": 1.0,
+    "damage_per_missing_hp": 0.0020000000949949026,
+    "attack_stamina": 16.0,
+    "attack_animation": "spear_poke"
+  },
+  "effects": {
+    "added_damage_percent": {
+      "blunt": 0,
+      "slash": 0,
+      "pierce": 0,
+      "fire": 0,
+      "frost": 0,
+      "lightning": 0,
+      "poison": 99.0,
+      "spirit": 0
+    },
+    "modify_damage_percent": 21.84,
+    "coin_hoarder": 12.0,
+    "dodge_buff_percent": 33.0,
+    "poison_conversion_percent": 52.5,
+    "double_damage_chance_percent": 19.5,
+    "double_damage_multiplier": 2
+  },
+  "context": {
+    "description": "Explicit full-health, no dodge-buff primary-attack case; not a claim about current live HP.",
+    "max_health": 672.448,
+    "health": 672.448,
+    "dodge_buff_active": false
+  },
+  "animation": {
+    "clip_name": "Javelin Stab",
+    "clip_duration": 0.3666667938232422,
+    "state_speed": 1.0,
+    "equipment_speed_multiplier": 1,
+    "speed_events": [
+      {
+        "time": 0.0,
+        "speed": 0.800000011920929
+      },
+      {
+        "time": 0.1389485001564026,
+        "speed": 1.0
+      }
+    ],
+    "hit_time": 0.3092556595802307,
+    "hit_freeze": 0.15,
+    "exit_normalized_time": 1.2999999523162842,
+    "exit_transition": 0.30000001192092896,
+    "entry_transition": 0.20000000298023224
+  },
+  "proc_inputs": {
+    "native_chain": {
+      "prefab": "ChainLightningRed",
+      "chance": 0.25,
+      "base_lightning": 75
+    },
+    "epic_chain": {
+      "prefab": "ChainLightning",
+      "chance": 0.15,
+      "base_lightning": 75,
+      "effect_percent": 64.9,
+      "scaled_lightning": 48.675
+    },
+    "double_damage": {
+      "chance": 0.195,
+      "multiplier": 2
+    }
+  },
+  "dot_rules": {
+    "poison": {
+      "m_damageInterval": 1.0,
+      "m_baseTTL": 1.0,
+      "m_TTLPerDamage": 1.0,
+      "m_TTLPower": 0.5
+    },
+    "fire": {
+      "m_damageInterval": 1.0,
+      "m_ttl": 5.0
+    },
+    "poison_refresh": "Replace only when new payload >= remaining poison; recompute tick damage and TTL.",
+    "fire_refresh": "Add new fire to remaining fire; redistribute over TTL ticks; reset elapsed time."
+  },
+  "sls_order_candidates": [
+    "before_conversion",
+    "after_conversion"
+  ],
+  "targets": [
+    {
+      "name": "Greydwarf",
+      "base_health": 40.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 2,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 0.5,
+        "spirit": 0
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "Greydwarf_Elite",
+      "base_health": 150.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 2,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 0.5,
+        "spirit": 0
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "Greydwarf_Shaman",
+      "base_health": 60.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 2,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 0.5,
+        "spirit": 0
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "Bjorn",
+      "base_health": 500.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 0.5,
+        "slash": 1,
+        "pierce": 0.5,
+        "fire": 1.5,
+        "frost": 0.5,
+        "lightning": 1,
+        "poison": 1,
+        "spirit": 0
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "Troll",
+      "base_health": 600.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 0.5,
+        "slash": 1,
+        "pierce": 1.5,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1,
+        "spirit": 0
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    }
+  ],
+  "unresolved": [
+    "SLS damage-received patch order relative to Epic Loot conversion has not been verified on the executing client. Both outcomes are reported.",
+    "Repeat attack cadence must include animator transition and fixed-update ordering, the 0.15-second hit pause, and any runtime animation handlers; clip landmarks are not a verified repeat interval.",
+    "Full TTK/HTK requires a timed sequence with poison/fire refresh, native and Epic Loot chain hits, double-damage rolls, stamina depletion/recovery, and target state. Weapon audit does not claim to simulate these.",
+    "Target stagger/backstab and hit count across multiple colliders require explicit encounter state.",
+    "Actual current player health and dodge-buff activity change weapon damage; the supplied context is explicitly full health and no dodge buff."
+  ],
+  "sources": {
+    "game_assembly_sha256": "50035055f9b158a025cacd25e038b603943f7c2a465da3021707b5f1e44e39fd",
+    "game_bundle_sha256": "c66eacffa638148ca3f82a0c7735129b95379449f5f5bb385de31d313436390e",
+    "epicloot_assembly_sha256": "802790e0cbd8a6f951627619a488b84e6a406e8770e2687b2fff8b63d2adf9ea",
+    "weapon_prefab": "Assets/GameElements/Items/weapons/SpearGold_BloodLightning.prefab",
+    "animator": "Assets/Characters/Player/animation/Player_animator.controller, Base Layer.spear_poke",
+    "code": [
+      "ItemDrop.ItemData.GetDamage",
+      "Attack.ModifyDamage",
+      "Attack.DoMeleeAttack",
+      "Attack.SpawnOnHit",
+      "Skills.GetRandomSkillFactor",
+      "CharacterAnimEvent.Speed/FreezeFrame",
+      "Humanoid.StartAttack/InAttack",
+      "SE_Poison.AddDamage",
+      "SE_Burning.AddFireDamage",
+      "EpicLoot ModifyDamage/CoinHoarder/PoisonToTrueDamage/ChanceDoubleDamage/ChainLightning"
+    ],
+    "sls_snapshot": "Season 8 LevelSettings.yaml: All DamageRecievedModifiers Poison=1.5"
+  }
+}

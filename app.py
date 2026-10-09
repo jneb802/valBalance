@@ -6,6 +6,7 @@ import sys
 from pathlib import Path
 
 from model import DEFAULTS, analyze
+from weapon import audit, evaluate_events
 
 
 def format_value(value):
@@ -16,17 +17,18 @@ def format_value(value):
 
 def report(data, result):
     lines = ["SHRINE BALANCE — deterministic planning estimates", "",
-             "Creature TTK starts at attack initiation; player TTD starts at first impact.",
+             "TTK/HTK: player kills monster. TTD/HTD: monster or pack kills player.",
+             "TTK starts at player attack initiation; TTD starts at first incoming impact.",
              "HTD excludes healing, blocking, parrying, and random hit avoidance.", ""]
     for enemy, row in zip(data["enemies"], result["enemies"]):
         lines.extend([
             f"{row['name']} [{enemy['role']}] — {row['health']:g} HP" + (f" / {row['stars']} stars" if row['stars'] is not None else ""),
             f"  Raw attack: {row['raw_physical']:g} physical + {row['raw_elemental']:g} elemental",
             f"  SLS modifiers: {', '.join(row['sls_modifiers']) or 'none'}; added lightning: {row['raw_lightning']:g}; added frost: {row['raw_frost']:g}",
-            f"  HTK: {row['htk']} ({row['htk_rating']})",
-            f"  Focused TTK: {row['ttk']:.2f}s ({row['ttk_rating']}); practical estimate: {row['practical']:.2f}s",
-            f"  Received damage: {row['damage']:.2f} normal / {row['low_damage']:.2f} at low health",
-            f"  Player HTD: {format_value(row['htd'])} ({row['htd_rating']}); TTD: {format_value(row['ttd'])} seconds",
+            f"  HTK (player -> monster): {row['htk']} ({row['htk_rating']})",
+            f"  TTK (player -> monster): {row['ttk']:.2f}s ({row['ttk_rating']}); practical estimate: {row['practical']:.2f}s",
+            f"  Damage received by player: {row['damage']:.2f} normal / {row['low_damage']:.2f} at low health",
+            f"  HTD (monster -> player): {format_value(row['htd'])} ({row['htd_rating']}); TTD: {format_value(row['ttd'])} seconds",
         ])
         if row['target_possible']:
             upper = f" and <= {row['health_max']:g}" if row['health_max'] is not None else ""
@@ -58,6 +60,10 @@ def main(argv=None):
     commands = parser.add_subparsers(dest="command", required=True)
     example = commands.add_parser("example", help="Write an editable Snuffiss / Black Forest example")
     example.add_argument("output", type=Path)
+    weapon = commands.add_parser("weapon", help="Audit exact weapon layers and unresolved combat inputs; JSON output")
+    weapon.add_argument("scenario", type=Path)
+    events = commands.add_parser("events", help="Calculate HTK/TTK from applied damage events; JSON output")
+    events.add_argument("scenario", type=Path)
     calculate = commands.add_parser("analyze", help="Analyze a scenario")
     calculate.add_argument("scenario", type=Path)
     calculate.add_argument("--json", action="store_true", help="Output machine-readable results")
@@ -68,10 +74,14 @@ def main(argv=None):
             with args.output.open("x") as stream:
                 json.dump(DEFAULTS, stream, indent=2, allow_nan=False)
                 stream.write("\n")
-            print(f"Wrote {args.output}. Attack damage and timings are examples; replace them with measurements.")
+            print(f"Wrote {args.output}. Offensive inputs are unresolved; enter verified values before analysis.")
             return 0
         with args.scenario.open() as stream:
             data = json.load(stream)
+        if args.command in ('weapon', 'events'):
+            result = audit(data) if args.command == 'weapon' else evaluate_events(data)
+            print(json.dumps(result, indent=2, allow_nan=False))
+            return 0
         result = analyze(data)
         output = json.dumps(result, indent=2, allow_nan=False) + "\n" if args.json else report(data, result)
         if args.output:

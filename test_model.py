@@ -7,6 +7,7 @@ from model import DEFAULTS, analyze, hits_to_die, received
 class ModelTests(unittest.TestCase):
     def setUp(self):
         self.data = copy.deepcopy(DEFAULTS)
+        self.data['player'].update(hit=500, interval=0.8, windup=0.4, uptime=70)
 
     def test_hit_breakpoint_and_first_hit_delay(self):
         self.data['player'].update(hit=300, interval=0.8, windup=0.4)
@@ -55,7 +56,7 @@ class ModelTests(unittest.TestCase):
     def test_invalid_inputs(self):
         for key, value in [('interval', 0), ('health', float('nan')), ('uptime', 101), ('hit', -5)]:
             with self.subTest(key=key):
-                data = copy.deepcopy(DEFAULTS)
+                data = copy.deepcopy(self.data)
                 data['player'][key] = value
                 with self.assertRaises(ValueError):
                     analyze(data)

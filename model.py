@@ -5,9 +5,10 @@ from copy import deepcopy
 
 DEFAULTS = {
     "version": 1,
+    "input_status": "Incomplete: enter verified effective damage and timing. No offensive defaults are assumed.",
     "player": {"health": 672.45, "armor": 186.36, "low_armor": 219.96,
                "threshold": 75, "physical_resist": 48.12, "elemental_resist": 38.728,
-               "hit": 500, "interval": 0.8, "windup": 0.4, "uptime": 70,
+               "hit": None, "interval": None, "windup": None, "uptime": None,
                "healing": 0},
     "roles": {
         "Fodder": [0.5, 2, 1, 3, 8, None],
@@ -39,6 +40,8 @@ def validate(data):
     if not isinstance(p, dict):
         raise ValueError("Player must be an object")
     for key in DEFAULTS["player"]:
+        if p[key] is None:
+            raise ValueError(f"Unresolved player {key}: supply a verified input. No placeholder damage or timing is used. Use the weapon command for source-based damage and timing data.")
         number(p[key], f"Player {key}", 0.001 if key in ("health", "hit", "interval", "uptime") else 0,
                100 if key in ("threshold", "physical_resist", "elemental_resist", "uptime") else 1e9)
     for key in ("lightning_resist", "frost_resist"):
@@ -202,4 +205,6 @@ def analyze(data):
         waves.append({"name": name, "count": sum(counts), "clear": clear, "pressure": pressure,
                       "low_pressure": low_pressure, "ttd": ttd,
                       "ratio": clear / ttd if ttd else None})
-    return {"enemies": rows, "waves": waves}
+    return {"metric_definitions": {"ttk": "Seconds for player to kill monster", "htk": "Player hits to kill monster",
+                                   "htd": "Monster hits to kill player", "ttd": "Seconds until monster or pack kills player"},
+            "enemies": rows, "waves": waves}
