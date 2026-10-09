@@ -59,9 +59,9 @@ Requires the spawn-managed Fortress PR19 implementation and its compatible SLS A
 From the repository root:
 
 ```sh
-python3 tools/shrine_balance/app.py calibrate \
-  tools/shrine_balance/examples/blackforest-v3.json \
-  --weapon tools/shrine_balance/examples/snuffiss-weapon-source.json
+python3 app.py calibrate \
+  examples/blackforest-v3.json \
+  --weapon examples/snuffiss-weapon-source.json
 ```
 
 The checked-in `results.json` contains 2,000 seeded trials per creature under the observed order. `use_verified_patch_order` requires controlled-hit evidence with matching game version and SLS/Epic Loot hashes. Set it to false to compare both candidate orders. These checks do not certify other changes to the mod set; reobserve order after changing it. The model integrates the source animation landmarks into a nominal 0.961404-second successful attack cycle, with the first hit at 0.343993 seconds. It includes random skill damage, double damage, fire accumulation, poison replacement, initial chain hits, and source-form idle stamina recovery.
