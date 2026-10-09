@@ -1,56 +1,87 @@
 #!/usr/bin/env python3
-"""Run with python3 app.py; no third-party dependencies."""
+"""Analyze shrine scenarios from JSON using only Python's standard library."""
 import argparse
 import json
-from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
+import sys
 from pathlib import Path
 
 from model import DEFAULTS, analyze
 
 
-class Handler(BaseHTTPRequestHandler):
-    def send(self, status, body, kind="application/json"):
-        raw = body.encode()
-        self.send_response(status)
-        self.send_header("Content-Type", kind + "; charset=utf-8")
-        self.send_header("Content-Length", str(len(raw)))
-        self.send_header("Cache-Control", "no-store")
-        self.send_header("X-Content-Type-Options", "nosniff")
-        self.end_headers()
-        self.wfile.write(raw)
+def format_value(value):
+    if value is None:
+        return "not reached"
+    return f"{value:.2f}" if isinstance(value, float) else str(value)
 
-    def do_GET(self):
-        if self.path == "/":
-            self.send(200, Path(__file__).with_name("index.html").read_text(), "text/html")
-        elif self.path == "/defaults":
-            self.send(200, json.dumps(DEFAULTS))
+
+def report(data, result):
+    lines = ["SHRINE BALANCE — deterministic planning estimates", "",
+             "Creature TTK starts at attack initiation; player TTD starts at first impact.",
+             "HTD excludes healing, blocking, parrying, and random hit avoidance.", ""]
+    for enemy, row in zip(data["enemies"], result["enemies"]):
+        lines.extend([
+            f"{row['name']} [{enemy['role']}] — {enemy['health']:g} HP",
+            f"  HTK: {row['htk']} ({row['htk_rating']})",
+            f"  Focused TTK: {row['ttk']:.2f}s ({row['ttk_rating']}); practical estimate: {row['practical']:.2f}s",
+            f"  Received damage: {row['damage']:.2f} normal / {row['low_damage']:.2f} at low health",
+            f"  Player HTD: {format_value(row['htd'])} ({row['htd_rating']}); TTD: {format_value(row['ttd'])} seconds",
+        ])
+        if row['target_possible']:
+            upper = f" and <= {row['health_max']:g}" if row['health_max'] is not None else ""
+            lines.append(f"  Health fitting both targets: > {row['health_min_exclusive']:g}{upper}")
         else:
-            self.send(404, json.dumps({"error": "Not found"}))
+            lines.append("  No health value satisfies both targets at this attack speed.")
+        lines.append("")
+    for wave in result["waves"]:
+        lines.extend([
+            f"{wave['name']} — {wave['count']} enemies",
+            f"  Sequential clear estimate: {wave['clear']:.2f}s",
+            f"  Constant-pack damage/s: {wave['pressure']:.2f} normal / {wave['low_pressure']:.2f} at low health",
+            f"  Constant-pack TTD: {format_value(wave['ttd'])} seconds; clear/TTD: {format_value(wave['ratio'])}",
+            "",
+        ])
+    lines.extend([
+        "ASSUMPTIONS",
+        "Effective player damage must be immediate damage after target defenses, not total poison payload.",
+        "Practical TTK divides focused TTK by attack uptime. Wave clear sums sequential single-target kills.",
+        "Wave pressure holds all enemies alive and spreads damage evenly, minus entered healing.",
+        "No area attacks, poison timing, triggered effects, enemy healing, or spawn delays are simulated.",
+        "Ratios are comparisons of assumptions, not difficulty scores. Validate with in-game measurements.",
+    ])
+    return "\n".join(lines) + "\n"
 
-    def do_POST(self):
-        if self.path != "/analyze":
-            self.send(404, json.dumps({"error": "Not found"}))
-            return
-        try:
-            length = int(self.headers.get("Content-Length", "0"))
-            if not 0 < length <= 200_000:
-                raise ValueError("Scenario must be smaller than 200 KB")
-            data = json.loads(self.rfile.read(length))
-            result = analyze(data)
-            self.send(200, json.dumps(result, allow_nan=False))
-        except (ValueError, KeyError, TypeError, OverflowError) as exc:
-            self.send(400, json.dumps({"error": f"Invalid scenario: {exc}"}))
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    commands = parser.add_subparsers(dest="command", required=True)
+    example = commands.add_parser("example", help="Write an editable Snuffiss / Black Forest example")
+    example.add_argument("output", type=Path)
+    calculate = commands.add_parser("analyze", help="Analyze a scenario")
+    calculate.add_argument("scenario", type=Path)
+    calculate.add_argument("--json", action="store_true", help="Output machine-readable results")
+    calculate.add_argument("--output", type=Path, help="Write report to a new file instead of stdout")
+    args = parser.parse_args(argv)
+    try:
+        if args.command == "example":
+            with args.output.open("x") as stream:
+                json.dump(DEFAULTS, stream, indent=2, allow_nan=False)
+                stream.write("\n")
+            print(f"Wrote {args.output}. Attack damage and timings are examples; replace them with measurements.")
+            return 0
+        with args.scenario.open() as stream:
+            data = json.load(stream)
+        result = analyze(data)
+        output = json.dumps(result, indent=2, allow_nan=False) + "\n" if args.json else report(data, result)
+        if args.output:
+            with args.output.open("x") as stream:
+                stream.write(output)
+        else:
+            print(output, end="")
+        return 0
+    except (OSError, ValueError, KeyError, TypeError, OverflowError) as exc:
+        print(f"Error: {exc}", file=sys.stderr)
+        return 2
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--port", type=int, default=8765)
-    args = parser.parse_args()
-    server = ThreadingHTTPServer(("127.0.0.1", args.port), Handler)
-    print(f"Shrine Balance: http://127.0.0.1:{args.port}", flush=True)
-    try:
-        server.serve_forever()
-    except KeyboardInterrupt:
-        pass
-    finally:
-        server.server_close()
+    sys.exit(main())

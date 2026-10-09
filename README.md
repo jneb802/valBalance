@@ -1,18 +1,30 @@
 # Shrine Balance
 
-A local Python app for comparing player strength, creature roles, and wave composition. No dependencies beyond Python 3.9 or later. No game or server files are changed.
+A Python calculation model and command-line app for comparing player strength, creature roles, and wave composition. No dependencies beyond Python 3.9 or later. No game or server files are changed.
 
 ```sh
-python3 tools/shrine_balance/app.py
+python3 tools/shrine_balance/app.py example /tmp/forest-scenario.json
+python3 tools/shrine_balance/app.py analyze /tmp/forest-scenario.json
+python3 tools/shrine_balance/app.py analyze /tmp/forest-scenario.json --json --output /tmp/forest-results.json
 ```
 
-Open http://127.0.0.1:8765. Use `--port 8766` if needed. Stop with Ctrl+C.
-
-1. Enter player health, armor, resistances, effective immediate damage, and attack timings.
-2. Set creature health, role, and representative incoming attack. Set a player damage override for creatures with different defenses.
+1. Generate the example JSON and edit player health, armor, resistances, effective immediate damage, and attack timings.
+2. Set creature health, role, and representative incoming attack. Set `hit` to override player damage for creatures with different defenses; zero uses the player default.
 3. Compare hits to kill (HTK), time to kill (TTK), hits to die (HTD), and time to die (TTD) against editable role targets. The suggested health interval satisfies both TTK and HTK targets; its lower bound is exclusive.
 4. Set counts in each wave. Compare sequential clear time and constant-pack pressure.
-5. Export JSON to keep or share a scenario. Import restores inputs, roles, and waves. Valid changes also save in browser storage.
+5. Keep separate scenario JSON files to compare builds and event variants. Use `--json` for further analysis in Python. Output files must not already exist.
+
+The reusable entry point is `model.analyze(scenario)`. It validates input and returns `enemies` and `waves` result lists. It has no file, browser, network, or server dependencies.
+
+## Input schema
+
+- `version`: `1`.
+- `player`: health, normal `armor`, `low_armor`, low-health `threshold` percent, `physical_resist` and `elemental_resist` percentages, effective immediate `hit`, attack `interval` seconds, first-hit `windup` seconds, attack `uptime` percent, and sustained `healing` HP/second.
+- `roles`: role names mapped to six limits: `[TTK min, TTK max, HTK min, HTK max, player HTD min, player HTD max]`. Use `null` for an unrestricted limit.
+- `enemies`: name, role, health, effective player hit override, raw physical and elemental damage for one representative attack, enemy attack interval, contact percentage, and counts in wave order.
+- `waves`: wave names, in the same order as each enemy's `counts` array.
+
+Contact percentage is the fraction of enemy attack opportunities that reach the player after movement and active defense. It affects wave pressure only. Uptime is the fraction of combat time available for player attacks. It affects practical TTK and wave clear time, not focused HTK/TTK.
 
 ## Defaults and provenance
 
