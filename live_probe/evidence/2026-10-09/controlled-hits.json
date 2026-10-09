@@ -1,0 +1,682 @@
+{
+  "game_version": "1.0.16",
+  "client": "valnet-client-02",
+  "world": "TestingWorld",
+  "conversion_percent": 52.5,
+  "poison_received_multiplier": 1.5,
+  "observed_order": "before_conversion",
+  "cases": [
+    {
+      "prefab": "Greydwarf",
+      "starting_hp": 10000.0,
+      "input_damage": {
+        "blunt": 0.0,
+        "slash": 0.0,
+        "pierce": 0.0,
+        "fire": 0.0,
+        "frost": 0.0,
+        "lightning": 0.0,
+        "poison": 100.0,
+        "spirit": 0.0
+      },
+      "applied_events": [
+        {
+          "time": 62.2899361,
+          "hp_before": 10000.0,
+          "hp_after": 10000.0,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 62.2999763,
+          "hp_before": 10000.0,
+          "hp_after": 9968.5,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 31.5,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 62.2999763,
+          "hp_before": 9968.5,
+          "hp_after": 9962.5625,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 5.9375,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 63.3199768,
+          "hp_before": 9962.5625,
+          "hp_after": 9931.0625,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 31.5,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 63.3199768,
+          "hp_before": 9931.0625,
+          "hp_after": 9925.125,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 5.9375,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 64.33997,
+          "hp_before": 9925.125,
+          "hp_after": 9893.625,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 31.5,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 64.33997,
+          "hp_before": 9893.625,
+          "hp_after": 9887.6875,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 5.9375,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 65.35998,
+          "hp_before": 9887.6875,
+          "hp_after": 9856.1875,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 31.5,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 65.35998,
+          "hp_before": 9856.1875,
+          "hp_after": 9850.25,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 5.9375,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 66.3799744,
+          "hp_before": 9850.25,
+          "hp_after": 9818.75,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 31.5,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 66.3799744,
+          "hp_before": 9818.75,
+          "hp_after": 9812.8125,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 5.9375,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 67.39998,
+          "hp_before": 9812.8125,
+          "hp_after": 9806.875,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 5.9375,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 68.4199753,
+          "hp_before": 9806.875,
+          "hp_after": 9800.9375,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 5.9375,
+            "spirit": 0.0
+          }
+        }
+      ],
+      "after_sls": {
+        "blunt": 0.0,
+        "slash": 0.0,
+        "pierce": 0.0,
+        "fire": 0.0,
+        "frost": 0.0,
+        "lightning": 0.0,
+        "poison": 150.0,
+        "spirit": 0.0
+      },
+      "after_conversion": {
+        "blunt": 0.0,
+        "slash": 0.0,
+        "pierce": 0.0,
+        "fire": 78.75,
+        "frost": 0.0,
+        "lightning": 0.0,
+        "poison": 71.25,
+        "spirit": 0.0
+      },
+      "ending_hp": 9800.9375,
+      "first_hit_time": 62.2899361,
+      "observed_hp_loss": 199.0625
+    },
+    {
+      "prefab": "Troll",
+      "starting_hp": 10000.0,
+      "input_damage": {
+        "blunt": 0.0,
+        "slash": 0.0,
+        "pierce": 0.0,
+        "fire": 0.0,
+        "frost": 0.0,
+        "lightning": 0.0,
+        "poison": 100.0,
+        "spirit": 0.0
+      },
+      "applied_events": [
+        {
+          "time": 82.64394,
+          "hp_before": 10000.0,
+          "hp_after": 9881.875,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 118.125,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 82.65997,
+          "hp_before": 9881.875,
+          "hp_after": 9873.958,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 7.91666651,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 83.67997,
+          "hp_before": 9873.958,
+          "hp_after": 9866.041,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 7.91666651,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 84.69997,
+          "hp_before": 9866.041,
+          "hp_after": 9858.124,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 7.91666651,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 85.71997,
+          "hp_before": 9858.124,
+          "hp_after": 9850.207,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 7.91666651,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 86.73997,
+          "hp_before": 9850.207,
+          "hp_after": 9842.29,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 7.91666651,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 87.75997,
+          "hp_before": 9842.29,
+          "hp_after": 9834.373,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 7.91666651,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 88.77997,
+          "hp_before": 9834.373,
+          "hp_after": 9826.456,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 7.91666651,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 89.7999649,
+          "hp_before": 9826.456,
+          "hp_after": 9818.539,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 7.91666651,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 90.81997,
+          "hp_before": 9818.539,
+          "hp_after": 9810.622,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 7.91666651,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 91.8399658,
+          "hp_before": 9810.622,
+          "hp_after": 9802.705,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 7.91666651,
+            "spirit": 0.0
+          }
+        }
+      ],
+      "after_sls": {
+        "blunt": 0.0,
+        "slash": 0.0,
+        "pierce": 0.0,
+        "fire": 0.0,
+        "frost": 0.0,
+        "lightning": 0.0,
+        "poison": 150.0,
+        "spirit": 0.0
+      },
+      "after_conversion": {
+        "blunt": 0.0,
+        "slash": 0.0,
+        "pierce": 78.75,
+        "fire": 0.0,
+        "frost": 0.0,
+        "lightning": 0.0,
+        "poison": 71.25,
+        "spirit": 0.0
+      },
+      "ending_hp": 9802.705,
+      "first_hit_time": 82.64394,
+      "observed_hp_loss": 197.29500000000007
+    },
+    {
+      "prefab": "Greydwarf",
+      "starting_hp": 10000.0,
+      "input_damage": {
+        "blunt": 0.0,
+        "slash": 0.0,
+        "pierce": 0.0,
+        "fire": 0.0,
+        "frost": 0.0,
+        "lightning": 0.0,
+        "poison": 100.0,
+        "spirit": 0.0
+      },
+      "applied_events": [
+        {
+          "time": 102.853432,
+          "hp_before": 10000.0,
+          "hp_after": 10000.0,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 102.859962,
+          "hp_before": 10000.0,
+          "hp_after": 9968.5,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 31.5,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 102.859962,
+          "hp_before": 9968.5,
+          "hp_after": 9962.5625,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 5.9375,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 103.879967,
+          "hp_before": 9962.5625,
+          "hp_after": 9931.0625,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 31.5,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 103.879967,
+          "hp_before": 9931.0625,
+          "hp_after": 9925.125,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 5.9375,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 104.899963,
+          "hp_before": 9925.125,
+          "hp_after": 9893.625,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 31.5,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 104.899963,
+          "hp_before": 9893.625,
+          "hp_after": 9887.6875,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 5.9375,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 105.91996,
+          "hp_before": 9887.6875,
+          "hp_after": 9856.1875,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 31.5,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 105.91996,
+          "hp_before": 9856.1875,
+          "hp_after": 9850.25,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 5.9375,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 106.939964,
+          "hp_before": 9850.25,
+          "hp_after": 9818.75,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 31.5,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 106.939964,
+          "hp_before": 9818.75,
+          "hp_after": 9812.8125,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 5.9375,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 107.959961,
+          "hp_before": 9812.8125,
+          "hp_after": 9806.875,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 5.9375,
+            "spirit": 0.0
+          }
+        },
+        {
+          "time": 108.979958,
+          "hp_before": 9806.875,
+          "hp_after": 9800.9375,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 5.9375,
+            "spirit": 0.0
+          }
+        }
+      ],
+      "after_sls": {
+        "blunt": 0.0,
+        "slash": 0.0,
+        "pierce": 0.0,
+        "fire": 0.0,
+        "frost": 0.0,
+        "lightning": 0.0,
+        "poison": 150.0,
+        "spirit": 0.0
+      },
+      "after_conversion": {
+        "blunt": 0.0,
+        "slash": 0.0,
+        "pierce": 0.0,
+        "fire": 78.75,
+        "frost": 0.0,
+        "lightning": 0.0,
+        "poison": 71.25,
+        "spirit": 0.0
+      },
+      "ending_hp": 9800.9375,
+      "first_hit_time": 102.853432,
+      "observed_hp_loss": 199.0625
+    }
+  ]
+}

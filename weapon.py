@@ -22,6 +22,22 @@ def skill_range(skill):
     return max(0, center - 0.15), min(1, center + 0.15)
 
 
+def verified_patch_order(profile):
+    """Use an observed order only for its recorded game and mod binary inputs."""
+    evidence = profile['observed_patch_order']
+    if evidence.get('validation') != 'controlled-hit':
+        raise ValueError('Patch order needs controlled-hit evidence')
+    if evidence['game_version'] != profile['game_version']:
+        raise ValueError('Patch-order evidence is for a different game version')
+    for key in ('sls_assembly_sha256', 'epicloot_assembly_sha256'):
+        if evidence[key] != profile['sources'][key]:
+            raise ValueError('Patch-order evidence does not match ' + key)
+    order = evidence['order']
+    if order not in ('before_conversion', 'after_conversion'):
+        raise ValueError('Unknown observed patch order')
+    return order
+
+
 def coin_bonus(effect, coins):
     finite(effect, 'CoinHoarder effect')
     finite(coins, 'Carried coins')

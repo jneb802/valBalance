@@ -1,0 +1,168 @@
+[Info   :   BepInEx] Loading [ShrineDamageProbe 0.1.0]
+[Info   :ShrineDamageProbe] VERSION game=l-1.0.16
+[Info   :ShrineDamageProbe] ASSEMBLY name=StarLevelSystem sha256=c0ecc08ea9a17bc62311b6dee98ca03a0325c32bec5bec36bd096975605c3b6f
+[Info   :ShrineDamageProbe] ASSEMBLY name=EpicLoot sha256=802790e0cbd8a6f951627619a488b84e6a406e8770e2687b2fff8b63d2adf9ea
+[Info   :ShrineDamageProbe] ORDER owner=MidnightsFX.StarLevelSystem priority=400 index=0 method=StarLevelSystem.modules.NemesisSystem.NemesisPatches+TrackPlayerDamage.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=MidnightsFX.StarLevelSystem priority=400 index=1 method=StarLevelSystem.modules.Damage.DamagePatches+CharacterDamageModificationApply.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=MidnightsFX.StarLevelSystem priority=400 index=2 method=StarLevelSystem.Modifiers.ElementalChaos+ElementalChaosRandomDamageSelectionBonus.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=randyknapp.mods.epicloot priority=400 index=3 method=EpicLoot.src.Magic.MagicItemEffects.Helpers.SharedCharacterDamagePatch.EarlyPreDamagePatch before= after=
+[Info   :ShrineDamageProbe] ORDER owner=shudnal.ProtectiveWards priority=400 index=5 method=ProtectiveWards.BackgroundProtection+Character_Damage_BackgroundTameProtection.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=shudnal.ProtectiveWards priority=400 index=6 method=ProtectiveWards.Multipliers+Character_Damage_DamageMultipliers.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=warpalicious.PraetorisClient priority=400 index=7 method=EpicLootLeslieAlphaTest.src.MagicEffectss.AncestralSlam+Character_Clone_Damage_Patch.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=warpalicious.PraetorisClient priority=400 index=8 method=EpicLootLeslieAlphaTest.src.MagicEffectss.Onslaught+Attack_Trigger_Patch.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=warpalicious.PraetorisClient priority=400 index=9 method=EpicLootLeslieAlphaTest.src.MagicEffectss.Whirlwind+Whirlwind_Damage_Patch.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=randyknapp.mods.epicloot priority=0 index=4 method=EpicLoot.src.Magic.MagicItemEffects.Helpers.SharedCharacterDamagePatch.LastPreDamagePatch before= after=
+[Info   :ShrineDamageProbe] OBSERVING StarLevelSystem.modules.Damage.DamagePatches+CharacterDamageModificationApply.Prefix
+[Info   :ShrineDamageProbe] OBSERVING EpicLoot.src.Magic.MagicItemEffects.Helpers.SharedCharacterDamagePatch.EarlyPreDamagePatch
+[Info   :ShrineDamageProbe] VERSION game=l-1.0.16
+[Info   :ShrineDamageProbe] ASSEMBLY name=StarLevelSystem sha256=c0ecc08ea9a17bc62311b6dee98ca03a0325c32bec5bec36bd096975605c3b6f
+[Info   :ShrineDamageProbe] ASSEMBLY name=EpicLoot sha256=802790e0cbd8a6f951627619a488b84e6a406e8770e2687b2fff8b63d2adf9ea
+[Info   :ShrineDamageProbe] ORDER owner=odin.shrine.damageprobe priority=800 index=10 method=ShrineDamageProbe.EnterDamage before= after=
+[Info   :ShrineDamageProbe] ORDER owner=MidnightsFX.StarLevelSystem priority=400 index=0 method=StarLevelSystem.modules.NemesisSystem.NemesisPatches+TrackPlayerDamage.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=MidnightsFX.StarLevelSystem priority=400 index=1 method=StarLevelSystem.modules.Damage.DamagePatches+CharacterDamageModificationApply.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=MidnightsFX.StarLevelSystem priority=400 index=2 method=StarLevelSystem.Modifiers.ElementalChaos+ElementalChaosRandomDamageSelectionBonus.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=randyknapp.mods.epicloot priority=400 index=3 method=EpicLoot.src.Magic.MagicItemEffects.Helpers.SharedCharacterDamagePatch.EarlyPreDamagePatch before= after=
+[Info   :ShrineDamageProbe] ORDER owner=shudnal.ProtectiveWards priority=400 index=5 method=ProtectiveWards.BackgroundProtection+Character_Damage_BackgroundTameProtection.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=shudnal.ProtectiveWards priority=400 index=6 method=ProtectiveWards.Multipliers+Character_Damage_DamageMultipliers.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=warpalicious.PraetorisClient priority=400 index=7 method=EpicLootLeslieAlphaTest.src.MagicEffectss.AncestralSlam+Character_Clone_Damage_Patch.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=warpalicious.PraetorisClient priority=400 index=8 method=EpicLootLeslieAlphaTest.src.MagicEffectss.Onslaught+Attack_Trigger_Patch.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=warpalicious.PraetorisClient priority=400 index=9 method=EpicLootLeslieAlphaTest.src.MagicEffectss.Whirlwind+Whirlwind_Damage_Patch.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=randyknapp.mods.epicloot priority=0 index=4 method=EpicLoot.src.Magic.MagicItemEffects.Helpers.SharedCharacterDamagePatch.LastPreDamagePatch before= after=
+[Info   :ShrineDamageProbe] TARGET received modifiers=0:1,2:1,1:1,3:1,4:1,5:1,6:1.5,7:1
+[Info   :ShrineDamageProbe] START case=Greydwarf-1944 owner=True level=1 hp=10000 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=100 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=62.2899361 ENTER Damage hp=10000 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=100 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=62.2899361 ENTER CharacterDamageModificationApply.Prefix blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=100 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=62.2899361 EXIT CharacterDamageModificationApply.Prefix blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=150 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=62.2899361 ENTER SharedCharacterDamagePatch.EarlyPreDamagePatch blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=150 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=62.2899361 EXIT SharedCharacterDamagePatch.EarlyPreDamagePatch blunt=0 slash=0 pierce=0 fire=78.75 frost=0 lightning=0 poison=71.25 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=62.2899361 ENTER RPC_Damage hp=10000 blunt=0 slash=0 pierce=0 fire=78.75 frost=0 lightning=0 poison=71.25 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=62.2899361 ENTER ApplyDamage hp=10000 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=62.2899361 EXIT ApplyDamage hp=10000 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=62.2899361 EXIT RPC_Damage hp=10000 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=62.2899361 EXIT Damage hp=10000 blunt=0 slash=0 pierce=0 fire=78.75 frost=0 lightning=0 poison=71.25 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=62.2999763 ENTER ApplyDamage hp=10000 blunt=0 slash=0 pierce=0 fire=31.5 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=62.2999763 EXIT ApplyDamage hp=9968.5 blunt=0 slash=0 pierce=0 fire=31.5 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=62.2999763 ENTER ApplyDamage hp=9968.5 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=62.2999763 EXIT ApplyDamage hp=9962.5625 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=63.3199768 ENTER ApplyDamage hp=9962.5625 blunt=0 slash=0 pierce=0 fire=31.5 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=63.3199768 EXIT ApplyDamage hp=9931.0625 blunt=0 slash=0 pierce=0 fire=31.5 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=63.3199768 ENTER ApplyDamage hp=9931.0625 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=63.3199768 EXIT ApplyDamage hp=9925.125 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=64.33997 ENTER ApplyDamage hp=9925.125 blunt=0 slash=0 pierce=0 fire=31.5 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=64.33997 EXIT ApplyDamage hp=9893.625 blunt=0 slash=0 pierce=0 fire=31.5 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=64.33997 ENTER ApplyDamage hp=9893.625 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=64.33997 EXIT ApplyDamage hp=9887.6875 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=65.35998 ENTER ApplyDamage hp=9887.6875 blunt=0 slash=0 pierce=0 fire=31.5 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=65.35998 EXIT ApplyDamage hp=9856.1875 blunt=0 slash=0 pierce=0 fire=31.5 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=65.35998 ENTER ApplyDamage hp=9856.1875 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=65.35998 EXIT ApplyDamage hp=9850.25 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=66.3799744 ENTER ApplyDamage hp=9850.25 blunt=0 slash=0 pierce=0 fire=31.5 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=66.3799744 EXIT ApplyDamage hp=9818.75 blunt=0 slash=0 pierce=0 fire=31.5 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=66.3799744 ENTER ApplyDamage hp=9818.75 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=66.3799744 EXIT ApplyDamage hp=9812.8125 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=67.39998 ENTER ApplyDamage hp=9812.8125 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=67.39998 EXIT ApplyDamage hp=9806.875 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=68.4199753 ENTER ApplyDamage hp=9806.875 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-1944 t=68.4199753 EXIT ApplyDamage hp=9800.9375 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] END case=Greydwarf-1944 hp=9800.9375
+[Info   :ShrineDamageProbe] CLEANUP restored equipment and removed probe creature/item
+[Info   :ShrineDamageProbe] VERSION game=l-1.0.16
+[Info   :ShrineDamageProbe] ASSEMBLY name=StarLevelSystem sha256=c0ecc08ea9a17bc62311b6dee98ca03a0325c32bec5bec36bd096975605c3b6f
+[Info   :ShrineDamageProbe] ASSEMBLY name=EpicLoot sha256=802790e0cbd8a6f951627619a488b84e6a406e8770e2687b2fff8b63d2adf9ea
+[Info   :ShrineDamageProbe] ORDER owner=odin.shrine.damageprobe priority=800 index=10 method=ShrineDamageProbe.EnterDamage before= after=
+[Info   :ShrineDamageProbe] ORDER owner=MidnightsFX.StarLevelSystem priority=400 index=0 method=StarLevelSystem.modules.NemesisSystem.NemesisPatches+TrackPlayerDamage.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=MidnightsFX.StarLevelSystem priority=400 index=1 method=StarLevelSystem.modules.Damage.DamagePatches+CharacterDamageModificationApply.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=MidnightsFX.StarLevelSystem priority=400 index=2 method=StarLevelSystem.Modifiers.ElementalChaos+ElementalChaosRandomDamageSelectionBonus.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=randyknapp.mods.epicloot priority=400 index=3 method=EpicLoot.src.Magic.MagicItemEffects.Helpers.SharedCharacterDamagePatch.EarlyPreDamagePatch before= after=
+[Info   :ShrineDamageProbe] ORDER owner=shudnal.ProtectiveWards priority=400 index=5 method=ProtectiveWards.BackgroundProtection+Character_Damage_BackgroundTameProtection.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=shudnal.ProtectiveWards priority=400 index=6 method=ProtectiveWards.Multipliers+Character_Damage_DamageMultipliers.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=warpalicious.PraetorisClient priority=400 index=7 method=EpicLootLeslieAlphaTest.src.MagicEffectss.AncestralSlam+Character_Clone_Damage_Patch.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=warpalicious.PraetorisClient priority=400 index=8 method=EpicLootLeslieAlphaTest.src.MagicEffectss.Onslaught+Attack_Trigger_Patch.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=warpalicious.PraetorisClient priority=400 index=9 method=EpicLootLeslieAlphaTest.src.MagicEffectss.Whirlwind+Whirlwind_Damage_Patch.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=randyknapp.mods.epicloot priority=0 index=4 method=EpicLoot.src.Magic.MagicItemEffects.Helpers.SharedCharacterDamagePatch.LastPreDamagePatch before= after=
+[Info   :ShrineDamageProbe] TARGET received modifiers=0:1,2:1,1:1,3:1,4:1,5:1,6:1.5,7:1
+[Info   :ShrineDamageProbe] START case=Troll-2447 owner=True level=1 hp=10000 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=100 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=82.64394 ENTER Damage hp=10000 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=100 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=82.64394 ENTER CharacterDamageModificationApply.Prefix blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=100 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=82.64394 EXIT CharacterDamageModificationApply.Prefix blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=150 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=82.64394 ENTER SharedCharacterDamagePatch.EarlyPreDamagePatch blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=150 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=82.64394 EXIT SharedCharacterDamagePatch.EarlyPreDamagePatch blunt=0 slash=0 pierce=78.75 fire=0 frost=0 lightning=0 poison=71.25 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=82.64394 ENTER RPC_Damage hp=10000 blunt=0 slash=0 pierce=78.75 fire=0 frost=0 lightning=0 poison=71.25 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=82.64394 ENTER ApplyDamage hp=10000 blunt=0 slash=0 pierce=118.125 fire=0 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=82.64394 EXIT ApplyDamage hp=9881.875 blunt=0 slash=0 pierce=118.125 fire=0 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=82.64394 EXIT RPC_Damage hp=9881.875 blunt=0 slash=0 pierce=118.125 fire=0 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=82.64394 EXIT Damage hp=9881.875 blunt=0 slash=0 pierce=78.75 fire=0 frost=0 lightning=0 poison=71.25 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=82.65997 ENTER ApplyDamage hp=9881.875 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=7.91666651 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=82.65997 EXIT ApplyDamage hp=9873.958 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=7.91666651 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=83.67997 ENTER ApplyDamage hp=9873.958 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=7.91666651 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=83.67997 EXIT ApplyDamage hp=9866.041 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=7.91666651 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=84.69997 ENTER ApplyDamage hp=9866.041 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=7.91666651 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=84.69997 EXIT ApplyDamage hp=9858.124 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=7.91666651 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=85.71997 ENTER ApplyDamage hp=9858.124 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=7.91666651 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=85.71997 EXIT ApplyDamage hp=9850.207 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=7.91666651 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=86.73997 ENTER ApplyDamage hp=9850.207 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=7.91666651 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=86.73997 EXIT ApplyDamage hp=9842.29 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=7.91666651 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=87.75997 ENTER ApplyDamage hp=9842.29 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=7.91666651 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=87.75997 EXIT ApplyDamage hp=9834.373 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=7.91666651 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=88.77997 ENTER ApplyDamage hp=9834.373 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=7.91666651 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=88.77997 EXIT ApplyDamage hp=9826.456 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=7.91666651 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=89.7999649 ENTER ApplyDamage hp=9826.456 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=7.91666651 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=89.7999649 EXIT ApplyDamage hp=9818.539 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=7.91666651 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=90.81997 ENTER ApplyDamage hp=9818.539 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=7.91666651 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=90.81997 EXIT ApplyDamage hp=9810.622 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=7.91666651 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=91.8399658 ENTER ApplyDamage hp=9810.622 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=7.91666651 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Troll-2447 t=91.8399658 EXIT ApplyDamage hp=9802.705 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=7.91666651 spirit=0
+[Info   :ShrineDamageProbe] END case=Troll-2447 hp=9802.705
+[Info   :ShrineDamageProbe] CLEANUP restored equipment and removed probe creature/item
+[Info   :ShrineDamageProbe] VERSION game=l-1.0.16
+[Info   :ShrineDamageProbe] ASSEMBLY name=StarLevelSystem sha256=c0ecc08ea9a17bc62311b6dee98ca03a0325c32bec5bec36bd096975605c3b6f
+[Info   :ShrineDamageProbe] ASSEMBLY name=EpicLoot sha256=802790e0cbd8a6f951627619a488b84e6a406e8770e2687b2fff8b63d2adf9ea
+[Info   :ShrineDamageProbe] ORDER owner=odin.shrine.damageprobe priority=800 index=10 method=ShrineDamageProbe.EnterDamage before= after=
+[Info   :ShrineDamageProbe] ORDER owner=MidnightsFX.StarLevelSystem priority=400 index=0 method=StarLevelSystem.modules.NemesisSystem.NemesisPatches+TrackPlayerDamage.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=MidnightsFX.StarLevelSystem priority=400 index=1 method=StarLevelSystem.modules.Damage.DamagePatches+CharacterDamageModificationApply.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=MidnightsFX.StarLevelSystem priority=400 index=2 method=StarLevelSystem.Modifiers.ElementalChaos+ElementalChaosRandomDamageSelectionBonus.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=randyknapp.mods.epicloot priority=400 index=3 method=EpicLoot.src.Magic.MagicItemEffects.Helpers.SharedCharacterDamagePatch.EarlyPreDamagePatch before= after=
+[Info   :ShrineDamageProbe] ORDER owner=shudnal.ProtectiveWards priority=400 index=5 method=ProtectiveWards.BackgroundProtection+Character_Damage_BackgroundTameProtection.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=shudnal.ProtectiveWards priority=400 index=6 method=ProtectiveWards.Multipliers+Character_Damage_DamageMultipliers.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=warpalicious.PraetorisClient priority=400 index=7 method=EpicLootLeslieAlphaTest.src.MagicEffectss.AncestralSlam+Character_Clone_Damage_Patch.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=warpalicious.PraetorisClient priority=400 index=8 method=EpicLootLeslieAlphaTest.src.MagicEffectss.Onslaught+Attack_Trigger_Patch.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=warpalicious.PraetorisClient priority=400 index=9 method=EpicLootLeslieAlphaTest.src.MagicEffectss.Whirlwind+Whirlwind_Damage_Patch.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=randyknapp.mods.epicloot priority=0 index=4 method=EpicLoot.src.Magic.MagicItemEffects.Helpers.SharedCharacterDamagePatch.LastPreDamagePatch before= after=
+[Info   :ShrineDamageProbe] TARGET received modifiers=0:1,2:1,1:1,3:1,4:1,5:1,6:1.5,7:1
+[Info   :ShrineDamageProbe] START case=Greydwarf-2941 owner=True level=1 hp=10000 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=100 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=102.853432 ENTER Damage hp=10000 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=100 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=102.853432 ENTER CharacterDamageModificationApply.Prefix blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=100 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=102.853432 EXIT CharacterDamageModificationApply.Prefix blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=150 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=102.853432 ENTER SharedCharacterDamagePatch.EarlyPreDamagePatch blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=150 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=102.853432 EXIT SharedCharacterDamagePatch.EarlyPreDamagePatch blunt=0 slash=0 pierce=0 fire=78.75 frost=0 lightning=0 poison=71.25 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=102.853432 ENTER RPC_Damage hp=10000 blunt=0 slash=0 pierce=0 fire=78.75 frost=0 lightning=0 poison=71.25 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=102.853432 ENTER ApplyDamage hp=10000 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=102.853432 EXIT ApplyDamage hp=10000 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=102.853432 EXIT RPC_Damage hp=10000 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=102.853432 EXIT Damage hp=10000 blunt=0 slash=0 pierce=0 fire=78.75 frost=0 lightning=0 poison=71.25 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=102.859962 ENTER ApplyDamage hp=10000 blunt=0 slash=0 pierce=0 fire=31.5 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=102.859962 EXIT ApplyDamage hp=9968.5 blunt=0 slash=0 pierce=0 fire=31.5 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=102.859962 ENTER ApplyDamage hp=9968.5 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=102.859962 EXIT ApplyDamage hp=9962.5625 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=103.879967 ENTER ApplyDamage hp=9962.5625 blunt=0 slash=0 pierce=0 fire=31.5 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=103.879967 EXIT ApplyDamage hp=9931.0625 blunt=0 slash=0 pierce=0 fire=31.5 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=103.879967 ENTER ApplyDamage hp=9931.0625 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=103.879967 EXIT ApplyDamage hp=9925.125 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=104.899963 ENTER ApplyDamage hp=9925.125 blunt=0 slash=0 pierce=0 fire=31.5 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=104.899963 EXIT ApplyDamage hp=9893.625 blunt=0 slash=0 pierce=0 fire=31.5 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=104.899963 ENTER ApplyDamage hp=9893.625 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=104.899963 EXIT ApplyDamage hp=9887.6875 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=105.91996 ENTER ApplyDamage hp=9887.6875 blunt=0 slash=0 pierce=0 fire=31.5 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=105.91996 EXIT ApplyDamage hp=9856.1875 blunt=0 slash=0 pierce=0 fire=31.5 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=105.91996 ENTER ApplyDamage hp=9856.1875 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=105.91996 EXIT ApplyDamage hp=9850.25 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=106.939964 ENTER ApplyDamage hp=9850.25 blunt=0 slash=0 pierce=0 fire=31.5 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=106.939964 EXIT ApplyDamage hp=9818.75 blunt=0 slash=0 pierce=0 fire=31.5 frost=0 lightning=0 poison=0 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=106.939964 ENTER ApplyDamage hp=9818.75 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=106.939964 EXIT ApplyDamage hp=9812.8125 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=107.959961 ENTER ApplyDamage hp=9812.8125 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=107.959961 EXIT ApplyDamage hp=9806.875 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=108.979958 ENTER ApplyDamage hp=9806.875 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] TRACE case=Greydwarf-2941 t=108.979958 EXIT ApplyDamage hp=9800.9375 blunt=0 slash=0 pierce=0 fire=0 frost=0 lightning=0 poison=5.9375 spirit=0
+[Info   :ShrineDamageProbe] END case=Greydwarf-2941 hp=9800.9375
+[Info   :ShrineDamageProbe] CLEANUP restored equipment and removed probe creature/item

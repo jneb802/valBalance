@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>10</LangVersion>
+    <GameInstall Condition="'$(GameInstall)' == ''">$(HOME)/Library/Application Support/Steam/steamapps/common/Valheim</GameInstall>
+    <GameManaged Condition="'$(GameManaged)' == ''">$(GameInstall)/Valheim.app/Contents/Resources/Data/Managed</GameManaged>
+    <GameAssembly Condition="'$(GameAssembly)' == ''">$(GameManaged)/assembly_valheim.dll</GameAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BepInEx" HintPath="$(GameInstall)/BepInEx/core/BepInEx.dll" Private="false" />
+    <Reference Include="0Harmony" HintPath="$(GameInstall)/BepInEx/core/0Harmony.dll" Private="false" />
+    <Reference Include="assembly_valheim" HintPath="$(GameAssembly)" Private="false" />
+    <Reference Include="assembly_utils" HintPath="$(GameManaged)/assembly_utils.dll" Private="false" />
+    <Reference Include="UnityEngine" HintPath="$(GameManaged)/UnityEngine.dll" Private="false" />
+    <Reference Include="UnityEngine.CoreModule" HintPath="$(GameManaged)/UnityEngine.CoreModule.dll" Private="false" />
+    <Reference Include="UnityEngine.PhysicsModule" HintPath="$(GameManaged)/UnityEngine.PhysicsModule.dll" Private="false" />
+  </ItemGroup>
+</Project>

@@ -114,6 +114,15 @@
     "before_conversion",
     "after_conversion"
   ],
+  "observed_patch_order": {
+    "order": "before_conversion",
+    "validation": "controlled-hit",
+    "game_version": "1.0.16",
+    "sls_assembly_sha256": "c0ecc08ea9a17bc62311b6dee98ca03a0325c32bec5bec36bd096975605c3b6f",
+    "epicloot_assembly_sha256": "802790e0cbd8a6f951627619a488b84e6a406e8770e2687b2fff8b63d2adf9ea",
+    "scope": "Valnet client 02, local TestingWorld, Season 8 8.0.39 client mod set with shared binaries and combat config matched to production. Both relevant prefixes priority 400; SLS index 1, Epic Loot index 3. Same order after restart. Remote ownership is not tested.",
+    "evidence": "live_probe/evidence/2026-10-09/controlled-hits.json"
+  },
   "targets": [
     {
       "name": "Greydwarf",
@@ -242,13 +251,15 @@
     }
   ],
   "unresolved": [
-    "SLS damage-received patch order relative to Epic Loot conversion has not been verified on the executing client. Both outcomes are reported.",
+    "SLS-before-conversion was verified on the recorded Valnet baseline. Other mod sets or new binaries need another observation; both order candidates remain available for sensitivity analysis.",
     "Repeat attack cadence must include animator transition and fixed-update ordering, the 0.15-second hit pause, and any runtime animation handlers; clip landmarks are not a verified repeat interval.",
     "Full TTK/HTK requires a timed sequence with poison/fire refresh, native and Epic Loot chain hits, double-damage rolls, stamina depletion/recovery, and target state. Weapon audit does not claim to simulate these.",
     "Target stagger/backstab and hit count across multiple colliders require explicit encounter state.",
     "Actual current player health and dodge-buff activity change weapon damage; the supplied context is explicitly full health and no dodge buff."
   ],
   "sources": {
+    "sls_assembly_sha256": "c0ecc08ea9a17bc62311b6dee98ca03a0325c32bec5bec36bd096975605c3b6f",
+    "client_game_assembly_sha256": "68f3baa9454653e5d3cdde49ad8932d36c13716caaa15b352aa3fb530ad63d9c",
     "game_assembly_sha256": "50035055f9b158a025cacd25e038b603943f7c2a465da3021707b5f1e44e39fd",
     "game_bundle_sha256": "c66eacffa638148ca3f82a0c7735129b95379449f5f5bb385de31d313436390e",
     "epicloot_assembly_sha256": "802790e0cbd8a6f951627619a488b84e6a406e8770e2687b2fff8b63d2adf9ea",

@@ -1,0 +1,41 @@
+[Info   :ShrineDamageProbe] VERSION game=l-1.0.16
+[Info   :ShrineDamageProbe] ASSEMBLY name=StarLevelSystem sha256=c0ecc08ea9a17bc62311b6dee98ca03a0325c32bec5bec36bd096975605c3b6f
+[Info   :ShrineDamageProbe] ASSEMBLY name=EpicLoot sha256=802790e0cbd8a6f951627619a488b84e6a406e8770e2687b2fff8b63d2adf9ea
+[Info   :ShrineDamageProbe] ORDER owner=MidnightsFX.StarLevelSystem priority=400 index=0 method=StarLevelSystem.modules.NemesisSystem.NemesisPatches+TrackPlayerDamage.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=MidnightsFX.StarLevelSystem priority=400 index=1 method=StarLevelSystem.modules.Damage.DamagePatches+CharacterDamageModificationApply.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=MidnightsFX.StarLevelSystem priority=400 index=2 method=StarLevelSystem.Modifiers.ElementalChaos+ElementalChaosRandomDamageSelectionBonus.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=randyknapp.mods.epicloot priority=400 index=3 method=EpicLoot.src.Magic.MagicItemEffects.Helpers.SharedCharacterDamagePatch.EarlyPreDamagePatch before= after=
+[Info   :ShrineDamageProbe] ORDER owner=shudnal.ProtectiveWards priority=400 index=5 method=ProtectiveWards.BackgroundProtection+Character_Damage_BackgroundTameProtection.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=shudnal.ProtectiveWards priority=400 index=6 method=ProtectiveWards.Multipliers+Character_Damage_DamageMultipliers.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=warpalicious.PraetorisClient priority=400 index=7 method=EpicLootLeslieAlphaTest.src.MagicEffectss.AncestralSlam+Character_Clone_Damage_Patch.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=warpalicious.PraetorisClient priority=400 index=8 method=EpicLootLeslieAlphaTest.src.MagicEffectss.Onslaught+Attack_Trigger_Patch.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=warpalicious.PraetorisClient priority=400 index=9 method=EpicLootLeslieAlphaTest.src.MagicEffectss.Whirlwind+Whirlwind_Damage_Patch.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=randyknapp.mods.epicloot priority=0 index=4 method=EpicLoot.src.Magic.MagicItemEffects.Helpers.SharedCharacterDamagePatch.LastPreDamagePatch before= after=
+[Info   :ShrineDamageProbe] VERSION game=l-1.0.16
+[Info   :ShrineDamageProbe] ASSEMBLY name=StarLevelSystem sha256=c0ecc08ea9a17bc62311b6dee98ca03a0325c32bec5bec36bd096975605c3b6f
+[Info   :ShrineDamageProbe] ASSEMBLY name=EpicLoot sha256=802790e0cbd8a6f951627619a488b84e6a406e8770e2687b2fff8b63d2adf9ea
+[Info   :ShrineDamageProbe] ORDER owner=odin.shrine.damageprobe priority=800 index=10 method=ShrineDamageProbe.EnterDamage before= after=
+[Info   :ShrineDamageProbe] ORDER owner=MidnightsFX.StarLevelSystem priority=400 index=0 method=StarLevelSystem.modules.NemesisSystem.NemesisPatches+TrackPlayerDamage.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=MidnightsFX.StarLevelSystem priority=400 index=1 method=StarLevelSystem.modules.Damage.DamagePatches+CharacterDamageModificationApply.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=MidnightsFX.StarLevelSystem priority=400 index=2 method=StarLevelSystem.Modifiers.ElementalChaos+ElementalChaosRandomDamageSelectionBonus.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=randyknapp.mods.epicloot priority=400 index=3 method=EpicLoot.src.Magic.MagicItemEffects.Helpers.SharedCharacterDamagePatch.EarlyPreDamagePatch before= after=
+[Info   :ShrineDamageProbe] ORDER owner=shudnal.ProtectiveWards priority=400 index=5 method=ProtectiveWards.BackgroundProtection+Character_Damage_BackgroundTameProtection.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=shudnal.ProtectiveWards priority=400 index=6 method=ProtectiveWards.Multipliers+Character_Damage_DamageMultipliers.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=warpalicious.PraetorisClient priority=400 index=7 method=EpicLootLeslieAlphaTest.src.MagicEffectss.AncestralSlam+Character_Clone_Damage_Patch.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=warpalicious.PraetorisClient priority=400 index=8 method=EpicLootLeslieAlphaTest.src.MagicEffectss.Onslaught+Attack_Trigger_Patch.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=warpalicious.PraetorisClient priority=400 index=9 method=EpicLootLeslieAlphaTest.src.MagicEffectss.Whirlwind+Whirlwind_Damage_Patch.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=randyknapp.mods.epicloot priority=0 index=4 method=EpicLoot.src.Magic.MagicItemEffects.Helpers.SharedCharacterDamagePatch.LastPreDamagePatch before= after=
+[Info   :ShrineDamageProbe] VERSION game=l-1.0.16
+[Info   :ShrineDamageProbe] ASSEMBLY name=StarLevelSystem sha256=c0ecc08ea9a17bc62311b6dee98ca03a0325c32bec5bec36bd096975605c3b6f
+[Info   :ShrineDamageProbe] ASSEMBLY name=EpicLoot sha256=802790e0cbd8a6f951627619a488b84e6a406e8770e2687b2fff8b63d2adf9ea
+[Info   :ShrineDamageProbe] ORDER owner=odin.shrine.damageprobe priority=800 index=10 method=ShrineDamageProbe.EnterDamage before= after=
+[Info   :ShrineDamageProbe] ORDER owner=MidnightsFX.StarLevelSystem priority=400 index=0 method=StarLevelSystem.modules.NemesisSystem.NemesisPatches+TrackPlayerDamage.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=MidnightsFX.StarLevelSystem priority=400 index=1 method=StarLevelSystem.modules.Damage.DamagePatches+CharacterDamageModificationApply.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=MidnightsFX.StarLevelSystem priority=400 index=2 method=StarLevelSystem.Modifiers.ElementalChaos+ElementalChaosRandomDamageSelectionBonus.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=randyknapp.mods.epicloot priority=400 index=3 method=EpicLoot.src.Magic.MagicItemEffects.Helpers.SharedCharacterDamagePatch.EarlyPreDamagePatch before= after=
+[Info   :ShrineDamageProbe] ORDER owner=shudnal.ProtectiveWards priority=400 index=5 method=ProtectiveWards.BackgroundProtection+Character_Damage_BackgroundTameProtection.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=shudnal.ProtectiveWards priority=400 index=6 method=ProtectiveWards.Multipliers+Character_Damage_DamageMultipliers.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=warpalicious.PraetorisClient priority=400 index=7 method=EpicLootLeslieAlphaTest.src.MagicEffectss.AncestralSlam+Character_Clone_Damage_Patch.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=warpalicious.PraetorisClient priority=400 index=8 method=EpicLootLeslieAlphaTest.src.MagicEffectss.Onslaught+Attack_Trigger_Patch.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=warpalicious.PraetorisClient priority=400 index=9 method=EpicLootLeslieAlphaTest.src.MagicEffectss.Whirlwind+Whirlwind_Damage_Patch.Prefix before= after=
+[Info   :ShrineDamageProbe] ORDER owner=randyknapp.mods.epicloot priority=0 index=4 method=EpicLoot.src.Magic.MagicItemEffects.Helpers.SharedCharacterDamagePatch.LastPreDamagePatch before= after=

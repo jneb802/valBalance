@@ -1,8 +1,9 @@
 """Repeatable, source-based single-target scenarios, not a Unity runtime emulator."""
 import math
 import random
+from copy import deepcopy
 
-from weapon import animation_landmarks, finite, skill_range, strike
+from weapon import animation_landmarks, finite, skill_range, strike, verified_patch_order
 from model import received, hits_to_die, rating
 
 
@@ -131,6 +132,9 @@ def distribution(profile, target, health, stamina, trials, seed, proc_hits=True)
 
 def calibrate(profile, scenario):
     """Report sampled offense by patch order and separate unblocked incoming hits."""
+    profile = deepcopy(profile)
+    if scenario.get('use_verified_patch_order', False):
+        profile['sls_order_candidates'] = [verified_patch_order(profile)]
     targets = {t['name']: t for t in profile['targets']}
     rows = []
     p = scenario['player_defense']
@@ -159,5 +163,7 @@ def calibrate(profile, scenario):
                          received_normal=normal, received_low_health=low, htd=htd,
                          htd_rating=rating(htd, *limits[4:]), median_ratings=checks, offense=outcomes))
     return dict(status='Nominal single-target simulation; not live validated',
+                selected_patch_orders=profile['sls_order_candidates'],
+                patch_order_evidence=profile.get('observed_patch_order') if scenario.get('use_verified_patch_order', False) else None,
                 trials_per_patch_order=scenario['trials'], seed=scenario['seed'],
                 timing=animation_landmarks(profile), assumptions=scenario['assumptions'], enemies=rows)
