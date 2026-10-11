@@ -1,6 +1,16 @@
 # Production-based configuration candidate
 
-Prepared from a read-only download of Praetoris production on October 11, 2026. No production files were changed. The server log reports Fortress 0.38.0 and StarLevelSystem 1.24.0.
+Prepared from a read-only download of Praetoris production on October 11, 2026, then deployed that day at the user's explicit request. The server log reports Fortress 0.38.0 and StarLevelSystem 1.24.0.
+
+## Deployment
+
+Deployed directly through Fortress's server-sync hotreload path without restarting the server. Live source hashes still matched the audited baseline, and the pending scheduled release had no config-copy operations. No modpack or mod-list changes were made.
+
+Original files are backed up on production at `/home/ubuntu/valbalance-deploy-20261011-1QAaxc/original/`. That directory's parent also contains the candidate files, deployment script, reload log, and final validation log.
+
+The first atomic replacement did not trigger the LastWrite watcher; the script restored Levels.yaml and stopped. The successful retry explicitly updated each file timestamp after atomic replacement. Reload and server-to-client sync were confirmed for Levels, WildShrines, and SpawnableCreatures. The intermediate shrine reload warned that aliases were not yet in the catalog. A final shrine reload after the catalog update passed without Fortress warnings or errors.
+
+Already-loaded shrines retain cached definitions until they unload and reload. No encounter was started as part of deployment. Combat balance validation remains outstanding.
 
 Inspection of the deployed Fortress DLL found that its final schema uses `creatureRules`, `minStars`, `maxStars`, and `modifiers: {major: [...]}`. The earlier PR draft's `creatureOverrides`, `minimumStars`, `maximumStars`, and `slsModifiers` fields are not present. Both the parent fragment and this merged candidate now use the deployed schema. Modifier names and powers match production's SLS Modifiers.yaml: Lightning base 0.4/per-level 0.05; Frost base 0.4/per-level 0.01. The deployed SLS DLL contains the spawn-managed API.
 
