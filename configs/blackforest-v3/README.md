@@ -45,6 +45,8 @@ This is a repeated-pack event with a stronger finale, not the previously propose
 
 ## Configuration files
 
+The [October 11 production-based candidate](production-2026-10-11/README.md) contains complete merged files for both shrines, with explicit exclusions on all existing events. Production now uses a different SLS binary from the controlled-hit evidence, so the combat table above needs revalidation for that build.
+
 1. Merge `SpawnableCreatures.fragment.yaml` into the existing `creatures` map.
 2. Merge the tribute entries from `WildShrines.fragment.yaml` into the existing Black Forest (`VF_wild_shrine_blue1`) and Plains (`VF_wild_shrine_yellow1`) definitions. Replace any existing `TrophyForestTroll` entry within each shrine so the tribute selects this challenge. Preserve all other tribute entries. Both shrines offer the same Black Forest encounter for one Troll trophy; the encounter biome stays `BlackForest`.
 3. Preserve the recorded `DynamicBoss` format. No WaveStyles edit is required.
@@ -52,7 +54,7 @@ This is a repeated-pack event with a stronger finale, not the previously propose
 
 These are merge fragments, **not complete replacement files**. Creature drops are disabled. The entry cost is one standard Troll trophy (`TrophyForestTroll`) for initial testing. The current rare dust/essence/reagent reward bundle is retained as an economy placeholder, not a calibrated endgame payout. The wild-shrine schema has no boss-completion gate; possession of the tribute does not enforce progression.
 
-Requires the spawn-managed Fortress PR19 implementation and its compatible SLS API. Fixed star bounds bypass ordinary random spawn caps. Required modifier maps do not disable additional random SLS modifiers. Extra health/resistance/damage modifiers can invalidate the table. High stars also affect creature size. Fortress already assigns spawned Humanoids to the Boss faction; this candidate does not require a separate faction mod.
+Uses the deployed Fortress 0.38.0 `creatureRules` schema and its compatible SLS API. Fixed star bounds bypass ordinary random spawn caps. Inspect actual spawned modifiers during validation: any extra health/resistance/damage modifiers can invalidate the table. High stars also affect creature size. Fortress already assigns spawned Humanoids to the Boss faction; this candidate does not require a separate faction mod.
 
 ## Reproduce the calculations
 

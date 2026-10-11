@@ -1,0 +1,457 @@
+# Prepared from production on 2026-10-11. Recheck source hashes before deployment.
+creatures:
+  Neck:
+    spawnCost: 2
+    prefabName: Neck
+    spawnType: common
+    biome: Meadows
+    enabled: true
+    dropsEnabled: false
+  Boar:
+    spawnCost: 2
+    prefabName: Boar
+    spawnType: common
+    biome: Meadows
+    enabled: true
+    dropsEnabled: false
+  Deer:
+    spawnCost: 2
+    prefabName: Deer
+    spawnType: common
+    biome: Meadows
+    enabled: false
+    dropsEnabled: false
+  Greyling:
+    spawnCost: 3
+    prefabName: Greyling
+    spawnType: common
+    biome: Meadows
+    enabled: true
+    dropsEnabled: false
+  GreyDwarf:
+    spawnCost: 4
+    prefabName: Greydwarf
+    spawnType: common
+    biome: BlackForest
+    enabled: true
+    dropsEnabled: false
+  GreyDwarfBrute:
+    spawnCost: 8
+    prefabName: Greydwarf_Elite
+    spawnType: rare
+    biome: BlackForest
+    enabled: true
+    dropsEnabled: false
+  GreyDwarfShaman:
+    spawnCost: 8
+    prefabName: Greydwarf_Shaman
+    spawnType: rare
+    biome: BlackForest
+    enabled: true
+    dropsEnabled: false
+  Skeleton:
+    spawnCost: 4
+    prefabName: Skeleton_NoArcher
+    spawnType: common
+    biome: BlackForest
+    enabled: true
+    dropsEnabled: false
+  SkeletonArcher:
+    spawnCost: 5
+    prefabName: Skeleton
+    spawnType: common
+    biome: BlackForest
+    enabled: true
+    dropsEnabled: false
+  RancidSkeleton:
+    spawnCost: 9
+    prefabName: Skeleton_Poison
+    spawnType: rare
+    biome: BlackForest
+    enabled: true
+    dropsEnabled: false
+  Ghost:
+    spawnCost: 7
+    prefabName: Ghost
+    spawnType: rare
+    biome: BlackForest
+    enabled: true
+    dropsEnabled: false
+  Troll:
+    spawnCost: 20
+    prefabName: Troll
+    spawnType: elite
+    biome: BlackForest
+    enabled: true
+    dropsEnabled: false
+  Surtling:
+    spawnCost: 6
+    prefabName: Surtling
+    spawnType: rare
+    biome: Swamp
+    enabled: true
+    dropsEnabled: false
+  Leech:
+    spawnCost: 8
+    prefabName: Leech
+    spawnType: common
+    biome: Swamp
+    enabled: false
+    dropsEnabled: false
+  Wraith:
+    spawnCost: 10
+    prefabName: Wraith
+    spawnType: rare
+    biome: Swamp
+    enabled: true
+    dropsEnabled: false
+  Abomination:
+    spawnCost: 30
+    prefabName: Abomination
+    spawnType: elite
+    biome: Swamp
+    enabled: true
+    dropsEnabled: false
+  Draugr:
+    spawnCost: 10
+    prefabName: Draugr
+    spawnType: common
+    biome: Swamp
+    enabled: true
+    dropsEnabled: false
+  DraugrArcher:
+    spawnCost: 20
+    prefabName: Draugr_Ranged
+    spawnType: rare
+    biome: Swamp
+    enabled: true
+    dropsEnabled: false
+  DraugrElite:
+    spawnCost: 15
+    prefabName: Draugr_Elite
+    spawnType: rare
+    biome: Swamp
+    enabled: true
+    dropsEnabled: false
+  Blob:
+    spawnCost: 7
+    prefabName: Blob
+    spawnType: common
+    biome: Swamp
+    enabled: true
+    dropsEnabled: false
+  BlobElite:
+    spawnCost: 15
+    prefabName: BlobElite
+    spawnType: rare
+    biome: Swamp
+    enabled: true
+    dropsEnabled: false
+  Bat:
+    spawnCost: 3
+    prefabName: Bat
+    spawnType: common
+    biome: Mountain
+    enabled: false
+    dropsEnabled: false
+  IceDrake:
+    spawnCost: 25
+    prefabName: Hatchling
+    spawnType: rare
+    biome: Mountain
+    enabled: true
+    dropsEnabled: false
+  Wolf:
+    spawnCost: 18
+    prefabName: Wolf
+    spawnType: common
+    biome: Mountain
+    enabled: true
+    dropsEnabled: false
+  Fenring:
+    spawnCost: 28
+    prefabName: Fenring
+    spawnType: rare
+    biome: Mountain
+    enabled: true
+    dropsEnabled: false
+  Ulv:
+    spawnCost: 20
+    prefabName: Ulv
+    spawnType: common
+    biome: Mountain
+    enabled: true
+    dropsEnabled: false
+  Cultist:
+    spawnCost: 40
+    prefabName: Fenring_Cultist
+    spawnType: rare
+    biome: Mountain
+    enabled: true
+    dropsEnabled: false
+  StoneGolem:
+    spawnCost: 50
+    prefabName: StoneGolem
+    spawnType: elite
+    biome: Mountain
+    enabled: true
+    dropsEnabled: false
+  Deathsquito:
+    spawnCost: 20
+    prefabName: Deathsquito
+    spawnType: common
+    biome: Plains
+    enabled: true
+    dropsEnabled: false
+  Fuling:
+    spawnCost: 15
+    prefabName: Goblin
+    spawnType: common
+    biome: Plains
+    enabled: true
+    dropsEnabled: false
+  FulingArcher:
+    spawnCost: 20
+    prefabName: GoblinArcher
+    spawnType: common
+    biome: Plains
+    enabled: true
+    dropsEnabled: false
+  FulingBerserker:
+    spawnCost: 45
+    prefabName: GoblinBrute
+    spawnType: elite
+    biome: Plains
+    enabled: true
+    dropsEnabled: false
+  FulingShaman:
+    spawnCost: 40
+    prefabName: GoblinShaman
+    spawnType: rare
+    biome: Plains
+    enabled: true
+    dropsEnabled: false
+  Growth:
+    spawnCost: 35
+    prefabName: BlobTar
+    spawnType: rare
+    biome: Plains
+    enabled: true
+    dropsEnabled: false
+  Seeker:
+    spawnCost: 30
+    prefabName: Seeker
+    spawnType: common
+    biome: Mistlands
+    enabled: true
+    dropsEnabled: false
+  SeekerSoldier:
+    spawnCost: 75
+    prefabName: SeekerBrute
+    spawnType: elite
+    biome: Mistlands
+    enabled: true
+    dropsEnabled: false
+  SeekerBrood:
+    spawnCost: 10
+    prefabName: SeekerBrood
+    spawnType: common
+    biome: Mistlands
+    enabled: true
+    dropsEnabled: false
+  Gjall:
+    spawnCost: 75
+    prefabName: Gjall
+    spawnType: elite
+    biome: Mistlands
+    enabled: true
+    dropsEnabled: false
+  Tick:
+    spawnCost: 15
+    prefabName: Tick
+    spawnType: common
+    biome: Mistlands
+    enabled: true
+    dropsEnabled: false
+  DvergerRouge:
+    spawnCost: 40
+    prefabName: Dverger
+    spawnType: rare
+    biome: Mistlands
+    enabled: true
+    dropsEnabled: false
+  DvergerMage:
+    spawnCost: 75
+    prefabName: DvergerMage
+    spawnType: rare
+    biome: Mistlands
+    enabled: true
+    dropsEnabled: false
+  DvergerMageFire:
+    spawnCost: 75
+    prefabName: DvergerMageFire
+    spawnType: rare
+    biome: Mistlands
+    enabled: false
+    dropsEnabled: false
+  DvergerMageIce:
+    spawnCost: 75
+    prefabName: DvergerMageIce
+    spawnType: rare
+    biome: Mistlands
+    enabled: false
+    dropsEnabled: false
+  DvergerMageSupport:
+    spawnCost: 75
+    prefabName: DvergerMageSupport
+    spawnType: elite
+    biome: Mistlands
+    enabled: true
+    dropsEnabled: false
+  Asksvin:
+    spawnCost: 70
+    prefabName: Asksvin
+    spawnType: rare
+    biome: AshLands
+    enabled: true
+    dropsEnabled: false
+  Charred_Archer:
+    spawnCost: 60
+    prefabName: Charred_Archer
+    spawnType: common
+    biome: AshLands
+    enabled: true
+    dropsEnabled: false
+  Charred_Twitcher:
+    spawnCost: 45
+    prefabName: Charred_Twitcher
+    spawnType: common
+    biome: AshLands
+    enabled: true
+    dropsEnabled: false
+  Charred_Mage:
+    spawnCost: 100
+    prefabName: Charred_Mage
+    spawnType: elite
+    biome: AshLands
+    enabled: true
+    dropsEnabled: false
+  Charred_Melee:
+    spawnCost: 75
+    prefabName: Charred_Melee
+    spawnType: rare
+    biome: AshLands
+    enabled: true
+    dropsEnabled: false
+  FallenValkyrie:
+    spawnCost: 100
+    prefabName: FallenValkyrie
+    spawnType: elite
+    biome: AshLands
+    enabled: true
+    dropsEnabled: false
+  BlobLava:
+    spawnCost: 75
+    prefabName: BlobLava
+    spawnType: rare
+    biome: AshLands
+    enabled: true
+    dropsEnabled: false
+  Morgen:
+    spawnCost: 85
+    prefabName: Morgen
+    spawnType: elite
+    biome: AshLands
+    enabled: true
+    dropsEnabled: false
+  Volture:
+    spawnCost: 30
+    prefabName: Volture
+    spawnType: common
+    biome: AshLands
+    enabled: true
+    dropsEnabled: false
+  Eikthyr:
+    spawnCost: 40
+    prefabName: Eikthyr
+    spawnType: unique
+    biome: Meadows
+    enabled: true
+    dropsEnabled: false
+  TheElder:
+    spawnCost: 180
+    prefabName: gd_king
+    spawnType: unique
+    biome: BlackForest
+    enabled: true
+    dropsEnabled: false
+  Bonemass:
+    spawnCost: 250
+    prefabName: Bonemass
+    spawnType: unique
+    biome: Swamp
+    enabled: true
+    dropsEnabled: false
+  Moder:
+    spawnCost: 320
+    prefabName: Dragon
+    spawnType: unique
+    biome: Mountain
+    enabled: true
+    dropsEnabled: false
+  Yagluth:
+    spawnCost: 450
+    prefabName: GoblinKing
+    spawnType: unique
+    biome: Plains
+    enabled: true
+    dropsEnabled: false
+  TheQueen:
+    spawnCost: 600
+    prefabName: SeekerQueen
+    spawnType: unique
+    biome: Mistlands
+    enabled: true
+    dropsEnabled: false
+  Fader:
+    spawnCost: 800
+    prefabName: Fader
+    spawnType: unique
+    biome: AshLands
+    enabled: true
+    dropsEnabled: false
+  EndForestGreydwarf:
+    spawnCost: 6
+    prefabName: Greydwarf
+    spawnType: common
+    biome: BlackForest
+    enabled: true
+    dropsEnabled: false
+  EndForestBrute:
+    spawnCost: 20
+    prefabName: Greydwarf_Elite
+    spawnType: rare
+    biome: BlackForest
+    enabled: true
+    dropsEnabled: false
+  EndForestShaman:
+    spawnCost: 20
+    prefabName: Greydwarf_Shaman
+    spawnType: rare
+    biome: BlackForest
+    enabled: true
+    dropsEnabled: false
+  EndForestBear:
+    spawnCost: 20
+    prefabName: Bjorn
+    spawnType: elite
+    biome: BlackForest
+    enabled: true
+    dropsEnabled: false
+  EndForestTroll:
+    spawnCost: 100
+    prefabName: Troll
+    spawnType: unique
+    biome: BlackForest
+    enabled: true
+    dropsEnabled: false
