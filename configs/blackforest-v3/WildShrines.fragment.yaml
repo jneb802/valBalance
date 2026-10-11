@@ -7,8 +7,8 @@ wildShrines:
   shrineUnacceptedTributeLocalization: $wild_shrine_not_interested
   shrineLargerTributeRequiredLocalization: $wild_shrine_hungry
   wildShrineLevelsConfig:
-  - tributeName: TrophyFrostTroll
-    tributeAmount: 3
+  - tributeName: TrophyForestTroll
+    tributeAmount: 1
     rewards:
       DustRare: 10
       EssenceRare: 10

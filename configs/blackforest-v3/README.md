@@ -50,7 +50,7 @@ This is a repeated-pack event with a stronger finale, not the previously propose
 3. Preserve the recorded `DynamicBoss` format. No WaveStyles edit is required.
 4. Exclude the five `EndForest*` aliases from unrelated challenge/wild levels that lack an explicit creature whitelist. Enabled catalog aliases are globally eligible; their names do not isolate them to this event.
 
-These are merge fragments, **not complete replacement files**. Creature drops are disabled. The proposed entry cost is three `TrophyFrostTroll` items, whose prefab is in the production manifest. The current rare dust/essence/reagent reward bundle is retained as an economy placeholder, not a calibrated endgame payout. The wild-shrine schema has no boss-completion gate; possession of the tribute does not enforce progression.
+These are merge fragments, **not complete replacement files**. Creature drops are disabled. The entry cost is one standard Troll trophy (`TrophyForestTroll`) for initial testing. The current rare dust/essence/reagent reward bundle is retained as an economy placeholder, not a calibrated endgame payout. The wild-shrine schema has no boss-completion gate; possession of the tribute does not enforce progression.
 
 Requires the spawn-managed Fortress PR19 implementation and its compatible SLS API. Fixed star bounds bypass ordinary random spawn caps. Required modifier maps do not disable additional random SLS modifiers. Extra health/resistance/damage modifiers can invalidate the table. High stars also affect creature size. Fortress already assigns spawned Humanoids to the Boss faction; this candidate does not require a separate faction mod.
 
