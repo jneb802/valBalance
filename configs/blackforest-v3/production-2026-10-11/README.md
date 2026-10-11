@@ -4,6 +4,8 @@ Prepared from a read-only download of Praetoris production on October 11, 2026, 
 
 ## Deployment
 
+Later on October 11, the global SLS `[LevelSystem] MaximumCreatureScale` was changed from 5 to 2 at the user's request. The independent audit confirmed this was the only config change and found no creature-specific MaxSizeScale overrides. Production logged `Configuration file has been changed, reloading settings.` and `Updating size scale: 0.1 (minimum 0.1, maximum 2)`. The deployed handler requests an attribute refresh for loaded creatures. No restart was performed. The previous SLS config is backed up at `/home/ubuntu/sls-size-cap-sv0npqzs/MidnightsFX.StarLevelSystem.cfg` on production. This global setting affects creatures outside these events too.
+
 Deployed directly through Fortress's server-sync hotreload path without restarting the server. Live source hashes still matched the audited baseline, and the pending scheduled release had no config-copy operations. No modpack or mod-list changes were made.
 
 Original files are backed up on production at `/home/ubuntu/valbalance-deploy-20261011-1QAaxc/original/`. That directory's parent also contains the candidate files, deployment script, reload log, and final validation log.
