@@ -1,9 +1,66 @@
-# Append this tribute entry to the existing VF_wild_shrine_blue1 levels.
+# Merge these tribute entries into the existing Black Forest and Plains shrine levels.
+# Replace any existing TrophyForestTroll entry in each shrine to avoid duplicate tribute matches.
 # Do not replace its other tribute entries or add a duplicate shrine definition.
 wildShrines:
 - definitionForWildShrine: VF_wild_shrine_blue1
   wildShrineNameLocalization: $wild_shrine_blackforest
   wildShrineRequestLocalization: $wild_shrine_blackforest_request
+  shrineUnacceptedTributeLocalization: $wild_shrine_not_interested
+  shrineLargerTributeRequiredLocalization: $wild_shrine_hungry
+  wildShrineLevelsConfig:
+  - tributeName: TrophyForestTroll
+    tributeAmount: 1
+    rewards:
+      DustRare: 10
+      EssenceRare: 10
+      ReagentRare: 10
+    hardMode: false
+    siegeMode: false
+    wildshrineWaveStartLocalization: The old forest answers. Endgame solo challenge.
+    wildshrineWaveEndLocalization: The old forest falls silent.
+    wildLevelDefinition:
+      # Level controls the pack budget; stars below control individual strength.
+      levelIndex: 1
+      biome: BlackForest
+      waveFormat: DynamicBoss
+      levelWarningLocalization: Kill the healers. Watch the bear. The troll comes last.
+      maxCreaturesPerPhaseOverride: 10
+      onlySelectMonsters:
+      - EndForestGreydwarf
+      - EndForestBrute
+      - EndForestShaman
+      - EndForestBear
+      - EndForestTroll
+      commonSpawnModifiers: {}
+      rareSpawnModifiers: {}
+      eliteSpawnModifiers: {}
+      creatureOverrides:
+      - creatures: [EndForestGreydwarf]
+        minimumStars: 19
+        maximumStars: 19
+        slsModifiers: {}
+      - creatures: [EndForestBrute]
+        minimumStars: 25
+        maximumStars: 25
+        slsModifiers:
+          Lightning: Major
+          Frost: Major
+      - creatures: [EndForestShaman]
+        minimumStars: 20
+        maximumStars: 20
+        slsModifiers: {}
+      - creatures: [EndForestBear]
+        minimumStars: 19
+        maximumStars: 19
+        slsModifiers:
+          Lightning: Major
+      - creatures: [EndForestTroll]
+        minimumStars: 39
+        maximumStars: 39
+        slsModifiers: {}
+- definitionForWildShrine: VF_wild_shrine_yellow1
+  wildShrineNameLocalization: $wild_shrine_plains
+  wildShrineRequestLocalization: $wild_shrine_plains_request
   shrineUnacceptedTributeLocalization: $wild_shrine_not_interested
   shrineLargerTributeRequiredLocalization: $wild_shrine_hungry
   wildShrineLevelsConfig:

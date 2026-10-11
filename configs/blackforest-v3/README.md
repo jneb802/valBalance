@@ -46,7 +46,7 @@ This is a repeated-pack event with a stronger finale, not the previously propose
 ## Configuration files
 
 1. Merge `SpawnableCreatures.fragment.yaml` into the existing `creatures` map.
-2. Append the tribute entry from `WildShrines.fragment.yaml` to the existing `VF_wild_shrine_blue1` definition. Preserve its other tribute entries.
+2. Merge the tribute entries from `WildShrines.fragment.yaml` into the existing Black Forest (`VF_wild_shrine_blue1`) and Plains (`VF_wild_shrine_yellow1`) definitions. Replace any existing `TrophyForestTroll` entry within each shrine so the tribute selects this challenge. Preserve all other tribute entries. Both shrines offer the same Black Forest encounter for one Troll trophy; the encounter biome stays `BlackForest`.
 3. Preserve the recorded `DynamicBoss` format. No WaveStyles edit is required.
 4. Exclude the five `EndForest*` aliases from unrelated challenge/wild levels that lack an explicit creature whitelist. Enabled catalog aliases are globally eligible; their names do not isolate them to this event.
 
