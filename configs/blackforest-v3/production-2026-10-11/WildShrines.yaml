@@ -103,8 +103,8 @@ wildShrines:
       rareSpawnModifiers:
         linearIncreaseRandomWaveAdjustment: true
       eliteSpawnModifiers: null
-  - tributeName: TrophyForestTroll
-    tributeAmount: 1
+  - tributeName: Resin
+    tributeAmount: 50
     rewards:
       DustRare: 10
       EssenceRare: 10
@@ -283,8 +283,8 @@ wildShrines:
         linearIncreaseRandomWaveAdjustment: true
       eliteSpawnModifiers:
         linearIncreaseRandomWaveAdjustment: true
-  - tributeName: TrophyForestTroll
-    tributeAmount: 1
+  - tributeName: Resin
+    tributeAmount: 50
     rewards:
       DustRare: 10
       EssenceRare: 10

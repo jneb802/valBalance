@@ -1,5 +1,5 @@
 # Merge these tribute entries into the existing Black Forest and Plains shrine levels.
-# Replace any existing TrophyForestTroll entry in each shrine to avoid duplicate tribute matches.
+# Replace any existing Resin entry in each shrine to avoid duplicate tribute matches.
 # Do not replace its other tribute entries or add a duplicate shrine definition.
 wildShrines:
 - definitionForWildShrine: VF_wild_shrine_blue1
@@ -8,8 +8,8 @@ wildShrines:
   shrineUnacceptedTributeLocalization: $wild_shrine_not_interested
   shrineLargerTributeRequiredLocalization: $wild_shrine_hungry
   wildShrineLevelsConfig:
-  - tributeName: TrophyForestTroll
-    tributeAmount: 1
+  - tributeName: Resin
+    tributeAmount: 50
     rewards:
       DustRare: 10
       EssenceRare: 10
@@ -60,8 +60,8 @@ wildShrines:
   shrineUnacceptedTributeLocalization: $wild_shrine_not_interested
   shrineLargerTributeRequiredLocalization: $wild_shrine_hungry
   wildShrineLevelsConfig:
-  - tributeName: TrophyForestTroll
-    tributeAmount: 1
+  - tributeName: Resin
+    tributeAmount: 50
     rewards:
       DustRare: 10
       EssenceRare: 10

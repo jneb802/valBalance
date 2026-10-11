@@ -17,7 +17,7 @@ Inspection of the deployed Fortress DLL found that its final schema uses `creatu
 The three YAML files in this directory are complete merged candidates, unlike the parent directory's fragments:
 
 - `Levels.yaml`: add all five EndForest aliases to exclusions on all 36 existing challenge/arena levels.
-- `WildShrines.yaml`: preserve all seven existing tribute events and exclude the aliases from each; add the one-Troll-trophy challenge to the Black Forest and Plains shrines.
+- `WildShrines.yaml`: preserve all seven existing tribute events and exclude the aliases from each; add the 50-Resin challenge to the Black Forest and Plains shrines.
 - `SpawnableCreatures.yaml`: preserve existing entries and add the five event aliases.
 
 Parsed-data checks confirmed that existing event settings differ only by the added exclusions, all original creature entries and shrine metadata are preserved, and only the two new tribute events can select these aliases. Both new events retain identical encounter definitions. All generated files round-trip through YAML parsing.
