@@ -1,0 +1,1512 @@
+# Prepared from production on 2026-10-11. Recheck source hashes before deployment.
+levels:
+- levelName: null
+  levelIndex: 1
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_meadow
+  requiredGlobalKey: NONE
+  biome: Meadows
+  waveFormat: Tutorial
+  bossWaveFormat: TutorialBoss
+  maxCreatureFromPreviousBiomes: 0
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_meadows
+  bossLevelWarningLocalization: $shrine_warning_meadows_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: []
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 2
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_meadow
+  requiredGlobalKey: NONE
+  biome: Meadows
+  waveFormat: Tutorial
+  bossWaveFormat: TutorialBoss
+  maxCreatureFromPreviousBiomes: 0
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_meadows
+  bossLevelWarningLocalization: $shrine_warning_meadows_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers: null
+  eliteSpawnModifiers: null
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 3
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_meadow
+  requiredGlobalKey: NONE
+  biome: Meadows
+  waveFormat: Tutorial
+  bossWaveFormat: TutorialBoss
+  maxCreatureFromPreviousBiomes: 0
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_meadows
+  bossLevelWarningLocalization: $shrine_warning_meadows_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers: null
+  eliteSpawnModifiers: null
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 4
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_meadow
+  requiredGlobalKey: NONE
+  biome: Meadows
+  waveFormat: Starter
+  bossWaveFormat: TutorialBoss
+  maxCreatureFromPreviousBiomes: 0
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_meadows
+  bossLevelWarningLocalization: $shrine_warning_meadows_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers: null
+  eliteSpawnModifiers: null
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 5
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_meadow
+  requiredGlobalKey: NONE
+  biome: Meadows
+  waveFormat: Starter
+  bossWaveFormat: TutorialBoss
+  maxCreatureFromPreviousBiomes: 0
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_meadows
+  bossLevelWarningLocalization: $shrine_warning_meadows_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers: null
+  eliteSpawnModifiers: null
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 6
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_forest
+  requiredGlobalKey: defeated_eikthyr
+  biome: BlackForest
+  waveFormat: Easy
+  bossWaveFormat: EasyBoss
+  maxCreatureFromPreviousBiomes: 0
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_forest
+  bossLevelWarningLocalization: $shrine_warning_forest_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers: null
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 7
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_forest
+  requiredGlobalKey: defeated_eikthyr
+  biome: BlackForest
+  waveFormat: Normal
+  bossWaveFormat: EasyBoss
+  maxCreatureFromPreviousBiomes: 0
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_forest
+  bossLevelWarningLocalization: $shrine_warning_forest_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers: null
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 8
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_forest
+  requiredGlobalKey: defeated_eikthyr
+  biome: BlackForest
+  waveFormat: Normal
+  bossWaveFormat: Boss
+  maxCreatureFromPreviousBiomes: 0
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_forest
+  bossLevelWarningLocalization: $shrine_warning_forest_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers: null
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 9
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_forest
+  requiredGlobalKey: defeated_eikthyr
+  biome: BlackForest
+  waveFormat: Normal
+  bossWaveFormat: Boss
+  maxCreatureFromPreviousBiomes: 0
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_forest
+  bossLevelWarningLocalization: $shrine_warning_forest_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers: null
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 10
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_forest
+  requiredGlobalKey: defeated_eikthyr
+  biome: BlackForest
+  waveFormat: Hard
+  bossWaveFormat: Boss
+  maxCreatureFromPreviousBiomes: 0
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_forest
+  bossLevelWarningLocalization: $shrine_warning_forest_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 11
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_swamp
+  requiredGlobalKey: defeated_gdking
+  biome: Swamp
+  waveFormat: Easy
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_swamp
+  bossLevelWarningLocalization: $shrine_warning_swamp_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 12
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_swamp
+  requiredGlobalKey: defeated_gdking
+  biome: Swamp
+  waveFormat: Normal
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_swamp
+  bossLevelWarningLocalization: $shrine_warning_swamp_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 13
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_swamp
+  requiredGlobalKey: defeated_gdking
+  biome: Swamp
+  waveFormat: Normal
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_swamp
+  bossLevelWarningLocalization: $shrine_warning_swamp_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 14
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_swamp
+  requiredGlobalKey: defeated_gdking
+  biome: Swamp
+  waveFormat: Hard
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_swamp
+  bossLevelWarningLocalization: $shrine_warning_swamp_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 15
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_swamp
+  requiredGlobalKey: defeated_gdking
+  biome: Swamp
+  waveFormat: Hard
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_swamp
+  bossLevelWarningLocalization: $shrine_warning_swamp_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 16
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_mountain
+  requiredGlobalKey: defeated_bonemass
+  biome: Mountain
+  waveFormat: Normal
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_mountain
+  bossLevelWarningLocalization: $shrine_warning_mountain_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 17
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_mountain
+  requiredGlobalKey: defeated_bonemass
+  biome: Mountain
+  waveFormat: Normal
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_mountain
+  bossLevelWarningLocalization: $shrine_warning_mountain_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 18
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_mountain
+  requiredGlobalKey: defeated_bonemass
+  biome: Mountain
+  waveFormat: Hard
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_mountain
+  bossLevelWarningLocalization: $shrine_warning_mountain_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 19
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_mountain
+  requiredGlobalKey: defeated_bonemass
+  biome: Mountain
+  waveFormat: Hard
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_mountain
+  bossLevelWarningLocalization: $shrine_warning_mountain_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 20
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_mountain
+  requiredGlobalKey: defeated_bonemass
+  biome: Mountain
+  waveFormat: Expert
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_mountain
+  bossLevelWarningLocalization: $shrine_warning_mountain_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 21
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_plains
+  requiredGlobalKey: defeated_dragon
+  biome: Plains
+  waveFormat: Normal
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_plains
+  bossLevelWarningLocalization: $shrine_warning_plains_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 22
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_plains
+  requiredGlobalKey: defeated_dragon
+  biome: Plains
+  waveFormat: Hard
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_plains
+  bossLevelWarningLocalization: $shrine_warning_plains_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 23
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_plains
+  requiredGlobalKey: defeated_dragon
+  biome: Plains
+  waveFormat: VeryHard
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_plains
+  bossLevelWarningLocalization: $shrine_warning_plains_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 24
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_plains
+  requiredGlobalKey: defeated_dragon
+  biome: Plains
+  waveFormat: Normal
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_plains
+  bossLevelWarningLocalization: $shrine_warning_plains_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 25
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_plains
+  requiredGlobalKey: defeated_dragon
+  biome: Plains
+  waveFormat: Expert
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_plains
+  bossLevelWarningLocalization: $shrine_warning_plains_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 26
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_mistland
+  requiredGlobalKey: defeated_goblinking
+  biome: Mistlands
+  waveFormat: Hard
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_mistlands
+  bossLevelWarningLocalization: $shrine_warning_mistlands_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 27
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_mistland
+  requiredGlobalKey: defeated_goblinking
+  biome: Mistlands
+  waveFormat: VeryHard
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_mistlands
+  bossLevelWarningLocalization: $shrine_warning_mistlands_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 28
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_mistland
+  requiredGlobalKey: defeated_goblinking
+  biome: Mistlands
+  waveFormat: Expert
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_mistlands
+  bossLevelWarningLocalization: $shrine_warning_mistlands_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 29
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_mistland
+  requiredGlobalKey: defeated_goblinking
+  biome: Mistlands
+  waveFormat: Extreme
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_mistlands
+  bossLevelWarningLocalization: $shrine_warning_mistlands_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 30
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_mistland
+  requiredGlobalKey: defeated_goblinking
+  biome: Mistlands
+  waveFormat: Dynamic
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_mistlands
+  bossLevelWarningLocalization: $shrine_warning_mistlands_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 31
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_ashland
+  requiredGlobalKey: defeated_fader
+  biome: AshLands
+  waveFormat: Hard
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_ashlands
+  bossLevelWarningLocalization: $shrine_warning_ashlands_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 32
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_ashland
+  requiredGlobalKey: defeated_fader
+  biome: AshLands
+  waveFormat: VeryHard
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_ashlands
+  bossLevelWarningLocalization: $shrine_warning_ashlands_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 33
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_ashland
+  requiredGlobalKey: defeated_fader
+  biome: AshLands
+  waveFormat: Expert
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_ashlands
+  bossLevelWarningLocalization: $shrine_warning_ashlands_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 34
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_ashland
+  requiredGlobalKey: defeated_fader
+  biome: AshLands
+  waveFormat: Extreme
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_ashlands
+  bossLevelWarningLocalization: $shrine_warning_ashlands_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 35
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: true
+    Arena: true
+  levelMenuLocalization: $shrine_menu_ashland
+  requiredGlobalKey: defeated_fader
+  biome: AshLands
+  waveFormat: Dynamic
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_ashlands
+  bossLevelWarningLocalization: $shrine_warning_ashlands_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters: null
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  rareSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: true
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: false
+  eliteSpawnModifiers:
+    linearIncreaseRandomWaveAdjustment: false
+    linearIncreaseWaveAdjustment: false
+    linearDecreaseRandomWaveAdjustment: false
+    partialRandomWaveAdjustment: false
+    onlyGenerateInSecondHalf: true
+  uniqueSpawnModifiers: null
+- levelName: null
+  levelIndex: 9
+  numPhases: 0
+  levelForShrineTypes:
+    Challenge: false
+    Arena: true
+  levelMenuLocalization: $shrine_menu_troll_level
+  requiredGlobalKey: KilledTroll
+  biome: BlackForest
+  waveFormat: ElitesOnly
+  bossWaveFormat: DynamicBoss
+  maxCreatureFromPreviousBiomes: 1
+  previousBiomeSearchRange: 0
+  chancePreviousBiomeCreatureSelected: 0
+  previousBiomeCreaturesAddedStarPerBiome: false
+  levelWarningLocalization: $shrine_warning_trolls
+  bossLevelWarningLocalization: $shrine_warning_forest_boss
+  levelRewardOptionsLimitedTo: null
+  onlySelectMonsters:
+  - Troll
+  excludeSelectMonsters:
+  - EndForestGreydwarf
+  - EndForestBrute
+  - EndForestShaman
+  - EndForestBear
+  - EndForestTroll
+  commonSpawnModifiers: null
+  rareSpawnModifiers: null
+  eliteSpawnModifiers: null
+  uniqueSpawnModifiers: null

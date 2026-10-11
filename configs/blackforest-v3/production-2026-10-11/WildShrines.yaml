@@ -1,0 +1,381 @@
+# Prepared from production on 2026-10-11. Recheck source hashes before deployment.
+wildShrines:
+- definitionForWildShrine: VF_wild_shrine_green1
+  wildShrineNameLocalization: $wild_shrine_green
+  wildShrineRequestLocalization: $wild_shrine_green_request
+  shrineUnacceptedTributeLocalization: $wild_shrine_not_interested
+  shrineLargerTributeRequiredLocalization: $wild_shrine_hungry
+  wildShrineLevelsConfig:
+  - tributeName: TrophyBoar
+    tributeAmount: 3
+    rewards:
+      EssenceMagic: 10
+      DustMagic: 10
+      ReagentMagic: 10
+    hardMode: false
+    siegeMode: false
+    wildshrineWaveStartLocalization: $wild_boars_attack
+    wildshrineWaveEndLocalization: $wild_boars_defeated
+    wildLevelDefinition:
+      levelIndex: 2
+      biome: Meadows
+      waveFormat: Starter
+      levelWarningLocalization: $meadows_warning_wilderness
+      maxCreaturesPerPhaseOverride: 15
+      onlySelectMonsters:
+      - Boar
+      - Greyling
+      - Neck
+      excludeSelectMonsters:
+      - EndForestGreydwarf
+      - EndForestBrute
+      - EndForestShaman
+      - EndForestBear
+      - EndForestTroll
+      commonSpawnModifiers:
+        linearIncreaseRandomWaveAdjustment: true
+      rareSpawnModifiers: null
+      eliteSpawnModifiers: null
+- definitionForWildShrine: VF_wild_shrine_blue1
+  wildShrineNameLocalization: $wild_shrine_blackforest
+  wildShrineRequestLocalization: $wild_shrine_blackforest_request
+  shrineUnacceptedTributeLocalization: $wild_shrine_not_interested
+  shrineLargerTributeRequiredLocalization: $wild_shrine_hungry
+  wildShrineLevelsConfig:
+  - tributeName: TrophyGreydwarf
+    tributeAmount: 3
+    rewards:
+      DustRare: 10
+      EssenceRare: 10
+      ReagentRare: 10
+    hardMode: false
+    siegeMode: false
+    wildshrineWaveStartLocalization: $wild_greydwarfs_attack
+    wildshrineWaveEndLocalization: $wild_greydwarfs_defeated
+    wildLevelDefinition:
+      levelIndex: 3
+      biome: BlackForest
+      waveFormat: Easy
+      levelWarningLocalization: $blackforest_warning_wilderness
+      maxCreaturesPerPhaseOverride: 15
+      onlySelectMonsters:
+      - GreyDwarf
+      - GreyDwarfBrute
+      - GreyDwarfShaman
+      excludeSelectMonsters:
+      - EndForestGreydwarf
+      - EndForestBrute
+      - EndForestShaman
+      - EndForestBear
+      - EndForestTroll
+      commonSpawnModifiers:
+        linearIncreaseRandomWaveAdjustment: true
+      rareSpawnModifiers: null
+      eliteSpawnModifiers: null
+  - tributeName: TrophySkeleton
+    tributeAmount: 3
+    rewards:
+      DustRare: 10
+      EssenceRare: 10
+      ReagentRare: 10
+    hardMode: false
+    siegeMode: false
+    wildshrineWaveStartLocalization: $wild_skeleton_attack
+    wildshrineWaveEndLocalization: $wild_skeleton_defeated
+    wildLevelDefinition:
+      levelIndex: 4
+      biome: BlackForest
+      waveFormat: Easy
+      levelWarningLocalization: $blackforest_warning_wilderness
+      maxCreaturesPerPhaseOverride: 15
+      onlySelectMonsters:
+      - Skeleton
+      - SkeletonArcher
+      - RancidSkeleton
+      excludeSelectMonsters:
+      - EndForestGreydwarf
+      - EndForestBrute
+      - EndForestShaman
+      - EndForestBear
+      - EndForestTroll
+      commonSpawnModifiers:
+        linearIncreaseRandomWaveAdjustment: true
+      rareSpawnModifiers:
+        linearIncreaseRandomWaveAdjustment: true
+      eliteSpawnModifiers: null
+  - tributeName: Resin
+    tributeAmount: 50
+    rewards:
+      DustRare: 10
+      EssenceRare: 10
+      ReagentRare: 10
+    hardMode: false
+    siegeMode: false
+    wildshrineWaveStartLocalization: The old forest answers. Endgame solo challenge.
+    wildshrineWaveEndLocalization: The old forest falls silent.
+    wildLevelDefinition:
+      levelIndex: 1
+      biome: BlackForest
+      waveFormat: DynamicBoss
+      levelWarningLocalization: Kill the healers. Watch the bear. The troll comes
+        last.
+      maxCreaturesPerPhaseOverride: 10
+      onlySelectMonsters:
+      - EndForestGreydwarf
+      - EndForestBrute
+      - EndForestShaman
+      - EndForestBear
+      - EndForestTroll
+      commonSpawnModifiers: {}
+      rareSpawnModifiers: {}
+      eliteSpawnModifiers: {}
+      creatureRules:
+      - creatures:
+        - EndForestGreydwarf
+        minStars: 19
+        maxStars: 19
+      - creatures:
+        - EndForestBrute
+        minStars: 25
+        maxStars: 25
+        modifiers:
+          major:
+          - Lightning
+          - Frost
+      - creatures:
+        - EndForestShaman
+        minStars: 20
+        maxStars: 20
+      - creatures:
+        - EndForestBear
+        minStars: 19
+        maxStars: 19
+        modifiers:
+          major:
+          - Lightning
+      - creatures:
+        - EndForestTroll
+        minStars: 39
+        maxStars: 39
+- definitionForWildShrine: VF_wild_shrine_green2
+  wildShrineNameLocalization: $wild_shrine_swamp
+  wildShrineRequestLocalization: $wild_shrine_swamp_request
+  shrineUnacceptedTributeLocalization: $wild_shrine_not_interested
+  shrineLargerTributeRequiredLocalization: $wild_shrine_hungry
+  wildShrineLevelsConfig:
+  - tributeName: TrophyDraugr
+    tributeAmount: 3
+    rewards:
+      DustRare: 10
+      EssenceRare: 10
+      ReagentRare: 10
+      DustEpic: 10
+      EssenceEpic: 10
+      ReagentEpic: 10
+    hardMode: false
+    siegeMode: false
+    wildshrineWaveStartLocalization: $wild_undead_attack
+    wildshrineWaveEndLocalization: $wild_undead_defeated
+    wildLevelDefinition:
+      levelIndex: 7
+      biome: Swamp
+      waveFormat: Normal
+      levelWarningLocalization: $swamp_warning_wilderness
+      maxCreaturesPerPhaseOverride: 10
+      onlySelectMonsters:
+      - Draugr
+      - DraugrArcher
+      - Leech
+      - Blob
+      excludeSelectMonsters:
+      - EndForestGreydwarf
+      - EndForestBrute
+      - EndForestShaman
+      - EndForestBear
+      - EndForestTroll
+      commonSpawnModifiers:
+        linearIncreaseRandomWaveAdjustment: true
+      rareSpawnModifiers:
+        linearIncreaseRandomWaveAdjustment: true
+      eliteSpawnModifiers:
+        linearIncreaseRandomWaveAdjustment: true
+- definitionForWildShrine: VF_wild_shrine_blue2
+  wildShrineNameLocalization: $wild_shrine_mountain
+  wildShrineRequestLocalization: $wild_shrine_mountain_request
+  shrineUnacceptedTributeLocalization: $wild_shrine_not_interested
+  shrineLargerTributeRequiredLocalization: $wild_shrine_hungry
+  wildShrineLevelsConfig:
+  - tributeName: TrophyWolf
+    tributeAmount: 3
+    rewards:
+      DustEpic: 10
+      EssenceEpic: 10
+      ReagentEpic: 10
+      DustLegendary: 5
+      EssenceLegendary: 5
+      ReagentLegendary: 5
+    hardMode: false
+    siegeMode: false
+    wildshrineWaveStartLocalization: $wild_wolves_attack
+    wildshrineWaveEndLocalization: $wild_wolves_defeated
+    wildLevelDefinition:
+      levelIndex: 12
+      biome: Mountain
+      waveFormat: Normal
+      levelWarningLocalization: $mountain_warning_wilderness
+      maxCreaturesPerPhaseOverride: 10
+      onlySelectMonsters:
+      - Wolf
+      - Fenring
+      - Ulv
+      - Cultist
+      excludeSelectMonsters:
+      - EndForestGreydwarf
+      - EndForestBrute
+      - EndForestShaman
+      - EndForestBear
+      - EndForestTroll
+      commonSpawnModifiers:
+        linearIncreaseRandomWaveAdjustment: true
+      rareSpawnModifiers:
+        linearIncreaseRandomWaveAdjustment: true
+      eliteSpawnModifiers:
+        linearIncreaseRandomWaveAdjustment: true
+- definitionForWildShrine: VF_wild_shrine_yellow1
+  wildShrineNameLocalization: $wild_shrine_plains
+  wildShrineRequestLocalization: $wild_shrine_plains_request
+  shrineUnacceptedTributeLocalization: $wild_shrine_not_interested
+  shrineLargerTributeRequiredLocalization: $wild_shrine_hungry
+  wildShrineLevelsConfig:
+  - tributeName: TrophyGoblin
+    tributeAmount: 3
+    rewards:
+      DustEpic: 10
+      EssenceEpic: 10
+      ReagentEpic: 10
+      DustLegendary: 10
+      EssenceLegendary: 10
+      ReagentLegendary: 10
+    hardMode: false
+    siegeMode: false
+    wildshrineWaveStartLocalization: $wild_fulings_attack
+    wildshrineWaveEndLocalization: $wild_fulings_defeated
+    wildLevelDefinition:
+      levelIndex: 16
+      biome: Plains
+      waveFormat: Hard
+      levelWarningLocalization: $plains_warning_wilderness
+      maxCreaturesPerPhaseOverride: 10
+      onlySelectMonsters:
+      - Fuling
+      - FulingArcher
+      - FulingShaman
+      - FulingBerserker
+      excludeSelectMonsters:
+      - EndForestGreydwarf
+      - EndForestBrute
+      - EndForestShaman
+      - EndForestBear
+      - EndForestTroll
+      commonSpawnModifiers:
+        linearIncreaseRandomWaveAdjustment: true
+      rareSpawnModifiers:
+        linearIncreaseRandomWaveAdjustment: true
+      eliteSpawnModifiers:
+        linearIncreaseRandomWaveAdjustment: true
+  - tributeName: Resin
+    tributeAmount: 50
+    rewards:
+      DustRare: 10
+      EssenceRare: 10
+      ReagentRare: 10
+    hardMode: false
+    siegeMode: false
+    wildshrineWaveStartLocalization: The old forest answers. Endgame solo challenge.
+    wildshrineWaveEndLocalization: The old forest falls silent.
+    wildLevelDefinition:
+      levelIndex: 1
+      biome: BlackForest
+      waveFormat: DynamicBoss
+      levelWarningLocalization: Kill the healers. Watch the bear. The troll comes
+        last.
+      maxCreaturesPerPhaseOverride: 10
+      onlySelectMonsters:
+      - EndForestGreydwarf
+      - EndForestBrute
+      - EndForestShaman
+      - EndForestBear
+      - EndForestTroll
+      commonSpawnModifiers: {}
+      rareSpawnModifiers: {}
+      eliteSpawnModifiers: {}
+      creatureRules:
+      - creatures:
+        - EndForestGreydwarf
+        minStars: 19
+        maxStars: 19
+      - creatures:
+        - EndForestBrute
+        minStars: 25
+        maxStars: 25
+        modifiers:
+          major:
+          - Lightning
+          - Frost
+      - creatures:
+        - EndForestShaman
+        minStars: 20
+        maxStars: 20
+      - creatures:
+        - EndForestBear
+        minStars: 19
+        maxStars: 19
+        modifiers:
+          major:
+          - Lightning
+      - creatures:
+        - EndForestTroll
+        minStars: 39
+        maxStars: 39
+- definitionForWildShrine: VF_wild_shrine_purple1
+  wildShrineNameLocalization: $wild_shrine_mistlands
+  wildShrineRequestLocalization: $wild_shrine_mistlands_request
+  shrineUnacceptedTributeLocalization: $wild_shrine_not_interested
+  shrineLargerTributeRequiredLocalization: $wild_shrine_hungry
+  wildShrineLevelsConfig:
+  - tributeName: TrophySeeker
+    tributeAmount: 3
+    rewards:
+      DustLegendary: 15
+      EssenceLegendary: 15
+      ReagentLegendary: 15
+      DustMythic: 5
+      EssenceMythic: 5
+      ReagentMythic: 5
+    hardMode: false
+    siegeMode: false
+    wildshrineWaveStartLocalization: $wild_seekers_attack
+    wildshrineWaveEndLocalization: $wild_seekers_defeated
+    wildLevelDefinition:
+      levelIndex: 20
+      biome: Mistlands
+      waveFormat: Hard
+      levelWarningLocalization: $mistlands_warning_wilderness
+      maxCreaturesPerPhaseOverride: 10
+      onlySelectMonsters:
+      - Seeker
+      - SeekerBrood
+      - SeekerSoldier
+      - Tick
+      excludeSelectMonsters:
+      - EndForestGreydwarf
+      - EndForestBrute
+      - EndForestShaman
+      - EndForestBear
+      - EndForestTroll
+      commonSpawnModifiers:
+        linearIncreaseRandomWaveAdjustment: true
+      rareSpawnModifiers:
+        linearIncreaseRandomWaveAdjustment: true
+      eliteSpawnModifiers:
+        linearIncreaseRandomWaveAdjustment: true
