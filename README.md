@@ -85,6 +85,8 @@ Only these two immediate damage modifiers are supported. Other modifiers are rej
 
 ## Tests
 
+The [three-tier workshop](workshops/three-tiers/README.md) compares Black Forest, Swamp, and Mountain against the same recorded Snuffiss build. These are discussion scenarios, not deployable event configs. In `calibrate`, `base_physical: null` marks an incoming attack that is not modeled, producing null incoming damage and HTD while retaining offensive results. Use this for unsupported attacks such as Oozer poison; do not replace them with zero damage.
+
 ```sh
 python3 -m unittest discover -s . -p 'test_*.py' -v
 ```

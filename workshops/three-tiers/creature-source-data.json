@@ -1,0 +1,413 @@
+{
+  "bundle_sha256": "c66eacffa638148ca3f82a0c7735129b95379449f5f5bb385de31d313436390e",
+  "creatures": {
+    "Abomination": {
+      "asset": "Assets/Characters/Abomination/Abomination.prefab",
+      "base_health": 800.0,
+      "native_resistance": {
+        "blunt": 0.5,
+        "slash": 1,
+        "pierce": 0.25,
+        "fire": 1.5,
+        "frost": 0,
+        "lightning": 1,
+        "poison": 0,
+        "spirit": 0
+      },
+      "attacks": {
+        "Abomination_attack1": {
+          "m_damage": 0.0,
+          "m_blunt": 60.0,
+          "m_slash": 0.0,
+          "m_pierce": 0.0,
+          "m_chop": 100.0,
+          "m_pickaxe": 60.0,
+          "m_fire": 0.0,
+          "m_frost": 0.0,
+          "m_lightning": 0.0,
+          "m_poison": 0.0,
+          "m_spirit": 0.0,
+          "m_nonPlayer": 0.0
+        },
+        "Abomination_attack2": {
+          "m_damage": 0.0,
+          "m_blunt": 80.0,
+          "m_slash": 0.0,
+          "m_pierce": 0.0,
+          "m_chop": 100.0,
+          "m_pickaxe": 60.0,
+          "m_fire": 0.0,
+          "m_frost": 0.0,
+          "m_lightning": 0.0,
+          "m_poison": 0.0,
+          "m_spirit": 0.0,
+          "m_nonPlayer": 0.0
+        },
+        "Abomination_attack3": {
+          "m_damage": 0.0,
+          "m_blunt": 80.0,
+          "m_slash": 0.0,
+          "m_pierce": 0.0,
+          "m_chop": 100.0,
+          "m_pickaxe": 60.0,
+          "m_fire": 0.0,
+          "m_frost": 0.0,
+          "m_lightning": 0.0,
+          "m_poison": 0.0,
+          "m_spirit": 0.0,
+          "m_nonPlayer": 0.0
+        }
+      }
+    },
+    "BlobElite": {
+      "asset": "Assets/Characters/Blob/BlobElite.prefab",
+      "base_health": 150.0,
+      "native_resistance": {
+        "blunt": 1.5,
+        "slash": 0.5,
+        "pierce": 0.5,
+        "fire": 0.5,
+        "frost": 1.5,
+        "lightning": 1.5,
+        "poison": 0,
+        "spirit": 1
+      },
+      "attacks": {
+        "blobelite_attack_aoe": {
+          "m_damage": 0.0,
+          "m_blunt": 0.0,
+          "m_slash": 0.0,
+          "m_pierce": 0.0,
+          "m_chop": 0.0,
+          "m_pickaxe": 0.0,
+          "m_fire": 0.0,
+          "m_frost": 0.0,
+          "m_lightning": 0.0,
+          "m_poison": 115.0,
+          "m_spirit": 0.0,
+          "m_nonPlayer": 0.0
+        }
+      }
+    },
+    "Draugr": {
+      "asset": "Assets/Characters/Draugr/Draugr.prefab",
+      "base_health": 100.0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 0.5,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 0,
+        "spirit": 1
+      },
+      "attacks": {
+        "draugr_axe": {
+          "m_damage": 0.0,
+          "m_blunt": 0.0,
+          "m_slash": 48.0,
+          "m_pierce": 0.0,
+          "m_chop": 15.0,
+          "m_pickaxe": 0.0,
+          "m_fire": 0.0,
+          "m_frost": 0.0,
+          "m_lightning": 0.0,
+          "m_poison": 0.0,
+          "m_spirit": 0.0,
+          "m_nonPlayer": 0.0
+        },
+        "draugr_bow": {
+          "m_damage": 0.0,
+          "m_blunt": 0.0,
+          "m_slash": 0.0,
+          "m_pierce": 48.0,
+          "m_chop": 0.0,
+          "m_pickaxe": 0.0,
+          "m_fire": 0.0,
+          "m_frost": 0.0,
+          "m_lightning": 0.0,
+          "m_poison": 0.0,
+          "m_spirit": 0.0,
+          "m_nonPlayer": 0.0
+        }
+      }
+    },
+    "Fenring": {
+      "asset": "Assets/Characters/Fenring/Fenring.prefab",
+      "base_health": 300.0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1.5,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 0.5,
+        "spirit": 1
+      },
+      "attacks": {
+        "Fenring_taunt": {
+          "m_damage": 0.0,
+          "m_blunt": 0.0,
+          "m_slash": 0.0,
+          "m_pierce": 0.0,
+          "m_chop": 0.0,
+          "m_pickaxe": 0.0,
+          "m_fire": 0.0,
+          "m_frost": 0.0,
+          "m_lightning": 0.0,
+          "m_poison": 0.0,
+          "m_spirit": 0.0,
+          "m_nonPlayer": 0.0
+        },
+        "Fenring_attack_claw": {
+          "m_damage": 0.0,
+          "m_blunt": 0.0,
+          "m_slash": 85.0,
+          "m_pierce": 0.0,
+          "m_chop": 0.0,
+          "m_pickaxe": 0.0,
+          "m_fire": 0.0,
+          "m_frost": 0.0,
+          "m_lightning": 0.0,
+          "m_poison": 0.0,
+          "m_spirit": 0.0,
+          "m_nonPlayer": 0.0
+        },
+        "Fenring_attack_jump": {
+          "m_damage": 0.0,
+          "m_blunt": 0.0,
+          "m_slash": 95.0,
+          "m_pierce": 0.0,
+          "m_chop": 0.0,
+          "m_pickaxe": 0.0,
+          "m_fire": 0.0,
+          "m_frost": 0.0,
+          "m_lightning": 0.0,
+          "m_poison": 0.0,
+          "m_spirit": 0.0,
+          "m_nonPlayer": 0.0
+        }
+      }
+    },
+    "StoneGolem": {
+      "asset": "Assets/Characters/StoneGolem/StoneGolem.prefab",
+      "base_health": 800.0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 0.5,
+        "pierce": 0.5,
+        "fire": 0,
+        "frost": 0,
+        "lightning": 1,
+        "poison": 0,
+        "spirit": 0
+      },
+      "attacks": {
+        "stonegolem_attack1_spike": {
+          "m_damage": 0.0,
+          "m_blunt": 0.0,
+          "m_slash": 0.0,
+          "m_pierce": 110.0,
+          "m_chop": 100.0,
+          "m_pickaxe": 100.0,
+          "m_fire": 0.0,
+          "m_frost": 0.0,
+          "m_lightning": 0.0,
+          "m_poison": 0.0,
+          "m_spirit": 0.0,
+          "m_nonPlayer": 0.0
+        },
+        "stonegolem_attack2_left_groundslam": {
+          "m_damage": 0.0,
+          "m_blunt": 110.0,
+          "m_slash": 0.0,
+          "m_pierce": 0.0,
+          "m_chop": 100.0,
+          "m_pickaxe": 100.0,
+          "m_fire": 0.0,
+          "m_frost": 0.0,
+          "m_lightning": 0.0,
+          "m_poison": 0.0,
+          "m_spirit": 0.0,
+          "m_nonPlayer": 0.0
+        },
+        "stonegolem_attack3_spikesweep": {
+          "m_damage": 0.0,
+          "m_blunt": 110.0,
+          "m_slash": 0.0,
+          "m_pierce": 0.0,
+          "m_chop": 100.0,
+          "m_pickaxe": 100.0,
+          "m_fire": 0.0,
+          "m_frost": 0.0,
+          "m_lightning": 0.0,
+          "m_poison": 0.0,
+          "m_spirit": 0.0,
+          "m_nonPlayer": 0.0
+        },
+        "stonegolem_attack_doublesmash": {
+          "m_damage": 0.0,
+          "m_blunt": 110.0,
+          "m_slash": 0.0,
+          "m_pierce": 0.0,
+          "m_chop": 100.0,
+          "m_pickaxe": 100.0,
+          "m_fire": 0.0,
+          "m_frost": 0.0,
+          "m_lightning": 0.0,
+          "m_poison": 0.0,
+          "m_spirit": 0.0,
+          "m_nonPlayer": 0.0
+        },
+        "stonegolem_attack_sonicboom_NOTUSED": {
+          "m_damage": 0.0,
+          "m_blunt": 50.0,
+          "m_slash": 0.0,
+          "m_pierce": 0.0,
+          "m_chop": 100.0,
+          "m_pickaxe": 100.0,
+          "m_fire": 0.0,
+          "m_frost": 0.0,
+          "m_lightning": 0.0,
+          "m_poison": 0.0,
+          "m_spirit": 0.0,
+          "m_nonPlayer": 0.0
+        }
+      }
+    },
+    "Ulv": {
+      "asset": "Assets/Characters/Ulv/Ulv.prefab",
+      "base_health": 50.0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 0.25,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      },
+      "attacks": {
+        "Ulv_attack1_bite": {
+          "m_damage": 0.0,
+          "m_blunt": 0.0,
+          "m_slash": 80.0,
+          "m_pierce": 0.0,
+          "m_chop": 0.0,
+          "m_pickaxe": 0.0,
+          "m_fire": 0.0,
+          "m_frost": 0.0,
+          "m_lightning": 0.0,
+          "m_poison": 0.0,
+          "m_spirit": 0.0,
+          "m_nonPlayer": 0.0
+        },
+        "Ulv_attack2_slash": {
+          "m_damage": 0.0,
+          "m_blunt": 0.0,
+          "m_slash": 70.0,
+          "m_pierce": 0.0,
+          "m_chop": 0.0,
+          "m_pickaxe": 0.0,
+          "m_fire": 0.0,
+          "m_frost": 0.0,
+          "m_lightning": 0.0,
+          "m_poison": 0.0,
+          "m_spirit": 0.0,
+          "m_nonPlayer": 0.0
+        }
+      }
+    },
+    "Wolf": {
+      "asset": "Assets/Characters/Wolf/Wolf.prefab",
+      "base_health": 80.0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1,
+        "spirit": 0
+      },
+      "attacks": {
+        "Wolf_Attack1": {
+          "m_damage": 0.0,
+          "m_blunt": 0.0,
+          "m_slash": 70.0,
+          "m_pierce": 0.0,
+          "m_chop": 0.0,
+          "m_pickaxe": 0.0,
+          "m_fire": 0.0,
+          "m_frost": 0.0,
+          "m_lightning": 0.0,
+          "m_poison": 0.0,
+          "m_spirit": 0.0,
+          "m_nonPlayer": 0.0
+        },
+        "Wolf_Attack2": {
+          "m_damage": 0.0,
+          "m_blunt": 0.0,
+          "m_slash": 70.0,
+          "m_pierce": 0.0,
+          "m_chop": 0.0,
+          "m_pickaxe": 0.0,
+          "m_fire": 0.0,
+          "m_frost": 0.0,
+          "m_lightning": 0.0,
+          "m_poison": 0.0,
+          "m_spirit": 0.0,
+          "m_nonPlayer": 0.0
+        },
+        "Wolf_Attack3": {
+          "m_damage": 0.0,
+          "m_blunt": 0.0,
+          "m_slash": 70.0,
+          "m_pierce": 0.0,
+          "m_chop": 0.0,
+          "m_pickaxe": 0.0,
+          "m_fire": 0.0,
+          "m_frost": 0.0,
+          "m_lightning": 0.0,
+          "m_poison": 0.0,
+          "m_spirit": 0.0,
+          "m_nonPlayer": 0.0
+        }
+      }
+    },
+    "Wraith": {
+      "asset": "Assets/Characters/Wraith/Wraith.prefab",
+      "base_health": 100.0,
+      "native_resistance": {
+        "blunt": 0.5,
+        "slash": 0.5,
+        "pierce": 0.5,
+        "fire": 1.5,
+        "frost": 0,
+        "lightning": 1,
+        "poison": 0,
+        "spirit": 1.5
+      },
+      "attacks": {
+        "wraith_melee": {
+          "m_damage": 0.0,
+          "m_blunt": 0.0,
+          "m_slash": 60.0,
+          "m_pierce": 0.0,
+          "m_chop": 0.0,
+          "m_pickaxe": 0.0,
+          "m_fire": 0.0,
+          "m_frost": 0.0,
+          "m_lightning": 0.0,
+          "m_poison": 0.0,
+          "m_spirit": 0.0,
+          "m_nonPlayer": 0.0
+        }
+      }
+    }
+  }
+}

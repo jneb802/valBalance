@@ -144,24 +144,28 @@ def calibrate(profile, scenario):
             raise ValueError('Stars must be whole numbers')
         target = targets[enemy['prefab']]
         health = target['base_health'] * (1 + stars)
-        physical = enemy['base_physical'] * (1 + .25 * stars)
+        physical = None if enemy['base_physical'] is None else enemy['base_physical'] * (1 + .25 * stars)
         incoming = dict(physical=physical, elemental=0)
         for modifier in enemy['sls_modifiers']:
             if modifier not in ('Lightning', 'Frost'):
                 raise ValueError('Unsupported incoming modifier: ' + modifier)
             base, per_level = scenario['sls_modifier_powers'][modifier]
-            incoming['resolved_' + modifier.lower()] = physical * (base + per_level * (stars + 1))
-        normal, low = (received(incoming, p, p[key]) for key in ('armor', 'low_armor'))
-        htd = hits_to_die(p, normal, low)
+            if physical is not None:
+                incoming['resolved_' + modifier.lower()] = physical * (base + per_level * (stars + 1))
+        if physical is None:
+            normal = low = htd = None
+        else:
+            normal, low = (received(incoming, p, p[key]) for key in ('armor', 'low_armor'))
+            htd = hits_to_die(p, normal, low)
         outcomes = distribution(profile, target, health, scenario['stamina'], scenario['trials'], scenario['seed'], scenario['include_initial_chain_hits'])
         limits = scenario['roles'][enemy['role']]
         checks = {order: dict(ttk=rating(r['ttk']['p50'], *limits[:2]),
                               htk=rating(r['htk']['p50'], *limits[2:4])) for order, r in outcomes.items()}
         rows.append(dict(prefab=enemy['prefab'], role=enemy['role'], stars=stars, health=health,
-                         raw_physical=physical, raw_lightning=incoming.get('resolved_lightning', 0),
-                         raw_frost=incoming.get('resolved_frost', 0),
+                         raw_physical=physical, raw_lightning=incoming.get('resolved_lightning', 0) if physical is not None else None,
+                         raw_frost=incoming.get('resolved_frost', 0) if physical is not None else None,
                          received_normal=normal, received_low_health=low, htd=htd,
-                         htd_rating=rating(htd, *limits[4:]), median_ratings=checks, offense=outcomes))
+                         htd_rating=rating(htd, *limits[4:]) if htd is not None else 'not modeled', median_ratings=checks, offense=outcomes))
     return dict(status='Nominal single-target simulation; not live validated',
                 selected_patch_orders=profile['sls_order_candidates'],
                 patch_order_evidence=profile.get('observed_patch_order') if scenario.get('use_verified_patch_order', False) else None,

@@ -1,0 +1,194 @@
+{
+  "status": "Nominal single-target simulation; not live validated",
+  "selected_patch_orders": [
+    "before_conversion"
+  ],
+  "patch_order_evidence": {
+    "order": "before_conversion",
+    "validation": "controlled-hit",
+    "game_version": "1.0.16",
+    "sls_assembly_sha256": "c0ecc08ea9a17bc62311b6dee98ca03a0325c32bec5bec36bd096975605c3b6f",
+    "epicloot_assembly_sha256": "802790e0cbd8a6f951627619a488b84e6a406e8770e2687b2fff8b63d2adf9ea",
+    "scope": "Valnet client 02, local TestingWorld, Season 8 8.0.39 client mod set with shared binaries and combat config matched to production. Both relevant prefixes priority 400; SLS index 1, Epic Loot index 3. Same order after restart. Remote ownership is not tested.",
+    "evidence": "live_probe/evidence/2026-10-09/controlled-hits.json"
+  },
+  "trials_per_patch_order": 2000,
+  "seed": 19,
+  "timing": {
+    "clip_hit_landmark_seconds": 0.34399278203121386,
+    "clip_end_landmark_seconds": 0.40140391627422534,
+    "on_hit_freeze_seconds": 0.15,
+    "exit_normalized_time": 1.2999999523162842,
+    "exit_transition_seconds": 0.30000001192092896,
+    "entry_transition_seconds": 0.20000000298023224,
+    "nominal_successful_cycle_seconds": 0.9614039488580918,
+    "attack_interval_seconds": null,
+    "status": "Clip landmarks verified. Nominal cycle integrates speed events through exit time plus hit pause and exit transition; it excludes frame/input scheduling and stamina gaps. Not a verified live TTK input."
+  },
+  "assumptions": [
+    "Primary spear attacks, full health, no dodge buff, no Crown, freshly eaten health foods, rested, full starting stamina for each isolated target.",
+    "Dry, alert, unstaggered target with zero armor. No enemy healing, blocking, movement, misses, chain returns, or collateral damage.",
+    "Nominal source animation cycle, immediate first status update and chain impact. Unity frame/input/network scheduling is not simulated. TTK is a scenario prediction, not an exact live value.",
+    "Uniform weapon skill rolls and independent double-damage and chain proc rolls. Each chain proc hits the isolated target once, without recursive weapon effects.",
+    "Uses the SLS-before-conversion order observed in controlled hits on Valnet client 02. The source profile retains both candidates for sensitivity analysis. Quantiles are random-outcome samples, not guaranteed bounds.",
+    "Stamina cost 16 * (1 - 0.33) = 10.72 with zero attack-cost equipment/status adjustment. Max stamina 50 + 109 + 0.12 * 672.448. Regen multiplier 2 rested + 0.8996 equipped effects. World stamina regen rate 1; continuous idle recovery, no combat recovery or potions.",
+    "Defense uses intended health patch order: 672.448 HP. HTD excludes shield, parry, healing, lifesteal, avoidance, and protective magic. Shaman HTD describes melee only, not its poison attack.",
+    "Only listed SLS modifiers are modeled. Required modifiers do not exclude extra random modifiers in the shrine API.",
+    "Role targets apply to median isolated-target results under the observed patch order. Critical fodder kills can take one hit and fall below the TTK floor. No pack-clear time is inferred from these results.",
+    "Workshop only; no deployment. Frozen October 9 patch order, pending validation on current SLS. Oozer incoming poison and spawned Blobs are not modeled; base_physical=null explicitly leaves HTD unknown."
+  ],
+  "enemies": [
+    {
+      "prefab": "Draugr",
+      "role": "Standard",
+      "stars": 39,
+      "health": 4000.0,
+      "raw_physical": 516.0,
+      "raw_lightning": 0,
+      "raw_frost": 412.8,
+      "received_normal": 207.80460799999997,
+      "received_low_health": 176.5842305305781,
+      "htd": 4,
+      "htd_rating": "In range",
+      "median_ratings": {
+        "before_conversion": {
+          "ttk": "In range",
+          "htk": "In range"
+        }
+      },
+      "offense": {
+        "before_conversion": {
+          "htk": {
+            "p10": 5,
+            "p50": 6,
+            "p90": 7
+          },
+          "ttk": {
+            "p10": 4.189608577463581,
+            "p50": 5.151012526321673,
+            "p90": 6.1124164751797645
+          },
+          "stamina_wait_seconds": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.0
+          }
+        }
+      }
+    },
+    {
+      "prefab": "Wraith",
+      "role": "Standard",
+      "stars": 39,
+      "health": 4000.0,
+      "raw_physical": 645.0,
+      "raw_lightning": 0,
+      "raw_frost": 0,
+      "received_normal": 150.21141677791994,
+      "received_low_health": 127.26603174826882,
+      "htd": 5,
+      "htd_rating": "In range",
+      "median_ratings": {
+        "before_conversion": {
+          "ttk": "In range",
+          "htk": "In range"
+        }
+      },
+      "offense": {
+        "before_conversion": {
+          "htk": {
+            "p10": 7,
+            "p50": 8,
+            "p90": 9
+          },
+          "ttk": {
+            "p10": 6.343992782031214,
+            "p50": 7.343992782031214,
+            "p90": 8.343992782031215
+          },
+          "stamina_wait_seconds": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.0
+          }
+        }
+      }
+    },
+    {
+      "prefab": "BlobElite",
+      "role": "Support",
+      "stars": 9,
+      "health": 1500.0,
+      "raw_physical": null,
+      "raw_lightning": null,
+      "raw_frost": null,
+      "received_normal": null,
+      "received_low_health": null,
+      "htd": null,
+      "htd_rating": "not modeled",
+      "median_ratings": {
+        "before_conversion": {
+          "ttk": "In range",
+          "htk": "In range"
+        }
+      },
+      "offense": {
+        "before_conversion": {
+          "htk": {
+            "p10": 2,
+            "p50": 3,
+            "p90": 3
+          },
+          "ttk": {
+            "p10": 1.3053967308893055,
+            "p50": 2.2668006797473974,
+            "p90": 2.2668006797473974
+          },
+          "stamina_wait_seconds": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.0
+          }
+        }
+      }
+    },
+    {
+      "prefab": "Abomination",
+      "role": "Mini boss",
+      "stars": 20,
+      "health": 16800.0,
+      "raw_physical": 480.0,
+      "raw_lightning": 0,
+      "raw_frost": 292.8,
+      "received_normal": 153.91508227292974,
+      "received_low_health": 130.40394776413166,
+      "htd": 5,
+      "htd_rating": "Above target",
+      "median_ratings": {
+        "before_conversion": {
+          "ttk": "In range",
+          "htk": "Unspecified"
+        }
+      },
+      "offense": {
+        "before_conversion": {
+          "htk": {
+            "p10": 26,
+            "p50": 28,
+            "p90": 30
+          },
+          "ttk": {
+            "p10": 26.343992782031215,
+            "p50": 29.343992782031215,
+            "p90": 31.343992782031215
+          },
+          "stamina_wait_seconds": {
+            "p10": 1.6397042673487168,
+            "p50": 2.340067208042262,
+            "p90": 3.0404301487358074
+          }
+        }
+      }
+    }
+  ]
+}
