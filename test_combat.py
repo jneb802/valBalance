@@ -24,6 +24,17 @@ class CombatTests(unittest.TestCase):
         self.assertEqual(result['htk'], 1)
         self.assertEqual(result['ttk'], animation_landmarks(self.profile)['clip_hit_landmark_seconds'])
 
+    def test_unmodeled_incoming_attack_preserves_offense_without_inventing_htd(self):
+        self.scenario['trials'] = 10
+        self.scenario['enemies'] = [self.scenario['enemies'][0]]
+        known = calibrate(self.profile, self.scenario)['enemies'][0]
+        self.scenario['enemies'][0]['base_physical'] = None
+        unknown = calibrate(self.profile, self.scenario)['enemies'][0]
+        self.assertEqual(unknown['offense'], known['offense'])
+        for key in ('raw_physical', 'raw_lightning', 'raw_frost', 'received_normal', 'received_low_health', 'htd'):
+            self.assertIsNone(unknown[key])
+        self.assertEqual(unknown['htd_rating'], 'not modeled')
+
     def test_poison_is_ticked_not_counted_as_immediate(self):
         p = self.profile
         p['effects']['poison_conversion_percent'] = 0
