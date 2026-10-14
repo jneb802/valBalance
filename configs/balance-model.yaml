@@ -1,0 +1,75 @@
+# Ratios, not percentages: 1.11 means 11% more per step.
+schema_version: 1
+model_version: 0.1.0
+status: proposal_not_combat_validated
+
+# Historical reference. Change adopted values below when tuning Valheim.
+reference:
+  game: Path of Exile 1
+  reviewed_on: '2026-10-14'
+  sources:
+    - https://www.poewiki.net/wiki/Monster_level
+    - https://www.poewiki.net/wiki/List_of_innate_magic_monster_modifiers
+    - https://www.poewiki.net/wiki/List_of_innate_rare_monster_modifiers
+  scope: Wiki-listed rules, not independently verified game code. Same creature and level, before explicit modifiers.
+  map_t1_to_t16_step_ranges:
+    health: [1.1030, 1.1245]
+    damage: [1.0589, 1.0621]
+  rarity_at_level_68_plus:
+    normal:
+      innate_health: 1.0
+      level_health: 1.0
+      damage_more: 1.0
+      damage_less: 1.0
+      attack_speed: 1.0
+    magic:
+      innate_health: 2.48
+      level_health: 1.75
+      damage_more: 1.3
+      damage_less: 0.8
+      attack_speed: 1.2
+    rare:
+      innate_health: 4.9
+      level_health: 2.0
+      damage_more: 1.5
+      damage_less: 0.67
+      attack_speed: 1.33
+
+# Proposed Valheim settings. These do not modify existing event stats.
+adopted:
+  baseline:
+    tier: 1
+    event: Black Forest
+    status: User accepted challenge level; existing event is not normalized to these rarity factors.
+    player: Snuffiss; comparisons require the exact player input file and hash.
+  tier:
+    health_per_step: 1.11
+    damage_per_step: 1.06
+  rarity:
+    normal:
+      health: 1.0
+      damage_per_hit: 1.0
+      attack_speed: 1.0
+    magic:
+      health: 4.34
+      damage_per_hit: 1.04
+      attack_speed: 1.2
+    rare:
+      health: 9.8
+      damage_per_hit: 1.005
+      attack_speed: 1.33
+  # Bounds are [minimum, maximum]. Null means unset, never zero.
+  targets:
+    status: Absolute targets await calibration to the accepted Black Forest event.
+    normal:
+      ttk_seconds: [null, null]
+      htd_hits: [null, null]
+    magic:
+      ttk_seconds: [null, null]
+      htd_hits: [null, null]
+    rare:
+      ttk_seconds: [null, null]
+      htd_hits: [null, null]
+    unique:
+      ttk_seconds: [null, null]
+      htd_hits: [null, null]
