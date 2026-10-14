@@ -36,7 +36,8 @@
     "Only listed SLS modifiers are modeled. Required modifiers do not exclude extra random modifiers in the shrine API.",
     "Star-only workshop; no required offensive SLS modifiers. Existing target SLS damage-received factors remain part of the player profile.",
     "Frozen October 9 patch-order evidence. Current runtime has not been revalidated. Oozer poison and children, Shaman poison and healing, and rarity attack speed are not simulated.",
-    "Health-first targets anchored to 800 HP normal and 24000 HP unique at tier 1. Absolute TTK/HTD targets remain unset."
+    "Health-first targets anchored to 800 HP normal and 24000 HP unique at tier 1. Absolute TTK/HTD targets remain unset.",
+    "Tiers 4-10 add creatures from the local installed bundle while retaining the recorded player and patch-order model. Unsupported attacks remain null. Flying targets assume reachable attacks; no geometry, weak spots, mage healing or hostility behavior is modeled."
   ],
   "enemies": [
     {

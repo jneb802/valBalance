@@ -97,9 +97,9 @@ def simulate(profile, target, health, order, rng, stamina, proc_hits=True):
         result = strike(profile, target, profile['context'], rng.uniform(lo, hi),
                         rng.random() < profile['effects']['double_damage_chance_percent'] / 100, order)
         health -= result['immediate_damage']
-        if result['spirit_payload']:
-            raise ValueError('Spirit DoT is not implemented in this scenario simulator')
-        for kind in ('fire', 'poison'):
+        if result['spirit_payload'] and 'spirit' not in profile['dot_rules']:
+            raise ValueError('Spirit damage requires verified spirit timing rules')
+        for kind in ('fire', 'poison', 'spirit'):
             add_dot(kind, result[kind + '_payload'], time)
         if proc_hits:
             for name in ('native_chain', 'epic_chain'):

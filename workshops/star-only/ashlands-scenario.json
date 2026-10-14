@@ -1,0 +1,113 @@
+{
+  "trials": 2000,
+  "seed": 19,
+  "use_verified_patch_order": true,
+  "include_initial_chain_hits": true,
+  "assumptions": [
+    "Primary spear attacks, full health, no dodge buff, no Crown, freshly eaten health foods, rested, full starting stamina for each isolated target.",
+    "Dry, alert, unstaggered target with zero armor. No enemy healing, blocking, movement, misses, chain returns, or collateral damage.",
+    "Nominal source animation cycle, immediate first status update and chain impact. Unity frame/input/network scheduling is not simulated. TTK is a scenario prediction, not an exact live value.",
+    "Uniform weapon skill rolls and independent double-damage and chain proc rolls. Each chain proc hits the isolated target once, without recursive weapon effects.",
+    "Uses the SLS-before-conversion order observed in controlled hits on Valnet client 02. The source profile retains both candidates for sensitivity analysis. Quantiles are random-outcome samples, not guaranteed bounds.",
+    "Stamina cost 16 * (1 - 0.33) = 10.72 with zero attack-cost equipment/status adjustment. Max stamina 50 + 109 + 0.12 * 672.448. Regen multiplier 2 rested + 0.8996 equipped effects. World stamina regen rate 1; continuous idle recovery, no combat recovery or potions.",
+    "Defense uses intended health patch order: 672.448 HP. HTD excludes shield, parry, healing, lifesteal, avoidance, and protective magic. Shaman HTD describes melee only, not its poison attack.",
+    "Only listed SLS modifiers are modeled. Required modifiers do not exclude extra random modifiers in the shrine API.",
+    "Star-only workshop; no required offensive SLS modifiers. Existing target SLS damage-received factors remain part of the player profile.",
+    "Frozen October 9 patch-order evidence. Current runtime has not been revalidated. Oozer poison and children, Shaman poison and healing, and rarity attack speed are not simulated.",
+    "Health-first targets anchored to 800 HP normal and 24000 HP unique at tier 1. Absolute TTK/HTD targets remain unset.",
+    "Tiers 4-10 add creatures from the local installed bundle while retaining the recorded player and patch-order model. Unsupported attacks remain null. Flying targets assume reachable attacks; no geometry, weak spots, mage healing or hostility behavior is modeled."
+  ],
+  "stamina": {
+    "maximum": 239.69376,
+    "initial": 239.69376,
+    "cost_per_attack": 10.72,
+    "base_regen": 6,
+    "regen_multiplier": 2.8996,
+    "regen_delay": 1,
+    "regen_time_multiplier": 1
+  },
+  "player_defense": {
+    "health": 672.448,
+    "armor": 186.3616,
+    "low_armor": 219.9616,
+    "threshold": 75,
+    "physical_resist": 48.12,
+    "elemental_resist": 38.728,
+    "lightning_resist": 57.728,
+    "frost_multiplier": 0.5
+  },
+  "sls_modifier_powers": {
+    "Lightning": [
+      0.4,
+      0.05
+    ],
+    "Frost": [
+      0.4,
+      0.01
+    ]
+  },
+  "roles": {
+    "normal": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "magic": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "rare": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ],
+    "unique": [
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  "enemies": [
+    {
+      "prefab": "Charred_Twitcher",
+      "role": "normal",
+      "stars": 6,
+      "base_physical": 100,
+      "sls_modifiers": []
+    },
+    {
+      "prefab": "Charred_Archer",
+      "role": "magic",
+      "stars": 31,
+      "base_physical": 90,
+      "sls_modifiers": []
+    },
+    {
+      "prefab": "Charred_Melee",
+      "role": "rare",
+      "stars": 23,
+      "base_physical": 150,
+      "sls_modifiers": []
+    },
+    {
+      "prefab": "Morgen",
+      "role": "unique",
+      "stars": 27,
+      "base_physical": 160,
+      "sls_modifiers": []
+    }
+  ]
+}

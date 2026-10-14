@@ -1,4 +1,48 @@
-# Star-only workshop
+# Star-only workshop through tier 10
+
+The complete current [calculated tables](RESULTS.md) include all ten tier targets,
+41 creature entries, nearest stars, HP error, raw physical attacks, median TTK,
+HTD where supported, and all 40 wave totals. The original three-tier table below
+is retained as the starting comparison. `summary.json` contains unrounded values,
+typed attack payloads, damage-growth errors and source hashes.
+
+Tier order: Black Forest, Swamp, Mountain, Plains, Mistlands bugs, Mistlands
+dvergr, Ashlands, Deep North, mixed elites, mixed finale. Tiers 9 and 10 are
+provisional themes. Each new tier uses four normal enemies, two magic enemies,
+one rare, and adds one boss in wave 4. Counts remain constant to separate stat
+growth from population changes. Dvergr support is a rare support threat, not a
+damage dealer. Its healing is not simulated.
+
+## Additional creature evidence and limits
+
+`additional-creature-source-data.json` records extracted local installed prefab
+health, resistance enums and weapon payloads, with the bundle SHA-256. The 13
+older creature health/resistance profiles were compared with this extraction and
+matched. The new source is not claimed to be the archived production bundle.
+The local Season 8 LevelSettings snapshot has no health/damage overrides for
+the new chosen prefabs; it retains the common poison damage-received factor 1.5.
+This read-only check does not prove current production or runtime behavior.
+
+Spirit damage is now simulated when explicit timing inputs are supplied. The
+local Spirit.asset has TTL 3 seconds and damage interval 0.5 seconds. The recorded
+production assembly's SE_Burning.AddSpiritDamage adds the payload to remaining
+spirit damage, redistributes it over TTL/interval ticks, and resets duration.
+Character.AddSpiritDamage uses a separate Spirit status effect. The same nominal
+immediate-first-tick assumption as the existing fire model applies. Provenance
+is recorded in player.json; this is not live timing validation.
+
+Star-only matching can produce lethal normal enemies and extreme caster levels.
+The numbers are not clipped to conceal those outcomes. Goblin Shaman HTD covers
+its poke only, not fireballs or shields. Gjall fire damage, Dvergr spells, support
+healing, Deep North mixed attacks and Jotun warrior equipment are not modeled as
+incoming hits. Their HTD remains unknown. Typed scaled payloads in summary.json
+are payload diagnostics, not immediate damage or validated per-hit outcomes.
+
+Gjall requires flight space and reachable attacks; its TTK assumes every nominal
+player attack can reach it. Tick spawns and weak spots are excluded. Dvergr must
+be made hostile to players and allied with the event creatures by the eventual
+integration. Mixed packs also require faction handling. No spawn, hostility,
+geometry, or death-tracking checks have been performed for these proposed packs.
 
 This is a health-first proposal, not a deployable Fortress configuration. No local
 profile or production file is changed. Roles were approved in the design session.

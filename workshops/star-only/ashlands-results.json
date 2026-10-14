@@ -1,0 +1,196 @@
+{
+  "status": "Nominal single-target simulation; not live validated",
+  "selected_patch_orders": [
+    "before_conversion"
+  ],
+  "patch_order_evidence": {
+    "order": "before_conversion",
+    "validation": "controlled-hit",
+    "game_version": "1.0.16",
+    "sls_assembly_sha256": "c0ecc08ea9a17bc62311b6dee98ca03a0325c32bec5bec36bd096975605c3b6f",
+    "epicloot_assembly_sha256": "802790e0cbd8a6f951627619a488b84e6a406e8770e2687b2fff8b63d2adf9ea",
+    "scope": "Valnet client 02, local TestingWorld, Season 8 8.0.39 client mod set with shared binaries and combat config matched to production. Both relevant prefixes priority 400; SLS index 1, Epic Loot index 3. Same order after restart. Remote ownership is not tested.",
+    "evidence": "live_probe/evidence/2026-10-09/controlled-hits.json"
+  },
+  "trials_per_patch_order": 2000,
+  "seed": 19,
+  "timing": {
+    "clip_hit_landmark_seconds": 0.34399278203121386,
+    "clip_end_landmark_seconds": 0.40140391627422534,
+    "on_hit_freeze_seconds": 0.15,
+    "exit_normalized_time": 1.2999999523162842,
+    "exit_transition_seconds": 0.30000001192092896,
+    "entry_transition_seconds": 0.20000000298023224,
+    "nominal_successful_cycle_seconds": 0.9614039488580918,
+    "attack_interval_seconds": null,
+    "status": "Clip landmarks verified. Nominal cycle integrates speed events through exit time plus hit pause and exit transition; it excludes frame/input scheduling and stamina gaps. Not a verified live TTK input."
+  },
+  "assumptions": [
+    "Primary spear attacks, full health, no dodge buff, no Crown, freshly eaten health foods, rested, full starting stamina for each isolated target.",
+    "Dry, alert, unstaggered target with zero armor. No enemy healing, blocking, movement, misses, chain returns, or collateral damage.",
+    "Nominal source animation cycle, immediate first status update and chain impact. Unity frame/input/network scheduling is not simulated. TTK is a scenario prediction, not an exact live value.",
+    "Uniform weapon skill rolls and independent double-damage and chain proc rolls. Each chain proc hits the isolated target once, without recursive weapon effects.",
+    "Uses the SLS-before-conversion order observed in controlled hits on Valnet client 02. The source profile retains both candidates for sensitivity analysis. Quantiles are random-outcome samples, not guaranteed bounds.",
+    "Stamina cost 16 * (1 - 0.33) = 10.72 with zero attack-cost equipment/status adjustment. Max stamina 50 + 109 + 0.12 * 672.448. Regen multiplier 2 rested + 0.8996 equipped effects. World stamina regen rate 1; continuous idle recovery, no combat recovery or potions.",
+    "Defense uses intended health patch order: 672.448 HP. HTD excludes shield, parry, healing, lifesteal, avoidance, and protective magic. Shaman HTD describes melee only, not its poison attack.",
+    "Only listed SLS modifiers are modeled. Required modifiers do not exclude extra random modifiers in the shrine API.",
+    "Star-only workshop; no required offensive SLS modifiers. Existing target SLS damage-received factors remain part of the player profile.",
+    "Frozen October 9 patch-order evidence. Current runtime has not been revalidated. Oozer poison and children, Shaman poison and healing, and rarity attack speed are not simulated.",
+    "Health-first targets anchored to 800 HP normal and 24000 HP unique at tier 1. Absolute TTK/HTD targets remain unset.",
+    "Tiers 4-10 add creatures from the local installed bundle while retaining the recorded player and patch-order model. Unsupported attacks remain null. Flying targets assume reachable attacks; no geometry, weak spots, mage healing or hostility behavior is modeled."
+  ],
+  "enemies": [
+    {
+      "prefab": "Charred_Twitcher",
+      "role": "normal",
+      "stars": 6,
+      "health": 1540.0,
+      "raw_physical": 250.0,
+      "raw_lightning": 0,
+      "raw_frost": 0,
+      "received_normal": 22.566464872591784,
+      "received_low_health": 19.119348559021216,
+      "htd": 34,
+      "htd_rating": "Unspecified",
+      "median_ratings": {
+        "before_conversion": {
+          "ttk": "Unspecified",
+          "htk": "Unspecified"
+        }
+      },
+      "offense": {
+        "before_conversion": {
+          "htk": {
+            "p10": 3,
+            "p50": 4,
+            "p90": 4
+          },
+          "ttk": {
+            "p10": 2.2668006797473974,
+            "p50": 3.2282046286054893,
+            "p90": 3.343992782031214
+          },
+          "stamina_wait_seconds": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.0
+          }
+        }
+      }
+    },
+    {
+      "prefab": "Charred_Archer",
+      "role": "magic",
+      "stars": 31,
+      "health": 6400.0,
+      "raw_physical": 787.5,
+      "raw_lightning": 0,
+      "raw_frost": 0,
+      "received_normal": 222.1934,
+      "received_low_health": 189.71173607688797,
+      "htd": 4,
+      "htd_rating": "Unspecified",
+      "median_ratings": {
+        "before_conversion": {
+          "ttk": "Unspecified",
+          "htk": "Unspecified"
+        }
+      },
+      "offense": {
+        "before_conversion": {
+          "htk": {
+            "p10": 9,
+            "p50": 11,
+            "p90": 12
+          },
+          "ttk": {
+            "p10": 8.843992782031215,
+            "p50": 9.95803227061213,
+            "p90": 10.91943621947022
+          },
+          "stamina_wait_seconds": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.0
+          }
+        }
+      }
+    },
+    {
+      "prefab": "Charred_Melee",
+      "role": "rare",
+      "stars": 23,
+      "health": 14400.0,
+      "raw_physical": 1012.5,
+      "raw_lightning": 0,
+      "raw_frost": 0,
+      "received_normal": 338.9234000000001,
+      "received_low_health": 305.3234000000001,
+      "htd": 3,
+      "htd_rating": "Unspecified",
+      "median_ratings": {
+        "before_conversion": {
+          "ttk": "Unspecified",
+          "htk": "Unspecified"
+        }
+      },
+      "offense": {
+        "before_conversion": {
+          "htk": {
+            "p10": 20,
+            "p50": 22,
+            "p90": 23
+          },
+          "ttk": {
+            "p10": 18.610667810334956,
+            "p50": 20.53347570805114,
+            "p90": 22.343992782031215
+          },
+          "stamina_wait_seconds": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.5891598563083993
+          }
+        }
+      }
+    },
+    {
+      "prefab": "Morgen",
+      "role": "unique",
+      "stars": 27,
+      "health": 44800.0,
+      "raw_physical": 1240.0,
+      "raw_lightning": 0,
+      "raw_frost": 0,
+      "received_normal": 456.9504,
+      "received_low_health": 423.35040000000004,
+      "htd": 2,
+      "htd_rating": "Unspecified",
+      "median_ratings": {
+        "before_conversion": {
+          "ttk": "Unspecified",
+          "htk": "Unspecified"
+        }
+      },
+      "offense": {
+        "before_conversion": {
+          "htk": {
+            "p10": 53,
+            "p50": 56,
+            "p90": 59
+          },
+          "ttk": {
+            "p10": 61.081420619016846,
+            "p50": 65.01617687663143,
+            "p90": 68.95093313424601
+          },
+          "stamina_wait_seconds": {
+            "p10": 10.744422496364798,
+            "p50": 11.794966907405115,
+            "p90": 12.845511318445432
+          }
+        }
+      }
+    }
+  ]
+}

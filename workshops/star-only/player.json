@@ -108,7 +108,12 @@
       "m_ttl": 5.0
     },
     "poison_refresh": "Replace only when new payload >= remaining poison; recompute tick damage and TTL.",
-    "fire_refresh": "Add new fire to remaining fire; redistribute over TTL ticks; reset elapsed time."
+    "fire_refresh": "Add new fire to remaining fire; redistribute over TTL ticks; reset elapsed time.",
+    "spirit": {
+      "m_ttl": 3.0,
+      "m_damageInterval": 0.5
+    },
+    "spirit_refresh": "Add new spirit to remaining spirit; redistribute over TTL ticks; reset elapsed time (SE_Burning.AddSpiritDamage)."
   },
   "sls_order_candidates": [
     "before_conversion",
@@ -448,6 +453,531 @@
         "poison": 1.5,
         "spirit": 1
       }
+    },
+    {
+      "name": "Charred_Archer",
+      "base_health": 200.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 0.5,
+        "fire": 0.25,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 0,
+        "spirit": 1.5
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "Charred_Melee",
+      "base_health": 600.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 0.5,
+        "fire": 0.25,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 0,
+        "spirit": 1.5
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "Charred_Twitcher",
+      "base_health": 220.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 0.5,
+        "fire": 0.25,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 0,
+        "spirit": 1.5
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "Dverger",
+      "base_health": 350.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1,
+        "spirit": 0
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "DvergerMageFire",
+      "base_health": 350.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 0.5,
+        "frost": 0.5,
+        "lightning": 1,
+        "poison": 1,
+        "spirit": 0
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "DvergerMageIce",
+      "base_health": 350.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 0.5,
+        "frost": 0.5,
+        "lightning": 1,
+        "poison": 1,
+        "spirit": 0
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "DvergerMageSupport",
+      "base_health": 350.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 0.5,
+        "frost": 0.5,
+        "lightning": 1,
+        "poison": 1,
+        "spirit": 0
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "Gjall",
+      "base_health": 1500.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 0.5,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1,
+        "spirit": 0
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "Goblin",
+      "base_health": 175.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1,
+        "spirit": 0
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "GoblinBrute",
+      "base_health": 800.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1,
+        "spirit": 0
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "GoblinShaman",
+      "base_health": 100.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1,
+        "spirit": 0
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "JotunWarrior",
+      "base_health": 1300.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 0.5,
+        "fire": 1,
+        "frost": 0.25,
+        "lightning": 1,
+        "poison": 0,
+        "spirit": 0
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "JotunWarriorDualWield",
+      "base_health": 1300.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 0.5,
+        "fire": 1,
+        "frost": 0.25,
+        "lightning": 1,
+        "poison": 0,
+        "spirit": 0
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "JotunWitch",
+      "base_health": 800.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1.5,
+        "frost": 0.25,
+        "lightning": 1,
+        "poison": 0,
+        "spirit": 0
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "Lox",
+      "base_health": 1000.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 0.5,
+        "slash": 0.5,
+        "pierce": 1,
+        "fire": 1.5,
+        "frost": 0.5,
+        "lightning": 1,
+        "poison": 1,
+        "spirit": 0
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "Morgen",
+      "base_health": 1600.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 0.5,
+        "slash": 0.5,
+        "pierce": 0.5,
+        "fire": 0.5,
+        "frost": 1,
+        "lightning": 1.5,
+        "poison": 1,
+        "spirit": 1
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "Seeker",
+      "base_health": 200.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 0.5,
+        "slash": 0.5,
+        "pierce": 0.5,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1,
+        "spirit": 0
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "SeekerBrood",
+      "base_health": 20.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 0.5,
+        "slash": 0.5,
+        "pierce": 0.5,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1,
+        "spirit": 0
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "SeekerBrute",
+      "base_health": 1500.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 0.5,
+        "slash": 0.5,
+        "pierce": 0.5,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1,
+        "spirit": 0
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "Skeleton_DeepNorth",
+      "base_health": 100.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 1.5,
+        "slash": 1,
+        "pierce": 0.5,
+        "fire": 1.5,
+        "frost": 0.5,
+        "lightning": 1,
+        "poison": 0,
+        "spirit": 1
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
+    },
+    {
+      "name": "TrollFrost",
+      "base_health": 3000.0,
+      "armor": 0,
+      "native_resistance": {
+        "blunt": 0.5,
+        "slash": 0.5,
+        "pierce": 0.5,
+        "fire": 0,
+        "frost": 0.5,
+        "lightning": 1,
+        "poison": 1,
+        "spirit": 0
+      },
+      "sls_damage_received": {
+        "blunt": 1,
+        "slash": 1,
+        "pierce": 1,
+        "fire": 1,
+        "frost": 1,
+        "lightning": 1,
+        "poison": 1.5,
+        "spirit": 1
+      }
     }
   ],
   "unresolved": [
@@ -478,6 +1008,14 @@
       "SE_Burning.AddFireDamage",
       "EpicLoot ModifyDamage/CoinHoarder/PoisonToTrueDamage/ChanceDoubleDamage/ChainLightning"
     ],
-    "sls_snapshot": "Season 8 LevelSettings.yaml: All DamageRecievedModifiers Poison=1.5"
+    "sls_snapshot": "Season 8 LevelSettings.yaml: All DamageRecievedModifiers Poison=1.5",
+    "additional_creature_bundle_sha256": "58f6c1b4d96124351362f12c3091884f5aaa6b15e1a774407b751121b38afa3b",
+    "additional_creature_scope": "Local installed bundle extracted 2026-10-14, not independently verified against production; original weapon and existing creatures retain recorded inputs.",
+    "spirit_effect": {
+      "asset": "Assets/GameElements/StatusEffects/Spirit.asset",
+      "bundle_sha256": "58f6c1b4d96124351362f12c3091884f5aaa6b15e1a774407b751121b38afa3b",
+      "code": "SE_Burning.AddSpiritDamage/UpdateStatusEffect; recorded production assembly SHA-256 in game_assembly_sha256",
+      "code_extraction_sha256": "1500128e4377984f32e80d1db9dd7d24fbe54b31b9ec84dc32da6b413a0a540f"
+    }
   }
 }
