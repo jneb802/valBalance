@@ -14,7 +14,7 @@ def generate():
     summary = json.loads(source.read_text())
     design = yaml.safe_load((ROOT / 'workshops/star-only/design.yaml').read_text())
     tributes = ['Resin', 'Guck', 'Crystal', 'BlackMetal', 'SeekerMeat',
-                'Softtissue', 'CharredBone', 'FreezeGland', 'Amber', 'Ruby']
+                'Softtissue', 'CharredBone', 'SealBlubber', 'Amber', 'Ruby']
     biomes = ['BlackForest', 'Swamp', 'Mountain', 'Plains', 'Mistlands',
               'Mistlands', 'AshLands', 'DeepNorth', 'DeepNorth', 'DeepNorth']
     spawn_types = {'normal': 'common', 'magic': 'rare', 'rare': 'elite', 'unique': 'unique'}
@@ -37,7 +37,7 @@ def generate():
             aliases.append(alias)
             rules.append(dict(creatures=[alias], minStars=entry['stars'], maxStars=entry['stars']))
         count = sum(definition['waves']['regular'].values()) + sum(definition['waves']['finale_addition'].values())
-        levels.append(dict(tributeName=tributes[tier-1], tributeAmount=50,
+        levels.append(dict(tributeName=tributes[tier-1], tributeAmount=10,
                            rewards=dict(DustRare=10, EssenceRare=10, ReagentRare=10),
                            hardMode=False, siegeMode=False,
                            wildshrineWaveStartLocalization=f"Tier {tier}: {event.replace('_', ' ')}.",
@@ -48,7 +48,7 @@ def generate():
                                maxCreaturesPerPhaseOverride=count, onlySelectMonsters=aliases,
                                commonSpawnModifiers={}, rareSpawnModifiers={}, eliteSpawnModifiers={},
                                creatureRules=rules)))
-        index.append(dict(tier=tier, event=event, tribute=tributes[tier-1], amount=50,
+        index.append(dict(tier=tier, event=event, tribute=tributes[tier-1], amount=10,
                           regular_count=count-1, final_count=count, aliases=aliases))
     wave_styles = {'CommonOnly': {'waveFormats': [
         {'spawnType': 'common', 'spawnPercentage': 45},

@@ -4,7 +4,7 @@ These are actual Fortress YAML merge fragments using `creatureRules`, `minStars`
 and `maxStars`. They use the existing ten-tier star-only results without a new
 balance pass. They have not been installed locally or deployed to production.
 
-All ten entries target `VF_wild_shrine_yellow1`. Each costs 50 of its tribute:
+All ten entries target `VF_wild_shrine_yellow1`. Each costs 10 of its tribute:
 
 | Tier | Event | Tribute |
 |---|---|---|
@@ -15,7 +15,7 @@ All ten entries target `VF_wild_shrine_yellow1`. Each costs 50 of its tribute:
 | 5 | Mistlands bugs | SeekerMeat |
 | 6 | Mistlands dvergr | Softtissue |
 | 7 | Ashlands | CharredBone |
-| 8 | Deep North | FreezeGland |
+| 8 | Deep North | SealBlubber (seal fat) |
 | 9 | Mixed elites | Amber |
 | 10 | Mixed finale | Ruby |
 
@@ -23,7 +23,10 @@ Tributes for tiers 3–10 are provisional test selectors. Rewards retain the tes
 amounts (10 each DustRare, EssenceRare, ReagentRare); reward progression is not
 balanced. The MWL interaction previously supported Resin/Guck only. Additional
 selectors need MWL support before these can all be offered through that dungeon
-interaction. Configuration alone does not extend its item handling.
+interaction. Its previously fixed 50-item payment also needs updating to 10.
+Configuration alone does not extend its item handling or change its fixed payment.
+SealBlubber is verified in the installed game's SoftRef manifest as
+`Assets/GameElements/Items/consumables/SealBlubber.prefab`.
 
 ## Files and merge requirements
 

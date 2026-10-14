@@ -6,7 +6,7 @@ events:
 - tier: 1
   event: blackforest
   tribute: Resin
-  amount: 50
+  amount: 10
   regular_count: 9
   final_count: 10
   aliases:
@@ -18,7 +18,7 @@ events:
 - tier: 2
   event: swamp
   tribute: Guck
-  amount: 50
+  amount: 10
   regular_count: 7
   final_count: 8
   aliases:
@@ -29,7 +29,7 @@ events:
 - tier: 3
   event: mountain
   tribute: Crystal
-  amount: 50
+  amount: 10
   regular_count: 6
   final_count: 7
   aliases:
@@ -40,7 +40,7 @@ events:
 - tier: 4
   event: plains
   tribute: BlackMetal
-  amount: 50
+  amount: 10
   regular_count: 7
   final_count: 8
   aliases:
@@ -51,7 +51,7 @@ events:
 - tier: 5
   event: mistlands_bugs
   tribute: SeekerMeat
-  amount: 50
+  amount: 10
   regular_count: 7
   final_count: 8
   aliases:
@@ -62,7 +62,7 @@ events:
 - tier: 6
   event: mistlands_dvergr
   tribute: Softtissue
-  amount: 50
+  amount: 10
   regular_count: 7
   final_count: 8
   aliases:
@@ -73,7 +73,7 @@ events:
 - tier: 7
   event: ashlands
   tribute: CharredBone
-  amount: 50
+  amount: 10
   regular_count: 7
   final_count: 8
   aliases:
@@ -83,8 +83,8 @@ events:
   - VB10_T07_Morgen
 - tier: 8
   event: deepnorth
-  tribute: FreezeGland
-  amount: 50
+  tribute: SealBlubber
+  amount: 10
   regular_count: 7
   final_count: 8
   aliases:
@@ -95,7 +95,7 @@ events:
 - tier: 9
   event: mixed_elites
   tribute: Amber
-  amount: 50
+  amount: 10
   regular_count: 7
   final_count: 8
   aliases:
@@ -106,7 +106,7 @@ events:
 - tier: 10
   event: mixed_finale
   tribute: Ruby
-  amount: 50
+  amount: 10
   regular_count: 7
   final_count: 8
   aliases:

@@ -3,7 +3,7 @@ wildShrines:
 - definitionForWildShrine: VF_wild_shrine_yellow1
   wildShrineLevelsConfig:
   - tributeName: Resin
-    tributeAmount: 50
+    tributeAmount: 10
     rewards:
       DustRare: 10
       EssenceRare: 10
@@ -49,7 +49,7 @@ wildShrines:
         minStars: 39
         maxStars: 39
   - tributeName: Guck
-    tributeAmount: 50
+    tributeAmount: 10
     rewards:
       DustRare: 10
       EssenceRare: 10
@@ -90,7 +90,7 @@ wildShrines:
         minStars: 32
         maxStars: 32
   - tributeName: Crystal
-    tributeAmount: 50
+    tributeAmount: 10
     rewards:
       DustRare: 10
       EssenceRare: 10
@@ -131,7 +131,7 @@ wildShrines:
         minStars: 36
         maxStars: 36
   - tributeName: BlackMetal
-    tributeAmount: 50
+    tributeAmount: 10
     rewards:
       DustRare: 10
       EssenceRare: 10
@@ -172,7 +172,7 @@ wildShrines:
         minStars: 32
         maxStars: 32
   - tributeName: SeekerMeat
-    tributeAmount: 50
+    tributeAmount: 10
     rewards:
       DustRare: 10
       EssenceRare: 10
@@ -213,7 +213,7 @@ wildShrines:
         minStars: 23
         maxStars: 23
   - tributeName: Softtissue
-    tributeAmount: 50
+    tributeAmount: 10
     rewards:
       DustRare: 10
       EssenceRare: 10
@@ -254,7 +254,7 @@ wildShrines:
         minStars: 115
         maxStars: 115
   - tributeName: CharredBone
-    tributeAmount: 50
+    tributeAmount: 10
     rewards:
       DustRare: 10
       EssenceRare: 10
@@ -294,8 +294,8 @@ wildShrines:
         - VB10_T07_Morgen
         minStars: 27
         maxStars: 27
-  - tributeName: FreezeGland
-    tributeAmount: 50
+  - tributeName: SealBlubber
+    tributeAmount: 10
     rewards:
       DustRare: 10
       EssenceRare: 10
@@ -336,7 +336,7 @@ wildShrines:
         minStars: 16
         maxStars: 16
   - tributeName: Amber
-    tributeAmount: 50
+    tributeAmount: 10
     rewards:
       DustRare: 10
       EssenceRare: 10
@@ -377,7 +377,7 @@ wildShrines:
         minStars: 34
         maxStars: 34
   - tributeName: Ruby
-    tributeAmount: 50
+    tributeAmount: 10
     rewards:
       DustRare: 10
       EssenceRare: 10
