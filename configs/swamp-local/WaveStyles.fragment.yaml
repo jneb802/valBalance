@@ -1,0 +1,11 @@
+waveFormats:
+  CommonOnly:
+    waveFormats:
+    - spawnType: common
+      spawnPercentage: 40
+    - spawnType: rare
+      spawnPercentage: 40
+    - spawnType: elite
+      spawnPercentage: 20
+    - spawnType: unique
+      spawnPercentage: 100
