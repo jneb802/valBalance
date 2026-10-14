@@ -1,0 +1,41 @@
+# Health-first workshop. Not deployment configs or validated absolute TTK targets.
+version: 1
+normal_tier1_health: 800
+boss_tier1_health: 24000
+health_per_star: 1.0
+damage_per_star: 0.25
+maximum_stars: 10000
+# The limit above is the simulator input limit, not a verified shrine runtime cap.
+events:
+  blackforest:
+    tier: 1
+    creatures:
+      Greydwarf: {rarity: normal, base_physical: 14}
+      Greydwarf_Elite: {rarity: magic, base_physical: 30}
+      Greydwarf_Shaman: {rarity: magic, base_physical: 14}
+      Bjorn: {rarity: rare, base_physical: 55}
+      Troll: {rarity: unique, base_physical: 70}
+    waves:
+      regular: {Greydwarf: 6, magic_support_selections: 2, Bjorn: 1}
+      finale_addition: {Troll: 1}
+    support_pool: [Greydwarf_Elite, Greydwarf_Shaman]
+  swamp:
+    tier: 2
+    creatures:
+      Draugr: {rarity: normal, base_physical: 48}
+      Wraith: {rarity: magic, base_physical: 60}
+      BlobElite: {rarity: rare, base_physical: null, base_poison_payload: 115}
+      Abomination: {rarity: unique, base_physical: 80}
+    waves:
+      regular: {Draugr: 4, Wraith: 2, BlobElite: 1}
+      finale_addition: {Abomination: 1}
+  mountain:
+    tier: 3
+    creatures:
+      Ulv: {rarity: normal, base_physical: 80}
+      Wolf: {rarity: magic, base_physical: 70}
+      Fenring: {rarity: rare, base_physical: 95}
+      StoneGolem: {rarity: unique, base_physical: 110}
+    waves:
+      regular: {Ulv: 3, Wolf: 2, Fenring: 1}
+      finale_addition: {StoneGolem: 1}

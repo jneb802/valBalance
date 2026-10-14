@@ -62,6 +62,16 @@ class CombatTests(unittest.TestCase):
         self.assertEqual([r['htd'] for r in a['enemies']], [327, 6, 300, 5, 4])
         self.assertEqual([r['htd'] for r in a['enemies']], [r['htd'] for r in b['enemies']])
 
+    def test_unknown_incoming_attack_preserves_offensive_results(self):
+        self.scenario['trials'] = 5
+        self.scenario['enemies'] = self.scenario['enemies'][:1]
+        self.scenario['enemies'][0]['base_physical'] = None
+        result = calibrate(self.profile, self.scenario)['enemies'][0]
+        self.assertIsNone(result['htd'])
+        self.assertIsNone(result['received_normal'])
+        self.assertEqual(result['htd_rating'], 'not modeled')
+        self.assertTrue(result['offense'])
+
     def test_invalid_unsupported_inputs_fail(self):
         self.target['armor'] = 1
         with self.assertRaisesRegex(ValueError, 'zero monster armor'):

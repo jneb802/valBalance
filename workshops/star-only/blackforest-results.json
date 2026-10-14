@@ -1,0 +1,233 @@
+{
+  "status": "Nominal single-target simulation; not live validated",
+  "selected_patch_orders": [
+    "before_conversion"
+  ],
+  "patch_order_evidence": {
+    "order": "before_conversion",
+    "validation": "controlled-hit",
+    "game_version": "1.0.16",
+    "sls_assembly_sha256": "c0ecc08ea9a17bc62311b6dee98ca03a0325c32bec5bec36bd096975605c3b6f",
+    "epicloot_assembly_sha256": "802790e0cbd8a6f951627619a488b84e6a406e8770e2687b2fff8b63d2adf9ea",
+    "scope": "Valnet client 02, local TestingWorld, Season 8 8.0.39 client mod set with shared binaries and combat config matched to production. Both relevant prefixes priority 400; SLS index 1, Epic Loot index 3. Same order after restart. Remote ownership is not tested.",
+    "evidence": "live_probe/evidence/2026-10-09/controlled-hits.json"
+  },
+  "trials_per_patch_order": 2000,
+  "seed": 19,
+  "timing": {
+    "clip_hit_landmark_seconds": 0.34399278203121386,
+    "clip_end_landmark_seconds": 0.40140391627422534,
+    "on_hit_freeze_seconds": 0.15,
+    "exit_normalized_time": 1.2999999523162842,
+    "exit_transition_seconds": 0.30000001192092896,
+    "entry_transition_seconds": 0.20000000298023224,
+    "nominal_successful_cycle_seconds": 0.9614039488580918,
+    "attack_interval_seconds": null,
+    "status": "Clip landmarks verified. Nominal cycle integrates speed events through exit time plus hit pause and exit transition; it excludes frame/input scheduling and stamina gaps. Not a verified live TTK input."
+  },
+  "assumptions": [
+    "Primary spear attacks, full health, no dodge buff, no Crown, freshly eaten health foods, rested, full starting stamina for each isolated target.",
+    "Dry, alert, unstaggered target with zero armor. No enemy healing, blocking, movement, misses, chain returns, or collateral damage.",
+    "Nominal source animation cycle, immediate first status update and chain impact. Unity frame/input/network scheduling is not simulated. TTK is a scenario prediction, not an exact live value.",
+    "Uniform weapon skill rolls and independent double-damage and chain proc rolls. Each chain proc hits the isolated target once, without recursive weapon effects.",
+    "Uses the SLS-before-conversion order observed in controlled hits on Valnet client 02. The source profile retains both candidates for sensitivity analysis. Quantiles are random-outcome samples, not guaranteed bounds.",
+    "Stamina cost 16 * (1 - 0.33) = 10.72 with zero attack-cost equipment/status adjustment. Max stamina 50 + 109 + 0.12 * 672.448. Regen multiplier 2 rested + 0.8996 equipped effects. World stamina regen rate 1; continuous idle recovery, no combat recovery or potions.",
+    "Defense uses intended health patch order: 672.448 HP. HTD excludes shield, parry, healing, lifesteal, avoidance, and protective magic. Shaman HTD describes melee only, not its poison attack.",
+    "Only listed SLS modifiers are modeled. Required modifiers do not exclude extra random modifiers in the shrine API.",
+    "Star-only workshop; no required offensive SLS modifiers. Existing target SLS damage-received factors remain part of the player profile.",
+    "Frozen October 9 patch-order evidence. Current runtime has not been revalidated. Oozer poison and children, Shaman poison and healing, and rarity attack speed are not simulated.",
+    "Health-first targets anchored to 800 HP normal and 24000 HP unique at tier 1. Absolute TTK/HTD targets remain unset."
+  ],
+  "enemies": [
+    {
+      "prefab": "Greydwarf",
+      "role": "normal",
+      "stars": 19,
+      "health": 800.0,
+      "raw_physical": 80.5,
+      "raw_lightning": 0,
+      "raw_frost": 0,
+      "received_normal": 2.3397813438498063,
+      "received_low_health": 1.9823705359935555,
+      "htd": 327,
+      "htd_rating": "Unspecified",
+      "median_ratings": {
+        "before_conversion": {
+          "ttk": "Unspecified",
+          "htk": "Unspecified"
+        }
+      },
+      "offense": {
+        "before_conversion": {
+          "htk": {
+            "p10": 1,
+            "p50": 2,
+            "p90": 2
+          },
+          "ttk": {
+            "p10": 0.34399278203121386,
+            "p50": 1.3053967308893055,
+            "p90": 1.3439927820312139
+          },
+          "stamina_wait_seconds": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.0
+          }
+        }
+      }
+    },
+    {
+      "prefab": "Greydwarf_Elite",
+      "role": "magic",
+      "stars": 22,
+      "health": 3450.0,
+      "raw_physical": 195.0,
+      "raw_lightning": 0,
+      "raw_frost": 0,
+      "received_normal": 13.72943722848484,
+      "received_low_health": 11.632211663308507,
+      "htd": 56,
+      "htd_rating": "Unspecified",
+      "median_ratings": {
+        "before_conversion": {
+          "ttk": "Unspecified",
+          "htk": "Unspecified"
+        }
+      },
+      "offense": {
+        "before_conversion": {
+          "htk": {
+            "p10": 5,
+            "p50": 5,
+            "p90": 6
+          },
+          "ttk": {
+            "p10": 4.189608577463581,
+            "p50": 4.343992782031214,
+            "p90": 5.343992782031214
+          },
+          "stamina_wait_seconds": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.0
+          }
+        }
+      }
+    },
+    {
+      "prefab": "Greydwarf_Shaman",
+      "role": "magic",
+      "stars": 57,
+      "health": 3480.0,
+      "raw_physical": 213.5,
+      "raw_lightning": 0,
+      "raw_frost": 0,
+      "received_normal": 16.458083895019147,
+      "received_low_health": 13.944046813671115,
+      "htd": 47,
+      "htd_rating": "Unspecified",
+      "median_ratings": {
+        "before_conversion": {
+          "ttk": "Unspecified",
+          "htk": "Unspecified"
+        }
+      },
+      "offense": {
+        "before_conversion": {
+          "htk": {
+            "p10": 5,
+            "p50": 5,
+            "p90": 6
+          },
+          "ttk": {
+            "p10": 4.189608577463581,
+            "p50": 4.343992782031214,
+            "p90": 5.343992782031214
+          },
+          "stamina_wait_seconds": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.0
+          }
+        }
+      }
+    },
+    {
+      "prefab": "Bjorn",
+      "role": "rare",
+      "stars": 15,
+      "health": 8000.0,
+      "raw_physical": 261.25,
+      "raw_lightning": 0,
+      "raw_frost": 0,
+      "received_normal": 24.64314380249204,
+      "received_low_health": 20.878806610165142,
+      "htd": 31,
+      "htd_rating": "Unspecified",
+      "median_ratings": {
+        "before_conversion": {
+          "ttk": "Unspecified",
+          "htk": "Unspecified"
+        }
+      },
+      "offense": {
+        "before_conversion": {
+          "htk": {
+            "p10": 12,
+            "p50": 14,
+            "p90": 15
+          },
+          "ttk": {
+            "p10": 11.343992782031215,
+            "p50": 12.842244117186404,
+            "p90": 13.803648066044495
+          },
+          "stamina_wait_seconds": {
+            "p10": 0.0,
+            "p50": 0.0,
+            "p90": 0.0
+          }
+        }
+      }
+    },
+    {
+      "prefab": "Troll",
+      "role": "unique",
+      "stars": 39,
+      "health": 24000.0,
+      "raw_physical": 752.5,
+      "raw_lightning": 0,
+      "raw_frost": 0,
+      "received_normal": 204.03540000000004,
+      "received_low_health": 173.22320987958813,
+      "htd": 4,
+      "htd_rating": "Unspecified",
+      "median_ratings": {
+        "before_conversion": {
+          "ttk": "Unspecified",
+          "htk": "Unspecified"
+        }
+      },
+      "offense": {
+        "before_conversion": {
+          "htk": {
+            "p10": 21,
+            "p50": 23,
+            "p90": 25
+          },
+          "ttk": {
+            "p10": 19.572071759193047,
+            "p50": 21.733858042870857,
+            "p90": 24.357028881280584
+          },
+          "stamina_wait_seconds": {
+            "p10": 0.0,
+            "p50": 0.2389783859616267,
+            "p90": 0.9393413266551718
+          }
+        }
+      }
+    }
+  ]
+}
