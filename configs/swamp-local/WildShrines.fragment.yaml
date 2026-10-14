@@ -1,0 +1,51 @@
+wildShrines:
+- definitionForWildShrine: VF_wild_shrine_yellow1
+  wildShrineLevelsConfig:
+  - tributeName: Guck
+    tributeAmount: 50
+    rewards:
+      DustRare: 10
+      EssenceRare: 10
+      ReagentRare: 10
+    hardMode: false
+    siegeMode: false
+    wildshrineWaveStartLocalization: The swamp stirs. Local endgame test.
+    wildshrineWaveEndLocalization: The swamp falls silent.
+    wildLevelDefinition:
+      levelIndex: 1
+      biome: Swamp
+      waveFormat: CommonOnly
+      levelWarningLocalization: Watch the Wraiths. The Abomination persists. The Oozer
+        joins last.
+      maxCreaturesPerPhaseOverride: 8
+      onlySelectMonsters:
+      - EndSwampDraugr
+      - EndSwampWraith
+      - EndSwampAbomination
+      - EndSwampOozer
+      commonSpawnModifiers: {}
+      rareSpawnModifiers: {}
+      eliteSpawnModifiers: {}
+      creatureRules:
+      - creatures:
+        - EndSwampDraugr
+        minStars: 39
+        maxStars: 39
+        modifiers:
+          major:
+          - Frost
+      - creatures:
+        - EndSwampWraith
+        minStars: 39
+        maxStars: 39
+      - creatures:
+        - EndSwampAbomination
+        minStars: 20
+        maxStars: 20
+        modifiers:
+          major:
+          - Frost
+      - creatures:
+        - EndSwampOozer
+        minStars: 9
+        maxStars: 9

@@ -1,0 +1,29 @@
+creatures:
+  EndSwampDraugr:
+    spawnCost: 9
+    prefabName: Draugr
+    spawnType: common
+    biome: Swamp
+    enabled: true
+    dropsEnabled: false
+  EndSwampWraith:
+    spawnCost: 18
+    prefabName: Wraith
+    spawnType: rare
+    biome: Swamp
+    enabled: true
+    dropsEnabled: false
+  EndSwampAbomination:
+    spawnCost: 20
+    prefabName: Abomination
+    spawnType: elite
+    biome: Swamp
+    enabled: true
+    dropsEnabled: false
+  EndSwampOozer:
+    spawnCost: 100
+    prefabName: BlobElite
+    spawnType: unique
+    biome: Swamp
+    enabled: true
+    dropsEnabled: false
