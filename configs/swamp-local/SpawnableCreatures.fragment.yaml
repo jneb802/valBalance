@@ -14,16 +14,16 @@ creatures:
     enabled: true
     dropsEnabled: false
   EndSwampAbomination:
-    spawnCost: 20
+    spawnCost: 100
     prefabName: Abomination
-    spawnType: elite
+    spawnType: unique
     biome: Swamp
     enabled: true
     dropsEnabled: false
   EndSwampOozer:
-    spawnCost: 100
+    spawnCost: 20
     prefabName: BlobElite
-    spawnType: unique
+    spawnType: elite
     biome: Swamp
     enabled: true
     dropsEnabled: false

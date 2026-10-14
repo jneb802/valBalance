@@ -15,8 +15,7 @@ wildShrines:
       levelIndex: 1
       biome: Swamp
       waveFormat: CommonOnly
-      levelWarningLocalization: Watch the Wraiths. The Abomination persists. The Oozer
-        joins last.
+      levelWarningLocalization: Watch the Wraiths and Oozers. The Abomination comes last.
       maxCreaturesPerPhaseOverride: 8
       onlySelectMonsters:
       - EndSwampDraugr
