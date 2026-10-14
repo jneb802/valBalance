@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Analyze shrine scenarios from JSON using only Python's standard library."""
+"""Analyze JSON shrine scenarios and inspect YAML balance settings."""
 import argparse
 import json
 import sys
@@ -8,6 +8,7 @@ from pathlib import Path
 from model import DEFAULTS, analyze
 from weapon import audit, evaluate_events
 from combat import calibrate
+from balance import DEFAULT_MODEL, plan
 
 
 def format_value(value):
@@ -59,6 +60,11 @@ def report(data, result):
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
+    scaling = commands.add_parser("balance-model", help="Inspect versioned tier and rarity planning factors")
+    scaling.add_argument("--tier", type=int, required=True)
+    scaling.add_argument("--rarity", choices=("normal", "magic", "rare"), required=True)
+    scaling.add_argument("--model", type=Path, default=DEFAULT_MODEL)
+    scaling.add_argument("--player", type=Path, help="Record the exact player input hash; does not simulate combat")
     example = commands.add_parser("example", help="Write an editable Snuffiss / Black Forest example")
     example.add_argument("output", type=Path)
     weapon = commands.add_parser("weapon", help="Audit exact weapon layers and unresolved combat inputs; JSON output")
@@ -74,6 +80,9 @@ def main(argv=None):
     calculate.add_argument("--output", type=Path, help="Write report to a new file instead of stdout")
     args = parser.parse_args(argv)
     try:
+        if args.command == "balance-model":
+            print(json.dumps(plan(args.tier, args.rarity, args.model, args.player), indent=2, allow_nan=False))
+            return 0
         if args.command == "example":
             with args.output.open("x") as stream:
                 json.dump(DEFAULTS, stream, indent=2, allow_nan=False)
