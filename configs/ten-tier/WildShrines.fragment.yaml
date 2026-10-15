@@ -157,12 +157,15 @@ wildShrines:
       creatureRules:
       - creatures:
         - VB10_T04_Goblin
-        minStars: 5
-        maxStars: 5
+        minStars: 7
+        maxStars: 7
       - creatures:
         - VB10_T04_GoblinShaman
         minStars: 46
         maxStars: 46
+        modifiers:
+          major:
+          - ElementalChaos
       - creatures:
         - VB10_T04_GoblinBrute
         minStars: 12

@@ -13,6 +13,8 @@ class FortressDraftTests(unittest.TestCase):
         levels = yaml.safe_load((config / 'WildShrines.fragment.yaml').read_text())['wildShrines'][0]['wildShrineLevelsConfig']
         source = json.loads((root / 'workshops/star-only/summary.json').read_text())['creatures']
         expected = {f"VB10_T{r['tier']:02d}_{r['prefab']}": r['stars'] for r in source}
+        overrides = yaml.safe_load((config / 'overrides.yaml').read_text())['creatureRules']
+        expected.update({alias: rule['minStars'] for alias, rule in overrides.items() if 'minStars' in rule})
         self.assertEqual(len(levels), 10)
         self.assertEqual(len({x['tributeName'] for x in levels}), 10)
         self.assertEqual(set(creatures), set(expected))
@@ -24,6 +26,7 @@ class FortressDraftTests(unittest.TestCase):
             for rule in level['creatureRules']:
                 self.assertEqual(rule['minStars'], expected[rule['creatures'][0]])
                 self.assertEqual(rule['maxStars'], rule['minStars'])
+                self.assertEqual(rule.get('modifiers'), overrides.get(rule['creatures'][0], {}).get('modifiers'))
             self.assertEqual(sum(creatures[a]['spawnType'] == 'unique' for a in aliases), 1)
         exclusions = yaml.safe_load((config / 'UnrelatedLevels.exclusions.yaml').read_text())
         self.assertEqual(set(exclusions['excludeSelectMonsters']), set(creatures))

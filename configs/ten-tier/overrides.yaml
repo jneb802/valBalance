@@ -1,0 +1,9 @@
+# Explicit event tuning after the saved star-only simulation.
+# Saved workshop results do not include these overrides.
+creatureRules:
+  VB10_T04_Goblin:
+    minStars: 7
+    maxStars: 7
+  VB10_T04_GoblinShaman:
+    modifiers:
+      major: [ElementalChaos]
