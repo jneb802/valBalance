@@ -1,0 +1,1519 @@
+{
+  "model_version": "0.1.0",
+  "input_sha256": {
+    "configs/balance-model.yaml": "88a8bb05d9d63cc8980d546f6f24d7e8d49c4f3d50d252ca1629310bada1e28e",
+    "workshops/star-only/design.yaml": "14a45a4c8f70ed21d8428a7d6dfa337df59f2bb7452496b7df410ff790785102",
+    "workshops/star-only/player.json": "4db5ea85326bc5d00a353f67f88eb835ad067d619491dd973a21663bf101b222",
+    "workshops/star-only/scenario-template.json": "e576c33fa4d30280c682f78a64af11f1f3e41b5b10c0bcb709e4c85b7b6d4ed7",
+    "workshops/star-only/additional-creature-source-data.json": "32e1225c710a8cdcd799df50523d12d5d8ada161d7305de8479da6663970e38c"
+  },
+  "selection": "Nearest health; lower stars on ties. Damage and timing are diagnostics, not optimized.",
+  "tier_curve": [
+    {
+      "tier": 1,
+      "event": "blackforest",
+      "health_factor": 1.0,
+      "damage_factor": 1.0,
+      "normal_hp": 800.0,
+      "magic_hp": 3472.0,
+      "rare_hp": 7840.000000000001,
+      "boss_hp": 24000.0
+    },
+    {
+      "tier": 2,
+      "event": "swamp",
+      "health_factor": 1.11,
+      "damage_factor": 1.06,
+      "normal_hp": 888.0000000000001,
+      "magic_hp": 3853.9200000000005,
+      "rare_hp": 8702.400000000001,
+      "boss_hp": 26640.000000000004
+    },
+    {
+      "tier": 3,
+      "event": "mountain",
+      "health_factor": 1.2321000000000002,
+      "damage_factor": 1.1236000000000002,
+      "normal_hp": 985.6800000000002,
+      "magic_hp": 4277.851200000001,
+      "rare_hp": 9659.664000000002,
+      "boss_hp": 29570.400000000005
+    },
+    {
+      "tier": 4,
+      "event": "plains",
+      "health_factor": 1.3676310000000003,
+      "damage_factor": 1.191016,
+      "normal_hp": 1094.1048000000003,
+      "magic_hp": 4748.414832000001,
+      "rare_hp": 10722.227040000003,
+      "boss_hp": 32823.14400000001
+    },
+    {
+      "tier": 5,
+      "event": "mistlands_bugs",
+      "health_factor": 1.5180704100000004,
+      "damage_factor": 1.2624769600000003,
+      "normal_hp": 1214.4563280000004,
+      "magic_hp": 5270.740463520002,
+      "rare_hp": 11901.672014400005,
+      "boss_hp": 36433.689840000014
+    },
+    {
+      "tier": 6,
+      "event": "mistlands_dvergr",
+      "health_factor": 1.6850581551000008,
+      "damage_factor": 1.3382255776000003,
+      "normal_hp": 1348.0465240800006,
+      "magic_hp": 5850.521914507202,
+      "rare_hp": 13210.855935984007,
+      "boss_hp": 40441.39572240002
+    },
+    {
+      "tier": 7,
+      "event": "ashlands",
+      "health_factor": 1.870414552161001,
+      "damage_factor": 1.4185191122560004,
+      "normal_hp": 1496.3316417288008,
+      "magic_hp": 6494.079325102995,
+      "rare_hp": 14664.05008894225,
+      "boss_hp": 44889.949251864025
+    },
+    {
+      "tier": 8,
+      "event": "deepnorth",
+      "health_factor": 2.0761601528987113,
+      "damage_factor": 1.5036302589913606,
+      "normal_hp": 1660.928122318969,
+      "magic_hp": 7208.428050864325,
+      "rare_hp": 16277.095598725897,
+      "boss_hp": 49827.84366956907
+    },
+    {
+      "tier": 9,
+      "event": "mixed_elites",
+      "health_factor": 2.3045377697175695,
+      "damage_factor": 1.5938480745308423,
+      "normal_hp": 1843.6302157740556,
+      "magic_hp": 8001.355136459401,
+      "rare_hp": 18067.576114585747,
+      "boss_hp": 55308.906473221665
+    },
+    {
+      "tier": 10,
+      "event": "mixed_finale",
+      "health_factor": 2.5580369243865024,
+      "damage_factor": 1.6894789590026928,
+      "normal_hp": 2046.429539509202,
+      "magic_hp": 8881.504201469936,
+      "rare_hp": 20055.009487190182,
+      "boss_hp": 61392.88618527606
+    }
+  ],
+  "waves": [
+    {
+      "event": "blackforest",
+      "wave": 1,
+      "counts": {
+        "Greydwarf": 6,
+        "magic_support_selections": 2,
+        "Bjorn": 1
+      },
+      "total_creatures_excluding_children": 9,
+      "total_hp_min": 19700.0,
+      "total_hp_max": 19760.0
+    },
+    {
+      "event": "blackforest",
+      "wave": 2,
+      "counts": {
+        "Greydwarf": 6,
+        "magic_support_selections": 2,
+        "Bjorn": 1
+      },
+      "total_creatures_excluding_children": 9,
+      "total_hp_min": 19700.0,
+      "total_hp_max": 19760.0
+    },
+    {
+      "event": "blackforest",
+      "wave": 3,
+      "counts": {
+        "Greydwarf": 6,
+        "magic_support_selections": 2,
+        "Bjorn": 1
+      },
+      "total_creatures_excluding_children": 9,
+      "total_hp_min": 19700.0,
+      "total_hp_max": 19760.0
+    },
+    {
+      "event": "blackforest",
+      "wave": 4,
+      "counts": {
+        "Greydwarf": 6,
+        "magic_support_selections": 2,
+        "Bjorn": 1,
+        "Troll": 1
+      },
+      "total_creatures_excluding_children": 10,
+      "total_hp_min": 43700.0,
+      "total_hp_max": 43760.0
+    },
+    {
+      "event": "swamp",
+      "wave": 1,
+      "counts": {
+        "Draugr": 4,
+        "Wraith": 2,
+        "BlobElite": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 20100.0,
+      "total_hp_max": 20100.0
+    },
+    {
+      "event": "swamp",
+      "wave": 2,
+      "counts": {
+        "Draugr": 4,
+        "Wraith": 2,
+        "BlobElite": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 20100.0,
+      "total_hp_max": 20100.0
+    },
+    {
+      "event": "swamp",
+      "wave": 3,
+      "counts": {
+        "Draugr": 4,
+        "Wraith": 2,
+        "BlobElite": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 20100.0,
+      "total_hp_max": 20100.0
+    },
+    {
+      "event": "swamp",
+      "wave": 4,
+      "counts": {
+        "Draugr": 4,
+        "Wraith": 2,
+        "BlobElite": 1,
+        "Abomination": 1
+      },
+      "total_creatures_excluding_children": 8,
+      "total_hp_min": 46500.0,
+      "total_hp_max": 46500.0
+    },
+    {
+      "event": "mountain",
+      "wave": 1,
+      "counts": {
+        "Ulv": 3,
+        "Wolf": 2,
+        "Fenring": 1
+      },
+      "total_creatures_excluding_children": 6,
+      "total_hp_min": 21080.0,
+      "total_hp_max": 21080.0
+    },
+    {
+      "event": "mountain",
+      "wave": 2,
+      "counts": {
+        "Ulv": 3,
+        "Wolf": 2,
+        "Fenring": 1
+      },
+      "total_creatures_excluding_children": 6,
+      "total_hp_min": 21080.0,
+      "total_hp_max": 21080.0
+    },
+    {
+      "event": "mountain",
+      "wave": 3,
+      "counts": {
+        "Ulv": 3,
+        "Wolf": 2,
+        "Fenring": 1
+      },
+      "total_creatures_excluding_children": 6,
+      "total_hp_min": 21080.0,
+      "total_hp_max": 21080.0
+    },
+    {
+      "event": "mountain",
+      "wave": 4,
+      "counts": {
+        "Ulv": 3,
+        "Wolf": 2,
+        "Fenring": 1,
+        "StoneGolem": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 50680.0,
+      "total_hp_max": 50680.0
+    },
+    {
+      "event": "plains",
+      "wave": 1,
+      "counts": {
+        "Goblin": 4,
+        "GoblinShaman": 2,
+        "GoblinBrute": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 24000.0,
+      "total_hp_max": 24000.0
+    },
+    {
+      "event": "plains",
+      "wave": 2,
+      "counts": {
+        "Goblin": 4,
+        "GoblinShaman": 2,
+        "GoblinBrute": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 24000.0,
+      "total_hp_max": 24000.0
+    },
+    {
+      "event": "plains",
+      "wave": 3,
+      "counts": {
+        "Goblin": 4,
+        "GoblinShaman": 2,
+        "GoblinBrute": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 24000.0,
+      "total_hp_max": 24000.0
+    },
+    {
+      "event": "plains",
+      "wave": 4,
+      "counts": {
+        "Goblin": 4,
+        "GoblinShaman": 2,
+        "GoblinBrute": 1,
+        "Lox": 1
+      },
+      "total_creatures_excluding_children": 8,
+      "total_hp_min": 57000.0,
+      "total_hp_max": 57000.0
+    },
+    {
+      "event": "mistlands_bugs",
+      "wave": 1,
+      "counts": {
+        "SeekerBrood": 4,
+        "Seeker": 2,
+        "SeekerBrute": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 27280.0,
+      "total_hp_max": 27280.0
+    },
+    {
+      "event": "mistlands_bugs",
+      "wave": 2,
+      "counts": {
+        "SeekerBrood": 4,
+        "Seeker": 2,
+        "SeekerBrute": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 27280.0,
+      "total_hp_max": 27280.0
+    },
+    {
+      "event": "mistlands_bugs",
+      "wave": 3,
+      "counts": {
+        "SeekerBrood": 4,
+        "Seeker": 2,
+        "SeekerBrute": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 27280.0,
+      "total_hp_max": 27280.0
+    },
+    {
+      "event": "mistlands_bugs",
+      "wave": 4,
+      "counts": {
+        "SeekerBrood": 4,
+        "Seeker": 2,
+        "SeekerBrute": 1,
+        "Gjall": 1
+      },
+      "total_creatures_excluding_children": 8,
+      "total_hp_min": 63280.0,
+      "total_hp_max": 63280.0
+    },
+    {
+      "event": "mistlands_dvergr",
+      "wave": 1,
+      "counts": {
+        "Dverger": 4,
+        "DvergerMageIce": 2,
+        "DvergerMageSupport": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 30800.0,
+      "total_hp_max": 30800.0
+    },
+    {
+      "event": "mistlands_dvergr",
+      "wave": 2,
+      "counts": {
+        "Dverger": 4,
+        "DvergerMageIce": 2,
+        "DvergerMageSupport": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 30800.0,
+      "total_hp_max": 30800.0
+    },
+    {
+      "event": "mistlands_dvergr",
+      "wave": 3,
+      "counts": {
+        "Dverger": 4,
+        "DvergerMageIce": 2,
+        "DvergerMageSupport": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 30800.0,
+      "total_hp_max": 30800.0
+    },
+    {
+      "event": "mistlands_dvergr",
+      "wave": 4,
+      "counts": {
+        "Dverger": 4,
+        "DvergerMageIce": 2,
+        "DvergerMageSupport": 1,
+        "DvergerMageFire": 1
+      },
+      "total_creatures_excluding_children": 8,
+      "total_hp_min": 71400.0,
+      "total_hp_max": 71400.0
+    },
+    {
+      "event": "ashlands",
+      "wave": 1,
+      "counts": {
+        "Charred_Twitcher": 4,
+        "Charred_Archer": 2,
+        "Charred_Melee": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 33360.0,
+      "total_hp_max": 33360.0
+    },
+    {
+      "event": "ashlands",
+      "wave": 2,
+      "counts": {
+        "Charred_Twitcher": 4,
+        "Charred_Archer": 2,
+        "Charred_Melee": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 33360.0,
+      "total_hp_max": 33360.0
+    },
+    {
+      "event": "ashlands",
+      "wave": 3,
+      "counts": {
+        "Charred_Twitcher": 4,
+        "Charred_Archer": 2,
+        "Charred_Melee": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 33360.0,
+      "total_hp_max": 33360.0
+    },
+    {
+      "event": "ashlands",
+      "wave": 4,
+      "counts": {
+        "Charred_Twitcher": 4,
+        "Charred_Archer": 2,
+        "Charred_Melee": 1,
+        "Morgen": 1
+      },
+      "total_creatures_excluding_children": 8,
+      "total_hp_min": 78160.0,
+      "total_hp_max": 78160.0
+    },
+    {
+      "event": "deepnorth",
+      "wave": 1,
+      "counts": {
+        "Skeleton_DeepNorth": 4,
+        "JotunWitch": 2,
+        "JotunWarrior": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 38100.0,
+      "total_hp_max": 38100.0
+    },
+    {
+      "event": "deepnorth",
+      "wave": 2,
+      "counts": {
+        "Skeleton_DeepNorth": 4,
+        "JotunWitch": 2,
+        "JotunWarrior": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 38100.0,
+      "total_hp_max": 38100.0
+    },
+    {
+      "event": "deepnorth",
+      "wave": 3,
+      "counts": {
+        "Skeleton_DeepNorth": 4,
+        "JotunWitch": 2,
+        "JotunWarrior": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 38100.0,
+      "total_hp_max": 38100.0
+    },
+    {
+      "event": "deepnorth",
+      "wave": 4,
+      "counts": {
+        "Skeleton_DeepNorth": 4,
+        "JotunWitch": 2,
+        "JotunWarrior": 1,
+        "TrollFrost": 1
+      },
+      "total_creatures_excluding_children": 8,
+      "total_hp_min": 89100.0,
+      "total_hp_max": 89100.0
+    },
+    {
+      "event": "mixed_elites",
+      "wave": 1,
+      "counts": {
+        "Charred_Twitcher": 4,
+        "Wraith": 2,
+        "SeekerBrute": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 41040.0,
+      "total_hp_max": 41040.0
+    },
+    {
+      "event": "mixed_elites",
+      "wave": 2,
+      "counts": {
+        "Charred_Twitcher": 4,
+        "Wraith": 2,
+        "SeekerBrute": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 41040.0,
+      "total_hp_max": 41040.0
+    },
+    {
+      "event": "mixed_elites",
+      "wave": 3,
+      "counts": {
+        "Charred_Twitcher": 4,
+        "Wraith": 2,
+        "SeekerBrute": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 41040.0,
+      "total_hp_max": 41040.0
+    },
+    {
+      "event": "mixed_elites",
+      "wave": 4,
+      "counts": {
+        "Charred_Twitcher": 4,
+        "Wraith": 2,
+        "SeekerBrute": 1,
+        "Morgen": 1
+      },
+      "total_creatures_excluding_children": 8,
+      "total_hp_min": 97040.0,
+      "total_hp_max": 97040.0
+    },
+    {
+      "event": "mixed_finale",
+      "wave": 1,
+      "counts": {
+        "Draugr": 4,
+        "DvergerMageIce": 2,
+        "JotunWarriorDualWield": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 45000.0,
+      "total_hp_max": 45000.0
+    },
+    {
+      "event": "mixed_finale",
+      "wave": 2,
+      "counts": {
+        "Draugr": 4,
+        "DvergerMageIce": 2,
+        "JotunWarriorDualWield": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 45000.0,
+      "total_hp_max": 45000.0
+    },
+    {
+      "event": "mixed_finale",
+      "wave": 3,
+      "counts": {
+        "Draugr": 4,
+        "DvergerMageIce": 2,
+        "JotunWarriorDualWield": 1
+      },
+      "total_creatures_excluding_children": 7,
+      "total_hp_min": 45000.0,
+      "total_hp_max": 45000.0
+    },
+    {
+      "event": "mixed_finale",
+      "wave": 4,
+      "counts": {
+        "Draugr": 4,
+        "DvergerMageIce": 2,
+        "JotunWarriorDualWield": 1,
+        "TrollFrost": 1
+      },
+      "total_creatures_excluding_children": 8,
+      "total_hp_min": 105000.0,
+      "total_hp_max": 105000.0
+    }
+  ],
+  "creatures": [
+    {
+      "event": "blackforest",
+      "tier": 1,
+      "prefab": "Greydwarf",
+      "rarity": "normal",
+      "base_health": 40.0,
+      "stars": 19,
+      "target_health": 800.0,
+      "health": 800.0,
+      "health_error_percent": 0.0,
+      "same_creature_tier1_stars": 19,
+      "tier_damage_reference": 80.5,
+      "attack": null,
+      "scaled_attack_payload": null,
+      "raw_physical": 80.5,
+      "received": 2.3397813438498063,
+      "htd": 327,
+      "ttk": 1.3053967308893055,
+      "htk": 2,
+      "tier_damage_error_percent": 0.0
+    },
+    {
+      "event": "blackforest",
+      "tier": 1,
+      "prefab": "Greydwarf_Elite",
+      "rarity": "magic",
+      "base_health": 150.0,
+      "stars": 22,
+      "target_health": 3472.0,
+      "health": 3450.0,
+      "health_error_percent": -0.6336405529953959,
+      "same_creature_tier1_stars": 22,
+      "tier_damage_reference": 195.0,
+      "attack": null,
+      "scaled_attack_payload": null,
+      "raw_physical": 195.0,
+      "received": 13.72943722848484,
+      "htd": 56,
+      "ttk": 4.343992782031214,
+      "htk": 5,
+      "tier_damage_error_percent": 0.0
+    },
+    {
+      "event": "blackforest",
+      "tier": 1,
+      "prefab": "Greydwarf_Shaman",
+      "rarity": "magic",
+      "base_health": 60.0,
+      "stars": 57,
+      "target_health": 3472.0,
+      "health": 3480.0,
+      "health_error_percent": 0.23041474654377225,
+      "same_creature_tier1_stars": 57,
+      "tier_damage_reference": 213.5,
+      "attack": null,
+      "scaled_attack_payload": null,
+      "raw_physical": 213.5,
+      "received": 16.458083895019147,
+      "htd": 47,
+      "ttk": 4.343992782031214,
+      "htk": 5,
+      "tier_damage_error_percent": 0.0
+    },
+    {
+      "event": "blackforest",
+      "tier": 1,
+      "prefab": "Bjorn",
+      "rarity": "rare",
+      "base_health": 500.0,
+      "stars": 15,
+      "target_health": 7840.000000000001,
+      "health": 8000.0,
+      "health_error_percent": 2.0408163265305923,
+      "same_creature_tier1_stars": 15,
+      "tier_damage_reference": 261.25,
+      "attack": null,
+      "scaled_attack_payload": null,
+      "raw_physical": 261.25,
+      "received": 24.64314380249204,
+      "htd": 31,
+      "ttk": 12.842244117186404,
+      "htk": 14,
+      "tier_damage_error_percent": 0.0
+    },
+    {
+      "event": "blackforest",
+      "tier": 1,
+      "prefab": "Troll",
+      "rarity": "unique",
+      "base_health": 600.0,
+      "stars": 39,
+      "target_health": 24000.0,
+      "health": 24000.0,
+      "health_error_percent": 0.0,
+      "same_creature_tier1_stars": 39,
+      "tier_damage_reference": 752.5,
+      "attack": null,
+      "scaled_attack_payload": null,
+      "raw_physical": 752.5,
+      "received": 204.03540000000004,
+      "htd": 4,
+      "ttk": 21.733858042870857,
+      "htk": 23,
+      "tier_damage_error_percent": 0.0
+    },
+    {
+      "event": "swamp",
+      "tier": 2,
+      "prefab": "Draugr",
+      "rarity": "normal",
+      "base_health": 100.0,
+      "stars": 8,
+      "target_health": 888.0000000000001,
+      "health": 900.0,
+      "health_error_percent": 1.3513513513513375,
+      "same_creature_tier1_stars": 7,
+      "tier_damage_reference": 139.92000000000002,
+      "attack": null,
+      "scaled_attack_payload": null,
+      "raw_physical": 144.0,
+      "received": 7.487011449569009,
+      "htd": 102,
+      "ttk": 1.3053967308893055,
+      "htk": 2,
+      "tier_damage_error_percent": 2.9159519725557415
+    },
+    {
+      "event": "swamp",
+      "tier": 2,
+      "prefab": "Wraith",
+      "rarity": "magic",
+      "base_health": 100.0,
+      "stars": 38,
+      "target_health": 3853.9200000000005,
+      "health": 3900.0,
+      "health_error_percent": 1.1956657117947245,
+      "same_creature_tier1_stars": 34,
+      "tier_damage_reference": 604.2,
+      "attack": null,
+      "scaled_attack_payload": null,
+      "raw_physical": 630.0,
+      "received": 143.30607852690684,
+      "htd": 6,
+      "ttk": 7.343992782031214,
+      "htk": 8,
+      "tier_damage_error_percent": 4.270109235352515
+    },
+    {
+      "event": "swamp",
+      "tier": 2,
+      "prefab": "BlobElite",
+      "rarity": "rare",
+      "base_health": 150.0,
+      "stars": 57,
+      "target_health": 8702.400000000001,
+      "health": 8700.0,
+      "health_error_percent": -0.02757859900718307,
+      "same_creature_tier1_stars": 51,
+      "tier_damage_reference": null,
+      "attack": null,
+      "scaled_attack_payload": null,
+      "raw_poison_payload": 1753.75,
+      "raw_physical": null,
+      "received": null,
+      "htd": null,
+      "ttk": 10.91943621947022,
+      "htk": 12,
+      "tier_damage_error_percent": null
+    },
+    {
+      "event": "swamp",
+      "tier": 2,
+      "prefab": "Abomination",
+      "rarity": "unique",
+      "base_health": 800.0,
+      "stars": 32,
+      "target_health": 26640.000000000004,
+      "health": 26400.0,
+      "health_error_percent": -0.9009009009009139,
+      "same_creature_tier1_stars": 29,
+      "tier_damage_reference": 699.6,
+      "attack": null,
+      "scaled_attack_payload": null,
+      "raw_physical": 720.0,
+      "received": 187.1744,
+      "htd": 5,
+      "ttk": 48.343992782031215,
+      "htk": 43,
+      "tier_damage_error_percent": 2.9159519725557415
+    },
+    {
+      "event": "mountain",
+      "tier": 3,
+      "prefab": "Ulv",
+      "rarity": "normal",
+      "base_health": 50.0,
+      "stars": 19,
+      "target_health": 985.6800000000002,
+      "health": 1000.0,
+      "health_error_percent": 1.4528041555068372,
+      "same_creature_tier1_stars": 15,
+      "tier_damage_reference": 426.9680000000001,
+      "attack": null,
+      "scaled_attack_payload": null,
+      "raw_physical": 460.0,
+      "received": 76.40102347264674,
+      "htd": 10,
+      "ttk": 1.3053967308893055,
+      "htk": 2,
+      "tier_damage_error_percent": 7.736411159618495
+    },
+    {
+      "event": "mountain",
+      "tier": 3,
+      "prefab": "Wolf",
+      "rarity": "magic",
+      "base_health": 80.0,
+      "stars": 52,
+      "target_health": 4277.851200000001,
+      "health": 4240.0,
+      "health_error_percent": -0.8848180600578348,
+      "same_creature_tier1_stars": 42,
+      "tier_damage_reference": 904.4980000000002,
+      "attack": null,
+      "scaled_attack_payload": null,
+      "raw_physical": 980.0,
+      "received": 322.0624,
+      "htd": 3,
+      "ttk": 5.151012526321673,
+      "htk": 6,
+      "tier_damage_error_percent": 8.347392697385715
+    },
+    {
+      "event": "mountain",
+      "tier": 3,
+      "prefab": "Fenring",
+      "rarity": "rare",
+      "base_health": 300.0,
+      "stars": 31,
+      "target_health": 9659.664000000002,
+      "health": 9600.0,
+      "health_error_percent": -0.6176612354218736,
+      "same_creature_tier1_stars": 25,
+      "tier_damage_reference": 773.8795000000001,
+      "attack": null,
+      "scaled_attack_payload": null,
+      "raw_physical": 831.25,
+      "received": 244.89090000000004,
+      "htd": 4,
+      "ttk": 12.343992782031215,
+      "htk": 13,
+      "tier_damage_error_percent": 7.413363449994459
+    },
+    {
+      "event": "mountain",
+      "tier": 3,
+      "prefab": "StoneGolem",
+      "rarity": "unique",
+      "base_health": 800.0,
+      "stars": 36,
+      "target_health": 29570.400000000005,
+      "health": 29600.0,
+      "health_error_percent": 0.10010010010008674,
+      "same_creature_tier1_stars": 29,
+      "tier_damage_reference": 1019.6670000000001,
+      "attack": null,
+      "scaled_attack_payload": null,
+      "raw_physical": 1100.0,
+      "received": 384.31840000000005,
+      "htd": 2,
+      "ttk": 59.76983519981198,
+      "htk": 52,
+      "tier_damage_error_percent": 7.8783563653624045
+    },
+    {
+      "event": "plains",
+      "tier": 4,
+      "prefab": "Goblin",
+      "rarity": "normal",
+      "base_health": 175.0,
+      "stars": 5,
+      "target_health": 1094.1048000000003,
+      "health": 1050.0,
+      "health_error_percent": -4.031131204250293,
+      "same_creature_tier1_stars": 4,
+      "tier_damage_reference": 202.47272,
+      "attack": "GoblinClub",
+      "scaled_attack_payload": {
+        "m_blunt": 191.25
+      },
+      "raw_physical": 191.25,
+      "received": 13.206459405062525,
+      "htd": 58,
+      "ttk": 1.3053967308893055,
+      "htk": 2,
+      "tier_damage_error_percent": -5.542830658866049
+    },
+    {
+      "event": "plains",
+      "tier": 4,
+      "prefab": "GoblinShaman",
+      "rarity": "magic",
+      "base_health": 100.0,
+      "stars": 46,
+      "target_health": 4748.414832000001,
+      "health": 4700.0,
+      "health_error_percent": -1.019599881495803,
+      "same_creature_tier1_stars": 34,
+      "tier_damage_reference": 1131.4652,
+      "attack": "GoblinShaman_attack_poke",
+      "scaled_attack_payload": {
+        "m_blunt": 1250.0
+      },
+      "raw_physical": 1250.0,
+      "received": 462.1384,
+      "htd": 2,
+      "ttk": 6.1124164751797645,
+      "htk": 7,
+      "tier_damage_error_percent": 10.476221451618661
+    },
+    {
+      "event": "plains",
+      "tier": 4,
+      "prefab": "GoblinBrute",
+      "rarity": "rare",
+      "base_health": 800.0,
+      "stars": 12,
+      "target_health": 10722.227040000003,
+      "health": 10400.0,
+      "health_error_percent": -3.0052249294657996,
+      "same_creature_tier1_stars": 9,
+      "tier_damage_reference": 503.20426000000003,
+      "attack": "GoblinBrute_Attack",
+      "scaled_attack_payload": {
+        "m_blunt": 520.0
+      },
+      "raw_physical": 520.0,
+      "received": 97.63155362478108,
+      "htd": 8,
+      "ttk": 12.842244117186404,
+      "htk": 14,
+      "tier_damage_error_percent": 3.3377579116679046
+    },
+    {
+      "event": "plains",
+      "tier": 4,
+      "prefab": "Lox",
+      "rarity": "unique",
+      "base_health": 1000.0,
+      "stars": 32,
+      "target_health": 32823.14400000001,
+      "health": 33000.0,
+      "health_error_percent": 0.5388149288806376,
+      "same_creature_tier1_stars": 23,
+      "tier_damage_reference": 1045.11654,
+      "attack": "lox_bite",
+      "scaled_attack_payload": {
+        "m_slash": 1170.0
+      },
+      "raw_physical": 1170.0,
+      "received": 420.6344000000001,
+      "htd": 2,
+      "ttk": 42.343992782031215,
+      "htk": 38,
+      "tier_damage_error_percent": 11.94923773764025
+    },
+    {
+      "event": "mistlands_bugs",
+      "tier": 5,
+      "prefab": "SeekerBrood",
+      "rarity": "normal",
+      "base_health": 20.0,
+      "stars": 60,
+      "target_health": 1214.4563280000004,
+      "health": 1220.0,
+      "health_error_percent": 0.45647355711251336,
+      "same_creature_tier1_stars": 39,
+      "tier_damage_reference": 814.2976392000002,
+      "attack": "babyseeker_attack",
+      "scaled_attack_payload": {
+        "m_pierce": 960.0
+      },
+      "raw_physical": 960.0,
+      "received": 311.68640000000005,
+      "htd": 3,
+      "ttk": 3.2282046286054893,
+      "htk": 4,
+      "tier_damage_error_percent": 17.89301034240305
+    },
+    {
+      "event": "mistlands_bugs",
+      "tier": 5,
+      "prefab": "Seeker",
+      "rarity": "magic",
+      "base_health": 200.0,
+      "stars": 25,
+      "target_health": 5270.740463520002,
+      "health": 5200.0,
+      "health_error_percent": -1.3421352086981475,
+      "same_creature_tier1_stars": 16,
+      "tier_damage_reference": 568.1146320000001,
+      "attack": "seeker_pincers",
+      "scaled_attack_payload": {
+        "m_pierce": 652.5
+      },
+      "raw_physical": 652.5,
+      "received": 153.7250153585825,
+      "htd": 5,
+      "ttk": 10.343992782031215,
+      "htk": 11,
+      "tier_damage_error_percent": 14.853581169512964
+    },
+    {
+      "event": "mistlands_bugs",
+      "tier": 5,
+      "prefab": "SeekerBrute",
+      "rarity": "rare",
+      "base_health": 1500.0,
+      "stars": 7,
+      "target_health": 11901.672014400005,
+      "health": 12000.0,
+      "health_error_percent": 0.8261695119897938,
+      "same_creature_tier1_stars": 4,
+      "tier_damage_reference": 302.99447040000007,
+      "attack": "SeekerBrute_groundslam",
+      "scaled_attack_payload": {
+        "m_blunt": 330.0
+      },
+      "raw_physical": 330.0,
+      "received": 39.319808394003914,
+      "htd": 20,
+      "ttk": 21.733858042870857,
+      "htk": 23,
+      "tier_damage_error_percent": 8.91287869522781
+    },
+    {
+      "event": "mistlands_bugs",
+      "tier": 5,
+      "prefab": "Gjall",
+      "rarity": "unique",
+      "base_health": 1500.0,
+      "stars": 23,
+      "target_health": 36433.689840000014,
+      "health": 36000.0,
+      "health_error_percent": -1.1903538782499945,
+      "same_creature_tier1_stars": 15,
+      "tier_damage_reference": null,
+      "attack": "gjall_attack_spit",
+      "scaled_attack_payload": {
+        "m_blunt": 337.5,
+        "m_fire": 540.0
+      },
+      "raw_physical": null,
+      "received": null,
+      "htd": null,
+      "ttk": 54.52349352299251,
+      "htk": 48,
+      "tier_damage_error_percent": null
+    },
+    {
+      "event": "mistlands_dvergr",
+      "tier": 6,
+      "prefab": "Dverger",
+      "rarity": "normal",
+      "base_health": 350.0,
+      "stars": 3,
+      "target_health": 1348.0465240800006,
+      "health": 1400.0,
+      "health_error_percent": 3.853982410247747,
+      "same_creature_tier1_stars": 1,
+      "tier_damage_reference": 184.00601692000004,
+      "attack": "DvergerArbalest_shoot",
+      "scaled_attack_payload": {
+        "m_pierce": 192.5
+      },
+      "raw_physical": 192.5,
+      "received": 13.379657022959668,
+      "htd": 57,
+      "ttk": 2.2668006797473974,
+      "htk": 3,
+      "tier_damage_error_percent": 4.616144201247985
+    },
+    {
+      "event": "mistlands_dvergr",
+      "tier": 6,
+      "prefab": "DvergerMageIce",
+      "rarity": "magic",
+      "base_health": 350.0,
+      "stars": 16,
+      "target_health": 5850.521914507202,
+      "health": 5950.0,
+      "health_error_percent": 1.7003283971320116,
+      "same_creature_tier1_stars": 9,
+      "tier_damage_reference": null,
+      "attack": "DvergerStaffIce_icebolt",
+      "scaled_attack_payload": {
+        "m_frost": 1000.0
+      },
+      "raw_physical": null,
+      "received": null,
+      "htd": null,
+      "ttk": 8.035224372895946,
+      "htk": 9,
+      "tier_damage_error_percent": null
+    },
+    {
+      "event": "mistlands_dvergr",
+      "tier": 6,
+      "prefab": "DvergerMageSupport",
+      "rarity": "rare",
+      "base_health": 350.0,
+      "stars": 37,
+      "target_health": 13210.855935984007,
+      "health": 13300.0,
+      "health_error_percent": 0.6747788670768973,
+      "same_creature_tier1_stars": 21,
+      "tier_damage_reference": null,
+      "attack": null,
+      "scaled_attack_payload": null,
+      "raw_physical": null,
+      "received": null,
+      "htd": null,
+      "ttk": 16.687859912618773,
+      "htk": 18,
+      "tier_damage_error_percent": null
+    },
+    {
+      "event": "mistlands_dvergr",
+      "tier": 6,
+      "prefab": "DvergerMageFire",
+      "rarity": "unique",
+      "base_health": 350.0,
+      "stars": 115,
+      "target_health": 40441.39572240002,
+      "health": 40600.0,
+      "health_error_percent": 0.39218299657282074,
+      "same_creature_tier1_stars": 68,
+      "tier_damage_reference": null,
+      "attack": "DvergerStaffFire_fireball",
+      "scaled_attack_payload": {
+        "m_fire": 3867.5
+      },
+      "raw_physical": null,
+      "received": null,
+      "htd": null,
+      "ttk": 62.39300603822171,
+      "htk": 54,
+      "tier_damage_error_percent": null
+    },
+    {
+      "event": "ashlands",
+      "tier": 7,
+      "prefab": "Charred_Twitcher",
+      "rarity": "normal",
+      "base_health": 220.0,
+      "stars": 6,
+      "target_health": 1496.3316417288008,
+      "health": 1540.0,
+      "health_error_percent": 2.9183609470923466,
+      "same_creature_tier1_stars": 3,
+      "tier_damage_reference": 248.24084464480006,
+      "attack": "charred_twitcher_scratch_l",
+      "scaled_attack_payload": {
+        "m_slash": 250.0
+      },
+      "raw_physical": 250.0,
+      "received": 22.566464872591784,
+      "htd": 34,
+      "ttk": 3.2282046286054893,
+      "htk": 4,
+      "tier_damage_error_percent": 0.7086486342394949
+    },
+    {
+      "event": "ashlands",
+      "tier": 7,
+      "prefab": "Charred_Archer",
+      "rarity": "magic",
+      "base_health": 200.0,
+      "stars": 31,
+      "target_health": 6494.079325102995,
+      "health": 6400.0,
+      "health_error_percent": -1.4486938085177092,
+      "same_creature_tier1_stars": 16,
+      "tier_damage_reference": 638.3336005152001,
+      "attack": "charred_bow",
+      "scaled_attack_payload": {
+        "m_pierce": 787.5
+      },
+      "raw_physical": 787.5,
+      "received": 222.1934,
+      "htd": 4,
+      "ttk": 9.95803227061213,
+      "htk": 11,
+      "tier_damage_error_percent": 23.368094576943378
+    },
+    {
+      "event": "ashlands",
+      "tier": 7,
+      "prefab": "Charred_Melee",
+      "rarity": "rare",
+      "base_health": 600.0,
+      "stars": 23,
+      "target_health": 14664.05008894225,
+      "health": 14400.0,
+      "health_error_percent": -1.8006627592015767,
+      "same_creature_tier1_stars": 12,
+      "tier_damage_reference": 851.1114673536002,
+      "attack": "charred_greatsword_swing",
+      "scaled_attack_payload": {
+        "m_slash": 1012.5
+      },
+      "raw_physical": 1012.5,
+      "received": 338.9234000000001,
+      "htd": 3,
+      "ttk": 20.53347570805114,
+      "htk": 22,
+      "tier_damage_error_percent": 18.962091199195385
+    },
+    {
+      "event": "ashlands",
+      "tier": 7,
+      "prefab": "Morgen",
+      "rarity": "unique",
+      "base_health": 1600.0,
+      "stars": 27,
+      "target_health": 44889.949251864025,
+      "health": 44800.0,
+      "health_error_percent": -0.20037726342559958,
+      "same_creature_tier1_stars": 14,
+      "tier_damage_reference": 1021.3337608243203,
+      "attack": "Morgen_bite",
+      "scaled_attack_payload": {
+        "m_pierce": 1240.0
+      },
+      "raw_physical": 1240.0,
+      "received": 456.9504,
+      "htd": 2,
+      "ttk": 65.01617687663143,
+      "htk": 56,
+      "tier_damage_error_percent": 21.40987085349981
+    },
+    {
+      "event": "deepnorth",
+      "tier": 8,
+      "prefab": "Skeleton_DeepNorth",
+      "rarity": "normal",
+      "base_health": 100.0,
+      "stars": 16,
+      "target_health": 1660.928122318969,
+      "health": 1700.0,
+      "health_error_percent": 2.35241231429566,
+      "same_creature_tier1_stars": 7,
+      "tier_damage_reference": null,
+      "attack": "skeleton_mace_DeepNorth",
+      "scaled_attack_payload": {
+        "m_damage": 75.0,
+        "m_blunt": 400.0,
+        "m_frost": 50.0
+      },
+      "raw_physical": null,
+      "received": null,
+      "htd": null,
+      "ttk": 2.2668006797473974,
+      "htk": 3,
+      "tier_damage_error_percent": null
+    },
+    {
+      "event": "deepnorth",
+      "tier": 8,
+      "prefab": "JotunWitch",
+      "rarity": "magic",
+      "base_health": 800.0,
+      "stars": 8,
+      "target_health": 7208.428050864325,
+      "health": 7200.0,
+      "health_error_percent": -0.11691940052470651,
+      "same_creature_tier1_stars": 3,
+      "tier_damage_reference": null,
+      "attack": "JotunWitch_attack_magicblast",
+      "scaled_attack_payload": {
+        "m_blunt": 90.0,
+        "m_lightning": 360.0
+      },
+      "raw_physical": null,
+      "received": null,
+      "htd": null,
+      "ttk": 9.95803227061213,
+      "htk": 11,
+      "tier_damage_error_percent": null
+    },
+    {
+      "event": "deepnorth",
+      "tier": 8,
+      "prefab": "JotunWarrior",
+      "rarity": "rare",
+      "base_health": 1300.0,
+      "stars": 12,
+      "target_health": 16277.095598725899,
+      "health": 16900.0,
+      "health_error_percent": 3.8268768374307482,
+      "same_creature_tier1_stars": 5,
+      "tier_damage_reference": null,
+      "attack": null,
+      "scaled_attack_payload": null,
+      "raw_physical": null,
+      "received": null,
+      "htd": null,
+      "ttk": 30.914955977304903,
+      "htk": 30,
+      "tier_damage_error_percent": null
+    },
+    {
+      "event": "deepnorth",
+      "tier": 8,
+      "prefab": "TrollFrost",
+      "rarity": "unique",
+      "base_health": 3000.0,
+      "stars": 16,
+      "target_health": 49827.84366956907,
+      "health": 51000.0,
+      "health_error_percent": 2.35241231429566,
+      "same_creature_tier1_stars": 7,
+      "tier_damage_reference": 909.6963066897731,
+      "attack": "trollsnow_punch",
+      "scaled_attack_payload": {
+        "m_blunt": 1100.0
+      },
+      "raw_physical": 1100.0,
+      "received": 384.31840000000005,
+      "htd": 2,
+      "ttk": 103.05215403357238,
+      "htk": 85,
+      "tier_damage_error_percent": 20.919475204061122
+    },
+    {
+      "event": "mixed_elites",
+      "tier": 9,
+      "prefab": "Charred_Twitcher",
+      "rarity": "normal",
+      "base_health": 220.0,
+      "stars": 7,
+      "target_health": 1843.6302157740556,
+      "health": 1760.0,
+      "health_error_percent": -4.536170814435425,
+      "same_creature_tier1_stars": 3,
+      "tier_damage_reference": 278.9234130428974,
+      "attack": "charred_twitcher_scratch_l",
+      "scaled_attack_payload": {
+        "m_slash": 275.0
+      },
+      "raw_physical": 275.0,
+      "received": 27.30542249583606,
+      "htd": 28,
+      "ttk": 3.2282046286054893,
+      "htk": 4,
+      "tier_damage_error_percent": -1.4066273605701118
+    },
+    {
+      "event": "mixed_elites",
+      "tier": 9,
+      "prefab": "Wraith",
+      "rarity": "magic",
+      "base_health": 100.0,
+      "stars": 79,
+      "target_health": 8001.355136459401,
+      "health": 8000.0,
+      "health_error_percent": -0.0169363368615727,
+      "same_creature_tier1_stars": 34,
+      "tier_damage_reference": 908.4934024825801,
+      "attack": null,
+      "scaled_attack_payload": null,
+      "raw_physical": 1245.0,
+      "received": 459.54440000000005,
+      "htd": 2,
+      "ttk": 13.343992782031215,
+      "htk": 14,
+      "tier_damage_error_percent": 37.04007058255685
+    },
+    {
+      "event": "mixed_elites",
+      "tier": 9,
+      "prefab": "SeekerBrute",
+      "rarity": "rare",
+      "base_health": 1500.0,
+      "stars": 11,
+      "target_health": 18067.576114585747,
+      "health": 18000.0,
+      "health_error_percent": -0.37401870708707596,
+      "same_creature_tier1_stars": 4,
+      "tier_damage_reference": 382.52353788740214,
+      "attack": "SeekerBrute_groundslam",
+      "scaled_attack_payload": {
+        "m_blunt": 450.0
+      },
+      "raw_physical": 450.0,
+      "received": 73.11534618719736,
+      "htd": 11,
+      "ttk": 33.538126815714634,
+      "htk": 32,
+      "tier_damage_error_percent": 17.63981962659247
+    },
+    {
+      "event": "mixed_elites",
+      "tier": 9,
+      "prefab": "Morgen",
+      "rarity": "unique",
+      "base_health": 1600.0,
+      "stars": 34,
+      "target_health": 55308.906473221665,
+      "health": 56000.0,
+      "health_error_percent": 1.2495158028715148,
+      "same_creature_tier1_stars": 14,
+      "tier_damage_reference": 1147.5706136622064,
+      "attack": "Morgen_bite",
+      "scaled_attack_payload": {
+        "m_pierce": 1520.0
+      },
+      "raw_physical": 1520.0,
+      "received": 602.2144000000001,
+      "htd": 2,
+      "ttk": 82.06678732629462,
+      "htk": 69,
+      "tier_damage_error_percent": 32.45372283883006
+    },
+    {
+      "event": "mixed_finale",
+      "tier": 10,
+      "prefab": "Draugr",
+      "rarity": "normal",
+      "base_health": 100.0,
+      "stars": 19,
+      "target_health": 2046.429539509202,
+      "health": 2000.0,
+      "health_error_percent": -2.268807140085416,
+      "same_creature_tier1_stars": 7,
+      "tier_damage_reference": 223.01122258835545,
+      "attack": null,
+      "scaled_attack_payload": null,
+      "raw_physical": 276.0,
+      "received": 27.504368450152825,
+      "htd": 28,
+      "ttk": 3.2282046286054893,
+      "htk": 4,
+      "tier_damage_error_percent": 23.76058782900523
+    },
+    {
+      "event": "mixed_finale",
+      "tier": 10,
+      "prefab": "DvergerMageIce",
+      "rarity": "magic",
+      "base_health": 350.0,
+      "stars": 24,
+      "target_health": 8881.504201469936,
+      "health": 8750.0,
+      "health_error_percent": -1.4806523589570686,
+      "same_creature_tier1_stars": 9,
+      "tier_damage_reference": null,
+      "attack": "DvergerStaffIce_icebolt",
+      "scaled_attack_payload": {
+        "m_frost": 1400.0
+      },
+      "raw_physical": null,
+      "received": null,
+      "htd": null,
+      "ttk": 10.91943621947022,
+      "htk": 12,
+      "tier_damage_error_percent": null
+    },
+    {
+      "event": "mixed_finale",
+      "tier": 10,
+      "prefab": "JotunWarriorDualWield",
+      "rarity": "rare",
+      "base_health": 1300.0,
+      "stars": 14,
+      "target_health": 20055.009487190182,
+      "health": 19500.0,
+      "health_error_percent": -2.767435675084995,
+      "same_creature_tier1_stars": 5,
+      "tier_damage_reference": null,
+      "attack": null,
+      "scaled_attack_payload": null,
+      "raw_physical": null,
+      "received": null,
+      "htd": null,
+      "ttk": 36.16129765412437,
+      "htk": 34,
+      "tier_damage_error_percent": null
+    },
+    {
+      "event": "mixed_finale",
+      "tier": 10,
+      "prefab": "TrollFrost",
+      "rarity": "unique",
+      "base_health": 3000.0,
+      "stars": 19,
+      "target_health": 61392.88618527606,
+      "health": 60000.0,
+      "health_error_percent": -2.268807140085427,
+      "same_creature_tier1_stars": 7,
+      "tier_damage_reference": 1022.1347701966291,
+      "attack": "trollsnow_punch",
+      "scaled_attack_payload": {
+        "m_blunt": 1265.0
+      },
+      "raw_physical": 1265.0,
+      "received": 469.92040000000003,
+      "htd": 2,
+      "ttk": 122.72593532164528,
+      "htk": 100,
+      "tier_damage_error_percent": 23.76058782900523
+    }
+  ]
+}

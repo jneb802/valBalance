@@ -3,6 +3,7 @@ import random
 import unittest
 from copy import deepcopy
 from pathlib import Path
+from unittest.mock import patch
 
 from combat import calibrate, distribution, simulate
 from weapon import animation_landmarks
@@ -23,6 +24,20 @@ class CombatTests(unittest.TestCase):
         result = self.run_combat(1)
         self.assertEqual(result['htk'], 1)
         self.assertEqual(result['ttk'], animation_landmarks(self.profile)['clip_hit_landmark_seconds'])
+
+    def test_spirit_ticks_are_not_immediate_payload(self):
+        self.profile['dot_rules']['spirit'] = {'m_ttl': 3, 'm_damageInterval': 0.5}
+        self.profile['animation']['exit_transition'] = 10
+        payload = dict(immediate_damage=0, fire_payload=0, poison_payload=0, spirit_payload=60)
+        with patch('combat.strike', return_value=payload):
+            result = self.run_combat(25)
+        self.assertEqual(result['htk'], 1)
+        self.assertAlmostEqual(result['ttk'], animation_landmarks(self.profile)['clip_hit_landmark_seconds'] + 1)
+
+    def test_spirit_requires_timing_inputs(self):
+        payload = dict(immediate_damage=0, fire_payload=0, poison_payload=0, spirit_payload=60)
+        with patch('combat.strike', return_value=payload), self.assertRaisesRegex(ValueError, 'verified spirit timing'):
+            self.run_combat(25)
 
     def test_poison_is_ticked_not_counted_as_immediate(self):
         p = self.profile
@@ -61,6 +76,16 @@ class CombatTests(unittest.TestCase):
         b = calibrate(self.profile, self.scenario)
         self.assertEqual([r['htd'] for r in a['enemies']], [327, 6, 300, 5, 4])
         self.assertEqual([r['htd'] for r in a['enemies']], [r['htd'] for r in b['enemies']])
+
+    def test_unknown_incoming_attack_preserves_offensive_results(self):
+        self.scenario['trials'] = 5
+        self.scenario['enemies'] = self.scenario['enemies'][:1]
+        self.scenario['enemies'][0]['base_physical'] = None
+        result = calibrate(self.profile, self.scenario)['enemies'][0]
+        self.assertIsNone(result['htd'])
+        self.assertIsNone(result['received_normal'])
+        self.assertEqual(result['htd_rating'], 'not modeled')
+        self.assertTrue(result['offense'])
 
     def test_invalid_unsupported_inputs_fail(self):
         self.target['armor'] = 1

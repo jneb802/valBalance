@@ -9,6 +9,10 @@ See [the balance model guide](docs/balance-model.md) for sources, formulas, tuni
 and validation status. Inspect planning factors with
 `python3 app.py balance-model --tier 2 --rarity rare`.
 
+The [star-only workshop](workshops/star-only/README.md) selects nearest-health
+integer stars for ten shrine tiers, with reproducible Snuffiss TTK/HTD reports
+and proposed waves. It is not a deployment payload.
+
 ```sh
 python3 app.py weapon examples/snuffiss-weapon-source.json
 python3 app.py calibrate examples/blackforest-v3.json --weapon examples/snuffiss-weapon-source.json

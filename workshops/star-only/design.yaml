@@ -1,0 +1,111 @@
+# Health-first workshop. Not deployment configs or validated absolute TTK targets.
+version: 1
+normal_tier1_health: 800
+boss_tier1_health: 24000
+health_per_star: 1.0
+damage_per_star: 0.25
+maximum_stars: 10000
+# The limit above is the simulator input limit, not a verified shrine runtime cap.
+events:
+  blackforest:
+    tier: 1
+    creatures:
+      Greydwarf: {rarity: normal, base_physical: 14}
+      Greydwarf_Elite: {rarity: magic, base_physical: 30}
+      Greydwarf_Shaman: {rarity: magic, base_physical: 14}
+      Bjorn: {rarity: rare, base_physical: 55}
+      Troll: {rarity: unique, base_physical: 70}
+    waves:
+      regular: {Greydwarf: 6, magic_support_selections: 2, Bjorn: 1}
+      finale_addition: {Troll: 1}
+    support_pool: [Greydwarf_Elite, Greydwarf_Shaman]
+  swamp:
+    tier: 2
+    creatures:
+      Draugr: {rarity: normal, base_physical: 48}
+      Wraith: {rarity: magic, base_physical: 60}
+      BlobElite: {rarity: rare, base_physical: null, base_poison_payload: 115}
+      Abomination: {rarity: unique, base_physical: 80}
+    waves:
+      regular: {Draugr: 4, Wraith: 2, BlobElite: 1}
+      finale_addition: {Abomination: 1}
+  mountain:
+    tier: 3
+    creatures:
+      Ulv: {rarity: normal, base_physical: 80}
+      Wolf: {rarity: magic, base_physical: 70}
+      Fenring: {rarity: rare, base_physical: 95}
+      StoneGolem: {rarity: unique, base_physical: 110}
+    waves:
+      regular: {Ulv: 3, Wolf: 2, Fenring: 1}
+      finale_addition: {StoneGolem: 1}
+  plains:
+    tier: 4
+    creatures:
+      Goblin: {rarity: normal, base_physical: 85, attack: GoblinClub}
+      GoblinShaman: {rarity: magic, base_physical: 100, attack: GoblinShaman_attack_poke}
+      GoblinBrute: {rarity: rare, base_physical: 130, attack: GoblinBrute_Attack}
+      Lox: {rarity: unique, base_physical: 130, attack: lox_bite}
+    waves:
+      regular: {Goblin: 4, GoblinShaman: 2, GoblinBrute: 1}
+      finale_addition: {Lox: 1}
+  mistlands_bugs:
+    tier: 5
+    creatures:
+      SeekerBrood: {rarity: normal, base_physical: 60, attack: babyseeker_attack}
+      Seeker: {rarity: magic, base_physical: 90, attack: seeker_pincers}
+      SeekerBrute: {rarity: rare, base_physical: 120, attack: SeekerBrute_groundslam}
+      Gjall: {rarity: unique, base_physical: null, attack: gjall_attack_spit}
+    waves:
+      regular: {SeekerBrood: 4, Seeker: 2, SeekerBrute: 1}
+      finale_addition: {Gjall: 1}
+  mistlands_dvergr:
+    tier: 6
+    creatures:
+      Dverger: {rarity: normal, base_physical: 110, attack: DvergerArbalest_shoot}
+      DvergerMageIce: {rarity: magic, base_physical: null, attack: DvergerStaffIce_icebolt}
+      DvergerMageSupport: {rarity: rare, base_physical: null}
+      DvergerMageFire: {rarity: unique, base_physical: null, attack: DvergerStaffFire_fireball}
+    waves:
+      regular: {Dverger: 4, DvergerMageIce: 2, DvergerMageSupport: 1}
+      finale_addition: {DvergerMageFire: 1}
+  ashlands:
+    tier: 7
+    creatures:
+      Charred_Twitcher: {rarity: normal, base_physical: 100, attack: charred_twitcher_scratch_l}
+      Charred_Archer: {rarity: magic, base_physical: 90, attack: charred_bow}
+      Charred_Melee: {rarity: rare, base_physical: 150, attack: charred_greatsword_swing}
+      Morgen: {rarity: unique, base_physical: 160, attack: Morgen_bite}
+    waves:
+      regular: {Charred_Twitcher: 4, Charred_Archer: 2, Charred_Melee: 1}
+      finale_addition: {Morgen: 1}
+  deepnorth:
+    tier: 8
+    creatures:
+      Skeleton_DeepNorth: {rarity: normal, base_physical: null, attack: skeleton_mace_DeepNorth}
+      JotunWitch: {rarity: magic, base_physical: null, attack: JotunWitch_attack_magicblast}
+      JotunWarrior: {rarity: rare, base_physical: null}
+      TrollFrost: {rarity: unique, base_physical: 220, attack: trollsnow_punch}
+    waves:
+      regular: {Skeleton_DeepNorth: 4, JotunWitch: 2, JotunWarrior: 1}
+      finale_addition: {TrollFrost: 1}
+  mixed_elites:
+    tier: 9
+    creatures:
+      Charred_Twitcher: {rarity: normal, base_physical: 100, attack: charred_twitcher_scratch_l}
+      Wraith: {rarity: magic, base_physical: 60}
+      SeekerBrute: {rarity: rare, base_physical: 120, attack: SeekerBrute_groundslam}
+      Morgen: {rarity: unique, base_physical: 160, attack: Morgen_bite}
+    waves:
+      regular: {Charred_Twitcher: 4, Wraith: 2, SeekerBrute: 1}
+      finale_addition: {Morgen: 1}
+  mixed_finale:
+    tier: 10
+    creatures:
+      Draugr: {rarity: normal, base_physical: 48}
+      DvergerMageIce: {rarity: magic, base_physical: null, attack: DvergerStaffIce_icebolt}
+      JotunWarriorDualWield: {rarity: rare, base_physical: null}
+      TrollFrost: {rarity: unique, base_physical: 220, attack: trollsnow_punch}
+    waves:
+      regular: {Draugr: 4, DvergerMageIce: 2, JotunWarriorDualWield: 1}
+      finale_addition: {TrollFrost: 1}
