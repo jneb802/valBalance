@@ -1,0 +1,84 @@
+# Player defensive-layer reference: KlOvpointO, Enforcer snapshot 2026-10-15.
+# Use these same six sections for each player. Fractions use 0–1, not 0–100.
+# Assumptions: fresh Moose Kebab, Seal Soup and Smoked Moose Meat; quality-4
+# Deep North cape equipped; fire, frost and poison resistance meads active;
+# dry, unblocked, no parry, no protective shield or temporary boss power.
+# Cape and all three meads are scenario assumptions, not proof of use at death.
+# Evidence: /Users/benjmarston/Develop/valheim-validation-evidence/shrine-balance-20261015/
+# Values below are reference data, not a new input format accepted by the CLI.
+# Source/assets inspected; installed runtime patch order is not yet validated.
+
+health_value:
+  maximum: 815.36
+  starting: 815.36
+  base: 25
+  food:
+    MooseKebab: 110
+    SealSoup: 110
+    SmokedMooseMeat: 105
+  flat_gear_bonus: 14
+  bulk_up_fraction_raw: 1.08
+  bulk_up_fraction_capped: 1.0
+  percent_health_bonus: 0.12
+  formula: "(25 + 110 + 110 + 105 + 14) * (1 + 1.0) * (1 + 0.12)"
+
+armor_value:
+  total: 178.80
+  pieces:
+    HelmetDNHeavy: {quality: 2, base: 44, per_quality: 2, epic_loot_bonus: 0.15, armor: 52.90}
+    ArmorDeepNorthHeavyChest: {quality: 2, base: 44, per_quality: 2, epic_loot_bonus: 0.155, armor: 53.13}
+    ArmorDeepNorthHeavylegs: {quality: 2, base: 44, per_quality: 2, epic_loot_bonus: 0.13, armor: 51.98}
+    CapeDeepNorth: {quality: 4, base: 12, per_quality: 2, epic_loot_bonus: 0.155, armor: 20.79}
+  piece_formula: "(base + (quality - 1) * per_quality) * (1 + epic_loot_bonus)"
+  mitigation: "For summed armor-eligible damage D and armor A: D-A if D>2*A; otherwise D*D/(4*A)."
+
+conversion:
+  incoming_physical_to_fire: 0.35
+  source_types: [blunt, slash, pierce]
+  order: "Convert before Epic Loot percentage resistance and base-game resistance. Apply armor afterward."
+  note: "Conversion redistributes damage; it is not itself a reduction."
+
+epic_loot_res:
+  # Per-type reductions after conversion; local config caps each at 0.50.
+  blunt: 0.20
+  slash: 0.0
+  pierce: 0.245
+  fire: 0.0
+  frost: 0.135
+  lightning: 0.31
+  poison: 0.0
+  spirit: 0.0
+  formula: "damage_component * (1 - capped_resistance)"
+
+base_game_res:
+  # Resolved category per type, not a sum of gear and mead bonuses.
+  blunt: {modifier: Normal, multiplier: 1.0}
+  slash: {modifier: Normal, multiplier: 1.0}
+  pierce: {modifier: Normal, multiplier: 1.0}
+  fire: {modifier: Resistant, multiplier: 0.5, source: Potion_barleywine}
+  frost: {modifier: Resistant, multiplier: 0.5, sources: [Deep_North_equipment, Potion_frostresist]}
+  lightning: {modifier: Normal, multiplier: 1.0}
+  poison: {modifier: VeryResistant, multiplier: 0.25, source: Potion_poisonresist}
+  spirit: {modifier: null, multiplier: null, note: "Resolve player native spirit modifier before modeling spirit attacks."}
+  mead_duration_seconds: 600
+  stacking: "Gear and meads resolve one category per type. Multiply that result by the Epic Loot multiplier."
+  combined_elemental_multipliers_before_armor: {fire: 0.5, frost: 0.4325, lightning: 0.69, poison: 0.25}
+  physical_multipliers_including_conversion_before_armor: {blunt: 0.695, slash: 0.825, pierce: 0.66575}
+
+recovery:
+  # Keep recovery timing separate from resistance. Do not assume every source
+  # is continuously active or count healing from both carried weapons at once.
+  cape_add_health_regen_effect_value: 7
+  bulk_up_regen_multiplier_subtraction: 1.0
+  adrenaline_surge: {regen_bonus: 0.48, duration_seconds: 24, condition: adrenaline_activation}
+  weapon_healing:
+    weapons: [VAGreatswordFader, THSwordGold_FrostFire]
+    health_per_trigger: 14
+    source_default_damage_per_trigger: 200
+    deployed_threshold_verified: false
+    condition: "Relevant weapon active; accumulated damage reaches configured threshold."
+  mead_cooldown_reduction: 0.27
+  healing_meads_carried: {MeadHealthMajor: 8, MeadHealthLingering: 9}
+  effective_health_per_second: null
+  unresolved: "Resolve food decay, regeneration ticks, resting state, actual mead use and deployed shard settings before calculating sustained recovery."
+  baseline_htd: "Disable recovery for repeatable full-health, unblocked HTD; report recovery-enabled survival separately."
