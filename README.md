@@ -5,6 +5,7 @@ A Python calculation model and command-line app for comparing player strength, c
 Install dependencies with `python3 -m pip install -r requirements.txt`.
 
 Shared tier and rarity settings live in [configs/balance-model.yaml](configs/balance-model.yaml).
+Player defenses use six sections: health value, armor value, conversion, Epic Loot resistance, base-game resistance, and recovery. Use [Klov's defensive-layer reference](configs/player-defense-klov.yaml) as the editable YAML template. It records calculation assumptions and unresolved inputs; it is reference data, not a CLI input file.
 See [the balance model guide](docs/balance-model.md) for sources, formulas, tuning,
 and validation status. Inspect planning factors with
 `python3 app.py balance-model --tier 2 --rarity rare`.
