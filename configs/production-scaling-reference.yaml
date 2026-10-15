@@ -1,0 +1,19 @@
+checked_at: '2026-10-15T16:49:31.676901+00:00'
+host: praetoris-1
+settings:
+  EnemyHealthMultiplier: 1
+  EnemyDamageLevelMultiplier: 0.25
+  BossEnemyHealthMultiplier: 0.3
+  BossEnemyDamageMultiplier: 0.25
+  MultiplayerEnemyDamageModifier: 0
+  MultiplayerEnemyHealthModifier: 0
+  EnableMultiplayerEnemyHealthScaling: false
+  EnableMultiplayerEnemyDamageScaling: false
+required_modifiers:
+  Goblin:
+    Lightning: Major
+  GoblinBrute:
+    ElementalChaos: Major
+calculation_scope: Verified production baseline. Additional creature overrides and
+  required modifiers must be resolved separately; saved star-only results omit these
+  required modifiers.
