@@ -2,7 +2,11 @@
 
 These are actual Fortress YAML merge fragments using `creatureRules`, `minStars`
 and `maxStars`. They use the existing ten-tier star-only results without a new
-balance pass. They have not been installed locally or deployed to production.
+balance pass. Installed into the local `praetoris-season-8` profile on 2026-10-14
+with a rebuilt MWL DLL accepting all ten items at 10 each. Production is unchanged.
+The local install preserved unrelated entries, added all 41 exclusions to unrelated
+levels, and verified file hashes against the staged content. A game restart is
+required for the DLL; live event testing remains pending.
 
 All ten entries target `VF_wild_shrine_yellow1`. Each costs 10 of its tribute:
 
@@ -21,10 +25,9 @@ All ten entries target `VF_wild_shrine_yellow1`. Each costs 10 of its tribute:
 
 Tributes for tiers 3–10 are provisional test selectors. Rewards retain the test
 amounts (10 each DustRare, EssenceRare, ReagentRare); reward progression is not
-balanced. The MWL interaction previously supported Resin/Guck only. Additional
-selectors need MWL support before these can all be offered through that dungeon
-interaction. Its previously fixed 50-item payment also needs updating to 10.
-Configuration alone does not extend its item handling or change its fixed payment.
+balanced. The updated MWL interaction supports all ten selectors and charges 10.
+Older DLLs only accept Resin/Guck and charge 50, so these configs require the
+updated DLL. Configuration alone cannot change an older DLL's item handling.
 SealBlubber is verified in the installed game's SoftRef manifest as
 `Assets/GameElements/Items/consumables/SealBlubber.prefab`.
 
