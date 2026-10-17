@@ -1,0 +1,12 @@
+{
+  "ttk-comparison.json": "e3385a175e10856c8ca830ee2ec64f34bac7f84aa0d61b3eab954da72e397b56",
+  "SpawnableCreatures.fragment.yaml": "b39d176c9dc6c588fbd0f1229d505f388daec2f11ef69428651de4d428d97453",
+  "generate.py": "4298ae74144103afeaac6b7f75b56a9f3dd3f39f417dd7a1e29541e6132a5e4e",
+  "WildShrines.fragment.yaml": "79a879be093202e11912c0152be4a2b591bbd5eb7dac47fced399acb303e8456",
+  "results.yaml": "2ce2502af8729b5957e930ee8abb90f11a422970e6c23d3ff51aaea865fa894c",
+  "validation.yaml": "1136ee20319020d502fe83e706130e9fcab7086064de32f2f4b2e1fc17b4ddcf",
+  "creature-source.json": "1d0a6b4ac9663c1fd87976393bfd5d2193fa65380ac51190c0efad9c91c2baf4",
+  "design.yaml": "2e94fd03ac3292f3540e221fbb1fc1d84097337ea76c02eb49f5be25131f507b",
+  "UnrelatedLevels.exclusions.yaml": "62273493123aec7c8c554eaabb8479b564f03ba6f4f83b98f3ec93e4760a9b0a",
+  "players.yaml": "fdba6cf84561bfb391dfa72ce37dfc25cd9ddf612cf40ca5a479746acc3ad333"
+}

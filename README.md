@@ -4,6 +4,13 @@ A Python calculation model and command-line app for comparing player strength, c
 
 Install dependencies with `python3 -m pip install -r requirements.txt`.
 
+The expanded Tier 1 candidate is in [configs/blackforest-v4/design.yaml](configs/blackforest-v4/design.yaml).
+It uses Mountain-level role HTD targets, 16 exact waves, and 14 creatures per wave.
+Run `python3 configs/blackforest-v4/generate.py` to regenerate the Fortress merge
+fragments and the per-attack health/damage/HTD report. This requires the Fortress
+`explicit-wild-phases` candidate; stock 0.39.0 cannot load the new phase fields.
+Bone Piles are not enabled. Higher tiers have not been rebased to this candidate.
+
 Shared tier and rarity settings live in [configs/balance-model.yaml](configs/balance-model.yaml).
 See [the balance model guide](docs/balance-model.md) for sources, formulas, tuning,
 and validation status. Inspect planning factors with
