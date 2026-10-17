@@ -1,0 +1,914 @@
+{
+  "Bjorn": {
+    "asset": "Assets/Characters/Bjorn/Bjorn.prefab",
+    "base_health": 500.0,
+    "damage_modifiers": {
+      "m_blunt": 1,
+      "m_slash": 0,
+      "m_pierce": 1,
+      "m_chop": 4,
+      "m_pickaxe": 4,
+      "m_fire": 2,
+      "m_frost": 1,
+      "m_lightning": 0,
+      "m_poison": 0,
+      "m_spirit": 3,
+      "m_nonPlayer": 0
+    },
+    "native_resistance": {
+      "blunt": 0.5,
+      "slash": 1,
+      "pierce": 0.5,
+      "fire": 1.5,
+      "frost": 0.5,
+      "lightning": 1,
+      "poison": 1,
+      "spirit": 0
+    },
+    "attacks": {
+      "bjorn_bite": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 55.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "bjorn_claws": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 50.0,
+        "m_pierce": 0.0,
+        "m_chop": 40.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "bjorn_swipe_l": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 25.0,
+        "m_pierce": 0.0,
+        "m_chop": 40.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "bjorn_swipe_r": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 25.0,
+        "m_pierce": 0.0,
+        "m_chop": 40.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "bjorn_swipe_combo": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 25.0,
+        "m_pierce": 0.0,
+        "m_chop": 40.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "bjorn_slam": {
+        "m_damage": 0.0,
+        "m_blunt": 50.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 40.0,
+        "m_pickaxe": 40.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      }
+    },
+    "attack_multipliers": {
+      "bjorn_bite": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      },
+      "bjorn_claws": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      },
+      "bjorn_swipe_l": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      },
+      "bjorn_swipe_r": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      },
+      "bjorn_swipe_combo": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      },
+      "bjorn_slam": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      }
+    }
+  },
+  "Ghost": {
+    "asset": "Assets/Characters/Ghost/Ghost.prefab",
+    "base_health": 60.0,
+    "damage_modifiers": {
+      "m_blunt": 1,
+      "m_slash": 1,
+      "m_pierce": 1,
+      "m_chop": 4,
+      "m_pickaxe": 4,
+      "m_fire": 0,
+      "m_frost": 0,
+      "m_lightning": 0,
+      "m_poison": 3,
+      "m_spirit": 2,
+      "m_nonPlayer": 0
+    },
+    "native_resistance": {
+      "blunt": 0.5,
+      "slash": 0.5,
+      "pierce": 0.5,
+      "fire": 1,
+      "frost": 1,
+      "lightning": 1,
+      "poison": 0,
+      "spirit": 1.5
+    },
+    "attacks": {
+      "Ghost_attack": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 25.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      }
+    },
+    "attack_multipliers": {
+      "Ghost_attack": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      }
+    }
+  },
+  "Greydwarf": {
+    "asset": "Assets/Characters/GreyDwarf/Greydwarf.prefab",
+    "base_health": 40.0,
+    "damage_modifiers": {
+      "m_blunt": 0,
+      "m_slash": 0,
+      "m_pierce": 0,
+      "m_chop": 4,
+      "m_pickaxe": 4,
+      "m_fire": 6,
+      "m_frost": 0,
+      "m_lightning": 0,
+      "m_poison": 1,
+      "m_spirit": 3,
+      "m_nonPlayer": 0
+    },
+    "native_resistance": {
+      "blunt": 1,
+      "slash": 1,
+      "pierce": 1,
+      "fire": 2,
+      "frost": 1,
+      "lightning": 1,
+      "poison": 0.5,
+      "spirit": 0
+    },
+    "attacks": {
+      "Greydwarf_attack": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 14.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "Greydwarf_throw": {
+        "m_damage": 0.0,
+        "m_blunt": 10.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      }
+    },
+    "attack_multipliers": {
+      "Greydwarf_attack": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      },
+      "Greydwarf_throw": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      }
+    }
+  },
+  "Greydwarf_Elite": {
+    "asset": "Assets/Characters/GreyDwarf/Greydwarf_Elite.prefab",
+    "base_health": 150.0,
+    "damage_modifiers": {
+      "m_blunt": 0,
+      "m_slash": 0,
+      "m_pierce": 0,
+      "m_chop": 4,
+      "m_pickaxe": 4,
+      "m_fire": 6,
+      "m_frost": 0,
+      "m_lightning": 0,
+      "m_poison": 1,
+      "m_spirit": 3,
+      "m_nonPlayer": 0
+    },
+    "native_resistance": {
+      "blunt": 1,
+      "slash": 1,
+      "pierce": 1,
+      "fire": 2,
+      "frost": 1,
+      "lightning": 1,
+      "poison": 0.5,
+      "spirit": 0
+    },
+    "attacks": {
+      "Greydwarf_elite_attack": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 30.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      }
+    },
+    "attack_multipliers": {
+      "Greydwarf_elite_attack": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      }
+    }
+  },
+  "Greydwarf_Shaman": {
+    "asset": "Assets/Characters/GreyDwarf/Greydwarf_Shaman.prefab",
+    "base_health": 60.0,
+    "damage_modifiers": {
+      "m_blunt": 0,
+      "m_slash": 0,
+      "m_pierce": 0,
+      "m_chop": 4,
+      "m_pickaxe": 4,
+      "m_fire": 6,
+      "m_frost": 0,
+      "m_lightning": 0,
+      "m_poison": 1,
+      "m_spirit": 3,
+      "m_nonPlayer": 0
+    },
+    "native_resistance": {
+      "blunt": 1,
+      "slash": 1,
+      "pierce": 1,
+      "fire": 2,
+      "frost": 1,
+      "lightning": 1,
+      "poison": 0.5,
+      "spirit": 0
+    },
+    "attacks": {
+      "Greydwarf_shaman_attack": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 30.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "Greydwarf_attack": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 14.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "Greydwarf_shaman_heal": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      }
+    },
+    "attack_multipliers": {
+      "Greydwarf_shaman_attack": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      },
+      "Greydwarf_attack": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      },
+      "Greydwarf_shaman_heal": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      }
+    }
+  },
+  "gd_king": {
+    "asset": "Assets/Characters/Greydwarf_king/gd_king.prefab",
+    "base_health": 2500.0,
+    "damage_modifiers": {
+      "m_blunt": 0,
+      "m_slash": 0,
+      "m_pierce": 0,
+      "m_chop": 4,
+      "m_pickaxe": 4,
+      "m_fire": 6,
+      "m_frost": 0,
+      "m_lightning": 0,
+      "m_poison": 3,
+      "m_spirit": 3,
+      "m_nonPlayer": 0
+    },
+    "native_resistance": {
+      "blunt": 1,
+      "slash": 1,
+      "pierce": 1,
+      "fire": 2,
+      "frost": 1,
+      "lightning": 1,
+      "poison": 0,
+      "spirit": 0
+    },
+    "attacks": {
+      "gd_king_rootspawn": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "gd_king_scream": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "gd_king_shoot": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 35.0,
+        "m_chop": 20.0,
+        "m_pickaxe": 20.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "gd_king_stomp": {
+        "m_damage": 0.0,
+        "m_blunt": 60.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 1000.0,
+        "m_pickaxe": 1000.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      }
+    },
+    "attack_multipliers": {
+      "gd_king_rootspawn": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      },
+      "gd_king_scream": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      },
+      "gd_king_shoot": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      },
+      "gd_king_stomp": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      }
+    }
+  },
+  "Skeleton": {
+    "asset": "Assets/Characters/Skeleton/Skeleton.prefab",
+    "base_health": 40.0,
+    "damage_modifiers": {
+      "m_blunt": 2,
+      "m_slash": 0,
+      "m_pierce": 1,
+      "m_chop": 4,
+      "m_pickaxe": 4,
+      "m_fire": 2,
+      "m_frost": 1,
+      "m_lightning": 0,
+      "m_poison": 3,
+      "m_spirit": 0,
+      "m_nonPlayer": 0
+    },
+    "native_resistance": {
+      "blunt": 1.5,
+      "slash": 1,
+      "pierce": 0.5,
+      "fire": 1.5,
+      "frost": 0.5,
+      "lightning": 1,
+      "poison": 0,
+      "spirit": 1
+    },
+    "attacks": {
+      "skeleton_sword": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 25.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "skeleton_bow": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 20.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      }
+    },
+    "attack_multipliers": {
+      "skeleton_sword": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      },
+      "skeleton_bow": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      }
+    }
+  },
+  "Skeleton_Hildir": {
+    "asset": "Assets/Characters/Skeleton/Skeleton_Hildir.prefab",
+    "base_health": 1200.0,
+    "damage_modifiers": {
+      "m_blunt": 2,
+      "m_slash": 0,
+      "m_pierce": 1,
+      "m_chop": 4,
+      "m_pickaxe": 4,
+      "m_fire": 3,
+      "m_frost": 2,
+      "m_lightning": 0,
+      "m_poison": 3,
+      "m_spirit": 0,
+      "m_nonPlayer": 0
+    },
+    "native_resistance": {
+      "blunt": 1.5,
+      "slash": 1,
+      "pierce": 0.5,
+      "fire": 0,
+      "frost": 1.5,
+      "lightning": 1,
+      "poison": 0,
+      "spirit": 1
+    },
+    "attacks": {
+      "skeleton_sword_hildir": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 60.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 20.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "skeleton_hildir_firenova": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 75.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      }
+    },
+    "attack_multipliers": {
+      "skeleton_sword_hildir": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      },
+      "skeleton_hildir_firenova": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      }
+    }
+  },
+  "Skeleton_Hildir_nochest": {
+    "asset": "Assets/Characters/Skeleton/Skeleton_Hildir_nochest.prefab",
+    "base_health": 600.0,
+    "damage_modifiers": {
+      "m_blunt": 2,
+      "m_slash": 0,
+      "m_pierce": 1,
+      "m_chop": 4,
+      "m_pickaxe": 4,
+      "m_fire": 3,
+      "m_frost": 2,
+      "m_lightning": 0,
+      "m_poison": 3,
+      "m_spirit": 0,
+      "m_nonPlayer": 0
+    },
+    "native_resistance": {
+      "blunt": 1.5,
+      "slash": 1,
+      "pierce": 0.5,
+      "fire": 0,
+      "frost": 1.5,
+      "lightning": 1,
+      "poison": 0,
+      "spirit": 1
+    },
+    "attacks": {
+      "skeleton_sword_hildir": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 60.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 20.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "skeleton_hildir_firenova": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 75.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      }
+    },
+    "attack_multipliers": {
+      "skeleton_sword_hildir": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      },
+      "skeleton_hildir_firenova": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      }
+    }
+  },
+  "Skeleton_NoArcher": {
+    "asset": "Assets/Characters/Skeleton/Skeleton_NoArcher.prefab",
+    "base_health": 40.0,
+    "damage_modifiers": {
+      "m_blunt": 2,
+      "m_slash": 0,
+      "m_pierce": 1,
+      "m_chop": 4,
+      "m_pickaxe": 4,
+      "m_fire": 2,
+      "m_frost": 1,
+      "m_lightning": 0,
+      "m_poison": 3,
+      "m_spirit": 0,
+      "m_nonPlayer": 0
+    },
+    "native_resistance": {
+      "blunt": 1.5,
+      "slash": 1,
+      "pierce": 0.5,
+      "fire": 1.5,
+      "frost": 0.5,
+      "lightning": 1,
+      "poison": 0,
+      "spirit": 1
+    },
+    "attacks": {
+      "skeleton_sword": {
+        "m_damage": 0.0,
+        "m_blunt": 0.0,
+        "m_slash": 25.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      }
+    },
+    "attack_multipliers": {
+      "skeleton_sword": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      }
+    }
+  },
+  "Skeleton_Poison": {
+    "asset": "Assets/Characters/Skeleton/Skeleton_Poison.prefab",
+    "base_health": 100.0,
+    "damage_modifiers": {
+      "m_blunt": 2,
+      "m_slash": 0,
+      "m_pierce": 1,
+      "m_chop": 4,
+      "m_pickaxe": 4,
+      "m_fire": 2,
+      "m_frost": 1,
+      "m_lightning": 0,
+      "m_poison": 3,
+      "m_spirit": 0,
+      "m_nonPlayer": 0
+    },
+    "native_resistance": {
+      "blunt": 1.5,
+      "slash": 1,
+      "pierce": 0.5,
+      "fire": 1.5,
+      "frost": 0.5,
+      "lightning": 1,
+      "poison": 0,
+      "spirit": 1
+    },
+    "attacks": {
+      "skeleton_mace": {
+        "m_damage": 0.0,
+        "m_blunt": 20.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 0.0,
+        "m_pickaxe": 0.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 30.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      }
+    },
+    "attack_multipliers": {
+      "skeleton_mace": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      }
+    }
+  },
+  "Troll": {
+    "asset": "Assets/Characters/Troll/Troll.prefab",
+    "base_health": 600.0,
+    "damage_modifiers": {
+      "m_blunt": 1,
+      "m_slash": 0,
+      "m_pierce": 2,
+      "m_chop": 4,
+      "m_pickaxe": 4,
+      "m_fire": 0,
+      "m_frost": 0,
+      "m_lightning": 0,
+      "m_poison": 0,
+      "m_spirit": 3,
+      "m_nonPlayer": 0
+    },
+    "native_resistance": {
+      "blunt": 0.5,
+      "slash": 1,
+      "pierce": 1.5,
+      "fire": 1,
+      "frost": 1,
+      "lightning": 1,
+      "poison": 1,
+      "spirit": 0
+    },
+    "attacks": {
+      "troll_punch": {
+        "m_damage": 0.0,
+        "m_blunt": 60.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 100.0,
+        "m_pickaxe": 40.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "troll_groundslam": {
+        "m_damage": 0.0,
+        "m_blunt": 70.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 100.0,
+        "m_pickaxe": 40.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "troll_throw": {
+        "m_damage": 0.0,
+        "m_blunt": 50.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 60.0,
+        "m_pickaxe": 40.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "troll_log_swing_v": {
+        "m_damage": 0.0,
+        "m_blunt": 70.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 100.0,
+        "m_pickaxe": 40.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      },
+      "troll_log_swing_h": {
+        "m_damage": 0.0,
+        "m_blunt": 60.0,
+        "m_slash": 0.0,
+        "m_pierce": 0.0,
+        "m_chop": 100.0,
+        "m_pickaxe": 40.0,
+        "m_fire": 0.0,
+        "m_frost": 0.0,
+        "m_lightning": 0.0,
+        "m_poison": 0.0,
+        "m_spirit": 0.0,
+        "m_nonPlayer": 0.0
+      }
+    },
+    "attack_multipliers": {
+      "troll_punch": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      },
+      "troll_groundslam": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      },
+      "troll_throw": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      },
+      "troll_log_swing_v": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      },
+      "troll_log_swing_h": {
+        "m_attack": 1.0,
+        "m_secondaryAttack": 1.0
+      }
+    }
+  }
+}

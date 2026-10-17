@@ -1,0 +1,41 @@
+status: compiled_and_schema_checked_not_live_validated
+date: '2026-10-16'
+required_fortress_change: feature/explicit-wild-phases
+stock_fortress_0_39_0_compatible: false
+checks:
+  - Compiled Fortress candidate with zero warnings and zero errors.
+  - Loaded these fragments with the candidate's actual YAML data types.
+  - Generated exactly ten phases and 140 creatures through the physical-shrine path.
+  - Verified minStars and maxStars survive on every horde.
+  - Verified Troll, Rancid Champion, Brenna, and Elder in waves 3, 6, 9, and 10.
+  - Verified API conversion and JSON round trip preserve all ten phases.
+  - Verified omitted new fields retain the four-wave API default.
+  - Reopened the development bundle and verified eight markers, all at twenty metres radius.
+creature_source:
+  description: Extracted from the production game bundle copied on 2026-10-15.
+  bundle_sha256: bc465fbd227d24db1fee6b0f424e3ea1105f003bcd9fd8d30f64c99932571aa7
+  damage: Includes all direct default/random/random-set weapon damage; excludes chained projectile and area-effect prefabs.
+  health: Cache HealthPerLevel=1 applies to the Elder too in the inspected SLS code; BossEnemyHealthMultiplier=0.3 is only a fallback when the cached health-per-level value is zero.
+ttk:
+  artifact: ttk-comparison.json
+  source_model: shrine-comparison-20261015
+  trials_per_patch_order: 1000
+  summary: Median time for each of two poison-conversion/SLS patch-order scenarios, not confidence bounds.
+  klov: Quality 7 Dreadfire Greatsword; sword skill 90.25; primary three-hit combo.
+  snuffiss: Quality 3 Blood Lightning spear; spear skill 95; 3110 coins; primary attacks.
+  limitations:
+    - Nominal source animation timings; live transitions and current patch order unverified.
+    - Isolated target; full starting stamina; no player recovery, buffs, movement, missed attacks, or enemy healing.
+    - TTK is a saved calculation snapshot; generate.py only regenerates stars, YAML, and HTD.
+pending:
+  - Live local-world or Valnet proof of ten-wave completion and payment/rewards.
+  - Root placement on the interior floor, native lifetime, and multiplayer ownership.
+  - Runtime SLS health and star persistence, especially bosses and world-level settings.
+  - Combat testing of total duration and simultaneous threats.
+  - Full production bundle build before release; this is a development bundle.
+mechanics:
+  brenna: Uses Skeleton_Hildir_nochest, the 600-base-health variant, to avoid quest chest behavior. Same extracted sword and fire nova attacks.
+  archers: Skeleton chooses sword or bow randomly. Archer counts are not guaranteed.
+  roots: Native Elder summon, 15 per cast up to its native cap; roots are not registered wave enemies and retain native stats and 18–20 second lifetime.
+  bone_pile: Deferred. Fortress's creature spawner rejects it because it lacks Humanoid/BaseAI. Requires explicit object and child-spawn lifecycle support.
+  rewards: Retains ten each of rare dust, essence, and reagent; reward balance has not changed with duration.

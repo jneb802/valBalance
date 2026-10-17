@@ -1,0 +1,837 @@
+{
+  "status": "local_candidate_not_combat_validated",
+  "total_creatures": 140,
+  "assumptions": [
+    "Full health, fresh food, Deep North cape, fire/frost/poison resistance meads.",
+    "No recovery, blocking, dodging, shield, or temporary buffs.",
+    "Each individual attack includes its full damage-over-time payload before another hit.",
+    "Random SLS modifiers, enemy healing, projectile volleys, and attack cadence are not modeled here.",
+    "Skeleton randomly equips sword or bow; no guaranteed archer count.",
+    "Elder roots use his native ability; their stats do not inherit the configured Elder stars.",
+    "Bone Pile needs object and child-spawn tracking in Fortress and is not enabled."
+  ],
+  "creatures": [
+    {
+      "name": "Greydwarf",
+      "prefab": "Greydwarf",
+      "role": "standard",
+      "stars": 127,
+      "health": 5120.0,
+      "reference_attack": "Greydwarf_attack",
+      "target_htd": 10,
+      "attacks": {
+        "Greydwarf_attack": {
+          "raw_damage": 458.5,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 458.5,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 5,
+            "Snuffiss": 10
+          }
+        },
+        "Greydwarf_throw": {
+          "raw_damage": 327.5,
+          "damage": {
+            "blunt": 327.5,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 12,
+            "Snuffiss": 20
+          }
+        }
+      },
+      "ttk_snuffiss": [
+        6.343992782031214,
+        7.343992782031214
+      ],
+      "ttk_klov": [
+        5.9376588612794885,
+        6.604378283023834
+      ]
+    },
+    {
+      "name": "Skeleton",
+      "prefab": "Skeleton",
+      "role": "standard",
+      "stars": 70,
+      "health": 2840.0,
+      "reference_attack": "skeleton_sword",
+      "target_htd": 10,
+      "attacks": {
+        "skeleton_sword": {
+          "raw_damage": 462.5,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 462.5,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 5,
+            "Snuffiss": 10
+          }
+        },
+        "skeleton_bow": {
+          "raw_damage": 370.0,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 370.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 10,
+            "Snuffiss": 16
+          }
+        }
+      },
+      "ttk_snuffiss": [
+        3.2282046286054893,
+        5.151012526321673
+      ],
+      "ttk_klov": [
+        2.3631186962127684,
+        4.1789184480905535
+      ]
+    },
+    {
+      "name": "SkeletonMelee",
+      "prefab": "Skeleton_NoArcher",
+      "role": "standard",
+      "stars": 70,
+      "health": 2840.0,
+      "reference_attack": "skeleton_sword",
+      "target_htd": 10,
+      "attacks": {
+        "skeleton_sword": {
+          "raw_damage": 462.5,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 462.5,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 5,
+            "Snuffiss": 10
+          }
+        }
+      },
+      "ttk_snuffiss": [
+        3.2282046286054893,
+        5.151012526321673
+      ],
+      "ttk_klov": [
+        2.3631186962127684,
+        4.1789184480905535
+      ]
+    },
+    {
+      "name": "Brute",
+      "prefab": "Greydwarf_Elite",
+      "role": "magic",
+      "stars": 108,
+      "health": 16350.0,
+      "reference_attack": "Greydwarf_elite_attack",
+      "target_htd": 3,
+      "attacks": {
+        "Greydwarf_elite_attack": {
+          "raw_damage": 840.0,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 840.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 2,
+            "Snuffiss": 3
+          }
+        }
+      },
+      "ttk_snuffiss": [
+        17.649263861476864,
+        21.343992782031215
+      ],
+      "ttk_klov": [
+        14.604378283023834,
+        17.604378283023834
+      ]
+    },
+    {
+      "name": "Shaman",
+      "prefab": "Greydwarf_Shaman",
+      "role": "magic",
+      "stars": 235,
+      "health": 14160.0,
+      "reference_attack": "Greydwarf_attack",
+      "target_htd": 3,
+      "attacks": {
+        "Greydwarf_shaman_attack": {
+          "raw_damage": 1792.5,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 1792.5,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 4,
+            "Snuffiss": 8
+          }
+        },
+        "Greydwarf_attack": {
+          "raw_damage": 836.5,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 836.5,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 2,
+            "Snuffiss": 3
+          }
+        }
+      },
+      "ttk_snuffiss": [
+        15.343992782031215,
+        18.343992782031215
+      ],
+      "ttk_klov": [
+        13.086739191412928,
+        15.604378283023834
+      ]
+    },
+    {
+      "name": "Ghost",
+      "prefab": "Ghost",
+      "role": "magic",
+      "stars": 130,
+      "health": 7860.0,
+      "reference_attack": "Ghost_attack",
+      "target_htd": 3,
+      "attacks": {
+        "Ghost_attack": {
+          "raw_damage": 837.5,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 837.5,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 2,
+            "Snuffiss": 3
+          }
+        }
+      },
+      "ttk_snuffiss": [
+        11.880840168328312,
+        14.765052014902587
+      ],
+      "ttk_klov": [
+        10.104378283023834,
+        13.086739191412928
+      ]
+    },
+    {
+      "name": "Bear",
+      "prefab": "Bjorn",
+      "role": "rare",
+      "stars": 49,
+      "health": 25000.0,
+      "reference_attack": "bjorn_bite",
+      "target_htd": 4,
+      "attacks": {
+        "bjorn_bite": {
+          "raw_damage": 728.75,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 728.75,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 3,
+            "Snuffiss": 4
+          }
+        },
+        "bjorn_claws": {
+          "raw_damage": 662.5,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 662.5,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 3,
+            "Snuffiss": 5
+          }
+        },
+        "bjorn_swipe_l": {
+          "raw_damage": 331.25,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 331.25,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 8,
+            "Snuffiss": 20
+          }
+        },
+        "bjorn_swipe_r": {
+          "raw_damage": 331.25,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 331.25,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 8,
+            "Snuffiss": 20
+          }
+        },
+        "bjorn_swipe_combo": {
+          "raw_damage": 331.25,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 331.25,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 8,
+            "Snuffiss": 20
+          }
+        },
+        "bjorn_slam": {
+          "raw_damage": 662.5,
+          "damage": {
+            "blunt": 662.5,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 3,
+            "Snuffiss": 5
+          }
+        }
+      },
+      "ttk_snuffiss": [
+        39.343992782031215,
+        50.343992782031215
+      ],
+      "ttk_klov": [
+        24.604378283023834,
+        29.200699603557574
+      ]
+    },
+    {
+      "name": "RancidRemains",
+      "prefab": "Skeleton_Poison",
+      "role": "rare",
+      "stars": 97,
+      "health": 9800.0,
+      "reference_attack": "skeleton_mace",
+      "target_htd": 4,
+      "attacks": {
+        "skeleton_mace": {
+          "raw_damage": 1262.5,
+          "damage": {
+            "blunt": 505.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 757.5,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 3,
+            "Snuffiss": 4
+          }
+        }
+      },
+      "ttk_snuffiss": [
+        12.842244117186404,
+        16.687859912618773
+      ],
+      "ttk_klov": [
+        9.512199026346208,
+        11.327998778223993
+      ]
+    },
+    {
+      "name": "Troll",
+      "prefab": "Troll",
+      "role": "miniboss",
+      "stars": 44,
+      "health": 27000.0,
+      "reference_attack": "troll_groundslam",
+      "target_htd": 3,
+      "attacks": {
+        "troll_punch": {
+          "raw_damage": 720.0,
+          "damage": {
+            "blunt": 720.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 3,
+            "Snuffiss": 5
+          }
+        },
+        "troll_groundslam": {
+          "raw_damage": 840.0,
+          "damage": {
+            "blunt": 840.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 3,
+            "Snuffiss": 3
+          }
+        },
+        "troll_throw": {
+          "raw_damage": 600.0,
+          "damage": {
+            "blunt": 600.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 4,
+            "Snuffiss": 6
+          }
+        },
+        "troll_log_swing_v": {
+          "raw_damage": 840.0,
+          "damage": {
+            "blunt": 840.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 3,
+            "Snuffiss": 3
+          }
+        },
+        "troll_log_swing_h": {
+          "raw_damage": 720.0,
+          "damage": {
+            "blunt": 720.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 3,
+            "Snuffiss": 5
+          }
+        }
+      },
+      "ttk_snuffiss": [
+        25.906826911802742,
+        32.503568937953446
+      ],
+      "ttk_klov": [
+        23.810359686613076,
+        30.02171859145163
+      ]
+    },
+    {
+      "name": "RancidChampion",
+      "prefab": "Skeleton_Poison",
+      "role": "miniboss",
+      "stars": 112,
+      "health": 11300.0,
+      "reference_attack": "skeleton_mace",
+      "target_htd": 3,
+      "attacks": {
+        "skeleton_mace": {
+          "raw_damage": 1450.0,
+          "damage": {
+            "blunt": 580.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 870.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 2,
+            "Snuffiss": 3
+          }
+        }
+      },
+      "ttk_snuffiss": [
+        14.765052014902587,
+        18.610667810334956
+      ],
+      "ttk_klov": [
+        9.512199026346208,
+        13.086739191412928
+      ]
+    },
+    {
+      "name": "Brenna",
+      "prefab": "Skeleton_Hildir_nochest",
+      "role": "miniboss",
+      "stars": 43,
+      "health": 26400.0,
+      "reference_attack": "skeleton_sword_hildir",
+      "target_htd": 3,
+      "attacks": {
+        "skeleton_sword_hildir": {
+          "raw_damage": 940.0,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 705.0,
+            "pierce": 0.0,
+            "fire": 235.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 2,
+            "Snuffiss": 3
+          }
+        },
+        "skeleton_hildir_firenova": {
+          "raw_damage": 881.25,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 881.25,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 4,
+            "Snuffiss": 8
+          }
+        }
+      },
+      "ttk_snuffiss": [
+        40.41965936933431,
+        53.613143421635755
+      ],
+      "ttk_klov": [
+        25.62615943849086,
+        34.04823567865095
+      ]
+    },
+    {
+      "name": "Elder",
+      "prefab": "gd_king",
+      "role": "boss",
+      "stars": 52,
+      "health": 132500.0,
+      "reference_attack": "gd_king_stomp",
+      "target_htd": 3,
+      "attacks": {
+        "gd_king_shoot": {
+          "raw_damage": 490.0,
+          "damage": {
+            "blunt": 0.0,
+            "slash": 0.0,
+            "pierce": 490.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 6,
+            "Snuffiss": 9
+          }
+        },
+        "gd_king_stomp": {
+          "raw_damage": 840.0,
+          "damage": {
+            "blunt": 840.0,
+            "slash": 0.0,
+            "pierce": 0.0,
+            "fire": 0.0,
+            "frost": 0.0,
+            "lightning": 0.0,
+            "poison": 0.0,
+            "spirit": 0.0,
+            "damage": 0.0
+          },
+          "htd": {
+            "Klov": 3,
+            "Snuffiss": 3
+          }
+        }
+      },
+      "ttk_snuffiss": [
+        165.34399278203122,
+        206.65755842833164
+      ],
+      "ttk_klov": [
+        134.60437828302383,
+        177.25921781357562
+      ]
+    }
+  ],
+  "waves": [
+    {
+      "number": 1,
+      "name": "Forest guards",
+      "creatures": {
+        "Greydwarf": 9,
+        "Brute": 2,
+        "Shaman": 1,
+        "Bear": 2
+      },
+      "count": 14
+    },
+    {
+      "number": 2,
+      "name": "Grave watch",
+      "creatures": {
+        "Skeleton": 6,
+        "Greydwarf": 3,
+        "Ghost": 2,
+        "Brute": 1,
+        "RancidRemains": 2
+      },
+      "count": 14
+    },
+    {
+      "number": 3,
+      "name": "Troll miniboss",
+      "creatures": {
+        "Troll": 1,
+        "Greydwarf": 6,
+        "Skeleton": 3,
+        "Brute": 2,
+        "Shaman": 1,
+        "Bear": 1
+      },
+      "count": 14
+    },
+    {
+      "number": 4,
+      "name": "Crypt guard",
+      "creatures": {
+        "Skeleton": 6,
+        "SkeletonMelee": 3,
+        "Ghost": 2,
+        "Shaman": 1,
+        "RancidRemains": 2
+      },
+      "count": 14
+    },
+    {
+      "number": 5,
+      "name": "Poison procession",
+      "creatures": {
+        "Skeleton": 5,
+        "Greydwarf": 4,
+        "Shaman": 2,
+        "Ghost": 1,
+        "RancidRemains": 2
+      },
+      "count": 14
+    },
+    {
+      "number": 6,
+      "name": "Rancid champion miniboss",
+      "creatures": {
+        "RancidChampion": 1,
+        "Skeleton": 6,
+        "SkeletonMelee": 3,
+        "Ghost": 2,
+        "Shaman": 1,
+        "RancidRemains": 1
+      },
+      "count": 14
+    },
+    {
+      "number": 7,
+      "name": "Haunted forest",
+      "creatures": {
+        "Greydwarf": 4,
+        "Skeleton": 5,
+        "Ghost": 2,
+        "Brute": 1,
+        "Bear": 1,
+        "RancidRemains": 1
+      },
+      "count": 14
+    },
+    {
+      "number": 8,
+      "name": "Burial guard",
+      "creatures": {
+        "Skeleton": 6,
+        "SkeletonMelee": 3,
+        "Ghost": 2,
+        "Shaman": 1,
+        "RancidRemains": 2
+      },
+      "count": 14
+    },
+    {
+      "number": 9,
+      "name": "Brenna miniboss",
+      "creatures": {
+        "Brenna": 1,
+        "Skeleton": 6,
+        "SkeletonMelee": 3,
+        "Ghost": 2,
+        "Shaman": 1,
+        "RancidRemains": 1
+      },
+      "count": 14
+    },
+    {
+      "number": 10,
+      "name": "The Elder",
+      "creatures": {
+        "Elder": 1,
+        "Greydwarf": 6,
+        "Skeleton": 3,
+        "Brute": 2,
+        "Shaman": 1,
+        "Bear": 1
+      },
+      "count": 14
+    }
+  ]
+}

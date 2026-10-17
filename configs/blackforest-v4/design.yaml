@@ -1,0 +1,58 @@
+version: 1
+status: local_candidate_not_combat_validated
+tribute: {prefab: Resin, amount: 10}
+shrine: VF_wild_shrine_yellow1
+baseline:
+  source: Mountain role HTD comparison, 2026-10-15
+  priority: Match incoming threat with stars; accept the resulting increase in health.
+  reference_player: Snuffiss
+  health_per_star: 1.0
+  damage_per_star: 0.25
+  maximum_stars: 10000
+  target_htd: {standard: 10, magic: 3, rare: 4, miniboss: 3, boss: 3}
+  attack_selection: Strongest modeled individual impact after the reference player's defenses.
+  next_tier_health_factor: 1.11
+  next_tier_damage_factor: 1.06
+  later_tiers: Recalculate after accepting this Tier 1 in combat; do not install higher-tier changes yet.
+assumptions:
+  - Full health, fresh food, Deep North cape, fire/frost/poison resistance meads.
+  - No recovery, blocking, dodging, shield, or temporary buffs.
+  - Each individual attack includes its full damage-over-time payload before another hit.
+  - Random SLS modifiers, enemy healing, projectile volleys, and attack cadence are not modeled here.
+  - Skeleton randomly equips sword or bow; no guaranteed archer count.
+  - Elder roots use his native ability; their stats do not inherit the configured Elder stars.
+  - Bone Pile needs object and child-spawn tracking in Fortress and is not enabled.
+creatures:
+  Greydwarf: {prefab: Greydwarf, role: standard}
+  Skeleton: {prefab: Skeleton, role: standard}
+  SkeletonMelee: {prefab: Skeleton_NoArcher, role: standard}
+  Brute: {prefab: Greydwarf_Elite, role: magic}
+  Shaman: {prefab: Greydwarf_Shaman, role: magic}
+  Ghost: {prefab: Ghost, role: magic}
+  Bear: {prefab: Bjorn, role: rare}
+  RancidRemains: {prefab: Skeleton_Poison, role: rare}
+  Troll: {prefab: Troll, role: miniboss}
+  RancidChampion: {prefab: Skeleton_Poison, role: miniboss}
+  Brenna: {prefab: Skeleton_Hildir_nochest, role: miniboss}
+  Elder: {prefab: gd_king, role: boss}
+waves:
+  - name: Forest guards
+    creatures: {Greydwarf: 9, Brute: 2, Shaman: 1, Bear: 2}
+  - name: Grave watch
+    creatures: {Skeleton: 6, Greydwarf: 3, Ghost: 2, Brute: 1, RancidRemains: 2}
+  - name: Troll miniboss
+    creatures: {Troll: 1, Greydwarf: 6, Skeleton: 3, Brute: 2, Shaman: 1, Bear: 1}
+  - name: Crypt guard
+    creatures: {Skeleton: 6, SkeletonMelee: 3, Ghost: 2, Shaman: 1, RancidRemains: 2}
+  - name: Poison procession
+    creatures: {Skeleton: 5, Greydwarf: 4, Shaman: 2, Ghost: 1, RancidRemains: 2}
+  - name: Rancid champion miniboss
+    creatures: {RancidChampion: 1, Skeleton: 6, SkeletonMelee: 3, Ghost: 2, Shaman: 1, RancidRemains: 1}
+  - name: Haunted forest
+    creatures: {Greydwarf: 4, Skeleton: 5, Ghost: 2, Brute: 1, Bear: 1, RancidRemains: 1}
+  - name: Burial guard
+    creatures: {Skeleton: 6, SkeletonMelee: 3, Ghost: 2, Shaman: 1, RancidRemains: 2}
+  - name: Brenna miniboss
+    creatures: {Brenna: 1, Skeleton: 6, SkeletonMelee: 3, Ghost: 2, Shaman: 1, RancidRemains: 1}
+  - name: The Elder
+    creatures: {Elder: 1, Greydwarf: 6, Skeleton: 3, Brute: 2, Shaman: 1, Bear: 1}

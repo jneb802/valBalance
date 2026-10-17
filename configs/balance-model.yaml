@@ -1,6 +1,6 @@
 # Ratios, not percentages: 1.11 means 11% more per step.
 schema_version: 1
-model_version: 0.1.0
+model_version: 0.2.0
 status: proposal_not_combat_validated
 
 # Historical reference. Change adopted values below when tuning Valheim.
@@ -40,7 +40,8 @@ adopted:
   baseline:
     tier: 1
     event: Black Forest
-    status: User accepted challenge level; existing event is not normalized to these rarity factors.
+    status: New candidate baseline targets Mountain-level incoming threat; stars take priority over kill time.
+    candidate: configs/blackforest-v4/design.yaml
     player: Snuffiss; comparisons require the exact player input file and hash.
   tier:
     health_per_step: 1.11
@@ -60,16 +61,16 @@ adopted:
       attack_speed: 1.33
   # Bounds are [minimum, maximum]. Null means unset, never zero.
   targets:
-    status: Absolute targets await calibration to the accepted Black Forest event.
+    status: Tier 1 candidate targets use Snuffiss's 2026-10-15 defensive inputs; strongest individual impact, no recovery. Rarity factors remain planning references, not extra multipliers on fitted stars.
     normal:
       ttk_seconds: [null, null]
-      htd_hits: [null, null]
+      htd_hits: [10, 10]
     magic:
       ttk_seconds: [null, null]
-      htd_hits: [null, null]
+      htd_hits: [3, 3]
     rare:
       ttk_seconds: [null, null]
-      htd_hits: [null, null]
+      htd_hits: [4, 4]
     unique:
       ttk_seconds: [null, null]
-      htd_hits: [null, null]
+      htd_hits: [3, 3]

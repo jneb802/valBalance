@@ -1,0 +1,36 @@
+native:
+  fire: 0.5
+  frost: 0.5
+  poison: 0.25
+  spirit: 0
+players:
+  Klov:
+    health: 815.36
+    armor: 178.8
+    low_armor: 178.8
+    threshold: 0
+    conversion: 0.35
+    resistance:
+      blunt: 0.2
+      slash: 0
+      pierce: 0.245
+      fire: 0
+      frost: 0.135
+      lightning: 0.31
+      poison: 0
+      spirit: 0
+  Snuffiss:
+    health: 672.448
+    armor: 186.3616
+    low_armor: 219.9616
+    threshold: 0.75
+    conversion: 0
+    resistance:
+      blunt: 0.4812
+      slash: 0.4812
+      pierce: 0.4812
+      fire: 0.38728
+      frost: 0.38728
+      lightning: 0.5
+      poison: 0.38728
+      spirit: 0.38728
