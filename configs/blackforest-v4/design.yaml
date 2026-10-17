@@ -40,31 +40,19 @@ waves:
     creatures: {Greydwarf: 9, Brute: 2, Shaman: 1, Bear: 2}
   - name: Grave watch
     creatures: {Skeleton: 6, Greydwarf: 3, Ghost: 2, Brute: 1, RancidRemains: 2}
-  - name: Forest and crypt
-    creatures: {Greydwarf: 5, Skeleton: 4, Shaman: 2, Ghost: 1, Bear: 1, RancidRemains: 1}
   - name: Troll miniboss
     creatures: {Troll: 1, Greydwarf: 6, Skeleton: 3, Brute: 2, Shaman: 1, Bear: 1}
   - name: Crypt guard
     creatures: {Skeleton: 6, SkeletonMelee: 3, Ghost: 2, Shaman: 1, RancidRemains: 2}
   - name: Poison procession
     creatures: {Skeleton: 5, Greydwarf: 4, Shaman: 2, Ghost: 1, RancidRemains: 2}
-  - name: Restless dead
-    creatures: {Skeleton: 6, SkeletonMelee: 3, Ghost: 3, RancidRemains: 2}
   - name: Rancid champion miniboss
     creatures: {RancidChampion: 1, Skeleton: 6, SkeletonMelee: 3, Ghost: 2, Shaman: 1, RancidRemains: 1}
   - name: Haunted forest
     creatures: {Greydwarf: 4, Skeleton: 5, Ghost: 2, Brute: 1, Bear: 1, RancidRemains: 1}
   - name: Burial guard
     creatures: {Skeleton: 6, SkeletonMelee: 3, Ghost: 2, Shaman: 1, RancidRemains: 2}
-  - name: Brenna's guard
-    creatures: {Skeleton: 6, SkeletonMelee: 3, Brute: 2, Ghost: 1, RancidRemains: 2}
   - name: Brenna miniboss
     creatures: {Brenna: 1, Skeleton: 6, SkeletonMelee: 3, Ghost: 2, Shaman: 1, RancidRemains: 1}
-  - name: Elder's sentries
-    creatures: {Greydwarf: 9, Brute: 2, Shaman: 1, Bear: 2}
-  - name: Forest awakening
-    creatures: {Greydwarf: 6, Skeleton: 3, Shaman: 2, Brute: 1, Bear: 1, RancidRemains: 1}
-  - name: Final guard
-    creatures: {Greydwarf: 5, Skeleton: 4, Brute: 2, Shaman: 1, Bear: 2}
   - name: The Elder
     creatures: {Elder: 1, Greydwarf: 6, Skeleton: 3, Brute: 2, Shaman: 1, Bear: 1}

@@ -5,10 +5,10 @@ stock_fortress_0_39_0_compatible: false
 checks:
   - Compiled Fortress candidate with zero warnings and zero errors.
   - Loaded these fragments with the candidate's actual YAML data types.
-  - Generated exactly sixteen phases and 224 creatures through the physical-shrine path.
+  - Generated exactly ten phases and 140 creatures through the physical-shrine path.
   - Verified minStars and maxStars survive on every horde.
-  - Verified Troll, Rancid Champion, Brenna, and Elder in waves 4, 8, 12, and 16.
-  - Verified API conversion and JSON round trip preserve all sixteen phases.
+  - Verified Troll, Rancid Champion, Brenna, and Elder in waves 3, 6, 9, and 10.
+  - Verified API conversion and JSON round trip preserve all ten phases.
   - Verified omitted new fields retain the four-wave API default.
   - Reopened the development bundle and verified eight markers, all at twenty metres radius.
 creature_source:
@@ -28,7 +28,7 @@ ttk:
     - Isolated target; full starting stamina; no player recovery, buffs, movement, missed attacks, or enemy healing.
     - TTK is a saved calculation snapshot; generate.py only regenerates stars, YAML, and HTD.
 pending:
-  - Live local-world or Valnet proof of sixteen-wave completion and payment/rewards.
+  - Live local-world or Valnet proof of ten-wave completion and payment/rewards.
   - Root placement on the interior floor, native lifetime, and multiplayer ownership.
   - Runtime SLS health and star persistence, especially bosses and world-level settings.
   - Combat testing of total duration and simultaneous threats.

@@ -84,17 +84,17 @@ def generate():
         assert all(isinstance(n, int) and 0 < n <= 32767 for n in wave['creatures'].values())
         phases.append([dict(creature=aliases[name], amount=count) for name, count in wave['creatures'].items()])
         wave_rows.append(dict(number=number, **wave, count=sum(wave['creatures'].values())))
-    assert len(phases) == 16
+    assert len(phases) == 10
     assert all(w['count'] == 14 for w in wave_rows)
     assert [next((n for n in w['creatures'] if design['creatures'][n]['role'] in ('miniboss', 'boss')), None)
-            for w in wave_rows if w['number'] % 4 == 0] == ['Troll', 'RancidChampion', 'Brenna', 'Elder']
+            for w in wave_rows if w['number'] in (3, 6, 9, 10)] == ['Troll', 'RancidChampion', 'Brenna', 'Elder']
     entry = dict(tributeName=design['tribute']['prefab'], tributeAmount=design['tribute']['amount'],
                  rewards=dict(DustRare=10, EssenceRare=10, ReagentRare=10), hardMode=False, siegeMode=False,
-                 wildshrineWaveStartLocalization='Tier 1: the forest and its dead awaken. Sixteen waves.',
+                 wildshrineWaveStartLocalization='Tier 1: the forest and its dead awaken. Ten waves.',
                  wildshrineWaveEndLocalization='Tier 1 complete. The Elder has fallen.',
                  wildLevelDefinition=dict(levelIndex=1, biome='BlackForest', waveFormat='DynamicBoss',
-                     numPhases=16, maxCreaturesPerPhaseOverride=14,
-                     levelWarningLocalization='Minibosses in waves 4, 8, and 12. The Elder in wave 16.',
+                     numPhases=10, maxCreaturesPerPhaseOverride=14,
+                     levelWarningLocalization='Minibosses in waves 3, 6, and 9. The Elder in wave 10.',
                      onlySelectMonsters=list(catalogue), commonSpawnModifiers={}, rareSpawnModifiers={},
                      eliteSpawnModifiers={}, creatureRules=rules, explicitPhases=phases))
     documents = {
