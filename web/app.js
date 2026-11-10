@@ -1,8 +1,15 @@
 const $ = id => document.getElementById(id);
 const node = (tag, text) => {const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n;};
 let data, players=[], selected='', generation=0;
-const inputs=new Map(), stars=new Map(), overrides={};
-const fields=['health_base','health_per_star','damage_base','damage_per_star'];
+const inputs=new Map(), stars=new Map();
+const defaults={health_per_star:100,damage_per_star:50};
+const percentages={...defaults};
+const fields=Object.keys(defaults);
+function resolvedCreature(c){
+ const result=structuredClone(c);
+ Object.assign(result.scaling,{health_base:1,damage_base:1,health_per_star:percentages.health_per_star/100,damage_per_star:percentages.damage_per_star/100});
+ return result;
+}
 function playerControls(){
  const area=$('players');area.replaceChildren();
  const menu=node('select');menu.id='character';menu.setAttribute('aria-label','Character');
@@ -47,23 +54,33 @@ async function render(){
   const name=node('td',c.id);name.append(node('small',c.biome+' · '+c.role));tr.append(name);
   const cell=node('td'),step=node('div');step.className='stepper';
   const minus=node('button','−'),input=node('input'),plus=node('button','+');input.type='number';input.min=0;input.max=10000;input.step=1;input.value=s;input.setAttribute('aria-label',c.id+' stars');
-  const change=value=>{if(!Number.isInteger(value)||value<0||value>10000){$('status').textContent='Stars must be a whole number from 0 to 10000.';input.value=s;return;}stars.set(c.id,value);render();};
-  minus.disabled=s===0;plus.disabled=s===10000;minus.setAttribute('aria-label','Decrease '+c.id+' stars');plus.setAttribute('aria-label','Increase '+c.id+' stars');minus.onclick=()=>change(s-1);plus.onclick=()=>change(s+1);input.onchange=()=>change(input.value===''?NaN:Number(input.value));step.append(minus,input,plus);cell.append(step);tr.append(cell);
-  tr.append(node('td',fields.map(f=>c.scaling[f]).join(' / ')));
-  const resolved=structuredClone(c);Object.assign(resolved.scaling,overrides);
-  const hp=c.health*(resolved.scaling.health_base+s*resolved.scaling.health_per_star);tr.append(node('td',display(hp)));
+  let rowGeneration=0;
+  const change=async value=>{
+   if(!Number.isInteger(value)||value<0||value>10000){$('status').textContent='Stars must be a whole number from 0 to 10000.';input.value=stars.get(c.id)||0;return;}
+   stars.set(c.id,value);input.value=value;minus.disabled=value===0;plus.disabled=value===10000;
+   const rowStamp=++rowGeneration,resolved=resolvedCreature(c),current=profile();
+   healthCell.textContent=display(c.health*(1+value*percentages.health_per_star/100));
+   if(current.missing.length){$('status').textContent=current.missing.join(' ');return;}
+   await new Promise(r=>setTimeout(r,0));if(stamp!==generation||rowStamp!==rowGeneration)return;
+   const m=BalanceEngine.metrics(resolved,[value,value],[current.value],'before').outcomes[0];
+   ttk.textContent=display(m.ttk[0]);htd.textContent=m.htd[0]===null?'No recorded attack':display(m.htd[0]);
+   $('status').textContent='Ready · 96 repeatable trials per value · SLS before physical conversion';
+  };
+  minus.disabled=s===0;plus.disabled=s===10000;minus.setAttribute('aria-label','Decrease '+c.id+' stars');plus.setAttribute('aria-label','Increase '+c.id+' stars');minus.onclick=()=>change((stars.get(c.id)||0)-1);plus.onclick=()=>change((stars.get(c.id)||0)+1);input.onchange=()=>change(input.value===''?NaN:Number(input.value));step.append(minus,input,plus);cell.append(step);tr.append(cell);
+  const resolved=resolvedCreature(c);
+  const hp=c.health*(resolved.scaling.health_base+s*resolved.scaling.health_per_star),healthCell=node('td',display(hp));tr.append(healthCell);
   const ttk=node('td',p.missing.length?'Missing inputs':'…'),htd=node('td',p.missing.length?'Missing inputs':'…');tr.append(ttk,htd);$('rows').append(tr);
-  if(!p.missing.length){await new Promise(r=>setTimeout(r,0));if(stamp!==generation)return;const m=BalanceEngine.metrics(resolved,[s,s],[p.value],'before').outcomes[0];ttk.textContent=display(m.ttk[0]);htd.textContent=m.htd[0]===null?'No recorded attack':display(m.htd[0]);}
+  if(!p.missing.length){const rowStamp=rowGeneration;await new Promise(r=>setTimeout(r,0));if(stamp!==generation)return;if(rowStamp===rowGeneration){const m=BalanceEngine.metrics(resolved,[s,s],[p.value],'before').outcomes[0];ttk.textContent=display(m.ttk[0]);htd.textContent=m.htd[0]===null?'No recorded attack':display(m.htd[0]);}}
  }
  if(stamp===generation&&!p.missing.length)$('status').textContent='Ready · 96 repeatable trials per value · SLS before physical conversion';
 }
 async function start(){
  data=await (await fetch('data.json')).json();
- for(const f of fields){const label=node('label',f.replaceAll('_',' ')+' '),n=node('input');n.type='number';n.min=f.endsWith('base')?'.001':'0';n.step='any';n.id=f;n.placeholder='Per creature';n.onchange=()=>{const v=Number(n.value);if(n.value==='')delete overrides[f];else if(Number.isFinite(v)&&v>=Number(n.min)&&v<=10000)overrides[f]=v;else {n.value=overrides[f]??'';$('status').textContent='Scaling must be within the allowed nonnegative range (base must be positive).';return;}render();};label.append(n);const defaults=[...new Set(data.creatures.map(c=>c.scaling[f]))].sort((a,b)=>a-b);label.append(node('small','Recorded defaults: '+defaults.join(', ')));$('scaling').append(label);}
- $('resetScaling').onclick=()=>{for(const f of fields){delete overrides[f];$(f).value='';}render();};
+ for(const f of fields){const label=node('label',(f==='health_per_star'?'Health':'Damage')+' increase per star (%) '),n=node('input');n.type='number';n.min=0;n.max=10000;n.step='any';n.id=f;n.value=percentages[f];n.onchange=()=>{const v=Number(n.value);if(n.value!==''&&Number.isFinite(v)&&v>=0&&v<=10000)percentages[f]=v;else {n.value=percentages[f];$('status').textContent='Enter a percentage from 0 to 10000.';return;}render();};label.append(n);$('scaling').append(label);}
+ $('resetScaling').onclick=()=>{for(const f of fields){percentages[f]=defaults[f];$(f).value=defaults[f];}render();};
  $('resetStars').onclick=()=>{stars.clear();render();};$('search').oninput=render;
  $('uploads').onchange=async()=>{const files=Array.from($('uploads').files);if(files.length>20||files.some(f=>f.size>5000000)){$('errors').textContent='Use at most 20 files, up to 5 MB each.';return;}await load({files:await Promise.all(files.map(async f=>({name:f.name,text:await f.text()})))});$('uploads').value='';};
  $('loadPaths').onclick=()=>load({paths:$('paths').value.split('\n').map(x=>x.trim()).filter(Boolean)});
- window.valbalance={get data(){return data;},profile,stars,overrides};render();
+ window.valbalance={get data(){return data;},profile,stars,percentages};render();
 }
 start().catch(e=>{$('status').textContent='Cannot start workbench: '+e.message;});
