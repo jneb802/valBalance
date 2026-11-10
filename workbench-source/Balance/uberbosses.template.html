@@ -1,0 +1,19 @@
+<section id="panel-uberbosses" role="tabpanel" aria-labelledby="tab-uberbosses" hidden>
+<header><h1>Uber bosses</h1><p class="muted">Every tunable number for the Uber boss attacks and encounter rules. Vanilla attacks are shown for reference and cannot be changed here.</p>
+<div class="actions toolbar"><button class="primary" id="uber-export">Export uberbosses.json</button><button id="uber-import">Import uberbosses.json</button><button id="uber-csv">Export table</button><button id="uber-reset">Reset to repository values</button><span class="right muted" id="uber-save-status">Local draft</span></div>
+<input class="file" type="file" accept=".json,application/json" id="uber-file"><div id="uber-error" class="loot-error" role="alert"></div></header>
+<main>
+<div class="toolbar"><label>Boss <select id="uber-boss"></select></label><label>Show <select id="uber-kind"><option value="all">All attacks</option><option value="changed">New and replaced only</option></select></label><span class="right muted" id="uber-count"></span></div>
+<div class="panel notice help"><b>How these values reach the game.</b> Export this file and commit it as <code>Balance/uberbosses.json</code>. The Unity authoring script bakes the attack values into the Uber Bosses bundle, and <code>apply_uberbosses.py</code> writes the encounter settings into <code>Config/encounters.yaml</code>. Nothing is deployed from this page.</div>
+<div class="panel" id="uber-threat">
+<div class="actions"><h2>Threat to a player</h2><span class="right muted" id="uber-threat-status"></span></div>
+<div class="toolbar"><label>Player <select id="uber-player"></select></label><label>Stars <input type="number" id="uber-stars" min="0" max="10000" step="1"></label><span class="muted" id="uber-player-note"></span></div>
+<div class="tablewrap"><table><thead><tr><th>Boss</th><th>Base health<small>Editable · before star scaling</small></th><th>Health at stars</th><th>Time to kill (TTK)<small>Seconds for the player to kill the boss</small></th><th>Deadliest hit</th><th>Received<small>After armor and resistances</small></th><th>Hits to die (HTD)<small>Boss hits that kill the player</small></th></tr></thead><tbody id="uber-summary"></tbody></table></div>
+<p class="muted">Base health is written to Config/encounters.yaml with the other settings and sets the boss's health before star scaling. TTK is the median of 96 simulated fights with the player's primary attack, no misses and no boss abilities. HTD counts hits of that one kind from full player health, with no healing or blocking. Damage per hit and hit counts below are the same numbers the Unity authoring bakes into the bundle; vanilla weapons stay read-only because the mod does not change them.</p>
+<div class="tablewrap"><table><thead><tr><th>Attack</th><th>Hit</th><th>Damage per hit<small>Editable by type</small></th><th>Hits<small>In one use of the attack</small></th><th>Volley total<small>Raw damage × hits</small></th><th>Received per hit<small>After armor and resistances</small></th><th>Hits to die (HTD)<small>Hits of this kind that kill the player</small></th><th>Volley kills<small>HTD within one use</small></th></tr></thead><tbody id="uber-hits"></tbody></table></div>
+</div>
+<div id="uber-settings" class="panel"></div>
+<div id="uber-attacks"></div>
+<p class="footer">Damage values are base numbers before star scaling and armor. Interval is the minimum seconds between uses of that attack. Range is the distance band in which the AI considers the attack. Changes are saved in this browser when storage is available.</p>
+</main>
+</section>

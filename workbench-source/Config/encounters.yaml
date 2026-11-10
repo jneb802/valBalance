@@ -1,0 +1,92 @@
+# Native encounter baseline.
+schemaVersion: 6
+uberEikthyr:
+  health: 100000
+  pullRange: 12
+  pullDistance: 4.5
+  pullMinimum: 3
+  slamShoveRadius: 12
+  slamShoveForce: 240
+uberElder:
+  health: 125000
+  nestCount: 4
+  nestRadius: 12
+  nestHealth: 300
+  nestRespawnHealthFraction: 0.5
+  rootStars: 2
+  curseDuration: 10
+  curseMovementThreshold: 6
+  immobilizeDuration: 3
+  stompShoveRadius: 12
+  stompShoveForce: 220
+uberBonemass:
+  health: 150000
+  pileCount: 4
+  pileRadius: 14
+  pileHealth: 400
+  pileRespawnHealthFraction: 0.5
+  blobHealFraction: 0.06
+  oozerHealFraction: 0.15
+uberModer:
+  health: 175000
+  drakeChance: 0.35
+  landingShoveRadius: 12
+  landingShoveForce: 220
+uberYagluth:
+  health: 200000
+  gazeHealthFraction: 0.5
+  gazeTimeout: 300
+  helplessSeconds: 10
+  lightningDamageFraction: 0.05
+  wrongHeadHealFraction: 0.05
+  wrongHeadRadius: 8
+  timeoutHealFraction: 0.15
+  curseHealthFraction: 0.25
+  curseEncumberSeconds: 8
+uberQueen:
+  health: 225000
+  scatterHealthFraction: 0.5
+  scatterInterval: 12
+  scatterPools: 4
+  undermineHealthFraction: 0.6
+  tickBrackets: [0.75, 0.5, 0.25]
+  ticksPerWave: 4
+  tickHitsToKill: 3
+  tickHealRatio: 1
+  slapTempos: [1, 1.5, 2]
+  roarTicks: 2
+  legionThreshold: 6
+  legionDamageReduction: 0.6
+  nestSpawnInterval: 8
+  nestMaxAlive: 3
+  larvaSeconds: 20
+uberFader:
+  health: 250000
+  crossCount: 4
+  crossRadius: 16
+  crossHealth: 500
+  summonBrackets: [0.66, 0.33]
+  warriorsPerWave: 3
+  archersPerWave: 1
+# Completion rewards are configured separately in rewards.yaml.
+tablets:
+  protectionReductionPercent: 20
+  totemRadius: 12
+  movementSlowPercent: 20
+  attackSlowPercent: 20
+  eitrDrainPercent: 5
+  healthDrainPercent: 5
+  fireDamage: 100
+  frostDamage: 90
+  hazardDamagePerTierPercent: 10
+  fireballOrbDamage: 100
+  iceShardOrbDamage: 100
+  mistileOrbDamage: 100
+events:
+# Tiered encounters build their waves and messages from creatures.yaml; this entry supplies pacing only.
+- id: forest-01
+  tier: 1
+  enabled: true
+  spawnInterval: 2
+  groupDelay: 8
+  maxAlive: 8

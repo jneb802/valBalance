@@ -1,0 +1,771 @@
+{
+  "schema": 1,
+  "note": "Source of truth for Uber boss balance. The Balance workbench edits and exports this file; Unity/Editor~/UberBossAuthoring.cs bakes the attack values into the bundle and Balance/apply_uberbosses.py writes the encounter settings into Config/encounters.yaml.",
+  "bosses": [
+    {
+      "id": "VE_UberEikthyr",
+      "name": "Uber Eikthyr",
+      "source": "Eikthyr",
+      "settings": {
+        "health": 100000,
+        "pullRange": 12,
+        "pullDistance": 4.5,
+        "pullMinimum": 3,
+        "slamShoveRadius": 12,
+        "slamShoveForce": 240
+      },
+      "attacks": [
+        {
+          "id": "Eikthyr_charge",
+          "name": "Lightning headbutt",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 14,
+            "rangeMin": 7,
+            "rangeMax": 20,
+            "lightning": 15
+          }
+        },
+        {
+          "id": "Eikthyr_stomp",
+          "name": "Stomp",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 40,
+            "rangeMin": 0,
+            "rangeMax": 6,
+            "lightning": 15,
+            "radius": 3
+          }
+        },
+        {
+          "id": "VE_Eikthyr_DoubleAntler",
+          "name": "Double antler swing",
+          "kind": "new",
+          "fields": {
+            "interval": 8,
+            "rangeMin": 0,
+            "rangeMax": 4.5,
+            "pierce": 1500
+          }
+        },
+        {
+          "id": "VE_Eikthyr_Charge",
+          "name": "Charge",
+          "kind": "new",
+          "fields": {
+            "interval": 14,
+            "rangeMin": 6,
+            "rangeMax": 20,
+            "duration": 1.5,
+            "speed": 18,
+            "hitboxLightning": 650,
+            "hitboxBlunt": 605,
+            "hitboxTick": 0.3,
+            "hitboxForce": 180,
+            "hitboxWidth": 5.5,
+            "hitboxLength": 8,
+            "trailSpacing": 1.8,
+            "trailLightning": 600,
+            "trailRadius": 1.6
+          }
+        },
+        {
+          "id": "VE_Eikthyr_StompLine",
+          "name": "Lightning stomp line",
+          "kind": "new",
+          "fields": {
+            "interval": 16,
+            "rangeMin": 2,
+            "rangeMax": 14,
+            "strikes": 10,
+            "spacing": 2,
+            "strikeDelay": 0.1,
+            "lightning": 800,
+            "blunt": 200,
+            "radius": 2.2,
+            "force": 40
+          }
+        },
+        {
+          "id": "VE_Eikthyr_Meteors",
+          "name": "Lightning ball meteors",
+          "kind": "new",
+          "fields": {
+            "interval": 20,
+            "rangeMin": 0,
+            "rangeMax": 30,
+            "ballsPerPlayer": 5,
+            "spread": 2.5,
+            "warning": 0.8,
+            "ballDelay": 0.25,
+            "lightning": 650,
+            "blunt": 250,
+            "radius": 3,
+            "force": 150,
+            "speed": 25
+          }
+        },
+        {
+          "id": "VE_Eikthyr_Vortex",
+          "name": "Lightning vortex",
+          "kind": "new",
+          "fields": {
+            "interval": 30,
+            "rangeMin": 0,
+            "rangeMax": 18,
+            "hold": 4.5,
+            "explosionLightning": 1500,
+            "explosionBlunt": 500,
+            "explosionRadius": 8,
+            "explosionForce": 250
+          }
+        }
+      ]
+    },
+    {
+      "id": "VE_UberElder",
+      "name": "Uber Elder",
+      "source": "gd_king",
+      "settings": {
+        "health": 125000,
+        "nestCount": 4,
+        "nestRadius": 12,
+        "nestHealth": 300,
+        "nestRespawnHealthFraction": 0.5,
+        "rootStars": 2,
+        "curseDuration": 10,
+        "curseMovementThreshold": 6,
+        "immobilizeDuration": 3,
+        "stompShoveRadius": 12,
+        "stompShoveForce": 220
+      },
+      "attacks": [
+        {
+          "id": "gd_king_punch",
+          "name": "Punch",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 7,
+            "rangeMin": 0,
+            "rangeMax": 8,
+            "blunt": 50
+          }
+        },
+        {
+          "id": "gd_king_shoot",
+          "name": "Root shots",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 30,
+            "rangeMin": 10,
+            "rangeMax": 50,
+            "pierce": 35
+          }
+        },
+        {
+          "id": "gd_king_scream",
+          "name": "Scream",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 30,
+            "rangeMin": 10,
+            "rangeMax": 50
+          }
+        },
+        {
+          "id": "VE_Elder_Shockwave",
+          "name": "Shockwave stomp",
+          "kind": "replaced",
+          "fields": {
+            "interval": 14,
+            "rangeMin": 0,
+            "rangeMax": 10,
+            "blunt": 3000,
+            "rings": 4,
+            "ringSpacing": 4.5,
+            "ringDelay": 0.35,
+            "pointBlunt": 2000,
+            "pointRadius": 2.8,
+            "pointForce": 60,
+            "launchMin": 7,
+            "launchMax": 9
+          }
+        },
+        {
+          "id": "VE_Elder_RootCast",
+          "name": "Root summon",
+          "kind": "replaced",
+          "fields": {
+            "interval": 20,
+            "rangeMin": 0,
+            "rangeMax": 30,
+            "roots": 8,
+            "maxAlive": 16,
+            "spread": 7
+          }
+        },
+        {
+          "id": "VE_Elder_StaffRoots",
+          "name": "Staff root summon",
+          "kind": "new",
+          "fields": {
+            "interval": 24,
+            "rangeMin": 0,
+            "rangeMax": 30,
+            "roots": 6,
+            "maxAlive": 16,
+            "spread": 7
+          }
+        },
+        {
+          "id": "VE_Elder_Curse",
+          "name": "Movement curse",
+          "kind": "new",
+          "fields": {
+            "interval": 28,
+            "rangeMin": 0,
+            "rangeMax": 35
+          }
+        }
+      ]
+    },
+    {
+      "id": "VE_UberBonemass",
+      "name": "Uber Bonemass",
+      "source": "Bonemass",
+      "settings": {
+        "health": 150000,
+        "pileCount": 4,
+        "pileRadius": 14,
+        "pileHealth": 400,
+        "pileRespawnHealthFraction": 0.5,
+        "blobHealFraction": 0.06,
+        "oozerHealFraction": 0.15
+      },
+      "attacks": [
+        {
+          "id": "bonemass_attack_punch",
+          "name": "Punch",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 7,
+            "rangeMin": 0,
+            "rangeMax": 8,
+            "blunt": 80,
+            "poison": 50
+          }
+        },
+        {
+          "id": "bonemass_attack_aoe",
+          "name": "Poison puke",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 30,
+            "rangeMin": 0,
+            "rangeMax": 15,
+            "poison": 130
+          }
+        },
+        {
+          "id": "VE_Bonemass_Throw",
+          "name": "Blob throw",
+          "kind": "replaced",
+          "fields": {
+            "interval": 50,
+            "rangeMin": 0,
+            "rangeMax": 30,
+            "blobs": 3,
+            "oozers": 1
+          }
+        },
+        {
+          "id": "VE_Bonemass_CallHealers",
+          "name": "Call healers",
+          "kind": "new",
+          "fields": {
+            "interval": 40,
+            "rangeMin": 0,
+            "rangeMax": 30,
+            "blobs": 3,
+            "oozers": 1,
+            "ringRadius": 16
+          }
+        }
+      ]
+    },
+    {
+      "id": "VE_UberModer",
+      "name": "Uber Moder",
+      "source": "Dragon",
+      "settings": {
+        "health": 175000,
+        "drakeChance": 0.35,
+        "landingShoveRadius": 12,
+        "landingShoveForce": 220
+      },
+      "attacks": [
+        {
+          "id": "dragon_bite",
+          "name": "Bite",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 30,
+            "rangeMin": 0,
+            "rangeMax": 7,
+            "pierce": 120
+          }
+        },
+        {
+          "id": "dragon_claw_left",
+          "name": "Claws",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 30,
+            "rangeMin": 0,
+            "rangeMax": 10,
+            "slash": 110
+          }
+        },
+        {
+          "id": "dragon_spit_shotgun",
+          "name": "Ice spit",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 8,
+            "rangeMin": 5,
+            "rangeMax": 25,
+            "pierce": 30,
+            "frost": 200
+          }
+        },
+        {
+          "id": "VE_Moder_Breath",
+          "name": "Frost breath",
+          "kind": "replaced",
+          "fields": {
+            "interval": 8,
+            "rangeMin": 5,
+            "rangeMax": 20,
+            "frost": 3000,
+            "fieldFrost": 1000,
+            "fieldTick": 0.4,
+            "fieldDuration": 0.8,
+            "fieldForce": 30,
+            "fieldWidth": 9,
+            "fieldLength": 26
+          }
+        },
+        {
+          "id": "VE_Moder_AirBreath",
+          "name": "Air frost breath",
+          "kind": "new",
+          "fields": {
+            "interval": 12,
+            "rangeMin": 4,
+            "rangeMax": 25,
+            "frost": 3000,
+            "fieldFrost": 1000,
+            "fieldTick": 0.4,
+            "fieldDuration": 1.4,
+            "fieldForce": 30,
+            "fieldWidth": 10,
+            "fieldLength": 26
+          }
+        },
+        {
+          "id": "VE_Moder_Icicles",
+          "name": "Shard rain",
+          "kind": "replaced",
+          "fields": {
+            "interval": 24,
+            "rangeMin": 8,
+            "rangeMax": 50,
+            "warning": 1,
+            "shardsPerPlayer": 18,
+            "spread": 3,
+            "shardDelay": 0.05,
+            "frost": 300,
+            "pierce": 200,
+            "radius": 0.6,
+            "force": 15,
+            "speed": 22
+          }
+        },
+        {
+          "id": "VE_FrostNova",
+          "name": "Ice formation nova",
+          "kind": "new",
+          "fields": {
+            "frost": 250,
+            "blunt": 50,
+            "radius": 5,
+            "force": 60
+          }
+        },
+        {
+          "id": "VE_FrostShockwave",
+          "name": "Landing shockwave",
+          "kind": "new",
+          "fields": {
+            "impactBlunt": 150,
+            "impactFrost": 50,
+            "impactRadius": 5,
+            "rings": 3,
+            "ringSpacing": 5,
+            "ringDelay": 0.3,
+            "pointBlunt": 200,
+            "pointFrost": 50,
+            "pointRadius": 3,
+            "force": 150
+          }
+        }
+      ]
+    },
+    {
+      "id": "VE_UberYagluth",
+      "name": "Uber Yagluth",
+      "source": "GoblinKing",
+      "settings": {
+        "health": 200000,
+        "gazeHealthFraction": 0.5,
+        "gazeTimeout": 300,
+        "helplessSeconds": 10,
+        "lightningDamageFraction": 0.05,
+        "wrongHeadHealFraction": 0.05,
+        "wrongHeadRadius": 8,
+        "timeoutHealFraction": 0.15,
+        "curseHealthFraction": 0.25,
+        "curseEncumberSeconds": 8
+      },
+      "attacks": [
+        {
+          "id": "GoblinKing_Meteors",
+          "name": "Meteors",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 25,
+            "rangeMin": 0,
+            "rangeMax": 30
+          }
+        },
+        {
+          "id": "GoblinKing_Taunt",
+          "name": "Taunt",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 60,
+            "rangeMin": 10,
+            "rangeMax": 50
+          }
+        },
+        {
+          "id": "VE_Yagluth_BeamSweep",
+          "name": "Whipping beam",
+          "kind": "replaced",
+          "fields": {
+            "interval": 22,
+            "rangeMin": 8,
+            "rangeMax": 40,
+            "hold": 4,
+            "bolts": 9,
+            "boltInterval": 0.45,
+            "fire": 1000,
+            "lightning": 500,
+            "turnRate": 55
+          }
+        },
+        {
+          "id": "VE_Yagluth_PalmSlam",
+          "name": "Palm slam (Enervation)",
+          "kind": "replaced",
+          "fields": {
+            "interval": 28,
+            "rangeMin": 0,
+            "rangeMax": 10,
+            "fire": 1500,
+            "lightning": 500,
+            "rings": 4,
+            "ringSpacing": 4,
+            "ringDelay": 0.3,
+            "ringBlunt": 250,
+            "ringForce": 20
+          }
+        },
+        {
+          "id": "VE_GazeHead",
+          "name": "Gaze head",
+          "kind": "new",
+          "fields": {
+            "health": 5000,
+            "speed": 2,
+            "keepDistance": 6,
+            "boltInterval": 3,
+            "boltFire": 250,
+            "boltLightning": 250,
+            "boltForce": 30
+          }
+        }
+      ]
+    },
+    {
+      "id": "VE_UberQueen",
+      "name": "Uber Queen",
+      "source": "SeekerQueen",
+      "settings": {
+        "health": 225000,
+        "scatterHealthFraction": 0.5,
+        "scatterInterval": 12,
+        "scatterPools": 4,
+        "undermineHealthFraction": 0.6,
+        "tickBrackets": [
+          0.75,
+          0.5,
+          0.25
+        ],
+        "ticksPerWave": 4,
+        "tickHitsToKill": 3,
+        "tickHealRatio": 1,
+        "slapTempos": [
+          1,
+          1.5,
+          2
+        ],
+        "roarTicks": 2,
+        "legionThreshold": 6,
+        "legionDamageReduction": 0.6,
+        "nestSpawnInterval": 8,
+        "nestMaxAlive": 3,
+        "larvaSeconds": 20
+      },
+      "attacks": [
+        {
+          "id": "SeekerQueen_Slap",
+          "name": "Slap",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 4,
+            "rangeMin": 0,
+            "rangeMax": 9,
+            "slash": 130
+          }
+        },
+        {
+          "id": "SeekerQueen_Bite",
+          "name": "Bite",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 10,
+            "rangeMin": 0,
+            "rangeMax": 10,
+            "pierce": 140,
+            "poison": 100
+          }
+        },
+        {
+          "id": "SeekerQueen_Rush",
+          "name": "Rush",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 25,
+            "rangeMin": 5,
+            "rangeMax": 25,
+            "slash": 100
+          }
+        },
+        {
+          "id": "SeekerQueen_Call",
+          "name": "Call",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 60,
+            "rangeMin": 0,
+            "rangeMax": 25
+          }
+        },
+        {
+          "id": "SeekerQueen_Teleport",
+          "name": "Burrow",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 60,
+            "rangeMin": 0,
+            "rangeMax": 400
+          }
+        },
+        {
+          "id": "VE_Queen_Spit",
+          "name": "Acid spit",
+          "kind": "replaced",
+          "fields": {
+            "interval": 20,
+            "rangeMin": 5,
+            "rangeMax": 25,
+            "blunt": 500,
+            "poison": 500,
+            "poolPoison": 100,
+            "poolTick": 1,
+            "poolDuration": 12,
+            "poolRadius": 3
+          }
+        },
+        {
+          "id": "VE_Queen_Pierce",
+          "name": "Pierce (Thorn frenzy)",
+          "kind": "replaced",
+          "fields": {
+            "interval": 4,
+            "rangeMin": 0,
+            "rangeMax": 4,
+            "pierce": 2500,
+            "thorns": 6,
+            "thornSpread": 2,
+            "thornWarning": 0.9,
+            "thornPierce": 1000,
+            "thornRadius": 2.5,
+            "thornForce": 40,
+            "slowSeconds": 6,
+            "slowPercent": 40
+          }
+        },
+        {
+          "id": "VE_Undermine",
+          "name": "Undermine",
+          "kind": "new",
+          "fields": {
+            "warning": 2.5,
+            "pierce": 1000,
+            "blunt": 500,
+            "radius": 5,
+            "force": 120,
+            "launchMin": 7,
+            "launchMax": 9
+          }
+        },
+        {
+          "id": "VE_HiveNest",
+          "name": "Hive nest",
+          "kind": "new",
+          "fields": {
+            "health": 500
+          }
+        }
+      ]
+    },
+    {
+      "id": "VE_UberFader",
+      "name": "Uber Fader",
+      "source": "Fader",
+      "settings": {
+        "health": 250000,
+        "crossCount": 4,
+        "crossRadius": 16,
+        "crossHealth": 500,
+        "summonBrackets": [
+          0.66,
+          0.33
+        ],
+        "warriorsPerWave": 3,
+        "archersPerWave": 1
+      },
+      "attacks": [
+        {
+          "id": "Fader_Bite",
+          "name": "Bite",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 3,
+            "rangeMin": 0,
+            "rangeMax": 9,
+            "pierce": 210
+          }
+        },
+        {
+          "id": "Fader_Claw_Left",
+          "name": "Claws",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 3,
+            "rangeMin": 0,
+            "rangeMax": 9,
+            "pierce": 200
+          }
+        },
+        {
+          "id": "Fader_Flamebreath",
+          "name": "Flame breath",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 25,
+            "rangeMin": 2,
+            "rangeMax": 20,
+            "fire": 60
+          }
+        },
+        {
+          "id": "Fader_WallOfFire",
+          "name": "Wall of fire",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 60,
+            "rangeMin": 0,
+            "rangeMax": 40,
+            "pierce": 120
+          }
+        },
+        {
+          "id": "Fader_Roar",
+          "name": "Charred roar",
+          "kind": "vanilla",
+          "fields": {
+            "interval": 45,
+            "rangeMin": 0,
+            "rangeMax": 100
+          }
+        },
+        {
+          "id": "VE_Fader_Fissures",
+          "name": "Triple fissure",
+          "kind": "replaced",
+          "fields": {
+            "interval": 22,
+            "rangeMin": 0,
+            "rangeMax": 40,
+            "fissures": 3,
+            "pillarsMin": 5,
+            "pillarsMax": 6,
+            "spread": 25,
+            "pierce": 750
+          }
+        },
+        {
+          "id": "VE_Fader_MeteorStorm",
+          "name": "Meteor storm",
+          "kind": "replaced",
+          "fields": {
+            "interval": 22,
+            "rangeMin": 0,
+            "rangeMax": 30
+          }
+        },
+        {
+          "id": "VE_Fader_LavaSpin",
+          "name": "Lava spin",
+          "kind": "replaced",
+          "fields": {
+            "interval": 24,
+            "rangeMin": 0,
+            "rangeMax": 8,
+            "pierce": 2000,
+            "pools": 8,
+            "poolRadius": 3,
+            "ringRadius": 6.5,
+            "poolFire": 250,
+            "poolTick": 0.5,
+            "poolDuration": 12
+          }
+        }
+      ]
+    }
+  ]
+}

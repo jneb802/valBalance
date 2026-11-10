@@ -1,0 +1,130 @@
+{
+  "description": "Scenario: quality 3 Deep North heavy helmet, chest, legs and cape equipped; fresh Moose Kebab, Smoked Moose Meat and Seal Soup. Estimated maximum health and stamina, not live values. Carried quality 7 blood-lightning spear selected for comparison. Other carried items remain unequipped.",
+  "profile": {
+    "id": "Cin",
+    "weapon": "SpearGold_BloodLightning",
+    "quality": 7,
+    "skill": 91.2,
+    "base": {
+      "blunt": 0.0,
+      "slash": 0.0,
+      "pierce": 180.0,
+      "fire": 0.0,
+      "frost": 0.0,
+      "lightning": 45.0,
+      "poison": 0.0,
+      "spirit": 0.0
+    },
+    "per_quality": {
+      "blunt": 0.0,
+      "slash": 0.0,
+      "pierce": 10.0,
+      "fire": 0.0,
+      "frost": 0.0,
+      "lightning": 5.0,
+      "poison": 0.0,
+      "spirit": 0.0
+    },
+    "effects": {
+      "Indestructible": 2.0,
+      "AddElementalResistancePercentage": 53.7814369,
+      "AddPhysicalResistancePercentage": 47.32571780000001,
+      "Waterproof": 1.0,
+      "AddHealthRegen": 19.205674000000002,
+      "AddCarryWeight": 175.0,
+      "ModifyHealthRegen": 47.84,
+      "PoisonToTrueDamage": 35.0,
+      "RestingHealthRegen": 100.0,
+      "ModifyArmor": 51.0,
+      "BulkUp": 108.0,
+      "IncreaseHealth": 38.0,
+      "Bloodrage": 6.0,
+      "PercentHealth": 12.0,
+      "PercentStamina": 7.0,
+      "FeatherFall": 1.0,
+      "DoubleJump": 1.0,
+      "IncreaseStamina": 12.0,
+      "ShockingCharge": 30.0,
+      "OffSetAttack": 40.0,
+      "ChainLightning": 67.6,
+      "ModifyDamage": 20.5285282,
+      "LifeSteal": 14.5599995,
+      "ModifyElementalDamage": 15.0,
+      "ModifyAttackSpeed": 10.92,
+      "AddPoisonDamage": 99.0,
+      "ChanceDoubleDamage": 19.5
+    },
+    "defense": {
+      "health": 869.12,
+      "armor": 184.48000000000002,
+      "low_armor": 184.48000000000002,
+      "threshold": 0,
+      "conversion": 0.0,
+      "resistance": {
+        "blunt": 0.47325717800000006,
+        "slash": 0.47325717800000006,
+        "pierce": 0.47325717800000006,
+        "fire": 0.5,
+        "frost": 0.5,
+        "lightning": 0.5,
+        "poison": 0.5,
+        "spirit": 0.5
+      }
+    },
+    "native": {
+      "fire": 0.5,
+      "frost": 0.5,
+      "poison": 0.25,
+      "spirit": 0
+    },
+    "stages": [
+      {
+        "name": "spear_poke",
+        "windup": 0.34399278203121386,
+        "chain": null,
+        "cycle": 0.9614039488580918,
+        "multiplier": 1
+      }
+    ],
+    "chains": [
+      {
+        "chance": 0.25,
+        "damage": 75
+      },
+      {
+        "chance": 0.15,
+        "damage": 50.7
+      }
+    ],
+    "coins": 1293,
+    "stamina": {
+      "maximum": 182.97,
+      "cost": 11.184639999999998,
+      "regen": 12.0,
+      "delay": 1
+    },
+    "snapshot_sha256": "bf734888bdd2339cb6dc31a1dc8362e73f230f015bac1c52de678f43b7ca47f8",
+    "weapon_selection": "Carried weapon; explicit selection required",
+    "source": "Scenario: quality 3 Deep North heavy helmet, chest, legs and cape equipped; fresh Moose Kebab, Smoked Moose Meat and Seal Soup. Estimated maximum health and stamina, not live values. Carried quality 7 blood-lightning spear selected for comparison. Other carried items remain unequipped.",
+    "dot": {
+      "fire": {
+        "interval": 1.0,
+        "ttl": 5.0
+      },
+      "spirit": {
+        "interval": 0.5,
+        "ttl": 3.0
+      },
+      "poison": {
+        "interval": 1.0,
+        "ttl": 0.0,
+        "base": 1.0,
+        "per_damage": 1.0,
+        "power": 0.5
+      }
+    }
+  },
+  "assumptions": "Source-based estimates; full damage-over-time payload per contact; no blocking, avoidance or healing; rested regeneration and reference resistance-mead assumptions. No live combat validation.",
+  "exportedAt": "2026-10-20T23:30:26.053Z",
+  "sourceRevision": "0b53926b6d7bb625"
+}

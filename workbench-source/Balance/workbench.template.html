@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Valheim Endgame · Balance workbench</title>
+<style>
+/*WORKBENCH_STYLE*/
+/*LOOT_STYLE*/
+/*SCALING_STYLE*/
+/*UBER_STYLE*/
+</style></head><body>
+<nav class="workbench-nav" aria-label="Balance workbench"><b>Valheim Endgame</b><div role="tablist" aria-label="Balance tools"><button id="tab-creatures" role="tab" aria-controls="panel-creatures">Creature balance</button><button id="tab-scaling" role="tab" aria-controls="panel-scaling">Creature scaling</button><button id="tab-loot" role="tab" aria-controls="panel-loot">Loot balance</button><button id="tab-uberbosses" role="tab" aria-controls="panel-uberbosses">Uber bosses</button></div><span class="muted">Local workshop</span></nav>
+<section id="panel-creatures" role="tabpanel" aria-labelledby="tab-creatures">
+<header><h1>Creature balance</h1><p class="muted">Valheim Endgame · Local workshop · Stars change health and damage together.</p>
+<div class="summary" id="players"></div>
+<div id="importErrors" role="alert"></div>
+<div class="actions"><button class="primary" id="export">Export review</button><button id="import">Import review</button><button id="csv">Export visible table</button><button id="reset">Reset Tier 1 baselines</button><button id="assumptions">Player inputs & assumptions</button><span class="right muted" id="saveStatus">Local draft</span></div>
+<input class="file" type="file" accept=".json,application/json" id="file">
+</header><main>
+<div class="tiers" id="tiers" aria-label="Encounter tier"></div>
+<div class="toolbar"><label>Biome <select id="biome"><option value="All">All biomes</option></select></label><label>Role <select id="role"><option value="All">All roles</option><option>standard</option><option>magic</option><option>rare</option><option>miniboss</option><option>boss</option></select></label><input id="search" type="search" placeholder="Find a creature" aria-label="Find a creature"><label>Button step <select id="step"><option>1</option><option selected>5</option><option>10</option></select></label><label><input type="checkbox" id="showExcluded">Show excluded</label><span class="right" id="count"></span></div>
+<div class="panel notice help"><b>Planning estimates, not live combat measurements.</b> TTK = seconds to kill one creature. HTD = hits that kill the player. Both use the selected star range. HTD excludes healing and blocking and lets each damage-over-time payload finish. Click a creature for its attacks and review notes.<p id="tierNote"></p><p><b>Completed Tier 1 review:</b> your configured ranges are the starting values. Every subsequent tier adds 3 stars to both ends of each range, through Tier 15. Leech, bats, Goblin_Gem and FrozenKing phases 2/3 are excluded. The original FrozenKing remains.</p></div>
+<div class="status" id="status" role="status"></div>
+<div class="tablewrap"><table><thead><tr><th>Creature / role</th><th>Stars · min–max</th><th>Health</th><th>Selected player TTK</th><th>Selected player HTD</th><th>Review</th></tr></thead><tbody id="rows"></tbody></table></div>
+<p class="footer">Changes are saved in this browser when storage is available. Export your review before moving or replacing this file. Nothing is deployed. “Limit” means the calculation did not finish within 30 simulated minutes or 10,000 attacks; “—” means no resolved incoming attack.</p>
+</main>
+</section>
+<!--SCALING_PANEL-->
+<!--LOOT_PANEL-->
+<!--UBER_PANEL-->
+<dialog id="detail"><div class="actions"><h2 id="detailTitle"></h2><button class="right" id="closeDetail">Close</button></div><div id="detailBody"></div></dialog>
+<script>/*WORKBENCH_DATA*/</script>
+<script>/*WORKBENCH_ENGINE*/</script>
+<script>/*WORKBENCH_COMMON*/</script>
+<script>/*LOOT_ENGINE*/</script>
+<script>/*YAML_VENDOR*/</script>
+<script>/*LOOT_YAML*/</script>
+<script>
+/*WORKBENCH_UI*/
+</script><script>/*SCALING_UI*/</script><script>/*LOOT_UI*/</script><script>/*UBER_HITS*/</script><script>/*UBER_UI*/</script></body></html>

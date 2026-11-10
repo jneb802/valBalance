@@ -1,0 +1,15 @@
+.uber-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:.5rem .9rem;margin:.4rem 0}
+.uber-field{display:flex;flex-direction:column;gap:.15rem;font-size:.85rem}
+.uber-field span{color:var(--muted,#8a8f98)}
+.uber-input{width:100%;box-sizing:border-box;padding:.25rem .4rem;font:inherit}
+.uber-list{font-family:ui-monospace,monospace}
+.uber-fixed{padding:.25rem .4rem;font:inherit;opacity:.75}
+.uber-attack h3{margin:0;font-size:1rem}
+#uber-threat h2{margin:0;font-size:1.05rem}
+#uber-threat .toolbar{margin:.4rem 0}
+#uber-stars{width:90px}
+.uber-kill{color:var(--warning,#e0a062);font-weight:600}
+.uber-types{font-size:.8rem;color:var(--muted,#8a8f98)}
+.uber-cell{width:80px;padding:.15rem .3rem;font:inherit;text-align:right}
+.uber-cell-wide{width:110px}
+th small{display:block;text-transform:none;letter-spacing:0;font-size:10px;color:var(--muted,#8a8f98)}

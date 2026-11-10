@@ -1,0 +1,209 @@
+# Reviewed role assignments. No star values or event changes are applied.
+schema_version: 1
+status: roles_reviewed
+source:
+  kind: installed_game_asset_bundle
+  sha256: 8bb0f9b6406781970651b22e50cac01948fb2bf8dce0c4520c12702b31b34241
+  checked_on: 2026-10-17
+  scope: Non-player Character prefabs in the installed creature bundle; includes variants and unused assets, excludes water serpents and third-party mod additions.
+  total_prefabs: 159
+rules:
+  standard: Ordinary enemies and fodder
+  magic: Support and special-attack enemies
+  rare: Elite and heavy enemies
+  boss: Main bosses and named boss threats
+  miniboss: Intermediate boss role; Eikthyr
+  variants: Exclude sleeping, non-sleeping, no-archer, no-chest and cave-leech variants; exclude Meadows except Eikthyr.
+  eligibility: Review separately from role; classification does not authorize spawning.
+excluded_prefabs:
+  Ghost_Void: Removed from encounter pools and active balancing by request.
+  ShadowPerson: Native non-player character ignores player damage; unsuitable for encounters that require killing every creature.
+  TrollFrost: Death leaves a mineable gold deposit that can block room cleanup; excluded from encounter pools and balancing.
+creatures:
+  # Meadows / standard
+  Greyling: {role: standard, group: Meadows, pool: excluded}
+  Neck: {role: standard, group: Meadows, pool: excluded}
+  Boar: {role: standard, group: Meadows, pool: excluded}
+  # Black Forest / standard
+  Greydwarf: {role: standard, group: Black Forest, pool: excluded}
+  Skeleton: {role: standard, group: Black Forest, pool: excluded}
+  Skeleton_NoArcher: {role: standard, group: Black Forest, pool: excluded}
+  # Swamp / standard
+  Draugr: {role: standard, group: Swamp, pool: candidate}
+  Draugr_Ranged: {role: standard, group: Swamp, pool: candidate}
+  Leech: {role: standard, group: Swamp, pool: excluded}
+  Bat_Swamp: {role: standard, group: Swamp, pool: excluded}
+  # Mountain / standard
+  Wolf: {role: standard, group: Mountain, pool: candidate}
+  Ulv: {role: standard, group: Mountain, pool: candidate}
+  Bat: {role: standard, group: Mountain, pool: excluded}
+  Skeleton_Mountains: {role: standard, group: Mountain, pool: excluded}
+  Skeleton_Mountains_noarcher: {role: standard, group: Mountain, pool: excluded}
+  # Plains / standard
+  Goblin: {role: standard, group: Plains, pool: excluded}
+  GoblinArcher: {role: standard, group: Plains, pool: candidate}
+  Deathsquito: {role: standard, group: Plains, pool: candidate}
+  # Mistlands / standard
+  Seeker: {role: standard, group: Mistlands, pool: candidate}
+  SeekerBrood: {role: standard, group: Mistlands, pool: candidate}
+  Tick: {role: standard, group: Mistlands, pool: candidate}
+  Dverger: {role: standard, group: Mistlands, pool: excluded}
+  # Ashlands / standard
+  Charred_Twitcher: {role: standard, group: Ashlands, pool: candidate}
+  Charred_Archer: {role: standard, group: Ashlands, pool: candidate}
+  Volture: {role: standard, group: Ashlands, pool: candidate}
+  DvergerAshlands: {role: standard, group: Ashlands, pool: excluded}
+  # Deep North / standard
+  Greydwarf_Frozen: {role: standard, group: Deep North, pool: candidate}
+  Skeleton_DeepNorth: {role: standard, group: Deep North, pool: candidate}
+  GoblinDeepNorth: {role: standard, group: Deep North, pool: candidate}
+  DvergerDeepNorth: {role: standard, group: Deep North, pool: candidate}
+  Elaking: {role: standard, group: Deep North, pool: candidate}
+  ElakingLantern: {role: standard, group: Deep North, pool: candidate}
+  Frysling: {role: standard, group: Deep North, pool: candidate}
+  # Variants / standard
+  Draugr_sleeping: {role: standard, group: Variants, pool: excluded}
+  Draugr_Ranged_sleeping: {role: standard, group: Variants, pool: excluded}
+  Leech_cave: {role: standard, group: Variants, pool: excluded}
+  Skeleton_Meadows: {role: standard, group: Variants, pool: excluded}
+  Skeleton_Meadows_noarcher: {role: standard, group: Variants, pool: excluded}
+  Skeleton_Swamps: {role: standard, group: Variants, pool: excluded}
+  Skeleton_Swamps_noarcher: {role: standard, group: Variants, pool: excluded}
+  # Black Forest / magic
+  Greydwarf_Shaman: {role: magic, group: Black Forest, pool: excluded}
+  Ghost: {role: magic, group: Black Forest, pool: candidate}
+  # Swamp / magic
+  Blob: {role: standard, group: Swamp, pool: candidate}
+  Surtling: {role: standard, group: Swamp, pool: candidate}
+  Wraith: {role: magic, group: Swamp, pool: candidate}
+  # Mountain / magic
+  Hatchling: {role: magic, group: Mountain, pool: candidate}
+  # Plains / magic
+  GoblinShaman: {role: magic, group: Plains, pool: candidate}
+  BlobTar: {role: magic, group: Plains, pool: candidate}
+  # Mistlands / magic
+  DvergerMage: {role: magic, group: Mistlands, pool: candidate}
+  DvergerMageSupport: {role: magic, group: Mistlands, pool: candidate}
+  # Ashlands / magic
+  Charred_Mage: {role: magic, group: Ashlands, pool: candidate}
+  BlobLava: {role: magic, group: Ashlands, pool: candidate}
+  # Deep North / magic
+  Greydwarf_Shaman_Frozen: {role: magic, group: Deep North, pool: candidate}
+  JotunWitch: {role: magic, group: Deep North, pool: candidate}
+  BlobMorkMini: {role: magic, group: Deep North, pool: candidate}
+  # Variants / magic
+  Ghost_sleeping: {role: magic, group: Variants, pool: excluded}
+  # Black Forest / rare
+  Greydwarf_Elite: {role: rare, group: Black Forest, pool: candidate}
+  Skeleton_Poison: {role: rare, group: Black Forest, pool: candidate}
+  Bjorn: {role: rare, group: Black Forest, pool: candidate}
+  Troll: {role: rare, group: Black Forest, pool: candidate}
+  # Swamp / rare
+  Draugr_Elite: {role: rare, group: Swamp, pool: candidate}
+  BlobElite: {role: rare, group: Swamp, pool: candidate}
+  Abomination: {role: rare, group: Swamp, pool: candidate}
+  # Mountain / rare
+  Fenring: {role: rare, group: Mountain, pool: candidate}
+  Fenring_Cultist: {role: rare, group: Mountain, pool: candidate}
+  StoneGolem: {role: rare, group: Mountain, pool: candidate}
+  # Plains / rare
+  GoblinBrute: {role: rare, group: Plains, pool: candidate}
+  Lox: {role: rare, group: Plains, pool: candidate}
+  Goblin_Gem: {role: rare, group: Plains, pool: excluded}
+  # Mistlands / rare
+  SeekerBrute: {role: rare, group: Mistlands, pool: candidate}
+  Gjall: {role: rare, group: Mistlands, pool: candidate}
+  DvergerMageFire: {role: rare, group: Mistlands, pool: candidate}
+  DvergerMageIce: {role: rare, group: Mistlands, pool: candidate}
+  # Ashlands / rare
+  Charred_Melee: {role: rare, group: Ashlands, pool: candidate}
+  Asksvin: {role: rare, group: Ashlands, pool: candidate}
+  Morgen: {role: rare, group: Ashlands, pool: candidate, wave_limits: {1: 1}}
+  FallenValkyrie: {role: rare, group: Ashlands, pool: candidate, wave_limits: {1: 1}}
+  # Deep North / rare
+  JotunWarrior: {role: rare, group: Deep North, pool: candidate}
+  JotunWarriorDualWield: {role: rare, group: Deep North, pool: candidate}
+  Barka: {role: rare, group: Deep North, pool: candidate}
+  ElakingMole: {role: rare, group: Deep North, pool: candidate}
+  BlobMork: {role: rare, group: Deep North, pool: candidate}
+  FallenWarrior: {role: rare, group: Deep North, pool: candidate}
+  Writhan: {role: rare, group: Deep North, pool: candidate}
+  Moose: {role: rare, group: Deep North, pool: candidate}
+  Unbjorn: {role: rare, group: Deep North, pool: candidate}
+  # Ocean / rare
+  # Variants / rare
+  Bjorn_sleeping: {role: rare, group: Variants, pool: excluded}
+  Troll_sleeping: {role: rare, group: Variants, pool: excluded}
+  Draugr_Elite_sleeping: {role: rare, group: Variants, pool: excluded}
+  Morgen_NonSleeping: {role: rare, group: Variants, pool: excluded}
+  # Main bosses / boss
+  Eikthyr: {role: miniboss, group: Meadows, pool: candidate}
+  gd_king: {role: boss, group: Main bosses, pool: candidate}
+  Bonemass: {role: boss, group: Main bosses, pool: candidate}
+  Dragon: {role: boss, group: Main bosses, pool: candidate}
+  GoblinKing: {role: boss, group: Main bosses, pool: candidate}
+  SeekerQueen: {role: boss, group: Main bosses, pool: candidate}
+  Fader: {role: boss, group: Main bosses, pool: candidate}
+  FrozenKing: {role: boss, group: Main bosses, pool: candidate}
+  FrozenKing_p2: {role: boss, group: Main bosses, pool: excluded}
+  FrozenKing_p3: {role: boss, group: Main bosses, pool: excluded}
+  # Minibosses / boss
+  Skeleton_Hildir: {role: boss, group: Minibosses, pool: candidate}
+  Skeleton_Hildir_nochest: {role: boss, group: Minibosses, pool: excluded}
+  Fenring_Cultist_Hildir: {role: boss, group: Minibosses, pool: candidate}
+  Fenring_Cultist_Hildir_nochest: {role: boss, group: Minibosses, pool: excluded}
+  GoblinBruteBros: {role: boss, group: Minibosses, pool: candidate}
+  GoblinBruteBros_nochest: {role: boss, group: Minibosses, pool: excluded}
+  Charred_Melee_Dyrnwyn: {role: boss, group: Minibosses, pool: candidate}
+  # Passive wildlife and young animals / excluded
+  Asksvin_hatchling: {role: standard, group: Passive wildlife and young animals, pool: excluded_pending_review}
+  Boar_piggy: {role: standard, group: Passive wildlife and young animals, pool: excluded_pending_review}
+  Chicken: {role: standard, group: Passive wildlife and young animals, pool: excluded_pending_review}
+  Hen: {role: standard, group: Passive wildlife and young animals, pool: excluded_pending_review}
+  Deer: {role: standard, group: Passive wildlife and young animals, pool: excluded_pending_review}
+  Deer_White: {role: standard, group: Passive wildlife and young animals, pool: excluded_pending_review}
+  Hare: {role: standard, group: Passive wildlife and young animals, pool: excluded_pending_review}
+  Lox_Calf: {role: standard, group: Passive wildlife and young animals, pool: excluded_pending_review}
+  Moose_calf: {role: standard, group: Passive wildlife and young animals, pool: excluded_pending_review}
+  Seal: {role: standard, group: Passive wildlife and young animals, pool: excluded_pending_review}
+  Seal_Pup: {role: standard, group: Passive wildlife and young animals, pool: excluded_pending_review}
+  Wolf_cub: {role: standard, group: Passive wildlife and young animals, pool: excluded_pending_review}
+  # NPC companion / excluded
+  BogWitchKvastur: {role: magic, group: NPC companion, pool: excluded_pending_review}
+  # Unverified or test prefabs / excluded
+  DvergerTest: {role: standard, group: Unverified or test prefabs, pool: excluded_pending_review}
+  Mistile: {role: magic, group: Unverified or test prefabs, pool: excluded_pending_review}
+  Hive: {role: boss, group: Unverified or test prefabs, pool: excluded_pending_review}
+  TheHive: {role: boss, group: Unverified or test prefabs, pool: excluded_pending_review}
+  BlobAspect: {role: magic, group: Unverified or test prefabs, pool: excluded_pending_review}
+  Ghost_old: {role: magic, group: Unverified or test prefabs, pool: excluded_pending_review}
+  # Training objects / excluded
+  TrainingDummy: {role: null, group: Training objects, pool: excluded_pending_review}
+  piece_TrainingDummy: {role: null, group: Training objects, pool: excluded_pending_review}
+  # Summons and encounter parts / excluded
+  Skeleton_Friendly: {role: null, group: Summons and encounter parts, pool: excluded}
+  Skeleton_aspect: {role: null, group: Summons and encounter parts, pool: excluded}
+  Charred_Archer_Fader: {role: null, group: Summons and encounter parts, pool: excluded}
+  Charred_Melee_Fader: {role: null, group: Summons and encounter parts, pool: excluded}
+  Charred_Twitcher_Summoned: {role: null, group: Summons and encounter parts, pool: excluded}
+  TentaRoot: {role: hazard, group: Black Forest, pool: hazard}
+  Aspect_TentaRoot: {role: null, group: Summons and encounter parts, pool: excluded}
+  TentaRoot_wild: {role: null, group: Summons and encounter parts, pool: excluded}
+  Tendril: {role: null, group: Summons and encounter parts, pool: excluded}
+  Tendril_back: {role: null, group: Summons and encounter parts, pool: excluded}
+  staff_greenroots_tentaroot: {role: hazard, group: Mistlands, pool: hazard}
+  Troll_Summoned: {role: null, group: Summons and encounter parts, pool: excluded}
+  Bjorn_spiritcaller: {role: null, group: Summons and encounter parts, pool: excluded}
+  Boar_spiritcaller: {role: null, group: Summons and encounter parts, pool: excluded}
+  Wolf_spiritcaller: {role: null, group: Summons and encounter parts, pool: excluded}
+  Moose_spiritcaller: {role: null, group: Summons and encounter parts, pool: excluded}
+  GoblinBrute_Hildir: {role: null, group: Summons and encounter parts, pool: excluded}
+  GoblinShaman_Hildir: {role: null, group: Summons and encounter parts, pool: excluded}
+  GoblinShaman_Hildir_nochest: {role: null, group: Summons and encounter parts, pool: excluded}
+  Aspect_Bonemass: {role: null, group: Summons and encounter parts, pool: excluded}
+  Aspect_Eikthyr: {role: null, group: Summons and encounter parts, pool: excluded}
+  Aspect_Elder: {role: null, group: Summons and encounter parts, pool: excluded}
+  Aspect_Fader: {role: null, group: Summons and encounter parts, pool: excluded}
+  Aspect_Moder: {role: null, group: Summons and encounter parts, pool: excluded}
+  Aspect_SeekerQueen: {role: null, group: Summons and encounter parts, pool: excluded}
+  Aspect_Yagluth: {role: null, group: Summons and encounter parts, pool: excluded}

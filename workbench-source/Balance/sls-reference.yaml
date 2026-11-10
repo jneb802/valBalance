@@ -1,0 +1,1072 @@
+checked_at: '2026-10-17T20:45:01.486981+00:00'
+host: praetoris-1
+source_root: /home/ubuntu/valheim_server/BepInEx/config
+source_hashes:
+  MidnightsFX.StarLevelSystem.cfg: 30b2e5ada5aa3c84bb1302750e13d63eafc667e1a7de35aae8674ecefb43a4a9
+  StarLevelSystem/LevelSettings.yaml: 4f5cb8a4b6ffe766b57f837ecc388a407ed09d4e0ca3051bde2d061f69d81bb3
+  StarLevelSystem/Modifiers.yaml: 2cf23ac9bfe49885b2d677439ba1944c2c8292c27ff62f10914e3889395b4e46
+settings:
+  EnemyHealthMultiplier: 1
+  EnemyDamageLevelMultiplier: 0.25
+  BossEnemyHealthMultiplier: 0.3
+  BossEnemyDamageMultiplier: 0.25
+  MultiplayerEnemyDamageModifier: 0
+  MultiplayerEnemyHealthModifier: 0
+  EnableMultiplayerEnemyHealthScaling: false
+  EnableMultiplayerEnemyDamageScaling: false
+level_settings:
+  biomeConfiguration:
+    All:
+      DistanceScaleModifier: 1.5
+      SpawnRateModifier: 1
+      DamageRecievedModifiers:
+        Poison: 1.5
+      NightSettings:
+        NightLevelUpChanceScaler: 1.5
+    Ocean:
+      CreatureSpawnsDisabled:
+      - Greydwarf
+      - Greydwarf_Elite
+      - Greydwarf_Shaman
+      - Troll
+      - Draugr
+      - Draugr_Elite
+      - Blob
+      - BlobElite
+      - Surtling
+      - Skeleton
+      - Ghost
+      - Wraith
+      - Skeleton_Poison
+      - Skeleton_Hildir
+      - Fenring_Cultist_Hildir
+      - Wolf
+      - Bat
+      - Hatchling
+      - Goblin
+      - GoblinBrute
+      - GoblinShaman
+      - GoblinBruteBros
+      - Seeker
+      - SeekerBrood
+      - Tick
+      - Gjall
+      - Charred_Melee
+      - Charred_Archer
+      - Charred_Twitcher
+      - Charred_Mage
+      - Spawner_CharredStone
+      - Spawner_CharredStone_Elite
+      - Barka
+      - BlobMork
+      - BlobMorkMini
+      - DvergerDeepNorth
+      - Elaking
+      - ElakingLantern
+      - ElakingMole
+      - GoblinDeepNorth
+      - Greydwarf_Frozen
+      - Greydwarf_Shaman_Frozen
+      - JotunWarrior
+      - JotunWarriorDualWield
+      - JotunWitch
+      - Moose
+      - Moose_calf
+      - Seal
+      - Seal_Pup
+      - ShadowPerson
+      - Skeleton_DeepNorth
+      - TrollFrost
+    Meadows:
+      CustomCreatureLevelUpChance:
+        1: 10
+        2: 5
+        3: 2
+        4: 1
+      BiomeMaxLevelOverride: 4
+      CreatureSpawnsDisabled:
+      - Greydwarf
+      - Greydwarf_Elite
+      - Greydwarf_Shaman
+      - Troll
+      - Draugr
+      - Draugr_Elite
+      - Blob
+      - BlobElite
+      - Surtling
+      - Skeleton
+      - Ghost
+      - Wraith
+      - Skeleton_Poison
+      - Skeleton_Hildir
+      - Fenring_Cultist_Hildir
+      - Wolf
+      - Bat
+      - Hatchling
+      - Goblin
+      - GoblinBrute
+      - GoblinShaman
+      - GoblinBruteBros
+      - Seeker
+      - SeekerBrood
+      - Tick
+      - Gjall
+      - Charred_Melee
+      - Charred_Archer
+      - Charred_Twitcher
+      - Charred_Mage
+      - Spawner_CharredStone
+      - Spawner_CharredStone_Elite
+      - Skeleton_Mountains
+      - GoblinArcher
+      - BlobTar
+      - Bjorn_sleeping
+      - Volture
+      - StoneGolem
+      - Morgen
+      - Draugr_Ranged
+      - SeekerBrute
+      - FallenValkyrie
+      - Barka
+      - BlobMork
+      - BlobMorkMini
+      - DvergerDeepNorth
+      - Elaking
+      - ElakingLantern
+      - ElakingMole
+      - GoblinDeepNorth
+      - Greydwarf_Frozen
+      - Greydwarf_Shaman_Frozen
+      - JotunWarrior
+      - JotunWarriorDualWield
+      - JotunWitch
+      - Moose
+      - Moose_calf
+      - Seal
+      - Seal_Pup
+      - ShadowPerson
+      - Skeleton_DeepNorth
+      - TrollFrost
+    BlackForest:
+      CustomCreatureLevelUpChance:
+        1: 40
+        2: 10
+        3: 3
+        4: 1
+      BiomeMaxLevelOverride: 6
+      CreatureSpawnsDisabled:
+      - Draugr
+      - Draugr_Elite
+      - Blob
+      - BlobElite
+      - Surtling
+      - Wraith
+      - Fenring_Cultist_Hildir
+      - Wolf
+      - Bat
+      - Hatchling
+      - Goblin
+      - GoblinBrute
+      - GoblinShaman
+      - GoblinBruteBros
+      - Seeker
+      - SeekerBrood
+      - Tick
+      - Gjall
+      - Charred_Melee
+      - Charred_Archer
+      - Charred_Twitcher
+      - Charred_Mage
+      - Spawner_CharredStone
+      - Spawner_CharredStone_Elite
+      - Skeleton_Mountains
+      - GoblinArcher
+      - BlobTar
+      - Volture
+      - StoneGolem
+      - Morgen
+      - Draugr_Ranged
+      - SeekerBrute
+      - FallenValkyrie
+      - Barka
+      - BlobMork
+      - BlobMorkMini
+      - DvergerDeepNorth
+      - Elaking
+      - ElakingLantern
+      - ElakingMole
+      - GoblinDeepNorth
+      - Greydwarf_Frozen
+      - Greydwarf_Shaman_Frozen
+      - JotunWarrior
+      - JotunWarriorDualWield
+      - JotunWitch
+      - Moose
+      - Moose_calf
+      - Seal
+      - Seal_Pup
+      - ShadowPerson
+      - Skeleton_DeepNorth
+      - TrollFrost
+    Swamp:
+      CustomCreatureLevelUpChance:
+        1: 40
+        2: 10
+        3: 3
+        4: 1.1
+        5: 0.1
+      BiomeMaxLevelOverride: 8
+      CreatureSpawnsDisabled:
+      - Fenring_Cultist_Hildir
+      - Wolf
+      - Bat
+      - Hatchling
+      - Goblin
+      - GoblinBrute
+      - GoblinShaman
+      - GoblinBruteBros
+      - Seeker
+      - SeekerBrood
+      - Tick
+      - Gjall
+      - Charred_Melee
+      - Charred_Archer
+      - Charred_Twitcher
+      - Charred_Mage
+      - Spawner_CharredStone
+      - Spawner_CharredStone_Elite
+      - Skeleton_Mountains
+      - GoblinArcher
+      - BlobTar
+      - Volture
+      - StoneGolem
+      - Morgen
+      - SeekerBrute
+      - FallenValkyrie
+      - Barka
+      - BlobMork
+      - BlobMorkMini
+      - DvergerDeepNorth
+      - Elaking
+      - ElakingLantern
+      - ElakingMole
+      - GoblinDeepNorth
+      - Greydwarf_Frozen
+      - Greydwarf_Shaman_Frozen
+      - JotunWarrior
+      - JotunWarriorDualWield
+      - JotunWitch
+      - Moose
+      - Moose_calf
+      - Seal
+      - Seal_Pup
+      - ShadowPerson
+      - Skeleton_DeepNorth
+      - TrollFrost
+    Mountain:
+      CustomCreatureLevelUpChance:
+        1: 40
+        2: 10
+        3: 3
+        4: 1.1
+        5: 0.1
+      BiomeMaxLevelOverride: 8
+      CreatureSpawnsDisabled:
+      - Goblin
+      - GoblinBrute
+      - GoblinShaman
+      - GoblinBruteBros
+      - Seeker
+      - SeekerBrood
+      - Tick
+      - Gjall
+      - Charred_Melee
+      - Charred_Archer
+      - Charred_Twitcher
+      - Charred_Mage
+      - Spawner_CharredStone
+      - Spawner_CharredStone_Elite
+      - GoblinArcher
+      - BlobTar
+      - Volture
+      - Morgen
+      - SeekerBrute
+      - FallenValkyrie
+      - Barka
+      - BlobMork
+      - BlobMorkMini
+      - DvergerDeepNorth
+      - Elaking
+      - ElakingLantern
+      - ElakingMole
+      - GoblinDeepNorth
+      - Greydwarf_Frozen
+      - Greydwarf_Shaman_Frozen
+      - JotunWarrior
+      - JotunWarriorDualWield
+      - JotunWitch
+      - Moose
+      - Moose_calf
+      - Seal
+      - Seal_Pup
+      - ShadowPerson
+      - Skeleton_DeepNorth
+      - TrollFrost
+    Plains:
+      CustomCreatureLevelUpChance:
+        1: 40
+        2: 10
+        3: 3
+        4: 1.1
+        5: 0.11
+        6: 0.01
+      BiomeMaxLevelOverride: 8
+      CreatureSpawnsDisabled:
+      - Seeker
+      - SeekerBrood
+      - Tick
+      - Gjall
+      - Charred_Melee
+      - Charred_Archer
+      - Charred_Twitcher
+      - Charred_Mage
+      - Spawner_CharredStone
+      - Spawner_CharredStone_Elite
+      - Volture
+      - Morgen
+      - SeekerBrute
+      - FallenValkyrie
+      - Barka
+      - BlobMork
+      - BlobMorkMini
+      - DvergerDeepNorth
+      - Elaking
+      - ElakingLantern
+      - ElakingMole
+      - GoblinDeepNorth
+      - Greydwarf_Frozen
+      - Greydwarf_Shaman_Frozen
+      - JotunWarrior
+      - JotunWarriorDualWield
+      - JotunWitch
+      - Moose
+      - Moose_calf
+      - Seal
+      - Seal_Pup
+      - ShadowPerson
+      - Skeleton_DeepNorth
+      - TrollFrost
+    Mistlands:
+      CustomCreatureLevelUpChance:
+        1: 40
+        2: 10
+        3: 3
+        4: 1.12
+        5: 0.111
+        6: 0.011
+        7: 0.001
+      BiomeMaxLevelOverride: 10
+      CreatureSpawnsDisabled:
+      - Charred_Melee
+      - Charred_Archer
+      - Charred_Twitcher
+      - Charred_Mage
+      - Spawner_CharredStone
+      - Volture
+      - Morgen
+      - FallenValkyrie
+      - Barka
+      - BlobMork
+      - BlobMorkMini
+      - DvergerDeepNorth
+      - Elaking
+      - ElakingLantern
+      - ElakingMole
+      - GoblinDeepNorth
+      - Greydwarf_Frozen
+      - Greydwarf_Shaman_Frozen
+      - JotunWarrior
+      - JotunWarriorDualWield
+      - JotunWitch
+      - Moose
+      - Moose_calf
+      - Seal
+      - Seal_Pup
+      - ShadowPerson
+      - Skeleton_DeepNorth
+      - TrollFrost
+    AshLands:
+      CustomCreatureLevelUpChance:
+        1: 100
+        2: 100
+        3: 100
+        4: 50
+        5: 10
+        6: 5
+        7: 1
+        8: 0.5
+        9: 0.25
+        10: 0.01
+      BiomeMaxLevelOverride: 10
+      DistanceScaleModifier: 1
+      CreatureSpawnsDisabled:
+      - Barka
+      - BlobMork
+      - BlobMorkMini
+      - DvergerDeepNorth
+      - Elaking
+      - ElakingLantern
+      - ElakingMole
+      - GoblinDeepNorth
+      - Greydwarf_Frozen
+      - Greydwarf_Shaman_Frozen
+      - JotunWarrior
+      - JotunWarriorDualWield
+      - JotunWitch
+      - Moose
+      - Moose_calf
+      - Seal
+      - Seal_Pup
+      - ShadowPerson
+      - Skeleton_DeepNorth
+      - TrollFrost
+    DeepNorth:
+      CustomCreatureLevelUpChance:
+        1: 100
+        2: 100
+        3: 100
+        4: 50
+        5: 10
+        6: 5
+        7: 1
+        8: 0.5
+        9: 0.25
+        10: 0.01
+        11: 0.01
+        12: 0.01
+      biomeMaxLevelOverride: 12
+      distanceScaleModifier: 1
+  creatureConfiguration:
+    piece_TrainingDummy:
+      customCreatureLevelUpChance:
+        1: 100
+        2: 100
+        3: 0
+      creatureMaxLevelOverride: 11
+      spawnRateModifier: 1
+      creatureBaseValueModifiers:
+        BaseHealth: 1.05
+        BaseDamage: 0.95
+        Speed: 1.05
+        Size: 1.05
+        AttackSpeed: 1.05
+      creaturePerLevelValueModifiers:
+        HealthPerLevel: 0.3
+        DamagePerLevel: 0.05
+        SizePerLevel: 0.005
+    Serpent:
+      customCreatureLevelUpChance:
+        1: 100
+        2: 100
+      creatureMaxLevelOverride: 11
+      creatureBaseValueModifiers:
+        BaseHealth: 1.05
+        BaseDamage: 1.05
+        Speed: 1.05
+        Size: 1.05
+        AttackSpeed: 1.05
+      creaturePerLevelValueModifiers:
+        SpeedPerLevel: 0.1
+    Lox:
+      spawnRateModifier: 1
+      creaturePerLevelValueModifiers:
+        SpeedPerLevel: -0.01
+        SizePerLevel: 0.0
+    Bat:
+      spawnRateModifier: 1
+      customCreatureLevelUpChance:
+        1: 100
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+      requiredModifiers:
+        Poison: Major
+    Greydwarf_Elite:
+      spawnRateModifier: 1
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+    Troll:
+      customCreatureLevelUpChance:
+        1: 15
+        2: 8
+        3: 4
+        4: 1
+        5: 0.5
+      spawnRateModifier: 1
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+    Bjorn:
+      spawnRateModifier: 1
+      creatureMaxLevelOverride: 6
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.03
+    Surtling:
+      spawnRateModifier: 1
+      customCreatureLevelUpChance:
+        1: 100
+      creatureMaxLevelOverride: 6
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+      requiredModifiers:
+        FireNova: Minor
+    StoneGolem:
+      spawnRateModifier: 1
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+    Goblin:
+      spawnRateModifier: 1
+      customCreatureLevelUpChance:
+        1: 100
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+      requiredModifiers:
+        Lightning: Major
+    GoblinBrute:
+      spawnRateModifier: 1
+      customCreatureLevelUpChance:
+        1: 100
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+      requiredModifiers:
+        ElementalChaos: Major
+    Deathsquito:
+      spawnRateModifier: 1
+      customCreatureLevelUpChance:
+        1: 100
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+      requiredModifiers:
+        Fire: Major
+    SeekerBrood:
+      spawnRateModifier: 1
+      customCreatureLevelUpChance:
+        1: 100
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+      requiredModifiers:
+        PoisonNova: Minor
+    Tick:
+      spawnRateModifier: 1
+      customCreatureLevelUpChance:
+        1: 100
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+      requiredModifiers:
+        FireNova: Minor
+    Seeker:
+      spawnRateModifier: 1
+      customCreatureLevelUpChance:
+        1: 100
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+      requiredModifiers:
+        Fire: Major
+    SeekerBrute:
+      spawnRateModifier: 1
+      customCreatureLevelUpChance:
+        1: 100
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+      requiredModifiers:
+        ElementalChaos: Major
+    Gjall:
+      spawnRateModifier: 1
+      customCreatureLevelUpChance:
+        1: 100
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+      requiredModifiers:
+        Frost: Major
+    Dverger:
+      spawnRateModifier: 1
+      customCreatureLevelUpChance:
+        1: 100
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+      requiredModifiers:
+        Lootbags: Minor
+    DvergerMage:
+      spawnRateModifier: 1
+      customCreatureLevelUpChance:
+        1: 100
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+      requiredModifiers:
+        Lootbags: Minor
+    BonemawSerpent:
+      spawnRateModifier: 1
+      customCreatureLevelUpChance:
+        1: 100
+        2: 100
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+      requiredModifiers:
+        Fast: Minor
+        Big: Minor
+    Volture:
+      spawnRateModifier: 1
+      customCreatureLevelUpChance:
+        1: 100
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+      requiredModifiers:
+        Poison: Major
+    Asksvin:
+      spawnRateModifier: 1
+      customCreatureLevelUpChance:
+        1: 100
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+    Charred_Melee:
+      spawnRateModifier: 1
+      customCreatureLevelUpChance:
+        1: 100
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+    Charred_Archer:
+      spawnRateModifier: 1
+      customCreatureLevelUpChance:
+        1: 100
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+      requiredModifiers:
+        Fire: Major
+    Charred_Twitcher:
+      spawnRateModifier: 1
+      customCreatureLevelUpChance:
+        1: 100
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+    Charred_Mage:
+      spawnRateModifier: 1
+      customCreatureLevelUpChance:
+        1: 100
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+      requiredModifiers:
+        Frost: Major
+    Morgen:
+      spawnRateModifier: 1
+      customCreatureLevelUpChance:
+        1: 100
+        2: 100
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+      requiredModifiers:
+        ElementalChaos: Major
+    FallenValkyrie:
+      spawnRateModifier: 1
+      customCreatureLevelUpChance:
+        1: 100
+        2: 100
+      creatureMaxLevelOverride: 10
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+      requiredModifiers:
+        Lootbags: Minor
+        Evolving: Minor
+    Charred_Melee_Dyrnwyn:
+      customCreatureLevelUpChance:
+        1: 100
+        2: 100
+        3: 100
+        4: 100
+        5: 100
+        6: 100
+        7: 100
+        8: 100
+        9: 100
+        10: 100
+      creatureMaxLevelOverride: 10
+      requiredModifiers:
+        ElementalChaos: Major
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+      creatureBaseValueModifiers:
+        BaseHealth: 1.5
+        BaseDamage: 1.0
+        Speed: 1.1
+        Size: 1.05
+        AttackSpeed: 1.1
+    Eikthyr:
+      distanceScaleModifier: 0
+      customCreatureLevelUpChance:
+        1: 50
+        2: 10
+        3: 5
+        4: 1
+        5: 0.1
+      creatureMaxLevelOverride: 5
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+    gd_king:
+      distanceScaleModifier: 0
+      customCreatureLevelUpChance:
+        1: 100
+        2: 15
+        3: 5
+        4: 1
+        5: 0.1
+      creatureMaxLevelOverride: 5
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+    Bonemass:
+      distanceScaleModifier: 0
+      customCreatureLevelUpChance:
+        1: 100
+        2: 30
+        3: 10
+        4: 1
+        5: 0.1
+      creatureMaxLevelOverride: 5
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+    Dragon:
+      distanceScaleModifier: 0
+      customCreatureLevelUpChance:
+        1: 100
+        2: 15
+        3: 5
+        4: 0.01
+        5: 0.001
+      creatureMaxLevelOverride: 5
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+    GoblinKing:
+      distanceScaleModifier: 0
+      customCreatureLevelUpChance:
+        1: 100
+        2: 100
+        3: 15
+        4: 5
+        5: 1
+      creatureMaxLevelOverride: 5
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+    SeekerQueen:
+      distanceScaleModifier: 0
+      customCreatureLevelUpChance:
+        1: 100
+        2: 100
+        3: 5
+        4: 0.01
+        5: 0.001
+      creatureMaxLevelOverride: 5
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+    Fader:
+      distanceScaleModifier: 0
+      customCreatureLevelUpChance:
+        1: 100
+        2: 100
+        3: 100
+        4: 0.01
+        5: 0.001
+      creatureMaxLevelOverride: 5
+      creaturePerLevelValueModifiers:
+        SizePerLevel: 0.05
+  defaultCreatureLevelUpChance:
+    1: 20
+    2: 10
+    3: 5
+    4: 1
+    5: 0.05
+  enableDistanceLevelBonus: true
+  distanceLevelBonus:
+    750:
+      1: 0
+      2: 0
+      3: 1
+    1200:
+      1: 0
+      2: 0
+      3: 0.05
+      4: 0.01
+    2000:
+      1: 0
+      2: 0
+      3: 0.1
+      4: 0.05
+      5: 0.01
+    3000:
+      1: 1
+      2: 0.5
+      3: 0.25
+      4: 0.05
+      5: 0.025
+    4000:
+      1: 2
+      2: 1
+      3: 0.5
+      4: 0.25
+      5: 0.05
+    5000:
+      1: 50
+      2: 25
+      3: 10
+      4: 5
+      5: 0.05
+    6000:
+      1: 100
+      2: 50
+      3: 25
+      4: 10
+      5: 0.1
+      6: 0.05
+    7000:
+      1: 100
+      2: 50
+      3: 25
+      4: 10
+      5: 0.5
+      6: 0.1
+      7: 0.002
+      8: 0.0001
+    8000:
+      1: 100
+      2: 50
+      3: 25
+      4: 10
+      5: 0.5
+      6: 0.1
+      7: 0.002
+      8: 0.0001
+    9100:
+      1: 100
+      2: 100
+      3: 50
+      4: 25
+      5: 1
+      6: 0.1
+      7: 0.025
+      8: 0.00125
+      9: 0.0006
+      10: 0.0003
+modifiers:
+  modifierGlobalSettings:
+    globalIgnorePrefabList:
+    - piece_TrainingDummy
+  majorModifiers:
+    Brutal:
+      selectionWeight: 10
+      config:
+        basePower: 0.07
+      unallowedCreatures: &id001
+      - Deer
+      - Hare
+      - Chicken
+      - Hen
+    ElementalChaos:
+      selectionWeight: 10
+      config:
+        perlevelPower: 0.01
+        basePower: 0.3
+      unallowedCreatures: *id001
+    Fire:
+      selectionWeight: 10
+      config:
+        perlevelPower: 0.01
+        basePower: 0.4
+      unallowedCreatures: *id001
+    Frost:
+      selectionWeight: 10
+      config:
+        perlevelPower: 0.01
+        basePower: 0.4
+      unallowedCreatures: *id001
+    Poison:
+      selectionWeight: 10
+      config:
+        perlevelPower: 0.05
+        basePower: 1
+      unallowedCreatures: *id001
+    Lightning:
+      selectionWeight: 10
+      config:
+        perlevelPower: 0.05
+        basePower: 0.4
+      unallowedCreatures: *id001
+    Splitter:
+      selectionWeight: 10
+      config:
+        perlevelPower: 0.1
+        basePower: 2
+    SoulEater:
+      selectionWeight: 10
+      config:
+        perlevelPower: 0.05
+      unallowedCreatures:
+      - Deer
+      - Hare
+      - Chicken
+      - Hen
+      - FrozenKing
+      - FrozenKing_p2
+      - FrozenKing_p3
+    ResistPierce:
+      selectionWeight: 10
+      config:
+        perlevelPower: 0.02
+        basePower: 0.9
+    ResistSlash:
+      selectionWeight: 10
+      config:
+        perlevelPower: 0.02
+        basePower: 0.9
+    ResistBlunt:
+      selectionWeight: 10
+      config:
+        perlevelPower: 0.02
+        basePower: 0.9
+  minorModifiers:
+    ResistFire:
+      selectionWeight: 5
+      config:
+        perlevelPower: 0.02
+        basePower: 0.9
+    ResistFrost:
+      selectionWeight: 4
+      config:
+        perlevelPower: 0.02
+        basePower: 0.9
+    ResistPoison:
+      selectionWeight: 3
+      config:
+        perlevelPower: 0.02
+        basePower: 0.9
+    ResistSpirit:
+      selectionWeight: 2
+      config:
+        perlevelPower: 0.02
+        basePower: 0.9
+    FireNova:
+      selectionWeight: 10
+      config:
+        perlevelPower: 0.1
+        basePower: 2
+      unallowedCreatures: *id001
+    PoisonNova:
+      selectionWeight: 10
+      config:
+        perlevelPower: 0.2
+        basePower: 2
+      unallowedCreatures: *id001
+    Lootbags:
+      selectionWeight: 10
+      config:
+        perlevelPower: 0.5
+        basePower: 2
+    Alert:
+      selectionWeight: 10
+      config:
+        perlevelPower: 0.05
+        basePower: 2
+    Big:
+      selectionWeight: 10
+      config:
+        basePower: 0.3
+    Fast:
+      selectionWeight: 10
+      config:
+        basePower: 0.2
+    StaminaDrain:
+      selectionWeight: 10
+      config:
+        perlevelPower: 0.1
+        basePower: 0.1
+      unallowedCreatures: *id001
+    EitrDrain:
+      selectionWeight: 10
+      config:
+        perlevelPower: 0.1
+        basePower: 0.1
+      unallowedCreatures: *id001
+      allowedBiomes:
+      - Mistlands
+      - AshLands
+  bossModifiers:
+    BossSummoner:
+      selectionWeight: 5
+      config:
+        perlevelPower: 300
+        basePower: 4
+        biomeObjects:
+          Meadows:
+          - Greyling
+          BlackForest:
+          - Greydwarf_Shaman
+          Swamp:
+          - BlobElite
+          Mountain:
+          - Hatchling
+          Plains:
+          - Goblin
+          - GoblinShaman
+          Mistlands:
+          - Seeker
+          AshLands:
+          - Charred_Archer
+          - Charred_Melee
+    SoulEater:
+      selectionWeight: 10
+      config:
+        perlevelPower: 0.01
+      unallowedCreatures:
+      - FrozenKing
+      - FrozenKing_p2
+      - FrozenKing_p3
+    LifeLink:
+      selectionWeight: 10
+      config:
+        perlevelPower: 0.02
+        basePower: 0.3
+    ResistPierce:
+      selectionWeight: 0
+      config:
+        perlevelPower: 0.02
+        basePower: 0.25
+    Brutal:
+      selectionWeight: 10
+      config:
+        basePower: 0.05
+      unallowedCreatures: *id001
+scope: Production files read over SSH; not a measurement of active runtime caches.
+formula_source:
+  repository: MidnightsFX/Valheim_Star_Levels_Expanded
+  local_revision: e400512201a21e0d22c5814bf7814c5388478458
+  health: StarLevelSystem/modules/Health/HealthModifications.cs
+  damage: StarLevelSystem/modules/Damage/DamagePatches.cs
+  defaults: StarLevelSystem/modules/Damage/DamageModifications.cs
+  status: Source-reviewed equations; deployed assembly and active cache behavior need
+    live validation.

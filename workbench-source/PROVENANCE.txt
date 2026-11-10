@@ -1,0 +1,7 @@
+Extracted from jneb802/ValheimEndgame, Balance directory and required configuration/source snapshots.
+Source commit: 1ebef89 (origin/main at extraction).
+The original workbench remains available here for loot and progression editing.
+The new local creature page is ../../web/index.html, served with python3 serve.py from the repository root.
+Refresh browser data and engine assets with python3 build_web.py.
+Run extracted tests with python3 -m unittest discover -s workbench-source/Balance.
+Configuration and C# files in this directory are offline reference inputs. They are not deployed by the local app.
