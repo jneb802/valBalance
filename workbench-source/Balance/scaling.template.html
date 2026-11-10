@@ -1,0 +1,10 @@
+<section id="panel-scaling" role="tabpanel" aria-labelledby="tab-scaling" hidden>
+<header><h1>Creature scaling</h1><p class="muted">Selected player TTK and HTD as stars increase. Each line runs from the creature’s Tier 1 minimum to its Tier 15 maximum, using the star ranges in the Creature balance draft.</p>
+<div class="toolbar"><label>Player <select id="scaling-player"></select></label><label>X axis <select id="scaling-axis"><option value="absolute">Stars</option><option value="relative">Stars above Tier 1 minimum</option></select></label><label>Highlight tier <select id="scaling-tier"></select></label><button id="scaling-csv">Export chart data</button><button id="scaling-clear">Clear selection</button><span class="right muted" id="scaling-status" role="status"></span></div></header>
+<main class="scaling-layout"><aside class="panel scaling-picker" aria-label="Creatures to chart"><input id="scaling-search" type="search" placeholder="Find a creature" aria-label="Find a creature"><select id="scaling-biome" aria-label="Biome"><option value="All">All biomes</option></select><p class="muted" id="scaling-limit"></p><div id="scaling-list"></div></aside>
+<div class="scaling-charts"><div id="scaling-legend" class="scaling-legend" aria-label="Selected creatures"></div>
+<div class="panel"><h2>Time to kill · seconds</h2><div id="scaling-ttk" class="scaling-plot"></div></div>
+<div class="panel"><h2>Hits to die</h2><div id="scaling-htd" class="scaling-plot"></div></div>
+<details><summary>Data table</summary><div class="tablewrap"><table><thead><tr><th>Creature</th><th>Stars</th><th>Tiers</th><th>TTK</th><th>HTD</th></tr></thead><tbody id="scaling-rows"></tbody></table></div></details>
+<p class="footer">Same planning model as Creature balance: 96 repeatable simulations per point, lowest hits to die across resolved attacks. Ringed dots mark the highlighted tier’s minimum and maximum stars. Gaps mean the calculation hit its limit (TTK) or no attack can kill the player (HTD). Charts show up to 8 creatures at once.</p></div></main>
+</section>

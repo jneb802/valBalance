@@ -1,0 +1,276 @@
+schemaVersion: 2
+rules:
+  budgetPerRoll: 10
+  maxRolls: 10000
+  tiers:
+    - {difficulty: 100, bonusPercent: 0}
+    - {difficulty: 105, bonusPercent: 2}
+    - {difficulty: 110.25, bonusPercent: 4}
+    - {difficulty: 115.7625, bonusPercent: 6}
+    - {difficulty: 121.5506, bonusPercent: 8}
+    - {difficulty: 127.6282, bonusPercent: 10}
+    - {difficulty: 134.0096, bonusPercent: 12}
+    - {difficulty: 140.71, bonusPercent: 14}
+    - {difficulty: 147.7455, bonusPercent: 16}
+    - {difficulty: 155.1328, bonusPercent: 18}
+    - {difficulty: 162.8895, bonusPercent: 20}
+    - {difficulty: 171.0339, bonusPercent: 22}
+    - {difficulty: 179.5856, bonusPercent: 24}
+    - {difficulty: 188.5649, bonusPercent: 26}
+    - {difficulty: 197.9932, bonusPercent: 28}
+  categoryDifficulty:
+    population: 2
+    hazards: 2
+    totems: 5
+    creatures: 10
+  modifierDifficulty: {
+    VE_PopulationStandard: 2,  # More standard monsters
+    VE_PopulationSupport: 2,  # More support monsters
+    VE_PopulationElite: 5,  # More elite monsters
+    VE_PopulationBosses: 10,  # More bosses and minibosses
+    VE_BearTraps: 2,  # The room contains bear traps
+    VE_Ballistae: 2,  # The room contains hostile ballistae
+    VE_Tentacles: 2,  # The room contains hostile tentacles
+    VE_BroodPods: 2,  # The room contains Seeker brood pods
+    VE_Roots: 2,  # The room contains hostile Elder roots
+    VE_ShamanShields: 5,  # Creatures spawn with a Fuling Shaman shield
+    VE_SlowTotems: 5,  # Movement-slowing totems
+    VE_AttackSlowTotems: 5,  # Attack-slowing totems
+    VE_EitrTotems: 5,  # Eitr-draining totems
+    VE_HealthTotems: 5,  # Health-draining totems
+    VE_ProtectionTotems: 5,  # Protection totems
+    VE_FrostTotems: 5,  # Frost-pulse totems
+    VE_FireTotems: 5,  # Fire-pulse totems
+    VE_FireballTotems: 5,  # Fireball totems
+    VE_IceShardTotems: 5,  # Ice Shard totems
+    VE_MistileTotems: 5,  # Mistile totems
+    VE_SLS_0_42727574616C: 5,  # All monsters have Brutal (major)
+    VE_SLS_0_456C656D656E74616C4368616F73: 10,  # All monsters have ElementalChaos (major)
+    VE_SLS_0_46697265: 5,  # All monsters have Fire (major)
+    VE_SLS_0_46726F7374: 5,  # All monsters have Frost (major)
+    VE_SLS_0_506F69736F6E: 5,  # All monsters have Poison (major)
+    VE_SLS_0_4C696768746E696E67: 5,  # All monsters have Lightning (major)
+    VE_SLS_0_53706C6974746572: 5,  # All monsters have Splitter (major)
+    VE_SLS_0_536F756C4561746572: 5,  # All monsters have SoulEater (major)
+    VE_SLS_0_526573697374506965726365: 5,  # All monsters have ResistPierce (major)
+    VE_SLS_0_526573697374536C617368: 5,  # All monsters have ResistSlash (major)
+    VE_SLS_0_526573697374426C756E74: 5,  # All monsters have ResistBlunt (major)
+    VE_SLS_1_52657369737446697265: 5,  # All monsters have ResistFire (minor)
+    VE_SLS_1_52657369737446726F7374: 5,  # All monsters have ResistFrost (minor)
+    VE_SLS_1_526573697374506F69736F6E: 5,  # All monsters have ResistPoison (minor)
+    VE_SLS_1_526573697374537069726974: 5,  # All monsters have ResistSpirit (minor)
+    VE_SLS_1_466972654E6F7661: 5,  # All monsters have FireNova (minor)
+    VE_SLS_1_506F69736F6E4E6F7661: 5,  # All monsters have PoisonNova (minor)
+    VE_SLS_1_4C6F6F7462616773: 2,  # All monsters have Lootbags (minor) (excluded from random generation)
+    VE_SLS_1_416C657274: 2,  # All monsters have Alert (minor)
+    VE_SLS_1_426967: 2,  # All monsters have Big (minor)
+    VE_SLS_1_46617374: 5,  # All monsters have Fast (minor)
+    VE_SLS_1_5374616D696E61447261696E: 10,  # All monsters have StaminaDrain (minor)
+    VE_SLS_1_45697472447261696E: 10,  # All monsters have EitrDrain (minor)
+    VE_SLS_2_426F737353756D6D6F6E6572: 5,  # All monsters have BossSummoner (boss)
+    VE_SLS_2_536F756C4561746572: 5,  # All monsters have SoulEater (boss)
+    VE_SLS_2_4C6966654C696E6B: 5,  # All monsters have LifeLink (boss)
+    VE_SLS_2_526573697374506965726365: 2,  # All monsters have ResistPierce (boss)
+    VE_SLS_2_42727574616C: 5,  # All monsters have Brutal (boss)
+  }
+items:
+  - prefab: Coins
+    randomLegendarySetRune: false
+    enabled: true
+    minTier: 1
+    maxTier: 15
+    minQuantity: 50
+    maxQuantity: 200
+    tabletTier: 0
+    tabletTheme: ''
+    id: coins
+  - prefab: ReagentAncient
+    randomLegendarySetRune: false
+    enabled: true
+    minTier: 1
+    maxTier: 15
+    minQuantity: 6
+    maxQuantity: 12
+    tabletTier: 0
+    tabletTheme: ''
+    id: ReagentAncient
+  - prefab: DustAncient
+    randomLegendarySetRune: false
+    enabled: true
+    minTier: 1
+    maxTier: 15
+    minQuantity: 6
+    maxQuantity: 12
+    tabletTier: 0
+    tabletTheme: ''
+    id: DustAncient
+  - prefab: EssenceAncient
+    randomLegendarySetRune: false
+    enabled: true
+    minTier: 1
+    maxTier: 15
+    minQuantity: 6
+    maxQuantity: 12
+    tabletTier: 0
+    tabletTheme: ''
+    id: EssenceAncient
+  - prefab: Upgrader6Armor
+    randomLegendarySetRune: false
+    enabled: true
+    minTier: 1
+    maxTier: 15
+    minQuantity: 1
+    maxQuantity: 2
+    tabletTier: 0
+    tabletTheme: ''
+    id: Upgrader6Armor
+  - prefab: Upgrader6Weapon
+    randomLegendarySetRune: false
+    enabled: true
+    minTier: 1
+    maxTier: 15
+    minQuantity: 1
+    maxQuantity: 2
+    tabletTier: 0
+    tabletTheme: ''
+    id: Upgrader6Weapon
+  - prefab: Upgrader7Armor
+    randomLegendarySetRune: false
+    enabled: true
+    minTier: 1
+    maxTier: 15
+    minQuantity: 1
+    maxQuantity: 2
+    tabletTier: 0
+    tabletTheme: ''
+    id: Upgrader7Armor
+  - prefab: Upgrader7Weapon
+    randomLegendarySetRune: false
+    enabled: true
+    minTier: 1
+    maxTier: 15
+    minQuantity: 1
+    maxQuantity: 2
+    tabletTier: 0
+    tabletTheme: ''
+    id: Upgrader7Weapon
+  - {prefab: ShardSlotChiselLegendary, randomLegendarySetRune: false, enabled: true, minTier: 4, maxTier: 15, minQuantity: 1, maxQuantity: 1, tabletTier: 0, tabletTheme: '', id: legendary-chisel}
+  - prefab: ShardSlotChiselMythic
+    randomLegendarySetRune: false
+    enabled: true
+    minTier: 6
+    maxTier: 15
+    minQuantity: 1
+    maxQuantity: 1
+    tabletTier: 0
+    tabletTheme: ''
+    id: mythic-chisel
+  - prefab: ShardSlotChiselAncient
+    randomLegendarySetRune: false
+    enabled: true
+    minTier: 10
+    maxTier: 15
+    minQuantity: 1
+    maxQuantity: 1
+    tabletTier: 0
+    tabletTheme: ''
+    id: ancient-chisel
+  - prefab: ve_tablet_tier01
+    randomLegendarySetRune: false
+    enabled: true
+    minTier: 1
+    maxTier: 15
+    minQuantity: 1
+    maxQuantity: 1
+    tabletTier: 0
+    tabletTheme: ''
+    id: tablet
+  - randomLegendarySetRune: true
+    enabled: true
+    minTier: 1
+    maxTier: 15
+    minQuantity: 1
+    maxQuantity: 1
+    tabletTier: 0
+    tabletTheme: ''
+    id: random-legendary-set-runestone
+  - {id: ShardAncient, prefab: ShardAncient, minTier: 6, minQuantity: 1, maxQuantity: 2}
+  - {id: RunestoneAncient, prefab: RunestoneAncient, minTier: 6, minQuantity: 1, maxQuantity: 1}
+  # The Dungeon Master trades one sigil plus a boss trophy for that boss's Uber tablet.
+  - {id: boss-sigil, prefab: VE_BossSigil, minTier: 12, maxTier: 15, minQuantity: 1, maxQuantity: 1}
+rarities:
+  - id: legendary
+    probability: 0.01
+    entries:
+      - weight: 1
+        item: legendary-chisel
+      - weight: 0.25
+        item: mythic-chisel
+      - weight: 0.1
+        item: ancient-chisel
+      - {weight: 1, item: random-legendary-set-runestone}
+  - id: epic
+    probability: 0.09
+    entries:
+      - weight: 1
+        item: tablet
+      - weight: 1
+        item: boss-sigil
+  - id: common
+    probability: 0.9
+    entries:
+      - weight: 2.5
+        item: coins
+      - weight: 0.75
+        item: ReagentAncient
+      - weight: 0.75
+        item: DustAncient
+      - weight: 0.75
+        item: EssenceAncient
+      - weight: 0.5
+        item: Upgrader6Armor
+      - weight: 0.5
+        item: Upgrader6Weapon
+      - weight: 0.5
+        item: Upgrader7Armor
+      - weight: 0.5
+        item: Upgrader7Weapon
+
+      - {item: ShardAncient, weight: 1}
+      - {item: RunestoneAncient, weight: 1}
+# Population roll ranges and reward difficulty divisors.
+populationModifiers:
+  VE_PopulationStandard:
+    difficultyPer: 25
+    ranges:
+      Magic: {min: 5, max: 10}
+      Rare: {min: 10, max: 20}
+      Epic: {min: 20, max: 30}
+      Legendary: {min: 30, max: 50}
+      Mythic: {min: 40, max: 60}
+      Ancient: {min: 50, max: 75}
+  VE_PopulationSupport:
+    difficultyPer: 25
+    ranges:
+      Magic: {min: 5, max: 10}
+      Rare: {min: 10, max: 20}
+      Epic: {min: 20, max: 30}
+      Legendary: {min: 30, max: 50}
+      Mythic: {min: 40, max: 60}
+      Ancient: {min: 50, max: 75}
+  VE_PopulationElite:
+    difficultyPer: 25
+    ranges:
+      Magic: {min: 5, max: 10}
+      Rare: {min: 10, max: 15}
+      Epic: {min: 15, max: 20}
+      Legendary: {min: 20, max: 25}
+      Mythic: {min: 25, max: 30}
+      Ancient: {min: 30, max: 35}
+  VE_PopulationBosses:
+    difficultyPer: 1
+    ranges:
+      Epic: {min: 1, max: 1}
+      Legendary: {min: 2, max: 2}
+      Mythic: {min: 3, max: 3}
+      Ancient: {min: 4, max: 4}

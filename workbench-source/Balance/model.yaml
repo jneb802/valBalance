@@ -1,0 +1,71 @@
+# Historical health/damage-fit inputs for the offline planner, not the active tier curve.
+# Active star progression is defined in progression.yaml using the reviewed Tier 1 baseline.
+schema_version: 1
+status: foundation_pending_calibration
+tier:
+  minimum: 1
+  maximum: 10
+  health_per_step: 1.11
+  damage_per_step: 1.06
+baseline:
+  health: 900
+  damage: 144
+  source: Previous Swamp tier 2 standard Draugr, 8 stars; user-selected new tier 1 anchor.
+  damage_measure: strongest_recorded_attack_payload_before_player_defenses
+  # These older references are not an approved baseline for the new system.
+  previous_health_target: 800
+  current_greydwarf_reference: {stars: 127, health: 5120, damage: 458.5}
+  old_swamp_boss_reference: {prefab: Abomination, stars: 32, health: 26400, damage: 720}
+roles:
+  standard:
+    health: 1.0
+    damage: 1.0
+    modifiers: [0, 0]
+    intent: Very easy to kill
+  magic:
+    health: 4.34
+    damage: 1.04
+    modifiers: [1, 2]
+    intent: Easy to kill but normally survives one hit
+  rare:
+    health: 9.8
+    damage: 1.005
+    modifiers: [3, 5]
+    intent: Challenging individual threat
+  boss:
+    health: 29.333333333333332
+    damage: 5.0
+    modifiers: [1, 3]
+    intent: Extended fight
+  miniboss:
+    health: 29.333333333333332
+    damage: 5.0
+    modifiers: [1, 3]
+    intent: Intermediate boss fight; initially shares boss factors until separately tuned
+fitting:
+  minimum_stars: 0
+  maximum_stars: 10000
+  # Proposed fitting tolerances, not combat-validated difficulty targets.
+  health_tolerance: 0.10
+  damage_tolerance: 0.10
+  health_weight: 1.0
+  damage_weight: 1.0
+principles:
+  creature_pool: Fixed reviewed creature roles; biome pools may appear at any configured tier.
+  roles: Multiply the tier standard targets; never multiply fitted stats a second time.
+  modifiers: Role counts are distinct SLS modifiers, not tablet enchantments or native abilities.
+  standard: No SLS modifiers unless a future explicit map rule grants them.
+  native_boss: Use the prefab boss flag for SLS scaling, not the encounter role name.
+  attacks: Keep every attack and damage type; raw payload is not effective damage or DPS.
+  effects: Resolve status effects, repeated hits, projectiles, summons and modifier effects separately.
+  metrics: TTK and HTD require a named player profile and verified combat inputs; never guessed defaults.
+  modifier_order: Fit stars before explicit role modifiers; report their final impact separately.
+  infeasible: Report no matching star range; never silently clamp or claim a successful fit.
+  room: Eligibility also depends on room size, navigation and creature abilities.
+  runtime: Exact modifier-count enforcement and random role selection are not implemented by this planner.
+provenance:
+  valbalance_revision: fce3b9d
+  factors: configs/balance-model.yaml
+  note: Magic and rare factors are inherited planning references, not newly calibrated values.
+  boss: Initial ratio from old Swamp Abomination (26400 HP / 900; 720 damage / 144). Proposed common boss ratio, not a previously validated universal rule.
+  attack_speed: Previous references were 1.2 magic and 1.33 rare; not adopted as automatic bonuses here.

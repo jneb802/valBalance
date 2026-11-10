@@ -1,0 +1,1671 @@
+schemaVersion: 2
+notes: 'All enabled monsters are eligible at every tier. Tier 1 baselines plus 3 stars
+  per tier. Source hashes: {''progression.yaml'': ''feb0136e37a33292cae843ec4e16fb958ff8ae529ef34c5a51fe28803f9b6881'',
+  ''creature-roles.yaml'': ''69f0e2d766688c5fe917202d9374354977835dc001041378eebe3e8e53914188'',
+  ''approved-review.json'': ''8e09c8c740ffd008f07679845ab1a6e56cf06c6acb71543657fd7f81483e95c7''}'
+creatures:
+  Greyling:
+    enabled: false
+    role: standard
+    biomes:
+    - Meadows
+    stars:
+      minStars: 43
+      maxStars: 45
+      status: user_reviewed
+    waveLimits: {}
+    notes: Meadows; excluded by the reviewed catalog.
+  Neck:
+    enabled: false
+    role: standard
+    biomes:
+    - Meadows
+    stars:
+      minStars: 178
+      maxStars: 180
+      status: user_reviewed
+    waveLimits: {}
+    notes: Meadows; excluded by the reviewed catalog.
+  Boar:
+    enabled: false
+    role: standard
+    biomes:
+    - Meadows
+    stars:
+      minStars: 88
+      maxStars: 90
+      status: user_reviewed
+    waveLimits: {}
+    notes: Meadows; excluded by the reviewed catalog.
+  Greydwarf:
+    enabled: false
+    role: standard
+    biomes:
+    - BlackForest
+    stars:
+      minStars: 86
+      maxStars: 88
+      status: user_reviewed
+    waveLimits: {}
+    notes: Black Forest; excluded by the reviewed catalog.
+  Skeleton:
+    enabled: false
+    role: standard
+    biomes:
+    - BlackForest
+    stars:
+      minStars: 50
+      maxStars: 52
+      status: user_reviewed
+    waveLimits: {}
+    notes: Black Forest; excluded by the reviewed catalog.
+  Skeleton_NoArcher:
+    enabled: false
+    role: standard
+    biomes:
+    - BlackForest
+    stars:
+      minStars: 20
+      maxStars: 22
+      status: user_reviewed
+    waveLimits: {}
+    notes: Black Forest; excluded by the reviewed catalog.
+  Draugr:
+    enabled: true
+    role: standard
+    biomes:
+    - Swamp
+    stars:
+      minStars: 24
+      maxStars: 26
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Draugr_Ranged:
+    enabled: true
+    role: standard
+    biomes:
+    - Swamp
+    stars:
+      minStars: 24
+      maxStars: 26
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Leech:
+    enabled: false
+    role: standard
+    biomes:
+    - Swamp
+    stars:
+      minStars: 13
+      maxStars: 15
+      status: user_reviewed
+    waveLimits: {}
+    notes: Swamp; excluded by the reviewed catalog.
+  Bat_Swamp:
+    enabled: false
+    role: standard
+    biomes:
+    - Swamp
+    stars:
+      minStars: 88
+      maxStars: 90
+      status: user_reviewed
+    waveLimits: {}
+    notes: Swamp; excluded by the reviewed catalog.
+  Wolf:
+    enabled: true
+    role: standard
+    biomes:
+    - Mountain
+    stars:
+      minStars: 14
+      maxStars: 16
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Ulv:
+    enabled: true
+    role: standard
+    biomes:
+    - Mountain
+    stars:
+      minStars: 12
+      maxStars: 14
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Bat:
+    enabled: false
+    role: standard
+    biomes:
+    - Mountain
+    stars:
+      minStars: 88
+      maxStars: 90
+      status: user_reviewed
+    waveLimits: {}
+    notes: Mountain; excluded by the reviewed catalog.
+  Skeleton_Mountains:
+    enabled: false
+    role: standard
+    biomes:
+    - Mountain
+    stars:
+      minStars: 18
+      maxStars: 20
+      status: user_reviewed
+    waveLimits: {}
+    notes: Mountain; excluded by the reviewed catalog.
+  Skeleton_Mountains_noarcher:
+    enabled: false
+    role: standard
+    biomes:
+    - Mountain
+    stars:
+      minStars: 10
+      maxStars: 12
+      status: user_reviewed
+    waveLimits: {}
+    notes: Mountain; excluded by the reviewed catalog.
+  Goblin:
+    enabled: false
+    role: standard
+    biomes:
+    - Plains
+    stars:
+      minStars: 11
+      maxStars: 13
+      status: user_reviewed
+    waveLimits: {}
+    notes: Plains; excluded by the reviewed catalog.
+  GoblinArcher:
+    enabled: true
+    role: standard
+    biomes:
+    - Plains
+    stars:
+      minStars: 11
+      maxStars: 13
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Deathsquito:
+    enabled: true
+    role: standard
+    biomes:
+    - Plains
+    stars:
+      minStars: 11
+      maxStars: 13
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Seeker:
+    enabled: true
+    role: standard
+    biomes:
+    - Mistlands
+    stars:
+      minStars: 6
+      maxStars: 8
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  SeekerBrood:
+    enabled: true
+    role: standard
+    biomes:
+    - Mistlands
+    stars:
+      minStars: 20
+      maxStars: 22
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Tick:
+    enabled: true
+    role: standard
+    biomes:
+    - Mistlands
+    stars:
+      minStars: 24
+      maxStars: 26
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Dverger:
+    enabled: false
+    role: standard
+    biomes:
+    - Mistlands
+    stars:
+      minStars: 8
+      maxStars: 10
+      status: user_reviewed
+    waveLimits: {}
+    notes: Mistlands; excluded by the reviewed catalog.
+  Charred_Twitcher:
+    enabled: true
+    role: standard
+    biomes:
+    - AshLands
+    stars:
+      minStars: 10
+      maxStars: 12
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Charred_Archer:
+    enabled: true
+    role: standard
+    biomes:
+    - AshLands
+    stars:
+      minStars: 14
+      maxStars: 16
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Volture:
+    enabled: true
+    role: standard
+    biomes:
+    - AshLands
+    stars:
+      minStars: 7
+      maxStars: 9
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  DvergerAshlands:
+    enabled: false
+    role: standard
+    biomes:
+    - AshLands
+    stars:
+      minStars: 3
+      maxStars: 5
+      status: user_reviewed
+    waveLimits: {}
+    notes: Ashlands; excluded by the reviewed catalog.
+  Greydwarf_Frozen:
+    enabled: true
+    role: standard
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 12
+      maxStars: 14
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Skeleton_DeepNorth:
+    enabled: true
+    role: standard
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 4
+      maxStars: 6
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  GoblinDeepNorth:
+    enabled: true
+    role: standard
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 5
+      maxStars: 7
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  DvergerDeepNorth:
+    enabled: true
+    role: standard
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 0
+      maxStars: 2
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Elaking:
+    enabled: true
+    role: standard
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 6
+      maxStars: 8
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  ElakingLantern:
+    enabled: true
+    role: standard
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 6
+      maxStars: 8
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Frysling:
+    enabled: true
+    role: standard
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 12
+      maxStars: 14
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Draugr_sleeping:
+    enabled: false
+    role: standard
+    biomes: []
+    stars:
+      minStars: 7
+      maxStars: 9
+      status: user_reviewed
+    waveLimits: {}
+    notes: Variants; excluded by the reviewed catalog.
+  Draugr_Ranged_sleeping:
+    enabled: false
+    role: standard
+    biomes: []
+    stars:
+      minStars: 7
+      maxStars: 9
+      status: user_reviewed
+    waveLimits: {}
+    notes: Variants; excluded by the reviewed catalog.
+  Leech_cave:
+    enabled: false
+    role: standard
+    biomes: []
+    stars:
+      minStars: 13
+      maxStars: 15
+      status: user_reviewed
+    waveLimits: {}
+    notes: Variants; excluded by the reviewed catalog.
+  Skeleton_Meadows:
+    enabled: false
+    role: standard
+    biomes: []
+    stars:
+      minStars: 28
+      maxStars: 30
+      status: user_reviewed
+    waveLimits: {}
+    notes: Variants; excluded by the reviewed catalog.
+  Skeleton_Meadows_noarcher:
+    enabled: false
+    role: standard
+    biomes: []
+    stars:
+      minStars: 28
+      maxStars: 30
+      status: user_reviewed
+    waveLimits: {}
+    notes: Variants; excluded by the reviewed catalog.
+  Skeleton_Swamps:
+    enabled: false
+    role: standard
+    biomes:
+    - Swamp
+    stars:
+      minStars: 22
+      maxStars: 24
+      status: user_reviewed
+    waveLimits: {}
+    notes: Variants; excluded by the reviewed catalog.
+  Skeleton_Swamps_noarcher:
+    enabled: false
+    role: standard
+    biomes: []
+    stars:
+      minStars: 13
+      maxStars: 15
+      status: user_reviewed
+    waveLimits: {}
+    notes: Variants; excluded by the reviewed catalog.
+  Greydwarf_Shaman:
+    enabled: false
+    role: magic
+    biomes:
+    - BlackForest
+    stars:
+      minStars: 60
+      maxStars: 65
+      status: user_reviewed
+    waveLimits: {}
+    notes: Black Forest; excluded by the reviewed catalog.
+  Ghost:
+    enabled: true
+    role: magic
+    biomes:
+    - BlackForest
+    stars:
+      minStars: 63
+      maxStars: 65
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Blob:
+    enabled: true
+    role: standard
+    biomes:
+    - Swamp
+    stars:
+      minStars: 71
+      maxStars: 73
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Surtling:
+    enabled: true
+    role: standard
+    biomes:
+    - Swamp
+    stars:
+      minStars: 43
+      maxStars: 45
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Wraith:
+    enabled: true
+    role: magic
+    biomes:
+    - Swamp
+    stars:
+      minStars: 27
+      maxStars: 29
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Hatchling:
+    enabled: true
+    role: magic
+    biomes:
+    - Mountain
+    stars:
+      minStars: 37
+      maxStars: 39
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  GoblinShaman:
+    enabled: true
+    role: magic
+    biomes:
+    - Plains
+    stars:
+      minStars: 14
+      maxStars: 16
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  BlobTar:
+    enabled: true
+    role: magic
+    biomes:
+    - Plains
+    stars:
+      minStars: 32
+      maxStars: 34
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  DvergerMage:
+    enabled: true
+    role: magic
+    biomes:
+    - Mistlands
+    stars:
+      minStars: 14
+      maxStars: 16
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  DvergerMageSupport:
+    enabled: true
+    role: magic
+    biomes:
+    - Mistlands
+    stars:
+      minStars: 9
+      maxStars: 11
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Charred_Mage:
+    enabled: true
+    role: magic
+    biomes:
+    - AshLands
+    stars:
+      minStars: 15
+      maxStars: 17
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  BlobLava:
+    enabled: true
+    role: magic
+    biomes:
+    - AshLands
+    stars:
+      minStars: 31
+      maxStars: 33
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Greydwarf_Shaman_Frozen:
+    enabled: true
+    role: magic
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 16
+      maxStars: 18
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  JotunWitch:
+    enabled: true
+    role: magic
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 8
+      maxStars: 10
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  BlobMorkMini:
+    enabled: true
+    role: magic
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 61
+      maxStars: 63
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Ghost_sleeping:
+    enabled: false
+    role: magic
+    biomes: []
+    stars:
+      minStars: 63
+      maxStars: 65
+      status: user_reviewed
+    waveLimits: {}
+    notes: Variants; excluded by the reviewed catalog.
+  Greydwarf_Elite:
+    enabled: true
+    role: rare
+    biomes:
+    - BlackForest
+    stars:
+      minStars: 92
+      maxStars: 94
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Skeleton_Poison:
+    enabled: true
+    role: rare
+    biomes:
+    - BlackForest
+    stars:
+      minStars: 101
+      maxStars: 103
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Bjorn:
+    enabled: true
+    role: rare
+    biomes:
+    - BlackForest
+    stars:
+      minStars: 51
+      maxStars: 53
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Troll:
+    enabled: true
+    role: rare
+    biomes:
+    - BlackForest
+    stars:
+      minStars: 33
+      maxStars: 35
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Draugr_Elite:
+    enabled: true
+    role: rare
+    biomes:
+    - Swamp
+    stars:
+      minStars: 42
+      maxStars: 44
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  BlobElite:
+    enabled: true
+    role: rare
+    biomes:
+    - Swamp
+    stars:
+      minStars: 67
+      maxStars: 69
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Abomination:
+    enabled: true
+    role: rare
+    biomes:
+    - Swamp
+    stars:
+      minStars: 29
+      maxStars: 31
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Fenring:
+    enabled: true
+    role: rare
+    biomes:
+    - Mountain
+    stars:
+      minStars: 27
+      maxStars: 29
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Fenring_Cultist:
+    enabled: true
+    role: rare
+    biomes:
+    - Mountain
+    stars:
+      minStars: 47
+      maxStars: 49
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  StoneGolem:
+    enabled: true
+    role: rare
+    biomes:
+    - Mountain
+    stars:
+      minStars: 24
+      maxStars: 26
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  GoblinBrute:
+    enabled: true
+    role: rare
+    biomes:
+    - Plains
+    stars:
+      minStars: 24
+      maxStars: 26
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Lox:
+    enabled: true
+    role: rare
+    biomes:
+    - Plains
+    stars:
+      minStars: 22
+      maxStars: 24
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Goblin_Gem:
+    enabled: false
+    role: rare
+    biomes:
+    - Plains
+    stars:
+      minStars: 7
+      maxStars: 9
+      status: user_reviewed
+    waveLimits: {}
+    notes: Plains; excluded by the reviewed catalog.
+  SeekerBrute:
+    enabled: true
+    role: rare
+    biomes:
+    - Mistlands
+    stars:
+      minStars: 19
+      maxStars: 21
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Gjall:
+    enabled: true
+    role: rare
+    biomes:
+    - Mistlands
+    stars:
+      minStars: 14
+      maxStars: 16
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  DvergerMageFire:
+    enabled: true
+    role: rare
+    biomes:
+    - Mistlands
+    stars:
+      minStars: 23
+      maxStars: 25
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  DvergerMageIce:
+    enabled: true
+    role: rare
+    biomes:
+    - Mistlands
+    stars:
+      minStars: 23
+      maxStars: 25
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Charred_Melee:
+    enabled: true
+    role: rare
+    biomes:
+    - AshLands
+    stars:
+      minStars: 13
+      maxStars: 15
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Asksvin:
+    enabled: true
+    role: rare
+    biomes:
+    - AshLands
+    stars:
+      minStars: 14
+      maxStars: 16
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Morgen:
+    enabled: true
+    role: rare
+    biomes:
+    - AshLands
+    stars:
+      minStars: 9
+      maxStars: 11
+      status: user_reviewed
+    waveLimits:
+      1: 1
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  FallenValkyrie:
+    enabled: true
+    role: rare
+    biomes:
+    - AshLands
+    stars:
+      minStars: 4
+      maxStars: 6
+      status: user_reviewed
+    waveLimits:
+      1: 1
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  JotunWarrior:
+    enabled: true
+    role: rare
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 5
+      maxStars: 7
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  JotunWarriorDualWield:
+    enabled: true
+    role: rare
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 5
+      maxStars: 7
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Barka:
+    enabled: true
+    role: rare
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 7
+      maxStars: 9
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  ElakingMole:
+    enabled: true
+    role: rare
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 4
+      maxStars: 6
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  BlobMork:
+    enabled: true
+    role: rare
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 57
+      maxStars: 59
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  FallenWarrior:
+    enabled: true
+    role: rare
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 10
+      maxStars: 12
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Writhan:
+    enabled: true
+    role: rare
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 20
+      maxStars: 22
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Moose:
+    enabled: true
+    role: rare
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 7
+      maxStars: 9
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Unbjorn:
+    enabled: true
+    role: rare
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 5
+      maxStars: 7
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Bjorn_sleeping:
+    enabled: false
+    role: rare
+    biomes: []
+    stars:
+      minStars: 16
+      maxStars: 18
+      status: user_reviewed
+    waveLimits: {}
+    notes: Variants; excluded by the reviewed catalog.
+  Troll_sleeping:
+    enabled: false
+    role: rare
+    biomes: []
+    stars:
+      minStars: 13
+      maxStars: 15
+      status: user_reviewed
+    waveLimits: {}
+    notes: Variants; excluded by the reviewed catalog.
+  Draugr_Elite_sleeping:
+    enabled: false
+    role: rare
+    biomes: []
+    stars:
+      minStars: 42
+      maxStars: 44
+      status: user_reviewed
+    waveLimits: {}
+    notes: Variants; excluded by the reviewed catalog.
+  Morgen_NonSleeping:
+    enabled: false
+    role: rare
+    biomes: []
+    stars:
+      minStars: 4
+      maxStars: 6
+      status: user_reviewed
+    waveLimits: {}
+    notes: Variants; excluded by the reviewed catalog.
+  Eikthyr:
+    enabled: true
+    role: miniboss
+    biomes:
+    - Meadows
+    stars:
+      minStars: 302
+      maxStars: 304
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  gd_king:
+    enabled: true
+    role: boss
+    biomes:
+    - BlackForest
+    stars:
+      minStars: 101
+      maxStars: 103
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Bonemass:
+    enabled: true
+    role: boss
+    biomes:
+    - Swamp
+    stars:
+      minStars: 63
+      maxStars: 65
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Dragon:
+    enabled: true
+    role: boss
+    biomes:
+    - Mountain
+    stars:
+      minStars: 37
+      maxStars: 39
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  GoblinKing:
+    enabled: true
+    role: boss
+    biomes:
+    - Plains
+    stars:
+      minStars: 44
+      maxStars: 46
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  SeekerQueen:
+    enabled: true
+    role: boss
+    biomes:
+    - Mistlands
+    stars:
+      minStars: 28
+      maxStars: 30
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Fader:
+    enabled: true
+    role: boss
+    biomes:
+    - AshLands
+    stars:
+      minStars: 25
+      maxStars: 27
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  FrozenKing:
+    enabled: true
+    role: boss
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 19
+      maxStars: 21
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  FrozenKing_p2:
+    enabled: false
+    role: boss
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 8
+      maxStars: 10
+      status: user_reviewed
+    waveLimits: {}
+    notes: Main bosses; excluded by the reviewed catalog.
+  FrozenKing_p3:
+    enabled: false
+    role: boss
+    biomes:
+    - DeepNorth
+    stars:
+      minStars: 0
+      maxStars: 2
+      status: user_reviewed
+    waveLimits: {}
+    notes: Main bosses; excluded by the reviewed catalog.
+  Skeleton_Hildir:
+    enabled: true
+    role: boss
+    biomes:
+    - BlackForest
+    stars:
+      minStars: 35
+      maxStars: 37
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Skeleton_Hildir_nochest:
+    enabled: false
+    role: boss
+    biomes: []
+    stars:
+      minStars: 42
+      maxStars: 44
+      status: user_reviewed
+    waveLimits: {}
+    notes: Minibosses; excluded by the reviewed catalog.
+  Fenring_Cultist_Hildir:
+    enabled: true
+    role: boss
+    biomes:
+    - Mountain
+    stars:
+      minStars: 20
+      maxStars: 22
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Fenring_Cultist_Hildir_nochest:
+    enabled: false
+    role: boss
+    biomes: []
+    stars:
+      minStars: 12
+      maxStars: 14
+      status: user_reviewed
+    waveLimits: {}
+    notes: Minibosses; excluded by the reviewed catalog.
+  GoblinBruteBros:
+    enabled: true
+    role: boss
+    biomes:
+    - Plains
+    stars:
+      minStars: 14
+      maxStars: 16
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  GoblinBruteBros_nochest:
+    enabled: false
+    role: boss
+    biomes: []
+    stars:
+      minStars: 11
+      maxStars: 13
+      status: user_reviewed
+    waveLimits: {}
+    notes: Minibosses; excluded by the reviewed catalog.
+  Charred_Melee_Dyrnwyn:
+    enabled: true
+    role: boss
+    biomes:
+    - AshLands
+    stars:
+      minStars: 13
+      maxStars: 15
+      status: user_reviewed
+    waveLimits: {}
+    notes: Approved Tier 1 baseline plus fixed stars per tier; see Balance/progression.yaml.
+  Asksvin_hatchling:
+    enabled: false
+    role: standard
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Passive wildlife and young animals; excluded by the reviewed catalog.
+  Boar_piggy:
+    enabled: false
+    role: standard
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Passive wildlife and young animals; excluded by the reviewed catalog.
+  Chicken:
+    enabled: false
+    role: standard
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Passive wildlife and young animals; excluded by the reviewed catalog.
+  Hen:
+    enabled: false
+    role: standard
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Passive wildlife and young animals; excluded by the reviewed catalog.
+  Deer:
+    enabled: false
+    role: standard
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Passive wildlife and young animals; excluded by the reviewed catalog.
+  Deer_White:
+    enabled: false
+    role: standard
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Passive wildlife and young animals; excluded by the reviewed catalog.
+  Hare:
+    enabled: false
+    role: standard
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Passive wildlife and young animals; excluded by the reviewed catalog.
+  Lox_Calf:
+    enabled: false
+    role: standard
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Passive wildlife and young animals; excluded by the reviewed catalog.
+  Moose_calf:
+    enabled: false
+    role: standard
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Passive wildlife and young animals; excluded by the reviewed catalog.
+  Seal:
+    enabled: false
+    role: standard
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Passive wildlife and young animals; excluded by the reviewed catalog.
+  Seal_Pup:
+    enabled: false
+    role: standard
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Passive wildlife and young animals; excluded by the reviewed catalog.
+  Wolf_cub:
+    enabled: false
+    role: standard
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Passive wildlife and young animals; excluded by the reviewed catalog.
+  BogWitchKvastur:
+    enabled: false
+    role: magic
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: NPC companion; excluded by the reviewed catalog.
+  DvergerTest:
+    enabled: false
+    role: standard
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Unverified or test prefabs; excluded by the reviewed catalog.
+  Mistile:
+    enabled: false
+    role: magic
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Unverified or test prefabs; excluded by the reviewed catalog.
+  Hive:
+    enabled: false
+    role: boss
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Unverified or test prefabs; excluded by the reviewed catalog.
+  TheHive:
+    enabled: false
+    role: boss
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Unverified or test prefabs; excluded by the reviewed catalog.
+  BlobAspect:
+    enabled: false
+    role: magic
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Unverified or test prefabs; excluded by the reviewed catalog.
+  Ghost_old:
+    enabled: false
+    role: magic
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Unverified or test prefabs; excluded by the reviewed catalog.
+  TrainingDummy:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Training objects; excluded by the reviewed catalog.
+  piece_TrainingDummy:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Training objects; excluded by the reviewed catalog.
+  Skeleton_Friendly:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  Skeleton_aspect:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  Charred_Archer_Fader:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  Charred_Melee_Fader:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  Charred_Twitcher_Summoned:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  TentaRoot:
+    enabled: true
+    role: hazard
+    biomes: [BlackForest]
+    stars: {minStars: 20, maxStars: 20, status: user_reviewed}
+    waveLimits: {}
+    notes: Elder root hazard; approved Tier 1 baseline plus fixed stars per tier. Not selected for random waves.
+  Aspect_TentaRoot:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  TentaRoot_wild:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  Tendril:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  Tendril_back:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  staff_greenroots_tentaroot:
+    enabled: true
+    role: hazard
+    biomes: [Mistlands]
+    stars: {minStars: 15, maxStars: 15, status: user_reviewed}
+    waveLimits: {}
+    notes: Tentacle hazard; approved Tier 1 baseline plus fixed stars per tier. Not selected for random waves.
+  Troll_Summoned:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  Bjorn_spiritcaller:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  Boar_spiritcaller:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  Wolf_spiritcaller:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  Moose_spiritcaller:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  GoblinBrute_Hildir:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  GoblinShaman_Hildir:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  GoblinShaman_Hildir_nochest:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  Aspect_Bonemass:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  Aspect_Eikthyr:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  Aspect_Elder:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  Aspect_Fader:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  Aspect_Moder:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  Aspect_SeekerQueen:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  Aspect_Yagluth:
+    enabled: false
+    role: excluded
+    biomes: []
+    stars: null
+    waveLimits: {}
+    notes: Summons and encounter parts; excluded by the reviewed catalog.
+  VE_UberEikthyr:
+    enabled: false
+    role: boss
+    biomes:
+    - Meadows
+    stars:
+      minStars: 0
+      maxStars: 0
+      status: prototype
+    waveLimits: {}
+    notes: Opt-in Uber Eikthyr. Final star values and compatible rooms require review
+      before enabling.
+  VE_UberElder:
+    enabled: false
+    role: boss
+    biomes:
+    - BlackForest
+    stars:
+      minStars: 0
+      maxStars: 0
+      status: prototype
+    waveLimits: {}
+    notes: Opt-in Uber Elder. Final star values and compatible rooms require review
+      before enabling.
+  VE_UberBonemass:
+    enabled: false
+    role: boss
+    biomes:
+    - Swamp
+    stars:
+      minStars: 0
+      maxStars: 0
+      status: prototype
+    waveLimits: {}
+    notes: Opt-in Uber Bonemass. Final star values and compatible rooms require review
+      before enabling.
+  VE_UberModer:
+    enabled: false
+    role: boss
+    biomes:
+    - Mountain
+    stars:
+      minStars: 0
+      maxStars: 0
+      status: prototype
+    waveLimits: {}
+    notes: Opt-in Uber Moder. Final star values and compatible rooms require review
+      before enabling.
+  VE_UberYagluth:
+    enabled: false
+    role: boss
+    biomes:
+    - Plains
+    stars:
+      minStars: 0
+      maxStars: 0
+      status: prototype
+    waveLimits: {}
+    notes: Opt-in Uber Yagluth. Final star values and compatible rooms require review
+      before enabling.
+  VE_UberQueen:
+    enabled: false
+    role: boss
+    biomes:
+    - Mistlands
+    stars:
+      minStars: 0
+      maxStars: 0
+      status: prototype
+    waveLimits: {}
+    notes: Opt-in Uber Queen. Final star values and compatible rooms require review
+      before enabling.
+  VE_UberFader:
+    enabled: false
+    role: boss
+    biomes:
+    - AshLands
+    stars:
+      minStars: 0
+      maxStars: 0
+      status: prototype
+    waveLimits: {}
+    notes: Opt-in Uber Fader. Final star values and compatible rooms require review
+      before enabling.
+minibosses:
+- Eikthyr
+- Troll
+- Skeleton_Hildir
+- Draugr_Elite
+- BlobElite
+- Abomination
+- Fenring
+- StoneGolem
+- Fenring_Cultist_Hildir
+- GoblinBrute
+- Lox
+- GoblinBruteBros
+- SeekerBrute
+- Gjall
+- DvergerMageFire
+- Morgen
+- FallenValkyrie
+- Charred_Melee_Dyrnwyn
+- JotunWarriorDualWield
+- Barka
+bosses:
+- gd_king
+- Bonemass
+- Dragon
+- GoblinKing
+- SeekerQueen
+- Fader
+- FrozenKing
+- VE_UberEikthyr
+- VE_UberElder
+- VE_UberBonemass
+- VE_UberModer
+- VE_UberYagluth
+- VE_UberQueen
+- VE_UberFader
+layout:
+- kind: regular
+  standard: 9
+  magic: 3
+  rare: 2
+- kind: regular
+  standard: 9
+  magic: 3
+  rare: 2
+- kind: miniboss
+  standard: 8
+  magic: 3
+  rare: 2
+- kind: regular
+  standard: 9
+  magic: 3
+  rare: 2
+- kind: regular
+  standard: 9
+  magic: 3
+  rare: 2
+- kind: miniboss
+  standard: 8
+  magic: 3
+  rare: 2
+- kind: regular
+  standard: 9
+  magic: 3
+  rare: 2
+- kind: regular
+  standard: 9
+  magic: 3
+  rare: 2
+- kind: miniboss
+  standard: 8
+  magic: 3
+  rare: 2
+- kind: boss
+  standard: 8
+  magic: 3
+  rare: 2
+# Escorts that spawn alongside each Uber boss, at their own Tier 15 star ranges. Bosses without an entry fight alone.
+uberWaves:
+  VE_UberBonemass:
+  - {prefab: Draugr, amount: 4}
+  - {prefab: Draugr_Ranged, amount: 2}
+  - {prefab: Abomination, amount: 1}
+  VE_UberModer:
+  - {prefab: Wolf, amount: 4}
+  - {prefab: Hatchling, amount: 2}
+  - {prefab: Fenring, amount: 1}

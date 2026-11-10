@@ -1,0 +1,482 @@
+source:
+  kind: installed_game_bundle
+  sha256: 8bb0f9b6406781970651b22e50cac01948fb2bf8dce0c4520c12702b31b34241
+  checkedOn: '2026-10-17'
+creatures:
+  Abomination:
+    health: 800.0
+    nativeBoss: false
+  Asksvin:
+    health: 800.0
+    nativeBoss: false
+  Asksvin_hatchling:
+    health: 400.0
+    nativeBoss: false
+  Barka:
+    health: 2200.0
+    nativeBoss: false
+  Bat:
+    health: 10.0
+    nativeBoss: false
+  Bat_Swamp:
+    health: 10.0
+    nativeBoss: false
+  Bjorn:
+    health: 500.0
+    nativeBoss: false
+  Bjorn_sleeping:
+    health: 500.0
+    nativeBoss: false
+  Bjorn_spiritcaller:
+    health: 1500.0
+    nativeBoss: false
+  Unbjorn:
+    health: 1200.0
+    nativeBoss: false
+  Blob:
+    health: 50.0
+    nativeBoss: false
+  BlobAspect:
+    health: 50.0
+    nativeBoss: false
+  BlobElite:
+    health: 150.0
+    nativeBoss: false
+  BlobFrost:
+    health: 50.0
+    nativeBoss: false
+  BlobLava:
+    health: 300.0
+    nativeBoss: false
+  BlobMork:
+    health: 150.0
+    nativeBoss: false
+  BlobMorkMini:
+    health: 50.0
+    nativeBoss: false
+  BlobTar:
+    health: 100.0
+    nativeBoss: false
+  Boar:
+    health: 10.0
+    nativeBoss: false
+  Boar_piggy:
+    health: 10.0
+    nativeBoss: false
+  Boar_spiritcaller:
+    health: 1000.0
+    nativeBoss: false
+  Bonemass:
+    health: 5000.0
+    nativeBoss: true
+  Chicken:
+    health: 10.0
+    nativeBoss: false
+  Hen:
+    health: 10.0
+    nativeBoss: false
+  Deathsquito:
+    health: 10.0
+    nativeBoss: false
+  Deer:
+    health: 10.0
+    nativeBoss: false
+  Deer_White:
+    health: 30.0
+    nativeBoss: false
+  Dragon:
+    health: 7500.0
+    nativeBoss: true
+  Draugr:
+    health: 100.0
+    nativeBoss: false
+  Draugr_Elite:
+    health: 200.0
+    nativeBoss: false
+  Draugr_Elite_sleeping:
+    health: 200.0
+    nativeBoss: false
+  Draugr_Ranged:
+    health: 100.0
+    nativeBoss: false
+  Draugr_Ranged_sleeping:
+    health: 100.0
+    nativeBoss: false
+  Draugr_sleeping:
+    health: 100.0
+    nativeBoss: false
+  Dverger:
+    health: 350.0
+    nativeBoss: false
+  DvergerAshlands:
+    health: 1000.0
+    nativeBoss: false
+  DvergerDeepNorth:
+    health: 1500.0
+    nativeBoss: false
+  DvergerMage:
+    health: 350.0
+    nativeBoss: false
+  DvergerMageFire:
+    health: 350.0
+    nativeBoss: false
+  DvergerMageIce:
+    health: 350.0
+    nativeBoss: false
+  DvergerMageSupport:
+    health: 350.0
+    nativeBoss: false
+  DvergerTest:
+    health: 100.0
+    nativeBoss: false
+  Mistile:
+    health: 1.0
+    nativeBoss: false
+  Eikthyr:
+    health: 500.0
+    nativeBoss: true
+  Elaking:
+    health: 350.0
+    nativeBoss: false
+  ElakingLantern:
+    health: 350.0
+    nativeBoss: false
+  ElakingMole:
+    health: 1400.0
+    nativeBoss: false
+  Fader:
+    health: 25000.0
+    nativeBoss: true
+  FallenValkyrie:
+    health: 1500.0
+    nativeBoss: false
+  FallenWarrior:
+    health: 750.0
+    nativeBoss: false
+  ShadowPerson:
+    health: 750.0
+    nativeBoss: false
+  Fenring:
+    health: 300.0
+    nativeBoss: false
+  Fenring_Cultist:
+    health: 200.0
+    nativeBoss: false
+  Fenring_Cultist_Hildir:
+    health: 3700.0
+    nativeBoss: false
+  Fenring_Cultist_Hildir_nochest:
+    health: 1850.0
+    nativeBoss: false
+  FrostWisp:
+    health: 100.0
+    nativeBoss: false
+  Aspect_Bonemass:
+    health: 1600.0
+    nativeBoss: false
+  Aspect_Eikthyr:
+    health: 3000.0
+    nativeBoss: false
+  Aspect_Elder:
+    health: 1600.0
+    nativeBoss: false
+  Aspect_Fader:
+    health: 1700.0
+    nativeBoss: false
+  Aspect_Moder:
+    health: 1500.0
+    nativeBoss: false
+  Aspect_SeekerQueen:
+    health: 1700.0
+    nativeBoss: false
+  Aspect_Yagluth:
+    health: 1700.0
+    nativeBoss: false
+  FrozenKing:
+    health: 10000.0
+    nativeBoss: true
+  FrozenKing_p2:
+    health: 7000.0
+    nativeBoss: true
+  FrozenKing_p3:
+    health: 30000.0
+    nativeBoss: true
+  Tendril_back:
+    health: 1000.0
+    nativeBoss: false
+  Tendril:
+    health: 80.0
+    nativeBoss: false
+  Frysling:
+    health: 100.0
+    nativeBoss: false
+  Ghost:
+    health: 60.0
+    nativeBoss: false
+  Ghost_Void:
+    health: 600.0
+    nativeBoss: false
+  Ghost_old:
+    health: 60.0
+    nativeBoss: false
+  Ghost_sleeping:
+    health: 60.0
+    nativeBoss: false
+  Gjall:
+    health: 1500.0
+    nativeBoss: false
+  Goblin:
+    health: 175.0
+    nativeBoss: false
+  GoblinArcher:
+    health: 175.0
+    nativeBoss: false
+  GoblinDeepNorth:
+    health: 250.0
+    nativeBoss: false
+  Goblin_Gem:
+    health: 1000.0
+    nativeBoss: false
+  GoblinBrute:
+    health: 800.0
+    nativeBoss: false
+  GoblinBruteBros:
+    health: 4200.0
+    nativeBoss: false
+  GoblinBruteBros_nochest:
+    health: 2100.0
+    nativeBoss: false
+  GoblinBrute_Hildir:
+    health: 800.0
+    nativeBoss: false
+  GoblinShaman_Hildir:
+    health: 2400.0
+    nativeBoss: false
+  GoblinShaman_Hildir_nochest:
+    health: 1200.0
+    nativeBoss: false
+  GoblinKing:
+    health: 10000.0
+    nativeBoss: true
+  GoblinShaman:
+    health: 100.0
+    nativeBoss: false
+  Greydwarf:
+    health: 40.0
+    nativeBoss: false
+  Greydwarf_Elite:
+    health: 150.0
+    nativeBoss: false
+  Greydwarf_Frozen:
+    health: 100.0
+    nativeBoss: false
+  Greydwarf_Shaman:
+    health: 60.0
+    nativeBoss: false
+  Greydwarf_Shaman_Frozen:
+    health: 120.0
+    nativeBoss: false
+  Greyling:
+    health: 20.0
+    nativeBoss: false
+  Aspect_TentaRoot:
+    health: 20.0
+    nativeBoss: false
+  TentaRoot:
+    health: 20.0
+    nativeBoss: false
+  TentaRoot_wild:
+    health: 30.0
+    nativeBoss: false
+  gd_king:
+    health: 2500.0
+    nativeBoss: true
+  Hare:
+    health: 10.0
+    nativeBoss: false
+  Hatchling:
+    health: 100.0
+    nativeBoss: false
+  Hive:
+    health: 10000.0
+    nativeBoss: true
+  JotunWarrior:
+    health: 1300.0
+    nativeBoss: false
+  JotunWarriorDualWield:
+    health: 1300.0
+    nativeBoss: false
+  JotunWitch:
+    health: 800.0
+    nativeBoss: false
+  BogWitchKvastur:
+    health: 700.0
+    nativeBoss: false
+  Leech:
+    health: 60.0
+    nativeBoss: false
+  Leech_cave:
+    health: 60.0
+    nativeBoss: false
+  Lox:
+    health: 1000.0
+    nativeBoss: false
+  Lox_Calf:
+    health: 100.0
+    nativeBoss: false
+  Morgen:
+    health: 1600.0
+    nativeBoss: false
+  Morgen_NonSleeping:
+    health: 1600.0
+    nativeBoss: false
+  Neck:
+    health: 5.0
+    nativeBoss: false
+  Seeker:
+    health: 200.0
+    nativeBoss: false
+  SeekerBrood:
+    health: 20.0
+    nativeBoss: false
+  SeekerBrute:
+    health: 1500.0
+    nativeBoss: false
+  SeekerQueen:
+    health: 12500.0
+    nativeBoss: true
+  Skeleton:
+    health: 40.0
+    nativeBoss: false
+  Skeleton_DeepNorth:
+    health: 100.0
+    nativeBoss: false
+  Skeleton_Friendly:
+    health: 400.0
+    nativeBoss: false
+  Skeleton_Hildir:
+    health: 1200.0
+    nativeBoss: false
+  Skeleton_Hildir_nochest:
+    health: 600.0
+    nativeBoss: false
+  Skeleton_Meadows:
+    health: 30.0
+    nativeBoss: false
+  Skeleton_Meadows_noarcher:
+    health: 30.0
+    nativeBoss: false
+  Skeleton_Mountains:
+    health: 75.0
+    nativeBoss: false
+  Skeleton_Mountains_noarcher:
+    health: 75.0
+    nativeBoss: false
+  Skeleton_NoArcher:
+    health: 40.0
+    nativeBoss: false
+  Skeleton_Poison:
+    health: 100.0
+    nativeBoss: false
+  Skeleton_Swamps:
+    health: 60.0
+    nativeBoss: false
+  Skeleton_Swamps_noarcher:
+    health: 60.0
+    nativeBoss: false
+  Skeleton_aspect:
+    health: 40.0
+    nativeBoss: false
+  StoneGolem:
+    health: 800.0
+    nativeBoss: false
+  Surtling:
+    health: 20.0
+    nativeBoss: false
+  Charred_Archer:
+    health: 200.0
+    nativeBoss: false
+  Charred_Archer_Fader:
+    health: 50.0
+    nativeBoss: false
+  Charred_Mage:
+    health: 600.0
+    nativeBoss: false
+  Charred_Melee:
+    health: 600.0
+    nativeBoss: false
+  Charred_Melee_Dyrnwyn:
+    health: 2500.0
+    nativeBoss: false
+  Charred_Melee_Fader:
+    health: 50.0
+    nativeBoss: false
+  Charred_Twitcher:
+    health: 220.0
+    nativeBoss: false
+  Charred_Twitcher_Summoned:
+    health: 50.0
+    nativeBoss: false
+  TheHive:
+    health: 5000.0
+    nativeBoss: true
+  Tick:
+    health: 50.0
+    nativeBoss: false
+  TrainingDummy:
+    health: 40000.0
+    nativeBoss: false
+  Troll:
+    health: 600.0
+    nativeBoss: false
+  TrollFrost:
+    health: 3000.0
+    nativeBoss: false
+  Troll_Summoned:
+    health: 2000.0
+    nativeBoss: false
+  Troll_sleeping:
+    health: 600.0
+    nativeBoss: false
+  Ulv:
+    health: 50.0
+    nativeBoss: false
+  Volture:
+    health: 200.0
+    nativeBoss: false
+  Wolf:
+    health: 80.0
+    nativeBoss: false
+  Wolf_cub:
+    health: 10.0
+    nativeBoss: false
+  Wolf_spiritcaller:
+    health: 800.0
+    nativeBoss: false
+  Wraith:
+    health: 100.0
+    nativeBoss: false
+  Writhan:
+    health: 400.0
+    nativeBoss: false
+  Moose:
+    health: 1000.0
+    nativeBoss: false
+  Moose_calf:
+    health: 1000.0
+    nativeBoss: false
+  Moose_spiritcaller:
+    health: 1100.0
+    nativeBoss: false
+  Seal:
+    health: 400.0
+    nativeBoss: false
+  Seal_Pup:
+    health: 200.0
+    nativeBoss: false
+  staff_greenroots_tentaroot:
+    health: 250.0
+    nativeBoss: false
+  piece_TrainingDummy:
+    health: 2500.0
+    nativeBoss: false
