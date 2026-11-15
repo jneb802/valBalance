@@ -7,10 +7,11 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 SOURCE = ROOT / 'workbench-source' / 'Balance'
 sys.path.insert(0, str(SOURCE))
-from build_workbench import build_data
+from build_workbench import build_data, render_html
 
 if __name__ == '__main__':
     data = build_data()
+    (ROOT / 'web/workbench.html').write_text(render_html(data))
     data = {key: data[key] for key in ('creatures', 'players', 'dot', 'hashes', 'revision', 'builtAt')}
     (ROOT / 'web/data.json').write_text(json.dumps(data, separators=(',', ':')))
     for name in ('workbench.js', 'workbench.css'):
